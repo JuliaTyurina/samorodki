@@ -1,3 +1,4 @@
+@use "./variables/index";
 @use "fonts";
 @use "reset";
 @use "typography";
@@ -5,4 +6,5 @@
 @use "common";
 @use "icons";
 @use "section";
+@use "helper";
 //@use "scrollbar";

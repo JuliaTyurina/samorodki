@@ -1,0 +1,26 @@
+<div class="header-bottom">
+  <div class="header-bottom__container __container">
+    <div class="header-bottom__main">
+      {{> logo }}
+      {{> button variant="primary" text="Каталог" icon-left="burger" icon-left-active="cancel" button-class="__hide-before-lg" }}
+      {{> search search-class="header-bottom__search __hide-before-lg" }}
+      <div class="header-bottom__navbar __hide-before-lg">
+        {{> menu-button class="menu-button--header" icon="baby" text="Войти" badge="" }}
+        {{> menu-button class="menu-button--header" icon="heart" text="Избранное" badge="8" }}
+        {{> menu-button class="menu-button--header" icon="cart" text="Корзина" }}
+      </div>
+      <div class="header-bottom__mobile-buttons __hide-after-md">
+        <button aria-label="поиск">
+          {{> svg id="search" svg-class="icon-md" }}
+        </button>
+        <a class="link-reset" href="tel:8 926 193 33 58" aria-label="телефон">
+          {{> svg id="phone-volume" svg-class="icon-md" }}
+        </a>
+        <button class="header-burger" aria-label="открыть меню">
+          {{> svg id="burger" svg-class="icon-md header-burger__default" }}
+          {{> svg id="cancel" svg-class="icon-md header-burger__active" }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

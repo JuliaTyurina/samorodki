@@ -15,6 +15,10 @@
 		}
 	}
 
+	&-big {
+		max-width : var(--container-big-width);
+	}
+
 	&-left, &-right {
       width : calc(100vw - var(--scrollbar-width));
 	}

@@ -1,18 +1,9 @@
 @use "/src/settings/styles/mixins";
+@use "/src/settings/styles/settings";
 
-.icon {
-	&-sm {
-		display : block;
-		@include mixins.size(16);
-	}
-
-	&-md {
-		display : block;
-		@include mixins.size(24);
-	}
-
-	&-lg {
-		display : block;
-		@include mixins.size(32);
-	}
+@each $size-name, $size-value in settings.$icons-size {
+  .icon-#{$size-name} {
+    display : block;
+    @include mixins.size($size-value);
+  }
 }

@@ -1,21 +1,33 @@
 {{#if url }}
-  <a class="button-{{size}} button--{{variant}} {{class}}" href="{{ url }}" {{safe attributes}}>
+  <a class="button-{{size}} button--{{variant}} {{button-class}}" href="{{ url }}" {{safe attributes}}>
     {{#if icon-left}}
-      {{> svg id=icon-left }}
+      {{> svg id=icon-left svg-class="button-icon" }}
+    {{/if}}
+    {{#if icon-left-active}}
+      {{> svg id=icon-left-active svg-class="button-icon-active" }}
     {{/if}}
     <span>{{text}}</span>
     {{#if icon-right}}
-      {{> svg id=icon-right }}
+      {{> svg id=icon-right svg-class="button-icon" }}
+    {{/if}}
+    {{#if icon-right-active}}
+      {{> svg id=icon-right-active svg-class="button-icon-active" }}
     {{/if}}
   </a>
 {{ else }}
-  <button class="button-{{size}} button--{{variant}} {{class}}" {{safe attributes}}>
+  <button class="button-{{size}} button--{{variant}} {{button-class}}" {{safe attributes}}>
     {{#if icon-left}}
-      {{> svg id=icon-left }}
+      {{> svg id=icon-left svg-class="button-icon" }}
+    {{/if}}
+    {{#if icon-left-active}}
+      {{> svg id=icon-left-active svg-class="button-icon-active" }}
     {{/if}}
     <span>{{text}}</span>
     {{#if icon-right}}
-      {{> svg id=icon-right }}
+      {{> svg id=icon-right svg-class="button-icon" }}
+    {{/if}}
+    {{#if icon-right-active}}
+      {{> svg id=icon-right-active svg-class="button-icon-active" }}
     {{/if}}
   </button>
 {{/if }}

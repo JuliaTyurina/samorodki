@@ -1,39 +1,41 @@
 @use "sass:map";
+@use "sass:meta";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+@use "/src/settings/styles/mixins";
 
-@import "variants/light";
-@import "variants/dark";
-@import "variants/accent";
-@import "variants/slim";
+@use "variants/index" as variants;
 
 $button-sizes    : (
-    sm: (padding: 7px 15px),
-    md: (padding: 9px 15px),
-    lg: (padding: 13px 23px),
-    sl: (padding: unset),
-
+    lg: (
+        padding-top: (min: 11px, max: 15px),
+        padding-bottom: (min: 11px, max: 15px),
+        padding-left: (min: 23px, max: 31px),
+        padding-right: (min: 23px, max: 31px),
+    ),
 );
 
 $button-variants : (
-    light: $button-light,
-    dark: $button-dark,
-    accent: $button-accent,
-    slim: $button-slim,
+    light: variants.$button-light,
+    dark: variants.$button-dark,
+    primary: variants.$button-primary,
 );
 
 .button {
-  @extend .__flex-center;
-  border        : 1px solid transparent;
-  border-radius : 8px;
-  transition    : background-color var(--transition-default), color var(--transition-default);
-  font-size     : 14px;
-  font-weight   : 700;
-  line-height   : 1.5;
-  width         : fit-content;
-  column-gap    : map.get($sizes, 2.5);
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  border          : 1px solid transparent;
+  border-radius   : 12px;
+  transition      : background-color var(--transition-default), color var(--transition-default);
+  font-size       : 16px;
+  font-weight     : 600;
+  line-height     : 1.5;
+  width           : fit-content;
+  column-gap      : 8px;
 
   svg {
-    width      : map.get($sizes, 4);
-    height     : map.get($sizes, 4);
+    @include mixins.size(24px);
     transition : fill var(--transition-default);
   }
 
@@ -46,7 +48,7 @@ $button-variants : (
   }
 
   &:not(:disabled):active {
-    transform : translateY(2%)
+    transform : translateY(1%)
   }
 
   @each $size, $styles in $button-sizes {
@@ -54,7 +56,18 @@ $button-variants : (
       @extend .button;
 
       @each $style-name, $style-value in $styles {
-        #{$style-name}: #{$style-value}
+        @if meta.type-of($style-value) == 'map' {
+          @if functions.map-has-value($style-value, 'min') {
+            #{$style-name}: map.get($style-value, 'min');
+          }
+          @if functions.map-has-value($style-value, 'max') {
+            @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+              #{$style-name}: map.get($style-value, 'max');
+            }
+          }
+        } @else {
+          #{$style-name}: #{$style-value};
+        }
       }
     }
   }
@@ -84,6 +97,25 @@ $button-variants : (
           }
         }
       }
+    }
+  }
+
+
+  .button-icon {
+    display : block;
+  }
+
+  .button-icon-active {
+    display : none;
+  }
+
+  &:where(.active) {
+    .button-icon {
+      display : none;
+    }
+
+    .button-icon-active {
+      display : block;
     }
   }
 }

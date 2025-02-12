@@ -1,1 +1,10 @@
-<div class="logo"></div>
+{{#if (or (not variant) (compare variant "===" "header"))}}
+  <a class="logo-header link-reset" href="{{url}}">
+<!--    <img class="logo__image" src="/assets/media/images/logo-with-text.svg" alt="">-->
+    {{> svg id="logo"}}
+  </a>
+{{else}}
+  {{#if (compare variant "===" "footer")}}
+    footer logo
+  {{/if}}
+{{/if}}

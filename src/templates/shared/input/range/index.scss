@@ -1,10 +1,8 @@
-@use "sass:map";
-
 .range {
   position : relative;
 
   &__title {
-    margin-bottom : map.get($sizes, 4);
+    margin-bottom : map-get($sizes, 4);
     display: block;
   }
 
@@ -14,7 +12,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
     &>* {
-      padding : map.get($sizes, 4);
+      padding : map-get($sizes, 4);
       border: 1px solid var(--color-stroke-secondary);
 
       &:first-child {
@@ -31,7 +29,7 @@
 
   &__slider {
     position : absolute;
-    height   : map.get($sizes, 4.5);
+    height   : map-get($sizes, 4.5);
     width : 100%;
     transform: translateY(-50%);
   }
@@ -50,8 +48,8 @@
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance : none;
     pointer-events     : all;
-    width              : map.get($sizes, 4.5);
-    height             : map.get($sizes, 4.5);
+    width              : map-get($sizes, 4.5);
+    height             : map-get($sizes, 4.5);
     background-color   : var(--color-accent);
     border-radius      : 50%;
     cursor             : pointer;

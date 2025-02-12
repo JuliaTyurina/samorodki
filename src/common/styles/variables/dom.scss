@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/breakpoints/breakpoints";
 
 html {
 	--header-height               : 56px;

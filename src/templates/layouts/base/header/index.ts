@@ -1,1 +1,6 @@
+import './header-top'
+import './header-bottom'
+import './navigation'
+import './location'
+import './search'
 import './index.scss'

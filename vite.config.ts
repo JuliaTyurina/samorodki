@@ -90,9 +90,9 @@ export default defineConfig( ( configEnv ) => {
           // additionalData: `@use "src/settings/styles/settings";`,
           api: 'modern-compiler',
         },
-        sass: {
-          silenceDeprecations: ['slash-div'],
-        },
+        // sass: {
+        //   silenceDeprecations: ['slash-div'],
+        // },
       },
     },
     resolve: {

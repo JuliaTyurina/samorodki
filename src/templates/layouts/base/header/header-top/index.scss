@@ -1,0 +1,16 @@
+.header-top {
+  &__main {
+    justify-content : space-between;
+  }
+
+  &__left,
+  &__right,
+  &__main {
+    display     : flex;
+    align-items : center;
+  }
+
+  &__left {
+    column-gap : 24px;
+  }
+}

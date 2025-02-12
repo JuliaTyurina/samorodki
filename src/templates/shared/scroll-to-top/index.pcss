@@ -1,0 +1,17 @@
+.scroll-to-top {
+	a {
+		display          : flex;
+		align-items      : center;
+		justify-content  : center;
+		padding          : 16px;
+		border-radius    : 8px;
+		background-color : var(--color-background-secondary);
+
+		@media (min-width : map(breakpoints, min, lg)) {
+			&:hover,
+			&:focus-visible {
+				opacity : .7;
+			}
+		}
+	}
+}

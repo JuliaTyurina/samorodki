@@ -1,9 +1,7 @@
-@use "sass:map";
-
 .radio {
   @extend .__flex;
   align-items: flex-start;
-  column-gap: map.get($sizes, 2.5);
+  column-gap: map-get($sizes, 2.5);
 
   &__icon {
     display: block;
@@ -37,11 +35,11 @@
 
   &__text {
     @extend .__flex-column;
-    row-gap: map.get($sizes, 1);
+    row-gap: map-get($sizes, 1);
   }
 }
 
 .radio-group {
   @extend .__flex-column;
-  row-gap: map.get($sizes, 6);
+  row-gap: map-get($sizes, 6);
 }

@@ -1,10 +1,8 @@
-@use "sass:map";
-
 .checkbox {
   @extend .__flex-center-y;
   cursor      : pointer;
   user-select : none;
-  column-gap  : map.get($sizes, 2);
+  column-gap  : map-get($sizes, 2);
   width       : fit-content;
 
   &__icon {
@@ -79,15 +77,15 @@
 .checkbox-group {
   &__title {
     display       : block;
-    margin-bottom : map.get($sizes, 4);
+    margin-bottom : map-get($sizes, 4);
   }
 
   &__items {
-    padding-top : map.get($sizes, 4);
+    padding-top : map-get($sizes, 4);
     border-top  : 1px solid var(--color-stroke-primary);
 
     & > *:not(:last-child) {
-      margin-bottom : map.get($sizes, 3);
+      margin-bottom : map-get($sizes, 3);
     }
   }
 }

@@ -1,3 +1,7 @@
 @use "colors";
 @use "dom";
 @use "container";
+
+:root {
+  --transition-default : .2s;
+}

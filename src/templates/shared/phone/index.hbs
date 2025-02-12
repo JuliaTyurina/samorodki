@@ -1,0 +1,8 @@
+{{#if description}}
+  <div class="phone {{phone-class}}">
+    <a class="text-no-wrap font-semibold" href="tel:{{number}}">{{number}}</a>
+    <span class="phone__description {{description-class}} text-gray text-no-wrap text-md">{{description}}</span>
+  </div>
+{{else}}
+  <a class="phone {{phone-class}} text-no-wrap font-semibold" href="tel:{{number}}">{{number}}</a>
+{{/if}}

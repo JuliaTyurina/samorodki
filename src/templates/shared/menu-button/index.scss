@@ -1,0 +1,71 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.menu-button {
+  display          : flex;
+  flex-direction   : column;
+  align-items      : center;
+  border           : none;
+  background-color : transparent;
+  padding          : 0;
+  cursor           : pointer;
+  transition       : color var(--transition-default);
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    &:not(:disabled):hover {
+      color : var(--color-text-secondary);
+
+      svg {
+        fill : var(--color-text-secondary);
+      }
+    }
+  }
+
+  &--header {
+    min-width : 56px;
+    row-gap   : 2px;
+  }
+
+  &__icon {
+    display  : block;
+    position : relative;
+
+    svg {
+      width      : 24px;
+      height     : 24px;
+      transition : fill var(--transition-default);
+      display    : block;
+    }
+  }
+
+  &__badge {
+    background-color : var(--color-background-negative);
+    border           : 2px solid var(--color-white);
+    position         : absolute;
+    top              : 0;
+    display          : block;
+
+    &-count {
+      @extend .menu-button__badge;
+      transform     : translateY(-3px);
+      left          : 50%;
+      padding       : 2px 4px;
+      color         : var(--color-white);
+      border-radius : 16px;
+      font-size     : 12px;
+      font-weight   : 500;
+      line-height   : 1;
+      text-align    : center;
+      min-width     : 20px;
+    }
+
+    &-empty {
+      @extend .menu-button__badge;
+      transform     : translateY(1px);
+      width         : 0;
+      right         : 0;
+      padding       : 3px;
+      border-radius : 50%;
+    }
+  }
+}

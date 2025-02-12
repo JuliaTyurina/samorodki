@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.__hide {
+  display : none !important;
+
+  &-before {
+    &-xxl {
+      @media (max-width : map.get(breakpoints.$breakpoints-max, xl)) {
+        display : none !important;
+      }
+    }
+
+    &-xl {
+      @media (max-width : map.get(breakpoints.$breakpoints-max, lg)) {
+        display : none !important;
+      }
+    }
+
+    &-lg {
+      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+        display : none !important;
+      }
+    }
+
+    &-md {
+      @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+        display : none !important;
+      }
+    }
+  }
+
+  &-after {
+    &-lg {
+      @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+        display : none !important;
+      }
+    }
+
+    &-md {
+      @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+        display : none !important;
+      }
+    }
+
+    &-sm {
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        display : none !important;
+      }
+    }
+  }
+}

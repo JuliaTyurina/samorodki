@@ -1,6 +1,6 @@
 import '@layouts/base/header'
 import '@layouts/base/footer'
-import '@shared/logo'
+import '@shared'
 
 import { app } from "@src/common";
 

@@ -1,0 +1,14 @@
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+  <div class="breadcrumbs__container __container">
+    <div class="breadcrumbs__items">
+      {{#each this}}
+        {{#if url}}
+          <a href="{{url}}">{{text}}</a>
+        {{else}}
+          <span>{{text}}</span>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</div>

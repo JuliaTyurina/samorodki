@@ -1,0 +1,26 @@
+.search {
+  position : relative;
+  width    : fit-content;
+
+  input {
+    width         : 100%;
+    font-weight   : 500;
+    padding       : 16px 48px 16px 24px;
+    border-radius : 12px;
+    border        : 1px solid var(--color-stroke-contrast);
+  }
+
+  &__button {
+    position         : absolute;
+    top              : 50%;
+    right            : 0;
+    transform        : translate(-100%, -50%);
+    background-color : transparent;
+    border           : none;
+    padding          : 0;
+
+    svg {
+      display : block;
+    }
+  }
+}

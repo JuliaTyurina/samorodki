@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.header-bottom {
+  &__main {
+    display     : flex;
+    align-items : center;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      justify-content : space-between;
+    }
+
+    & > * {
+      flex-shrink : 0;
+
+      &:nth-child(1) {
+        margin-right : 32px;
+      }
+
+      &:nth-child(2) {
+        margin-right : 16px;
+      }
+
+      &:nth-child(3) {
+        margin-right : 40px;
+      }
+    }
+  }
+
+  &__search {
+    flex-grow : 1;
+  }
+
+  &__navbar {
+    display    : flex;
+    column-gap : 26px;
+  }
+
+  &__mobile-buttons {
+    display     : flex;
+    align-items : center;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      transform : translateX(var(--container-mobile-padding));
+    }
+
+    & > button {
+      margin           : 0;
+      background-color : transparent;
+      border           : none;
+    }
+
+    & > * {
+      padding : 16px;
+    }
+  }
+}

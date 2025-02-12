@@ -1,5 +1,3 @@
-@use "sass:map";
-
 .tooltip {
   width : fit-content;
   position : relative;
@@ -87,7 +85,7 @@
     margin : 0;
     border: none;
     cursor: pointer;
-    padding : map.get($sizes, 1);
+    padding : map-get($sizes, 1);
     display: block;
 
     svg {
@@ -112,7 +110,7 @@
     z-index : -1;
     position : absolute;
     user-select: none;
-    padding : map.get($sizes, 3) map.get($sizes, 4);
+    padding : map-get($sizes, 3) map-get($sizes, 4);
     border-radius: 8px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.14);
     background-color : var(--color-white);
