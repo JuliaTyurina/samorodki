@@ -2,25 +2,42 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 .logo {
-  &-header {
+  &-header,
+  &-footer {
     width      : fit-content;
     transition : opacity var(--transition-default);
-
-    & > svg {
-      aspect-ratio : 9.5/1;
-      display      : block;
-      max-width    : 128px;
-      width        : 100%;
-
-      @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-        max-width : 190px;
-      }
-    }
 
     &:active,
     &:hover,
     &:focus-visible {
       opacity : .5;
+    }
+
+    & > svg {
+      display : block;
+      width   : 100%;
+    }
+  }
+
+  &-header {
+    & > svg {
+      aspect-ratio : 9.5/1;
+      max-width    : 128px;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+        max-width : 190px;
+      }
+    }
+  }
+
+  &-footer {
+    & > svg {
+      aspect-ratio : 3.93/1;
+      max-width    : 181px;
+
+      //@media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      //  max-width : 190px;
+      //}
     }
   }
 }

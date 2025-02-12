@@ -1,19 +1,29 @@
-.navigation {
-  ul {
-    display     : flex;
-    align-items : center;
-    column-gap  : 10px;
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.header {
+  display        : flex;
+  flex-direction : column;
+  row-gap        : 16px;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    padding-top    : 16px;
+    padding-bottom : 16px;
   }
 }
 
-.header {
-  padding-top    : 15px;
-  padding-bottom : 15px;
-  background-color : lightsalmon;
+.header-burger {
+  .header-burger__active {
+    display : none;
+  }
 
-  &__main {
-    display     : flex;
-    align-items : center;
-    column-gap  : 50px;
+  &.active {
+    .header-burger__active {
+      display : block;
+    }
+
+    .header-burger__default {
+      display : none;
+    }
   }
 }

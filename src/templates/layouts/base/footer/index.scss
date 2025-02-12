@@ -1,11 +1,105 @@
-.footer {
-  padding-top : 20px;
-  padding-bottom : 50px;
-  background-color : lightgreen;
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
 
-  &__main {
-    display: flex;
-    align-items: center;
-    column-gap: 100px;
+.footer {
+  padding-top    : 50px;
+  padding-bottom : 50px;
+  border-top     : 1px solid var(--color-stroke-primary);
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+    padding-top    : 40px;
+    padding-bottom : 24px;
+  }
+
+  &__top {
+    display    : flex;
+    column-gap : functions.getClamp(32, 96);
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      flex-direction : column;
+      align-items    : center;
+      row-gap        : 32px;
+    }
+  }
+
+  &__content {
+    display               : grid;
+    grid-template-columns : repeat(4, auto);
+    column-gap            : 50px;
+    row-gap               : 32px;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      grid-template-columns : repeat(2, auto);
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, xs)) {
+      column-gap : 12px;
+    }
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      column-gap : functions.getClamp(32, 96);
+    }
+
+    &-title {
+      display       : block;
+      margin-bottom : 16px;
+    }
+
+    &-list {
+      display        : flex;
+      flex-direction : column;
+      row-gap        : 16px;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        row-gap : 8px;
+      }
+
+      &--social {
+        row-gap : 16px;
+      }
+    }
+  }
+
+  &__social {
+    display     : flex;
+    align-items : center;
+    column-gap  : 4px;
+  }
+
+  &__bottom {
+    margin-top      : 72px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    row-gap         : 32px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      flex-direction : row;
+    }
+
+    &-first {
+      display        : flex;
+      flex-direction : column;
+      row-gap        : 16px;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        flex-direction : row;
+
+        & > *:not(:last-child) {
+          &:after {
+            content      : "/";
+            margin-left  : 16px;
+            margin-right : 16px;
+          }
+
+          &[href]:hover {
+            &:after {
+              color : var(--color-text-tertiary);
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,14 +1,69 @@
 <footer class="footer">
   <div class="footer__main __container">
-    {{> logo }}
-    <div class="navigation">
-      <ul class="list-reset">
-        <li><a href="#">Ссылка в подвале 1</a></li>
-        <li><a href="#">Ссылка в подвале 2</a></li>
-        <li><a href="#">Ссылка в подвале 3</a></li>
-        <li><a href="#">Ссылка в подвале 4</a></li>
-        <li><a href="#">Ссылка в подвале 5</a></li>
-      </ul>
+    <div class="footer__top">
+      {{> logo variant="footer" }}
+      <div class="footer__content font-semibold">
+        <div class="footer__content-block">
+          <span class="footer__content-title title-sm font-bold">Покупателям</span>
+          <ul class="footer__content-list list-reset">
+            <li><a href="#">акции</a></li>
+            <li><a href="#">доставка и оплата </a></li>
+            <li><a href="#">обмен и возврат</a></li>
+            <li><a href="#">контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__content-block">
+          <span class="footer__content-title title-sm font-bold">Samorodki</span>
+          <ul class="footer__content-list list-reset">
+            <li><a href="#">о бренде</a></li>
+            <li><a href="#">новости</a></li>
+            <li><a href="#">журнал</a></li>
+            <li><a href="#">вакансии</a></li>
+          </ul>
+        </div>
+        <div class="footer__content-block">
+          <span class="footer__content-title title-sm font-bold">Мы в соцсетях</span>
+          <ul class="footer__content-list footer__content-list--social list-reset">
+            <li>
+              <a class="footer__social" href="#">
+                {{> svg id="telegram" svg-class="icon-md"}}
+                <span>телеграм</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social" href="#">
+                {{> svg id="instagram" svg-class="icon-md"}}
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social" href="#">
+                {{> svg id="vk" svg-class="icon-md"}}
+                <span>вконтакте</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__content-block">
+          <span class="footer__content-title title-sm font-bold">Контакты</span>
+          <ul class="footer__content-list list-reset">
+            <li>{{> phone number="8 926 193 33 58" description="с 9 -21"}}</li>
+            <li><a href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
+            <li><span>Москва, Искры, 17а, стр.3</span></li>
+            <li><span>Кострома, Сутырина, д.3</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom text-gray">
+      <div class="footer__bottom-first">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Юридическая информация</a>
+        <span>© 2025 Samorodki, Все права защищены</span>
+      </div>
+      <div class="footer__bottom-second">
+        <span>Создание сайта - <a href="#">drozzi.ru</a></span>
+      </div>
     </div>
   </div>
 </footer>
