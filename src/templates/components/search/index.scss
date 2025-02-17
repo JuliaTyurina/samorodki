@@ -1,0 +1,135 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.search {
+  width : fit-content;
+
+  &__input-wrapper {
+    position : relative;
+    z-index  : 3;
+  }
+
+  &__input {
+    width         : 100%;
+    font-weight   : 500;
+    padding       : 16px 48px 16px 24px;
+    border-radius : 12px;
+    border        : 1px solid var(--color-stroke-contrast);
+  }
+
+  &__button {
+    position         : absolute;
+    top              : 50%;
+    right            : 0;
+    transform        : translate(-100%, -50%);
+    background-color : transparent;
+    border           : none;
+    padding          : 0;
+
+    &--cancel {
+      display : none;
+    }
+
+    svg {
+      display : block;
+    }
+  }
+
+  &__result {
+    position         : absolute;
+    width            : 100%;
+    z-index          : 3;
+    background-color : var(--color-background-primary);
+    display          : none;
+    padding-top      : 12px;
+    padding-bottom   : 12px;
+    border-radius    : 12px;
+    margin-top       : 4px;
+
+    &-indent {
+      padding-left  : 12px;
+      padding-right : 12px;
+    }
+
+    &-groups {
+      border-top    : 1px solid var(--color-stroke-primary);
+      border-bottom : 1px solid var(--color-stroke-primary);
+    }
+
+    &-cards {
+      display        : flex;
+      column-gap     : 8px;
+      overflow-x     : auto;
+      margin-top     : 32px;
+      padding-bottom : 16px;
+
+      & > * {
+        width       : 99px;
+        flex-shrink : 0;
+
+        @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+          width : 112px;
+        }
+      }
+    }
+
+    &-footer {
+      border-top      : 1px solid var(--color-stroke-primary);
+      display         : flex;
+      justify-content : space-between;
+      padding-top     : 28px;
+      padding-bottom  : 12px;
+      padding-left    : 12px;
+
+      &-wrapper {
+        margin-top  : 24px;
+        padding-top : 16px;
+      }
+
+      a {
+        display     : flex;
+        align-items : center;
+        column-gap  : 8px;
+        color       : var(--color-text-accent);
+        fill        : var(--color-text-accent);
+        transition  : opacity var(--transition-default);
+
+        &:hover {
+          opacity : .8;
+        }
+      }
+    }
+  }
+
+  &__background {
+    position         : absolute;
+    width            : 100vw;
+    height           : 0;
+    background-color : rgba(0, 0, 0, 0.50);
+    left             : 0;
+    top              : 0;
+    z-index          : 2;
+  }
+}
+
+body.search-active {
+  .search {
+    &__background {
+      height : 100vh;
+    }
+
+    &__result {
+      display : block;
+    }
+
+    &__button {
+      &--normal {
+        display : none;
+      }
+
+      &--cancel {
+        display : block;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.catalog-lvl1-item {
+  display          : flex;
+  align-items      : center;
+  justify-content  : space-between;
+  background-color : transparent;
+  border           : none;
+  cursor           : pointer;
+  column-gap       : 15px;
+  padding          : 8px 16px 8px 8px;
+  transition       : color var(--transition-default), background-color var(--transition-default);
+  border-radius    : 12px;
+
+  svg {
+    transition : fill var(--transition-default);
+  }
+
+  &:hover {
+    color            : var(--color-text-accent);
+    background-color : var(--color-highlight-accent);
+
+    svg {
+      fill : var(--color-icon-accent);
+    }
+  }
+
+  &__main {
+    display     : flex;
+    align-items : center;
+    column-gap  : 6px;
+
+    svg {
+      fill : var(--color-icon-tertiary);
+    }
+  }
+}

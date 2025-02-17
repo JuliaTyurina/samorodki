@@ -1,0 +1,35 @@
+<!-- catalog-menu -->
+<div class="catalog-menu-wrapper">
+  <div class="catalog-menu-main">
+    <div class="__container">
+      <div class="catalog-menu">
+        <div class="catalog-menu__lvl1-wrapper">
+          <div class="catalog-menu__lvl1 scrollbar-custom">
+            {{#each catalog-menu-context.lvl1}}
+              {{> catalog-lvl1-item }}
+            {{/each}}
+            {{#each catalog-menu-context.lvl1}}
+              {{> catalog-lvl1-item }}
+            {{/each}}
+          </div>
+        </div>
+        <div class="catalog-menu__lvl2 scrollbar-custom">
+          <a class="catalog-menu__lvl2-title" href="#">
+            <span class="font-bold">{{catalog-menu-context.lvl2.title}}</span>
+            {{> svg id="chevron-right" svg-class="icon-sm" }}
+          </a>
+
+          <div class="catalog-menu__lvl2-groups-wrapper">
+            <div class="catalog-menu__lvl2-groups">
+              {{#each catalog-menu-context.lvl2.groups}}
+                {{> catalog-lvl2-group }}
+              {{/each}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-menu-background" data-global-action="catalog-close"></div>
+</div>

@@ -4,6 +4,7 @@
   <body>
     <div id="app">
       {{> header header-layout=layout.header }}
+      {{> catalog-menu }}
 
       {{#if layout.breadcrumbs }}
         {{> breadcrumbs layout.breadcrumbs }}
@@ -13,7 +14,6 @@
       <main>
         {{> @partial-block }}
       </main>
-
 
       {{> footer footer-layout=layout.footer }}
 

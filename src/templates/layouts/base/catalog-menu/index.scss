@@ -1,0 +1,72 @@
+.catalog-menu-wrapper {
+  position   : absolute;
+  left       : 0;
+  width      : 100%;
+  top        : var(--header-height);
+  border-top : 1px solid var(--color-stroke-primary);
+  height     : 100vw;
+  display    : none;
+}
+
+body.catalog-open {
+  .catalog-menu-wrapper {
+    display : block;
+  }
+}
+
+.catalog-menu-main {
+  background-color : var(--color-background-primary);
+  position         : relative;
+  z-index          : 2;
+}
+
+.catalog-menu-background {
+  background-color : rgba(0, 0, 0, 0.50);
+  position         : absolute;
+  inset            : 0;
+  z-index          : 1;
+}
+
+.catalog-menu {
+  --catalog-menu-height : 600px;
+  max-height            : var(--catalog-menu-height);
+  height                : 100%;
+  display               : grid;
+  grid-template-columns : 235px auto;
+  column-gap            : 4px;
+
+  &__lvl1 {
+    display         : flex;
+    flex-direction  : column;
+    max-height      : 545px;
+    overflow-anchor : none;
+    padding-right   : 12px;
+    row-gap         : 6px;
+
+    &-wrapper {
+      padding-top    : 16px;
+      padding-bottom : 40px;
+    }
+  }
+
+  &__lvl2 {
+    border-left : 1px solid var(--color-stroke-primary);
+    max-height  : var(--catalog-menu-height);
+    padding     : 24px 32px;
+
+    &-title {
+      display       : flex;
+      align-items   : center;
+      column-gap    : 12px;
+      margin-bottom : 12px;
+    }
+
+    &-groups {
+      display    : flex;
+      column-gap : 32px;
+
+      &-wrapper {
+      }
+    }
+  }
+}

@@ -9,8 +9,12 @@ export const initGlobalAction = () => {
     if ( target ) {
       event.stopPropagation()
 
-      if ( action === EGlobalActions.ModalOpen ) app.modalOpen()
-      if ( action === EGlobalActions.ModalClose ) app.modalClose()
+      if ( action === EGlobalActions.SearchStop ) app.searchStop()
+      if ( action === EGlobalActions.CatalogOpen ) app.catalogOpen()
+      if ( action === EGlobalActions.CatalogClose ) app.catalogClose()
+      if ( action === EGlobalActions.MenuOpen ) app.menuOpen()
+      if ( action === EGlobalActions.MenuClose ) app.menuClose()
+      if ( action === EGlobalActions.MenuToggle ) app.menuToggle()
     }
   } )
 }

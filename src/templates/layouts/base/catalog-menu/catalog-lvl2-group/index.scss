@@ -1,0 +1,13 @@
+.catalog-lvl2-group {
+  &__title {
+    display       : block;
+    margin-bottom : 12px;
+  }
+
+  &__list {
+    display        : flex;
+    flex-direction : column;
+    row-gap        : 14px;
+    min-width      : 140px;
+  }
+}

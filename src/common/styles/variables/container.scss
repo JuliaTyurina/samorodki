@@ -19,8 +19,4 @@ html {
   @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
     --container-width : #{map.get(breakpoints.$breakpoints-min, xl)};
   }
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, xxl)) {
-    --container-width : #{map.get(breakpoints.$breakpoints-min, xxl)};
-  }
 }

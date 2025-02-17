@@ -1,0 +1,17 @@
+{{#if (str-equals type "history")}}
+  <button class="search-item">
+    <span class="search-item__left">
+        {{> svg id="history" svg-class="icon-sm" }}
+      <span>{{text}}</span>
+    </span>
+    <span class="search-item__right">{{> svg id="chevron-right" svg-class="icon-sm" }}</span>
+  </button>
+{{else}}
+  <a class="search-item link-reset" href="#">
+    <span class="search-item__left">
+        {{> svg id="search" svg-class="icon-sm" }}
+      <span>{{text}}</span>
+    </span>
+    <span class="search-item__right">{{> svg id="chevron-right" svg-class="icon-sm" }}</span>
+  </a>
+{{/if}}

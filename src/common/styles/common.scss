@@ -1,17 +1,18 @@
 html {
-	scroll-behavior : smooth;
+  scroll-behavior : smooth;
 }
 
 body {
-	overflow-x : hidden;
+  overflow-x : hidden;
 
-	&.no-scroll,
-	&.modal-open {
-		overflow-y    : hidden;
-		padding-right : var(--scrollbar-width);
-	}
+  &.no-scroll,
+  &.catalog-open,
+  &.search-active {
+    overflow-y    : hidden;
+    padding-right : var(--scrollbar-width);
+  }
 }
 
 #app {
-	position : relative;
+  position : relative;
 }

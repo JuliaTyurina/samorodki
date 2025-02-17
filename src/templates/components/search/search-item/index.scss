@@ -1,0 +1,30 @@
+.search-item {
+  display          : flex;
+  justify-content  : space-between;
+  align-items      : center;
+  padding          : 12px;
+  width            : 100%;
+  background-color : transparent;
+  margin           : 0;
+  border           : none;
+  cursor           : pointer;
+  transition       : background-color var(--transition-default);
+  border-radius    : 12px;
+  column-gap       : 10px;
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color : var(--color-background-tertiary);
+  }
+
+  &__left {
+    display     : flex;
+    align-items : center;
+    column-gap  : 8px;
+  }
+
+  svg {
+    fill : var(--color-icon-tertiary);
+  }
+}

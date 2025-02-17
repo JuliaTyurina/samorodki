@@ -1,0 +1,25 @@
+.search-group {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  padding         : 12px;
+  column-gap      : 10px;
+  border-radius   : 12px;
+  transition      : background-color var(--transition-default);
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color : var(--color-background-tertiary);
+  }
+
+  &__left {
+    display        : flex;
+    flex-direction : column;
+    row-gap        : 4px;
+  }
+
+  svg {
+    fill : var(--color-icon-tertiary);
+  }
+}
