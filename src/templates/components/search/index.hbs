@@ -1,41 +1,14 @@
 <div class="search {{search-class}}">
   <div class="search__input-wrapper">
     <input class="search__input" type="text" name="search" placeholder="Поиск по более чем 10 000 товарам">
-    <button class="search__button search__button--normal">
+    <button class="search__button search__button--normal" data-global-action="search-open">
       {{> svg id="search" svg-class="icon-md" }}
     </button>
-    <button class="search__button search__button--cancel" data-global-action="search-stop">
+    <button class="search__button search__button--cancel" data-global-action="search-close">
       {{> svg id="cancel" svg-class="icon-md" }}
     </button>
     <div class="search__result">
-      <div class="search__result-items search__result-indent">
-        {{> search-item type="history" text="Серьги"}}
-        {{> search-item text="Серьги женские"}}
-        {{> search-item text="Серьги мужские"}}
-        {{> search-item text="Серьги золотые"}}
-      </div>
-      <div class="search__result-groups-wrapper search__result-indent">
-        <div class="search__result-groups">
-          {{> search-group text="Серьги" group="Категория" }}
-          {{> search-group text="Золотые серьги" group="Категория" }}
-        </div>
-      </div>
-      <div class="search__result-cards search__result-indent scrollbar-custom">
-        {{> search-card text="67 112₽" variant="1" }}
-        {{> search-card text="2 321₽" variant="2" }}
-        {{> search-card text="7 712₽" variant="3" }}
-        {{> search-card text="1 712₽" variant="1" }}
-        {{> search-card text="697 712₽" variant="3" }}
-      </div>
-      <div class="search__result-footer-wrapper search__result-indent">
-        <div class="search__result-footer">
-          <span class="font-medium text-gray">Найдено 102 товара</span>
-          <a class="link-reset" href="#" aria-label="смотреть все">
-            <span class="font-bold">Все результаты поиска</span>
-            {{> svg id="chevron-right" svg-class="icon-sm" }}
-          </a>
-        </div>
-      </div>
+      {{> search-content }}
     </div>
   </div>
   <div class="search__background"></div>

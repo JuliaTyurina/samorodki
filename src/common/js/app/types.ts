@@ -6,10 +6,13 @@ export interface AppInterface {
   bodyBlock: ( isBlock?: boolean ) => void
   initDependencies: () => void
   setWindowVariables?: () => void
-  searchRun: () => void
-  searchStop: () => void
+  searchOpen: () => void
+  searchClose: () => void
   catalogOpen: () => void
+  catalogToggle: () => void
   catalogClose: () => void
+  catalogLvl2Open: () => void
+  catalogLvl2Close: () => void
   menuOpen: () => void
   menuClose: () => void
   menuToggle: () => void
@@ -21,7 +24,8 @@ export interface App extends Omit<AppInterface, 'initDependencies'> {
 }
 
 export enum EBodyStateClasses {
-  SearchActive = "search-active",
+  SearchOpen = "search-open",
   CatalogOpen = "catalog-open",
+  CatalogLvl2Open = "catalog-lvl2-open",
   MenuOpen = "menu-open",
 }

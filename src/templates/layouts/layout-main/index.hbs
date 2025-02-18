@@ -5,6 +5,8 @@
     <div id="app">
       {{> header header-layout=layout.header }}
       {{> catalog-menu }}
+      {{> menu }}
+      {{> search-mobile }}
 
       {{#if layout.breadcrumbs }}
         {{> breadcrumbs layout.breadcrumbs }}
@@ -16,6 +18,8 @@
       </main>
 
       {{> footer footer-layout=layout.footer }}
+
+      {{> tabbar }}
 
       <!-- scripts -->
       <script type="module" src="{{ layout.script-src }}"></script>

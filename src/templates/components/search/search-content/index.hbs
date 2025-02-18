@@ -1,0 +1,30 @@
+<div class="search-content">
+  <div class="search-content__items">
+    {{> search-item type="history" text="Серьги"}}
+    {{> search-item text="Серьги женские"}}
+    {{> search-item text="Серьги мужские"}}
+    {{> search-item text="Серьги золотые"}}
+  </div>
+  <div class="search-content__groups-wrapper">
+    <div class="search-content__groups">
+      {{> search-group text="Серьги" group="Категория" }}
+      {{> search-group text="Золотые серьги" group="Категория" }}
+    </div>
+  </div>
+  <div class="search-content__cards scrollbar-custom">
+    {{> search-card text="67 112₽" variant="1" }}
+    {{> search-card text="2 321₽" variant="2" }}
+    {{> search-card text="7 712₽" variant="3" }}
+    {{> search-card text="1 712₽" variant="1" }}
+    {{> search-card text="697 712₽" variant="3" }}
+  </div>
+  <div class="search-content__footer-wrapper">
+    <div class="search-content__footer">
+      <span class="font-medium text-gray">Найдено 102 товара</span>
+      <a class="link-reset" href="#" aria-label="смотреть все">
+        <span class="font-bold">Все результаты поиска</span>
+        {{> svg id="chevron-right" svg-class="icon-sm" }}
+      </a>
+    </div>
+  </div>
+</div>

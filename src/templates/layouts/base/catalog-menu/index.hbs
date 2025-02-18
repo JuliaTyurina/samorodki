@@ -3,7 +3,8 @@
   <div class="catalog-menu-main">
     <div class="__container">
       <div class="catalog-menu">
-        <div class="catalog-menu__lvl1-wrapper">
+        <div class="catalog-menu__lvl1-wrapper scrollbar-custom">
+          {{> catalog-menu-back text="Каталог" class="__hide-after-md" attributes='data-global-action="catalog-close"'}}
           <div class="catalog-menu__lvl1 scrollbar-custom">
             {{#each catalog-menu-context.lvl1}}
               {{> catalog-lvl1-item }}
@@ -14,12 +15,13 @@
           </div>
         </div>
         <div class="catalog-menu__lvl2 scrollbar-custom">
-          <a class="catalog-menu__lvl2-title" href="#">
+          <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
             <span class="font-bold">{{catalog-menu-context.lvl2.title}}</span>
             {{> svg id="chevron-right" svg-class="icon-sm" }}
           </a>
 
           <div class="catalog-menu__lvl2-groups-wrapper">
+            {{> catalog-menu-back text="Все украшения" class="__hide-after-md" attributes='data-global-action="catalog-lvl2-close"'}}
             <div class="catalog-menu__lvl2-groups">
               {{#each catalog-menu-context.lvl2.groups}}
                 {{> catalog-lvl2-group }}

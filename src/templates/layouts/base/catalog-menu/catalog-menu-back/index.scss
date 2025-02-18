@@ -1,0 +1,17 @@
+.catalog-menu-back {
+  display          : flex;
+  align-items      : center;
+  width            : 100%;
+  border           : none;
+  background-color : transparent;
+  justify-content  : center;
+  padding          : 24px 46px;
+  position         : relative;
+
+  & > svg {
+    position  : absolute;
+    left      : 0;
+    top       : 50%;
+    transform : translateY(-50%);
+  }
+}

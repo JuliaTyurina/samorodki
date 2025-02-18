@@ -1,0 +1,109 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.menu {
+  opacity    : 0;
+  visibility : hidden;
+  top        : var(--header-height);
+  position   : absolute;
+  height     : calc(100vh - var(--header-height) - var(--tabbar-height));
+  width      : calc(100vw - var(--scrollbar-width));
+  z-index    : 90;
+
+  &__content {
+    position         : absolute;
+    z-index          : 2;
+    background-color : var(--color-background-primary);
+    width            : 100%;
+    height           : 100%;
+    padding-bottom   : 24px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      width      : 40%;
+      right      : 0;
+      transform  : translateX(100%);
+      transition : transform var(--transition-default);
+    }
+  }
+
+  &__background {
+    width            : 100vw;
+    height           : 100%;
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    z-index          : 1;
+    background-color : rgba(0, 0, 0, .5);
+  }
+
+  &__location {
+    width   : 100%;
+    padding : 24px 16px 16px 16px;
+  }
+
+  &__button {
+    width            : 100%;
+    display          : flex;
+    align-items      : center;
+    justify-content  : space-between;
+    background-color : transparent;
+    margin           : 0;
+    border           : none;
+    padding          : 16px;
+  }
+
+  &__blocks {
+    display        : flex;
+    flex-direction : column;
+    row-gap        : 48px;
+  }
+
+  &__block {
+    &-title {
+      display       : block;
+      margin-bottom : 16px;
+    }
+
+    &:not(&--contacts) {
+      .menu__block-title {
+        padding-left  : 16px;
+        padding-right : 16px;
+      }
+
+      a {
+        display       : block;
+        width         : 100%;
+        padding       : 16px;
+        border-bottom : 1px solid var(--color-stroke-primary);
+
+        &:active {
+          background-color : var(--color-background-secondary);
+        }
+      }
+    }
+
+    &--contacts {
+      padding-left  : 16px;
+      padding-right : 16px;
+
+      ul {
+        display        : flex;
+        flex-direction : column;
+        row-gap        : 16px;
+      }
+    }
+  }
+}
+
+body.menu-open {
+  .menu {
+    opacity    : 1;
+    visibility : visible;
+
+    &__content {
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        transform : translateX(0);
+      }
+    }
+  }
+}

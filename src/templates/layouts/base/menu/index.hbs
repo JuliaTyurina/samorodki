@@ -1,0 +1,39 @@
+<!-- Menu -->
+<div class="menu">
+  <div class="menu__content scrollbar-custom">
+    {{> location city="Москва" location-class="menu__location"}}
+    <button class="menu__button" data-global-action="catalog-open">
+      <span class="title-sm font-bold">Каталог</span>
+      {{> svg id="chevron-right" svg-class="icon-md" }}
+    </button>
+    <div class="menu__blocks">
+      <nav class="menu__block">
+        <ul class="list-reset">
+          <li><a class="font-semibold" href="#">Акции</a></li>
+          <li><a class="font-semibold" href="#">О бренде</a></li>
+          <li><a class="font-semibold" href="#">Доставка и оплата</a></li>
+          <li><a class="font-semibold" href="#">Обмен и возврат</a></li>
+          <li><a class="font-semibold" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="menu__block">
+        <span class="menu__block-title title-sm font-bold">Мы в соцсетях</span>
+        <ul class="list-reset">
+          <li><a class="font-semibold" href="#">Вконтакте</a></li>
+          <li><a class="font-semibold" href="#">Instagram</a></li>
+          <li><a class="font-semibold" href="#">Телеграм</a></li>
+        </ul>
+      </div>
+      <div class="menu__block menu__block--contacts">
+        <span class="menu__block-title title-sm font-bold">Контакты</span>
+        <ul class="list-reset">
+          <li>{{> phone number="8 926 193 33 58" description="с 9 -21" phone-class="font-bold"}}</li>
+          <li><a class="font-bold" href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
+          <li><span>Москва, Искры, 17а, стр.3</span></li>
+          <li><span>Кострома, Сутырина, д.3</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="menu__background"></div>
+</div>

@@ -1,13 +1,29 @@
-<button class="menu-button {{class}}" {{safe attributes}}>
-  <span class="menu-button__icon">
-    {{> svg id=icon class=icon-class }}
-    {{#if (is-defined badge) }}
-      {{#if (badge-num badge)}}
-        <span class="menu-button__badge-count">{{badge-num badge}}</span>
-      {{else}}
-        <span class="menu-button__badge-empty"></span>
+{{#if url}}
+  <a class="menu-button link-reset {{class}}" href="{{url}}" {{safe attributes}}>
+    <span class="menu-button__icon">
+      {{> svg id=icon class=icon-class }}
+      {{#if (is-defined badge) }}
+        {{#if (badge-num badge)}}
+          <span class="menu-button__badge-count">{{badge-num badge}}</span>
+        {{else}}
+          <span class="menu-button__badge-empty"></span>
+        {{/if}}
       {{/if}}
-    {{/if}}
-  </span>
-  <span class="menu-button__text text-md font-semibold">{{text}}</span>
-</button>
+    </span>
+    <span class="menu-button__text text-md font-semibold">{{text}}</span>
+  </a>
+{{else}}
+  <button class="menu-button {{class}}" {{safe attributes}}>
+    <span class="menu-button__icon">
+      {{> svg id=icon class=icon-class }}
+      {{#if (is-defined badge) }}
+        {{#if (badge-num badge)}}
+          <span class="menu-button__badge-count">{{badge-num badge}}</span>
+        {{else}}
+          <span class="menu-button__badge-empty"></span>
+        {{/if}}
+      {{/if}}
+    </span>
+    <span class="menu-button__text text-md font-semibold">{{text}}</span>
+  </button>
+{{/if}}

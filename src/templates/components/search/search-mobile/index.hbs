@@ -1,0 +1,14 @@
+<div class="search-mobile">
+  <div class="search-mobile__header">
+    <button class="search-mobile__cancel" data-global-action="search-close">
+      {{> svg id="chevron-left" svg-class="icon-md"}}
+    </button>
+    <div class="search-mobile__input-wrapper">
+      <input class="search-mobile__input" type="text">
+      <button class="search-mobile__input-button">
+        {{> svg id="search" svg-class="icon-md"}}
+      </button>
+    </div>
+  </div>
+  {{> search-content }}
+</div>

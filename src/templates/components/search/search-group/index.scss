@@ -1,11 +1,18 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
 .search-group {
   display         : flex;
   align-items     : center;
   justify-content : space-between;
-  padding         : 12px;
+  padding         : 12px 16px;
   column-gap      : 10px;
-  border-radius   : 12px;
   transition      : background-color var(--transition-default);
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    border-radius : 12px;
+    padding       : 12px;
+  }
 
   &:hover,
   &:active,

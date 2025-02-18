@@ -7,6 +7,8 @@ body {
 
   &.no-scroll,
   &.catalog-open,
+  &.menu-open,
+  &.search-open,
   &.search-active {
     overflow-y    : hidden;
     padding-right : var(--scrollbar-width);

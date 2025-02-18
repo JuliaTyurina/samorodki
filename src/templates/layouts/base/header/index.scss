@@ -16,14 +16,14 @@
   .header-burger__active {
     display : none;
   }
+}
 
-  &.active {
-    .header-burger__active {
-      display : block;
-    }
+body.menu-open {
+  .header-burger__active {
+    display : block;
+  }
 
-    .header-burger__default {
-      display : none;
-    }
+  .header-burger__default {
+    display : none;
   }
 }

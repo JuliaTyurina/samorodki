@@ -2,9 +2,11 @@ import "./index.scss"
 import "./search-card"
 import "./search-group"
 import "./search-item"
+import "./search-mobile"
+import "./search-content"
 import { ESearchElems, ISearch } from "./types.ts";
 import { Nullable } from "@js/types";
-import { app } from "@src/common";
+// import { app } from "@src/common";
 
 export const search: ISearch = {
   isActive: false,
@@ -19,11 +21,11 @@ export const search: ISearch = {
         this.input = search.querySelector( ESearchElems.Input )
       }
 
-      const buttonStartSearch: Nullable<HTMLButtonElement> = search.querySelector( ESearchElems.ButtonStartSearch )
-
-      buttonStartSearch?.addEventListener( 'click', () => {
-        !this.isActive && this.input?.value.length && app.searchRun()
-      } )
+      // const buttonStartSearch: Nullable<HTMLButtonElement> = search.querySelector( ESearchElems.ButtonStartSearch )
+      //
+      // buttonStartSearch?.addEventListener( 'click', () => {
+      //   !this.isActive && this.input?.value.length && app.searchOpen()
+      // } )
     }
   }
 }

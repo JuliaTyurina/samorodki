@@ -6,6 +6,7 @@ html {
   --scrollbar-width             : 0;
   --sections-indent             : 56px;
   --swiper-images-1-slide-width : 0;
+  --tabbar-height               : 54px;
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
     --header-height   : 80px;

@@ -1,0 +1,69 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.search-mobile {
+  display          : none;
+  height           : calc(100vh - var(--tabbar-height));
+  width            : calc(100vw - var(--scrollbar-width));
+  background-color : var(--color-background-primary);
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+
+  &__cancel {
+    padding          : 12px;
+    border           : none;
+    background-color : transparent;
+  }
+
+  &__header {
+    padding-top    : 4px;
+    padding-bottom : 4px;
+    display        : flex;
+    align-items    : center;
+
+    & > * {
+      &:last-child {
+        flex-grow : 1;
+      }
+    }
+  }
+
+  &__input {
+    width            : 100%;
+    color            : var(--color-text-tertiary);
+    padding          : 8px 52px 8px 12px;
+    outline          : none;
+    border-radius    : 8px;
+    border           : none;
+    background-color : var(--color-background-tertiary);
+
+    &-wrapper {
+      position     : relative;
+      margin-right : 16px;
+    }
+
+    &-button {
+      position         : absolute;
+      top              : 50%;
+      right            : 0;
+      transform        : translateY(-50%);
+      padding          : 8px;
+      max-height       : 100%;
+      border           : none;
+      background-color : transparent;
+
+      svg {
+        fill : var(--color-icon-secondary);
+      }
+    }
+  }
+}
+
+body.search-open {
+  @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    .search-mobile {
+      display : block;
+    }
+  }
+}

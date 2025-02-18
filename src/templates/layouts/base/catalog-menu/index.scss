@@ -1,16 +1,47 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
 .catalog-menu-wrapper {
   position   : absolute;
-  left       : 0;
   width      : 100%;
+  right      : 0;
   top        : var(--header-height);
-  border-top : 1px solid var(--color-stroke-primary);
-  height     : 100vw;
-  display    : none;
+  height     : calc(100vh - var(--header-height) - var(--tabbar-height));
+  opacity    : 0;
+  visibility : hidden;
+  z-index    : 91;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+    width : 40%;
+  }
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    border-top : 1px solid var(--color-stroke-primary);
+    height     : 100vw;
+    width      : 100%;
+    left       : 0;
+    right      : unset;
+  }
 }
 
 body.catalog-open {
   .catalog-menu-wrapper {
-    display : block;
+    opacity    : 1;
+    visibility : visible;
+  }
+
+  &:where(.catalog-lvl2-open) {
+    .catalog-menu {
+      &__lvl1 {
+        &-wrapper {
+          transform : translateX(100%);
+        }
+      }
+
+      &__lvl2 {
+        transform : translateX(0);
+      }
+    }
   }
 }
 
@@ -18,6 +49,17 @@ body.catalog-open {
   background-color : var(--color-background-primary);
   position         : relative;
   z-index          : 2;
+  height           : calc(100vh - var(--header-height) - var(--tabbar-height));
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    height : unset;
+  }
+
+  @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    .__container {
+      max-width : unset;
+    }
+  }
 }
 
 .catalog-menu-background {
@@ -29,30 +71,68 @@ body.catalog-open {
 
 .catalog-menu {
   --catalog-menu-height : 600px;
-  max-height            : var(--catalog-menu-height);
   height                : 100%;
-  display               : grid;
-  grid-template-columns : 235px auto;
-  column-gap            : 4px;
+  position              : relative;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    max-height            : var(--catalog-menu-height);
+    column-gap            : 4px;
+    display               : grid;
+    grid-template-columns : 235px auto;
+  }
 
   &__lvl1 {
     display         : flex;
     flex-direction  : column;
-    max-height      : 545px;
     overflow-anchor : none;
     padding-right   : 12px;
     row-gap         : 6px;
+    width           : 100%;
+    //transform       : translateX(100%);
 
-    &-wrapper {
-      padding-top    : 16px;
-      padding-bottom : 40px;
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      position   : static;
+      transform  : none;
+      width      : unset;
+      max-height : 545px;
+
+      &-wrapper {
+        position       : absolute;
+        padding-top    : 16px;
+        padding-bottom : 40px;
+        top            : 0;
+        right          : 0;
+
+        @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+          position : static;
+        }
+      }
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      &-wrapper {
+        height : calc(100vh - var(--header-height) - var(--tabbar-height));
+      }
     }
   }
 
   &__lvl2 {
-    border-left : 1px solid var(--color-stroke-primary);
-    max-height  : var(--catalog-menu-height);
-    padding     : 24px 32px;
+    width     : 100%;
+    transform : translateX(100%);
+    position  : absolute;
+    top       : 0;
+    right     : 0;
+    height    : calc(100vh - var(--header-height) - var(--tabbar-height));
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      border-left : 1px solid var(--color-stroke-primary);
+      position    : static;
+      transform   : none;
+      max-height  : var(--catalog-menu-height);
+      padding     : 24px 32px;
+      width       : unset;
+      height      : unset;
+    }
 
     &-title {
       display       : flex;
@@ -62,10 +142,13 @@ body.catalog-open {
     }
 
     &-groups {
-      display    : flex;
-      column-gap : 32px;
+      display   : flex;
+      flex-wrap : wrap;
+      gap       : 32px;
 
-      &-wrapper {
+      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+        flex-direction : column;
+        gap            : 48px;
       }
     }
   }

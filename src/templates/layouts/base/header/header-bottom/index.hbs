@@ -2,7 +2,7 @@
   <div class="header-bottom__container __container">
     <div class="header-bottom__main">
       {{> logo }}
-      {{> button variant="primary" text="Каталог" icon-left="burger" icon-left-active="cancel" button-class="__hide-before-lg" attributes='data-global-action="catalog-open"' }}
+      {{> button variant="primary" text="Каталог" icon-left="burger" icon-left-active="cancel" button-class="__hide-before-lg" attributes='data-global-action="catalog-toggle"' }}
       {{> search search-class="header-bottom__search __hide-before-lg" }}
       <div class="header-bottom__navbar __hide-before-lg">
         {{> menu-button class="menu-button--header" icon="baby" text="Войти" badge="" }}
@@ -10,7 +10,7 @@
         {{> menu-button class="menu-button--header" icon="cart" text="Корзина" }}
       </div>
       <div class="header-bottom__mobile-buttons __hide-after-md">
-        <button aria-label="поиск">
+        <button aria-label="поиск" data-global-action="search-open">
           {{> svg id="search" svg-class="icon-md" }}
         </button>
         <a class="link-reset" href="tel:8 926 193 33 58" aria-label="телефон">
