@@ -1,7 +1,8 @@
 export enum EStateClass {
   Active = 'active',
-  Init = 'init',
+  Inited = 'inited',
   Touch = 'touch',
   Open = 'open',
+  Play = 'play',
   Close = 'close'
 }

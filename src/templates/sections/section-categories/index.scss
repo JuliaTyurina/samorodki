@@ -1,0 +1,76 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.categories-list {
+  display               : grid;
+  grid-template-columns : repeat(2, minmax(0, auto));
+  gap                   : 16px 8px;
+
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+    grid-template-columns : repeat(3, minmax(0, auto));
+    gap                   : 32px 16px;
+  }
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    grid-template-columns : repeat(4, minmax(0, auto));
+  }
+
+  & > a {
+    span {
+      display : block;
+
+      &:first-child {
+        aspect-ratio : 1/1;
+        position     : relative;
+
+        &:before,
+        &:after {
+          content       : "";
+          display       : block;
+          position      : absolute;
+          inset         : 0;
+          border-radius : 50%;
+        }
+
+        &:before {
+          background-color : #F8F8F8;
+          z-index          : 1;
+        }
+
+        &:after {
+          background-color : #c6e0ef;
+          z-index          : 2;
+          transform        : scale(0%);
+          transition       : transform var(--transition-default);
+        }
+
+        img {
+          position      : relative;
+          z-index       : 3;
+          width         : 100%;
+          height        : 100%;
+          display       : block;
+          border-radius : 50%;
+        }
+      }
+
+      &:last-child {
+        margin-top : 8px;
+        text-align : center;
+      }
+    }
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      &:hover {
+        span {
+          &:first-child {
+            &:after {
+              transform : scale(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

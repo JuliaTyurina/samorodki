@@ -16,9 +16,8 @@ $button-sizes    : (
 );
 
 $button-variants : (
-    light: variants.$button-light,
-    dark: variants.$button-dark,
-    primary: variants.$button-primary,
+    accent: variants.$button-accent,
+    gray: variants.$button-gray,
 );
 
 .button {

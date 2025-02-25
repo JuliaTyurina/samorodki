@@ -1,41 +1,41 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
 .__container {
-	max-width : var(--container-width);
-	width     : 100%;
+  max-width : var(--container-width);
+  width     : 100%;
 
-	&, &-max {
-		margin-left  : auto;
-		margin-right : auto;
-	}
+  &, &-big {
+    margin-left  : auto;
+    margin-right : auto;
+  }
 
-	&-max {
-		width : calc(100vw - var(--scrollbar-width));
+  &-big {
+    max-width : var(--container-width);
+    width     : 100%;
 
-		@media (width >= 1920px) {
-			max-width : var(--container-width-maximal);
-		}
-	}
+    @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+      max-width : var(--container-big-width);
+    }
+  }
 
-	&-big {
-		max-width : var(--container-big-width);
-	}
+  //&-left, &-right {
+  //  width : calc(100vw - var(--scrollbar-width));
+  //}
+  //
+  //&-right {
+  //	padding-right : var(--container-outer-indent);
+  //}
 
-	&-left, &-right {
-      width : calc(100vw - var(--scrollbar-width));
-	}
-
-	&-right {
-		padding-right : var(--container-outer-indent);
-	}
-
-	//&-left {
-	//	&, &-after-sm {
-	//		padding-left : var(--container-outer-indent);
-	//	}
-    //
-	//	&-after-sm {
-	//		@media (max-width : map(breakpoints, max, sm)) {
-	//			padding-right : var(--container-outer-indent);
-	//		}
-	//	}
-	//}
+  //&-left {
+  //	&, &-after-sm {
+  //		padding-left : var(--container-outer-indent);
+  //	}
+  //
+  //	&-after-sm {
+  //		@media (max-width : map(breakpoints, max, sm)) {
+  //			padding-right : var(--container-outer-indent);
+  //		}
+  //	}
+  //}
 }

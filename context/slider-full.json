@@ -1,0 +1,22 @@
+{
+  "slides": [
+    {
+      "img": "/assets/media/images/slider/full/1.png",
+      "title": "Ювелирный дом Samorodki Jewelry",
+      "description": "Ваш блестящий выход",
+      "action": {
+        "text": "Перейти в каталог",
+        "url": "#"
+      }
+    },
+    {
+      "img": "/assets/media/images/slider/full/2.png",
+      "title": "Какой - то текст Samorodki Jewelry",
+      "description": "Ваш блестящий выход ddddddd",
+      "action": {
+        "text": "Перейти в каталог",
+        "url": "#"
+      }
+    }
+  ]
+}

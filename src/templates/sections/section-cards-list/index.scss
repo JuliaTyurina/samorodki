@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.section-cards-list {
+  &__title {
+    margin-bottom : 16px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-bottom : 24px;
+    }
+  }
+
+  &__link {
+    margin-top      : 32px;
+    display         : flex;
+    justify-content : center;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-top : 48px;
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      & > * {
+        width : 100%;
+      }
+    }
+  }
+}

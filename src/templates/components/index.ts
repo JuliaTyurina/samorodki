@@ -1,1 +1,5 @@
-export { initSearch } from "./search"
+import { initCard } from './card'
+
+export {
+  initCard
+}

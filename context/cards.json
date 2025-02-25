@@ -1,0 +1,231 @@
+{
+  "list": [
+    {
+      "image": "/assets/media/images/products/product_1.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "40 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 23%"
+      },
+      "rating": "4.8",
+      "favourite": true,
+      "tags": [
+        { "text": "Новинка", "type": "new" },
+        { "text": "ХИТ-цена", "type": "hit" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_2.png",
+      "title": "Подвеска на шею серебро 925 подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "",
+        "discount": ""
+      },
+      "rating": "4.4",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_3.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 77%"
+      },
+      "rating": "4.2",
+      "favourite": false,
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_4.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "89 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 42%"
+      },
+      "rating": "3.7",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_5.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "89 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 32%"
+      },
+      "rating": "4.7",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_6.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "89 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 32%"
+      },
+      "rating": "5.0",
+      "favourite": true,
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_7.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "",
+        "discount": ""
+      },
+      "rating": "5.0",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_8.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "89 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 32%"
+      },
+      "rating": "4.0",
+      "favourite": false,
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_9.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "",
+        "discount": ""
+      },
+      "rating": "3.0",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" },
+        { "text": "ХИТ-цена", "type": "hit" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_10.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "809 222₽",
+        "discounted": "2 134₽",
+        "discount": "- 23%"
+      },
+      "rating": "3.7",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_11.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "",
+        "discount": ""
+      },
+      "rating": "4.7",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_12.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "1 355₽",
+        "discount": "- 7%"
+      },
+      "rating": "4.7",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_13.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "",
+        "discount": ""
+      },
+      "rating": "4.4",
+      "favourite": false,
+      "tags": [
+        { "text": "ХИТ-цена", "type": "hit" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_14.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "discounted": "999₽",
+        "discount": "- 5%"
+      },
+      "rating": "4.7",
+      "favourite": true,
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_6.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "89 222₽",
+        "discounted": "9 222₽",
+        "discount": "- 15%"
+      },
+      "rating": "4.2",
+      "favourite": false,
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_15.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "89 222₽",
+        "discounted": "9 222₽",
+        "discount": "- 15%"
+      },
+      "rating": "4.5",
+      "favourite": false,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    }
+  ]
+}

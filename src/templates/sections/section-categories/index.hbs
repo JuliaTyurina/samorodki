@@ -1,0 +1,14 @@
+<section class="{{section-class}}">
+  <div class="__container">
+    <div class="categories-list">
+      {{#each categories-context.list }}
+        <a href="#">
+          <span>
+            <img src="{{image}}" alt="{{title}}">
+          </span>
+          <span class="font-bold">{{title}}</span>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</section>

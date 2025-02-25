@@ -1,41 +1,41 @@
 @use "sass:map";
 
-$text-sizes    : (
+$text-sizes      : (
     heading: (
         md: (
             line-height: 1,
-            font-size: ( min: 32, max: 48 )
+            font-size: (min: 32, max: 48)
         ),
     ),
     title: (
         lg: (
             line-height: 1,
-            font-size: ( min: 24, max: 36 ),
+            font-size: (min: 24, max: 36),
             letter-spacing: -0.72px
         ),
         md: (
             line-height: 1.3,
-            font-size: ( min: 18, max: 24 ),
+            font-size: (min: 18, max: 24),
             letter-spacing: -0.2px
         ),
         sm: (
             line-height: 1.3,
-            font-size: ( min: 18, max: 20 ),
+            font-size: (min: 18, max: 20),
             letter-spacing: -0.2px
         ),
     ),
     text: (
         xl: (
             line-height: 1.5,
-            font-size: ( min: 16, max: 18 ),
+            font-size: (min: 16, max: 18),
         ),
         xl-130: (
             line-height: 1.3,
-            font-size: ( min: 16, max: 18 ),
+            font-size: (min: 16, max: 18),
         ),
         lg: (
             line-height: 1.5,
-            font-size: ( min: 14, max: 16 ),
+            font-size: (min: 14, max: 16),
         ),
         md: (
             line-height: 1.5,
@@ -48,7 +48,7 @@ $text-sizes    : (
     )
 );
 
-$fonts-weights : (
+$fonts-weights   : (
     extralight: 200,
     light: 300,
     regular: 400,
@@ -58,7 +58,7 @@ $fonts-weights : (
     extrabold: 800,
 );
 
-$typography : (
+$typography      : (
     text-color: var(--color-dark),
     title-font-weght: map.get($fonts-weights, 'medium'),
     redactor-elem-margin-bottom: 8px,
@@ -66,4 +66,4 @@ $typography : (
     list-padding-left: 20px
 );
 
-$text-crop-lines: (2);
+$text-crop-lines : (1, 2);

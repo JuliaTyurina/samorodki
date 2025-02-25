@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "title": "Аксессуары",
+      "image": "/assets/media/images/categories/category_1.png"
+    },
+    {
+      "title": "Кольца",
+      "image": "/assets/media/images/categories/category_2.png"
+    },
+    {
+      "title": "Серьги",
+      "image": "/assets/media/images/categories/category_3.png"
+    },
+    {
+      "title": "Цепи",
+      "image": "/assets/media/images/categories/category_4.png"
+    },
+    {
+      "title": "Подвески",
+      "image": "/assets/media/images/categories/category_5.png"
+    },
+    {
+      "title": "Колье",
+      "image": "/assets/media/images/categories/category_6.png"
+    },
+    {
+      "title": "Пирсинг",
+      "image": "/assets/media/images/categories/category_7.png"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<div class="card-product" {{#if (str-equals media-type "image")}} data-product-image2="/assets/media/images/product_card_image-2.jpg"{{else}} data-product-video="/assets/media/videos/product_card_video.mp4"{{/if}}>
+  <a class="card-product__link" href="#"></a>
+  <div class="card-product__media-wrapper">
+    <div class="card-product__media">
+      <div class="card-product__media-layer">
+        <div class="card-product__tags">
+          {{#if tags}}
+            {{#each tags}}
+              <div class="card-product__tag text-sm font-bold card-product__tag--{{type}}">{{text}}</div>
+            {{/each}}
+          {{/if}}
+        </div>
+        {{#if favourite}}
+          <button class="card-product__favourite card-product__favourite--filled">
+            {{> svg id="heart-fill"}}
+          </button>
+        {{else}}
+          <button class="card-product__favourite">
+            {{> svg id="heart-fill"}}
+          </button>
+        {{/if}}
+      </div>
+      <div class="card-product__image">
+        <img src="{{image}}" alt="{{title}}">
+      </div>
+      <div class="card-product__media-entry"></div>
+    </div>
+    <button class="card-product__add-to-cart">
+      {{> svg id="cart" }}
+    </button>
+  </div>
+  <div class="card-product__info">
+    <div class="card-product__price-block">
+      <div class="card-product__price-wrapper">
+        <div class="card-product__prices">
+          <span class="card-product__price title-md font-bold">{{price.normal}}</span>
+          {{#if price.discounted}}
+            <span class="card-product__price-discounted font-medium text-gray text-through">{{price.discounted}}</span>
+          {{/if}}
+        </div>
+        {{#if price.discount}}
+          <span class="card-product__price-discount text-sm font-bold">{{price.discount}}</span>
+        {{/if}}
+      </div>
+      {{> rating value=rating rating-class="__hide-before-lg"}}
+    </div>
+    <span class="card-product__title" title="{{title}}">{{title}}</span>
+    {{> rating value=rating rating-class="__hide-after-md"}}
+  </div>
+</div>

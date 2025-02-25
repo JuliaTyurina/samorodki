@@ -2,10 +2,9 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 html {
-  --container-width-maximal  : 1920px;
+  --container-big-width      : 1500px;
   --container-mobile-padding : 16px;
   --container-width          : calc(100vw - var(--container-mobile-padding) * 2);
-  --container-big-width      : 1500px;
   --container-outer-indent   : calc((100vw - var(--container-width)) / 2);
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {

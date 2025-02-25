@@ -1,0 +1,187 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.section-slider-full {
+  @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+    .__container-big {
+      max-width : unset;
+    }
+  }
+}
+
+.slider-full {
+  position : relative;
+
+  .swiper-slide {
+    background-color : var(--color-background-primary);
+    position         : relative;
+
+    img {
+      width        : 100%;
+      aspect-ratio : 0.9/1;
+      display      : block;
+      object-fit   : cover;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, sm)) {
+        aspect-ratio : 2/1;
+      }
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        aspect-ratio  : 2/1;
+        border-radius : 32px;
+      }
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+        aspect-ratio : 3/1;
+      }
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+        aspect-ratio : 4.05/1;
+      }
+    }
+
+    .slider-full-content {
+      position    : absolute;
+      inset       : 0;
+      z-index     : 2;
+      padding     : 46px 16px;
+      color       : var(--color-text-contrast);
+      display     : flex;
+      align-items : flex-start;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        padding     : 24px 60px;
+        align-items : center;
+      }
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+        padding : 32px 60px;
+      }
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, xxl)) {
+        padding : 64px 120px;
+      }
+
+      & > *:not(.slider-full-pagination) {
+        height          : 100%;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+
+        @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+          max-width : 440px;
+        }
+
+        @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+          max-width : 540px;
+        }
+
+        @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+          flex-grow : 1;
+        }
+
+        & > * {
+          &:first-child {
+            margin-bottom : 16px;
+          }
+
+          &:last-child {
+            margin-top : 48px;
+
+            @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+              margin-top : auto;
+              width      : auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slider-full-pagination {
+    width : auto;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      margin-top : 12px;
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      position : absolute;
+      top      : 24px;
+      left     : 16px;
+      bottom   : unset;
+      z-index  : 5;
+    }
+  }
+}
+
+.slider-full-pagination {
+  display     : flex;
+  align-items : center;
+  flex-wrap   : wrap;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+    justify-content : center;
+    gap             : 16px;
+    padding-top     : 7px;
+    padding-bottom  : 7px;
+  }
+
+  .swiper-pagination-bullet {
+    padding : 0;
+    margin  : 0 !important;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      width         : 64px;
+      height        : 2px;
+      border-radius : 12px;
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      background-color : transparent;
+      width            : 14px;
+      height           : 14px;
+      display          : flex;
+      align-items      : center;
+      justify-content  : center;
+      opacity          : 1;
+
+      &:before {
+        content          : "";
+        display          : block;
+        width            : 4px;
+        height           : 4px;
+        border-radius    : 50%;
+        background-color : rgba(255, 255, 255, 0.22);
+      }
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      background-color : var(--color-icon-accent);
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      position : relative;
+
+      &:before {
+        background-color : var(--color-icon-accent);
+      }
+
+      &:after {
+        position         : absolute;
+        border-radius    : 50%;
+        border           : 1px solid var(--color-icon-accent);
+        background-color : transparent;
+        content          : "";
+        display          : block;
+        width            : 8px;
+        height           : 8px;
+        top              : 50%;
+        left             : 50%;
+        transform        : translate(-50%, -50%);
+      }
+    }
+  }
+}
