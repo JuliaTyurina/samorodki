@@ -1,0 +1,71 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.section-slider-2 {
+  overflow : hidden;
+
+  &__title {
+    margin-bottom : 16px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-bottom : 24px;
+    }
+  }
+
+  &__header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+  }
+
+  .swiper-slide {
+    img {
+      border-radius : 24px;
+      aspect-ratio  : 1.93/1;
+      display       : block;
+      width         : 100%;
+
+      @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+        border-radius : 8px;
+        aspect-ratio  : 1.1/1;
+      }
+    }
+
+    span {
+      display    : block;
+      text-align : center;
+      margin-top : 16px;
+    }
+  }
+
+  .swiper {
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      overflow : visible;
+    }
+  }
+
+  &__buttons {
+    display     : flex;
+    align-items : center;
+    column-gap  : 32px;
+
+    button {
+      padding          : 0;
+      background-color : transparent;
+      border           : none;
+      transition       : fill var(--transition-default);
+
+      &.swiper-button-disabled {
+        fill : var(--color-icon-secondary);
+      }
+
+      &:not(.swiper-button-disabled) {
+        cursor : pointer;
+
+        &:hover {
+          fill : var(--color-icon-accent);
+        }
+      }
+    }
+  }
+}
