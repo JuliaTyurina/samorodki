@@ -1,4 +1,4 @@
-<div class="card-product" {{#if (str-equals media-type "image")}} data-product-image2="/assets/media/images/product_card_image-2.jpg"{{else}} data-product-video="/assets/media/videos/product_card_video.mp4"{{/if}}>
+<article class="card-product" {{#if (str-equals media-type "image")}} data-product-image2="/assets/media/images/product_card_image-2.jpg"{{else}} data-product-video="/assets/media/videos/product_card_video.mp4"{{/if}}>
   <a class="card-product__link" href="#"></a>
   <div class="card-product__media-wrapper">
     <div class="card-product__media">
@@ -47,4 +47,4 @@
     <span class="card-product__title" title="{{title}}">{{title}}</span>
     {{> rating value=rating rating-class="__hide-after-md"}}
   </div>
-</div>
+</article>

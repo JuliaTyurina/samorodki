@@ -1,0 +1,31 @@
+<section class="section-cards-slider {{section-class}}">
+  <div class="section-cards-slider__container __container">
+    <div class="section-cards-slider__main">
+      <header class="section-cards-slider__header">
+        <div class="section-cards-slider__groups scrollbar-custom">
+          <button class="title-lg font-semibold active">Новинки</button>
+          <button class="title-lg font-semibold">Хит продаж</button>
+          <button class="title-lg font-semibold">Скидки</button>
+        </div>
+
+        <div class="section-cards-slider__slider-buttons __hide-before-md">
+          <button class="slider-button-prev">
+            {{> svg id="arrow-left" svg-class="icon-md" }}
+          </button>
+          <button class="slider-button-next">
+            {{> svg id="arrow-right" svg-class="icon-md" }}
+          </button>
+        </div>
+      </header>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {{#each cards-context.list}}
+            <div class="swiper-slide">
+              {{> card }}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
