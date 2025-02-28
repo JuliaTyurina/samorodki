@@ -1,0 +1,67 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.section-gifts {
+  &-header {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    gap            : 12px;
+    text-align     : center;
+    margin-bottom  : 16px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-bottom : 36px;
+    }
+
+    & > * {
+      margin : 0;
+    }
+  }
+
+  &__image-container {
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      max-width : 100%;
+    }
+
+    img {
+      width        : 100%;
+      aspect-ratio : 1.67/1;
+      object-fit   : cover;
+      display      : block;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        border-radius : 32px;
+        aspect-ratio  : 3.6/1;
+      }
+    }
+  }
+
+  &-categories {
+    display         : flex;
+    justify-content : center;
+    gap             : 16px;
+    flex-wrap       : wrap;
+    padding-left    : 40px;
+    padding-right   : 40px;
+    margin-top      : -24px;
+
+    & > * {
+      display        : flex;
+      flex-direction : column;
+      align-items    : center;
+      gap            : 12px;
+
+      img {
+        aspect-ratio  : 1/1;
+        width         : 103px;
+        display       : block;
+        border-radius : 50%;
+
+        @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+          width : 148px;
+        }
+      }
+    }
+  }
+}

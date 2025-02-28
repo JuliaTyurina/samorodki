@@ -34,7 +34,7 @@ export const addMediaActionToCardsProduct = () => {
 
   if ( isDevice.pc ) {
     const cards: NodeListOf<HTMLElement> = document.querySelectorAll( `${ ECardProductElems.Card }:not(.${ EStateClass.Inited })` )
-    const delay: number = 800
+    const delay: number = 500
 
     cards.forEach( card => {
       const mediaEntry: Nullable<HTMLElement> = card.querySelector( ECardProductElems.MediaEntry )

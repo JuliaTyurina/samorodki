@@ -1,0 +1,23 @@
+<section class="section-gifts {{section-class}}">
+  <div class="__container">
+    <div class="section-gifts-header">
+      <h2 class="heading-md font-semibold text-uppercase">идеи подарков</h2>
+      <div class="font-bold">
+        <p>Выберите идеальный подарок для своих близких и сделайте их день незабываемым!</p>
+      </div>
+    </div>
+  </div>
+  <div class="section-gifts__image-container __container">
+    <img src="/assets/media/images/slider/full/2.png" alt="">
+  </div>
+  <div class="__container">
+    <div class="section-gifts-categories">
+      {{#each gifts-context.categories }}
+        <a href="#">
+          <img src="{{image}}" alt="">
+          <span class="font-bold">{{text}}</span>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</section>

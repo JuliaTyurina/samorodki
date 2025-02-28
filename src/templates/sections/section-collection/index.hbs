@@ -1,0 +1,22 @@
+<section class="section-collection {{section-class}}">
+  <div class="section-collection__container __container-big">
+    <h2 class="section-collection__title text-center title-lg font-semibold">Коллекция месяца</h2>
+    <div class="section-collection__images">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {{#each collection-context.list}}
+            <div class="swiper-slide">
+              <img src="{{url}}" alt="">
+            </div>
+          {{/each}}
+          {{#each collection-context.list}}
+            <div class="swiper-slide">
+              <img src="{{url}}" alt="">
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{> button text="Смотреть коллекцию" url="#" button-class="section-collection__action" }}
+  </div>
+</section>
