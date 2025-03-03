@@ -57,11 +57,15 @@ $button-variants : (
       @each $style-name, $style-value in $styles {
         @if meta.type-of($style-value) == 'map' {
           @if functions.map-has-value($style-value, 'min') {
-            #{$style-name}: map.get($style-value, 'min');
+            & {
+              #{$style-name}: map.get($style-value, 'min');
+            }
           }
           @if functions.map-has-value($style-value, 'max') {
-            @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-              #{$style-name}: map.get($style-value, 'max');
+            & {
+              @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+                #{$style-name}: map.get($style-value, 'max');
+              }
             }
           }
         } @else {
@@ -72,7 +76,7 @@ $button-variants : (
   }
 
   @each $variant, $states in $button-variants {
-    &--#{$variant} {
+    &--#{"" + $variant} {
       @each $state, $styles in $states {
         @if $state == 'default' {
           @each $style-name, $style-value in $styles {

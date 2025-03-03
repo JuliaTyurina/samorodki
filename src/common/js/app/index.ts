@@ -3,6 +3,7 @@ import { Nullable } from "@js/types";
 import { addClass, hasClass, removeClass } from "@js/helpers/classHelper.ts";
 import { search } from "@components/search";
 import { menu } from "@layouts/base/menu";
+import { mqData } from "@js/helpers/media.ts";
 
 const getScrollbarWidth = () => {
   const scrollDiv = document.createElement( "div" );
@@ -20,6 +21,7 @@ const getScrollbarWidth = () => {
 
 export const app: AppInterface = {
   scrollbarWidth: 0,
+  device: "mobile",
   body: null,
   bodyBlock( isBlock = true ) {
     if ( this.body ) {
@@ -45,10 +47,14 @@ export const app: AppInterface = {
     }
   },
   catalogLvl2Open() {
-    this.body && addClass( EBodyStateClasses.CatalogLvl2Open, this.body )
+    if ( this.device === 'mobile' || this.device === "tablet" ) {
+      this.body && addClass( EBodyStateClasses.CatalogLvl2Open, this.body )
+    }
   },
   catalogLvl2Close() {
-    this.body && removeClass( EBodyStateClasses.CatalogLvl2Open, this.body )
+    if ( this.device === 'mobile' || this.device === "tablet" ) {
+      this.body && removeClass( EBodyStateClasses.CatalogLvl2Open, this.body )
+    }
   },
   menuOpen() {
     menu.open()
@@ -62,9 +68,13 @@ export const app: AppInterface = {
     menu.isOpen ? this.menuClose() : this.menuOpen();
   },
   initDependencies() {
+    const { isDevice } = mqData()
     this.body = document.body
     const root: Nullable<HTMLElement> = document.querySelector( ':root' );
     const header: Nullable<HTMLElement> = document.querySelector( 'header.header' );
+
+    if ( isDevice.tablet ) this.device = "tablet"
+    if ( isDevice.pc ) this.device = "pc"
 
     if ( !this.scrollbarWidth ) this.scrollbarWidth = getScrollbarWidth()
 

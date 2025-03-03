@@ -1,0 +1,9 @@
+{
+  "page-title": "Page Catalog",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "#" },
+    { "text": "Каталог", "url": "#" },
+    { "text": "Браслеты  " }
+  ]
+}

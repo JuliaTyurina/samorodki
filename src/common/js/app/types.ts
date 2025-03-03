@@ -3,6 +3,7 @@ import { Nullable } from "@js/types";
 export interface AppInterface {
   scrollbarWidth: Nullable<number>
   body?: Nullable<HTMLElement>
+  device: "mobile" | "tablet" | "pc"
   bodyBlock: ( isBlock?: boolean ) => void
   initDependencies: () => void
   setWindowVariables?: () => void
