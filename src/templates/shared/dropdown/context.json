@@ -1,0 +1,56 @@
+{
+  "contacts": {
+    "header": {
+      "title": "+7 925 322-13-19",
+      "icon": {
+        "id": "chevron-down",
+        "position": "left",
+        "class": "icon-md rotate"
+      }
+    },
+    "items": [
+      {
+        "url": "tel:+79261421362",
+        "icon": "phone",
+        "text": "+7 926 142-13-62",
+        "attributes": {
+          "aria-label": "Телефон"
+        },
+        "addition": {
+          "icon": "clock",
+          "text": "8—18"
+        }
+      },
+      {
+        "url": "mailto:info@standwood.ru",
+        "icon": "mail",
+        "text": "info@standwood.ru",
+        "attributes": {
+          "aria-label": "Почта"
+        }
+      }
+    ]
+  },
+  "sort": {
+    "position": "right",
+    "header": {
+      "title": "Сортировка",
+      "icon": {
+        "id": "chevron-down",
+        "position": "right",
+        "class": "icon-md"
+      }
+    }
+  },
+  "navigation": {
+    "position": "left",
+    "header": {
+      "title": "..."
+    },
+    "items": [
+      { "url": "#", "text": "Доставка и оплата" },
+      { "url": "#", "text": "Блог" },
+      { "url": "#", "text": "Контакты" }
+    ]
+  }
+}

@@ -1,45 +1,49 @@
 .radio {
-  @extend .__flex;
-  align-items: flex-start;
-  column-gap: map-get($sizes, 2.5);
+  display     : flex;
+  align-items : flex-start;
+  column-gap  : 10px;
 
   &__icon {
-    display: block;
+    display  : block;
     position : relative;
+
     input {
       position : absolute;
-      width : 0;
-      height : 0;
-      opacity: 0;
+      width    : 0;
+      height   : 0;
+      opacity  : 0;
     }
 
     svg {
-      display: block;
+      display : block;
 
       &.checked {
-        display: none;
+        display : none;
       }
     }
 
     input:checked {
       & ~ svg {
         &.default {
-          display: none;
+          display : none;
         }
+
         &.checked {
-          display: block;
+          display : block;
         }
       }
     }
   }
 
   &__text {
-    @extend .__flex-column;
-    row-gap: map-get($sizes, 1);
+    display        : flex;
+    flex-direction : column;
+    row-gap        : 4px;
   }
 }
 
 .radio-group {
-  @extend .__flex-column;
-  row-gap: map-get($sizes, 6);
+  display        : flex;
+  flex-direction : column;
+  row-gap        : 24px;
 }

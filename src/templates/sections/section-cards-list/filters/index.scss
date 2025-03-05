@@ -1,0 +1,103 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.filters {
+  display        : flex;
+  flex-direction : column;
+  row-gap        : 24px;
+
+  &__switchers {
+    display        : flex;
+    flex-direction : column;
+    gap            : 14px;
+  }
+}
+
+.filters-group {
+  &__header {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    gap             : 10px;
+  }
+
+  &__title {
+    display          : flex;
+    align-items      : center;
+    column-gap       : 8px;
+    padding          : 0;
+    border           : none;
+    background-color : transparent;
+    cursor           : pointer;
+
+    svg {
+      display   : block;
+      width     : 24px;
+      height    : 24px;
+      fill      : var(--color-icon-secondary);
+      transform : rotate(180deg);
+    }
+  }
+
+  &__cancel {
+    padding          : 0;
+    border           : none;
+    background-color : transparent;
+    cursor           : pointer;
+
+    svg {
+      width   : 16px;
+      height  : 16px;
+      display : block;
+    }
+  }
+
+  &__list {
+    display        : flex;
+    flex-direction : column;
+    gap            : 12px;
+  }
+
+  &__more {
+    margin-top       : 12px;
+    padding          : 0;
+    border           : none;
+    background-color : transparent;
+    color            : var(--color-text-accent);
+    cursor           : pointer;
+  }
+
+  &__range {
+    &-variants {
+      margin-top     : 16px;
+      display        : flex;
+      flex-direction : column;
+      row-gap        : 8px;
+    }
+  }
+
+  &__main {
+    max-height  : 0;
+    overflow    : hidden;
+    transition  : max-height .15s;
+    will-change : max-height;
+
+    & > *:first-child {
+      padding-top : 16px;
+    }
+  }
+
+  &.open {
+    .filters-group {
+      &__main {
+        max-height : 1000px;
+      }
+
+      &__title {
+        svg {
+          transform : rotate(0);
+        }
+      }
+    }
+  }
+}

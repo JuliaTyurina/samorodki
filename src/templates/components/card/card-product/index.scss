@@ -189,6 +189,7 @@
 
     svg {
       @include mixins.size('16px');
+      display : block;
 
       @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
         @include mixins.size('24px');

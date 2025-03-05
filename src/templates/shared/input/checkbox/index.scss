@@ -1,17 +1,29 @@
 .checkbox {
-  @extend .__flex-center-y;
+  display     : flex;
+  align-items : center;
   cursor      : pointer;
   user-select : none;
-  column-gap  : map-get($sizes, 2);
+  column-gap  : 8px;
   width       : fit-content;
+
+  &__round {
+    width         : 12px;
+    height        : 12px;
+    display       : block;
+    border-radius : 50%;
+
+    &.border {
+      border : 1px solid var(--color-stroke-primary);
+    }
+  }
 
   &__icon {
     display  : block;
     position : relative;
 
     svg {
-      width  : 24px;
-      height : 24px;
+      width  : 22px;
+      height : 22px;
       fill   : var(--color-icon-tertiary);
     }
 
@@ -22,18 +34,27 @@
       opacity  : 0;
       cursor   : pointer;
 
-      &:disabled ~ svg {
-        fill : var(--color-icon-disabled);
+      &:disabled {
+        & ~ svg {
+          fill : var(--color-icon-quaternary);
+        }
+
+        &:checked ~ svg {
+          fill : var(--color-icon-secondary);
+        }
       }
 
       &:not(:disabled):hover ~ svg,
+      &:not(:disabled):focus-visible ~ svg {
+        fill : var(--color-icon-secondary);
+      }
+
       &:not(:disabled):checked ~ svg {
         fill : var(--color-icon-accent);
       }
 
-      &:not(:disabled):focus ~ svg,
       &:not(:disabled):checked:focus ~ svg {
-        fill : var(--color-accent-second);
+        opacity : .8;
       }
 
       & ~ svg {
@@ -74,18 +95,18 @@
   }
 }
 
-.checkbox-group {
-  &__title {
-    display       : block;
-    margin-bottom : map-get($sizes, 4);
-  }
-
-  &__items {
-    padding-top : map-get($sizes, 4);
-    border-top  : 1px solid var(--color-stroke-primary);
-
-    & > *:not(:last-child) {
-      margin-bottom : map-get($sizes, 3);
-    }
-  }
-}
+//.checkbox-group {
+//  &__title {
+//    display       : block;
+//    margin-bottom : map-get($sizes, 4);
+//  }
+//
+//  &__items {
+//    padding-top : map-get($sizes, 4);
+//    border-top  : 1px solid var(--color-stroke-primary);
+//
+//    & > *:not(:last-child) {
+//      margin-bottom : map-get($sizes, 3);
+//    }
+//  }
+//}

@@ -1,0 +1,33 @@
+<div class="dropdown {{add-modificator "dropdown" position}} {{class}}">
+  <div class="dropdown__header" tabindex="0">
+    {{#if (str-equals header.icon.position "left")}}
+      {{> svg id=header.icon.id svg-class=header.icon.class}}
+    {{/if}}
+    <span class="dropdown__header-text">{{ header.title }}</span>
+    {{#if (str-equals header.icon.position "right")}}
+      {{> svg id=header.icon.id svg-class=header.icon.class}}
+    {{/if}}
+  </div>
+  <div class="dropdown__body">
+    <div class="dropdown__content">
+      <ul class="list-reset">
+        <li><a href="#" class="dropdown-item">По популярности</a></li>
+        <li><a href="#" class="dropdown-item">По рейтингу</a></li>
+        <li>
+          <a href="#" class="dropdown-item">
+            <span>По алфавиту</span>
+            <span class="text-md text-gray font-medium">От А до Я</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="dropdown-item">
+            <span>По алфавиту</span>
+            <span class="text-md text-gray font-medium">От Я до А</span>
+          </a>
+        </li>
+        <li><a href="#" class="dropdown-item">Сначала дешевле</a></li>
+        <li><a href="#" class="dropdown-item">Сначала дороже</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

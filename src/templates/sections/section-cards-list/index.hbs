@@ -1,12 +1,45 @@
 <!-- section-cards-list -->
-<section class="section-cards-list {{section-class}}">
-  <div class="section-cards-list__container __container">
-    <h2 class="section-cards-list__title title-lg font-semibold">{{title}}</h2>
-    <div class="section-cards-list__cards">
-      {{> cards-list }}
+{{#if (or (not type) (str-equals type "default"))}}
+  <section class="section-cards-list {{section-class}}">
+    <div class="section-cards-list__container __container">
+      <h2 class="section-cards-list__title title-lg font-semibold">{{title}}</h2>
+      <div class="section-cards-list__cards">
+        {{> cards-list }}
+      </div>
+      <div class="section-cards-list__link">
+        {{> button text="Показать больше товаров" url="#" }}
+      </div>
     </div>
-    <div class="section-cards-list__link">
-      {{> button text="Показать больше товаров" url="#" }}
-    </div>
-  </div>
-</section>
+  </section>
+{{else}}
+  {{#if (str-equals type "with-filters")}}
+    <section class="section-cards-list with-filters {{section-class}}">
+      <div class="section-cards-list__container __container">
+        <div class="section-cards-list__header">
+          <h1 class="section-cards-list__title title-lg font-semibold">{{title}}</h1>
+          <span class="text-gray font-bold">26 000 товаров</span>
+        </div>
+        <div class="section-cards-list__main">
+          <div class="section-cards-list__filters">
+            {{> filters }}
+          </div>
+          <div class="section-cards-list__cards-wrapper">
+            <div class="cards-list-header">
+              <div class="accept-filters">
+                {{> filters-accept }}
+              </div>
+              <div class="sort">
+                {{#> dropdown dropdown-context.sort }}
+                {{/dropdown}}
+              </div>
+            </div>
+            {{> cards-list cards-list-class="cards-list--max-3" }}
+            <div class="section-cards-list__footer">
+              {{> pagination }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{/if}}
+{{/if}}

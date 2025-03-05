@@ -1,62 +1,116 @@
 .range {
   position : relative;
 
+  &.vertical {
+    display        : flex;
+    flex-direction : column-reverse;
+
+    .range {
+      &__inputs {
+        display        : flex;
+        flex-direction : column;
+        row-gap        : 8px;
+      }
+
+      &__slider {
+        position      : relative;
+        transform     : unset;
+        margin-bottom : 16px;
+      }
+    }
+  }
+
   &__title {
-    margin-bottom : map-get($sizes, 4);
-    display: block;
+    margin-bottom : 16px;
+    display       : block;
   }
 
   &__inputs {
-    width : 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width                 : 100%;
+    display               : grid;
+    grid-template-columns : minmax(0, 1fr) minmax(0, 1fr);
+    column-gap            : 8px;
+  }
 
-    &>* {
-      padding : map-get($sizes, 4);
-      border: 1px solid var(--color-stroke-secondary);
+  &__input {
+    &-wrapper {
+      position : relative;
 
-      &:first-child {
-        border-bottom-left-radius: 6px;
-        border-top-left-radius: 6px;
+      &:before {
+        position    : absolute;
+        height      : 100%;
+        left        : 16px;
+        top         : 0;
+        display     : flex;
+        align-items : center;
+        font-weight : 600;
+        font-size   : 16px;
+        border      : 1px solid transparent;
+        width       : 20px;
       }
-      &:last-child {
-        border-bottom-right-radius: 6px;
-        border-top-right-radius: 6px;
-        border-left: none;
+
+      input {
+        padding          : 16px 16px 16px 42px;
+        border           : 1px solid var(--color-stroke-primary);
+        border-radius    : 12px;
+        background-color : var(--color-background-tertiary);
+        max-width        : 100%;
+      }
+
+      &--from {
+        &:before {
+          content : "от";
+        }
+      }
+
+      &--to {
+        &:before {
+          content : "до";
+        }
       }
     }
   }
 
   &__slider {
-    position : absolute;
-    height   : map-get($sizes, 4.5);
-    width : 100%;
-    transform: translateY(-50%);
+    position  : absolute;
+    height    : 18px;
+    width     : 100%;
+    transform : translateY(-50%);
   }
 
   &__trek,
   input[type="range"] {
-    width            : 100%;
-    height           : 2px;
+    width     : 100%;
+    height    : 2px;
+    position  : absolute;
+    top       : 50%;
+    transform : translateY(-50%);
+  }
+
+  &__trek {
+    background-color : var(--color-icon-quaternary);
+    //z-index : 1;
+  }
+
+  input[type="range"] {
+    //z-index : 2;
     background-color : transparent;
-    position         : absolute;
-    top              : 50%;
-    transform        : translateY(-50%);
   }
 
 
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance : none;
     pointer-events     : all;
-    width              : map-get($sizes, 4.5);
-    height             : map-get($sizes, 4.5);
-    background-color   : var(--color-accent);
+    width              : 18px;
+    height             : 18px;
+    background-color   : var(--color-background-primary);
+    border             : 2px solid var(--color-background-accent);
     border-radius      : 50%;
     cursor             : pointer;
   }
 
   input[type=range]::-webkit-slider-thumb:hover {
-    background : var(--color-accent-second);
+    //background : var(--color-accent-second);
   }
 
   input[type="range"] {

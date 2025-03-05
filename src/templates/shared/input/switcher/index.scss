@@ -1,15 +1,21 @@
 .switcher {
-  @extend .__flex-center-y-between;
+  display            : flex;
+  align-items        : center;
+  justify-content    : space-between;
   user-select        : none;
-  $round-size        : 12px;
+  $round-size        : 19px;
   $round-side-indent : 2px;
+
+  &__text {
+    cursor : pointer;
+  }
 
   &__icon {
     display          : block;
     width            : 30px;
     height           : 16px;
     border-radius    : 8px;
-    background-color : var(--color-gray-8);
+    background-color : var(--color-background-tertiary);
     position         : relative;
 
     &:before {
@@ -18,11 +24,12 @@
       height           : $round-size;
       background-color : var(--color-background-primary);
       position         : absolute;
-      left             : $round-side-indent;
-      top              : 2px;
+      left             : -#{$round-side-indent};
+      top              : -2px;
       border-radius    : 50%;
-      box-shadow       : 0 0 2px 0 rgba(0, 0, 0, .2);
+      //box-shadow       : 0 0 2px 0 rgba(0, 0, 0, .2);
       transition       : left .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      filter           : drop-shadow(0px 1.25px 3.75px rgba(0, 0, 0, 0.10)) drop-shadow(0px 1.25px 0px rgba(0, 0, 0, 0.10)) drop-shadow(0px 2.5px 5px rgba(0, 0, 0, 0.10));
     }
   }
 
@@ -50,9 +57,9 @@
         cursor : pointer;
       }
 
-      &:focus {
+      &:focus-visible {
         & ~ .switcher__icon {
-          background-color : var(--color-gray-3);
+          opacity : .8;
         }
       }
 
@@ -61,13 +68,13 @@
           background-color : var(--color-background-accent);
 
           &:before {
-            left : calc(100% - (#{$round-size} + #{$round-side-indent}));
+            left : calc(100% - (#{$round-size} - #{$round-side-indent}));
           }
         }
 
-        &:focus {
+        &:focus-visible {
           & ~ .switcher__icon {
-            background-color : var(--color-accent-second);
+            opacity : .8;
           }
         }
       }

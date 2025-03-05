@@ -11,7 +11,18 @@
   }
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-    grid-template-columns : repeat(4, minmax(0, auto));
-    gap                   : 48px 16px;
+    gap : 48px 16px;
   }
+
+  &:not(&--max-3) {
+    @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+      grid-template-columns : repeat(4, minmax(0, auto));
+    }
+  }
+}
+
+.cards-list-header {
+  display         : flex;
+  justify-content : space-between;
+  column-gap      : 84px;
 }

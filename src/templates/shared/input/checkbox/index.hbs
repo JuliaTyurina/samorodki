@@ -1,8 +1,11 @@
 <label class="checkbox">
   <span class="checkbox__icon {{#if dark}}checkbox__icon--dark{{/if}}">
     <input type="checkbox" name="{{name}}" {{set-checked checked}} {{set-disabled disabled}} aria-label="применить {{text}}">
-      {{> svg id="checkbox" svg-class="default"}}
-      {{> svg id="checkbox-checked" svg-class="checked"}}
+    {{> svg id="checkbox-default" svg-class="default"}}
+    {{> svg id="checkbox-filled" svg-class="checked"}}
   </span>
-    <span class="text-lg font-600">{{text}}</span>
+  {{#if color }}
+    <span class="checkbox__round {{round-class}}" style="background-color: {{color}}"></span>
+  {{/if}}
+  <span class="text-md font-medium">{{text}}</span>
 </label>

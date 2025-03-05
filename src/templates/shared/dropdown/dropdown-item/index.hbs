@@ -1,0 +1,7 @@
+<li class="dropdown-item">
+  {{#if attributes.aria-label}}
+    {{> contact-item this attributes=(str-concat 'aria-label="' attributes.aria-label '"')}}
+  {{else}}
+    {{> contact-item this attributes=attributes}}
+  {{/if}}
+</li>

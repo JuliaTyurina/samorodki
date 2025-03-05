@@ -1,0 +1,19 @@
+<div class="filters-group {{filters-group-class}}">
+  <div class="filters-group__header">
+    <button class="filters-group__title">
+      <span class="text-xl font-bold">Цена, ₽</span>
+      {{> svg id="chevron-up"}}
+    </button>
+  </div>
+  <div class="filters-group__main">
+    <div class="filters-group__range">
+      {{> range aria-label="цена" from="300" to="15500" max="20000" name="price" range-type="vertical" }}
+      <div class="filters-group__range-variants">
+        {{> chip text="до 2 000₽" value="from_0,to_2000"}}
+        {{> chip text="от 2 000₽ до 5 000₽" value="fromo_2000,to_5000" chip-class="active"}}
+        {{> chip text="от 5 000₽ до 15 000₽" value="fromo_5000,to_15000"}}
+        {{> chip text="от 15 000₽" value="from_2000,to_max"}}
+      </div>
+    </div>
+  </div>
+</div>

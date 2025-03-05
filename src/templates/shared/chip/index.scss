@@ -1,0 +1,42 @@
+.chip {
+  border           : none;
+  border-radius    : 16px;
+  display          : flex;
+  align-items      : center;
+  gap              : 6px;
+  padding          : 6px 12px;
+  background-color : var(--color-background-tertiary);
+  width            : fit-content;
+  transition       : background-color var(--transition-default);
+
+  &:not(.active) {
+    cursor : pointer;
+
+    &:hover,
+    &:focus-visible {
+      background-color : #D7D8DA;
+    }
+  }
+
+  &.active {
+    background-color : var(--color-background-contrast);
+    color            : var(--color-text-contrast);
+    fill             : var(--color-icon-contrast);
+
+    &:hover,
+    &:focus-visible {
+      background-color : #475869;
+    }
+
+    .chip {
+      &__cancel {
+        display : block;
+      }
+    }
+  }
+
+  &__cancel {
+    display : none;
+    cursor  : pointer;
+  }
+}
