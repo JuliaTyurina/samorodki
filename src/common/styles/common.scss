@@ -10,6 +10,7 @@ body {
   &.menu-open,
   &.search-open,
   &.filters-open,
+  &.sort-open,
   &.search-active {
     overflow-y    : hidden;
     padding-right : var(--scrollbar-width);

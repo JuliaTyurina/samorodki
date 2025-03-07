@@ -21,10 +21,8 @@ export const initGlobalAction = () => {
       if ( action === EGlobalActions.MenuToggle ) app.menuToggle()
       if ( action === EGlobalActions.FiltersOpen ) app.filtersOpen()
       if ( action === EGlobalActions.FiltersClose ) app.filtersClose()
-
-      if ( action === EGlobalActions.SortOpen ) {
-        console.log( 'sort open' )
-      }
+      if ( action === EGlobalActions.SortOpen ) app.sortOpen()
+      if ( action === EGlobalActions.SortClose ) app.sortClose()
     }
   } )
 }

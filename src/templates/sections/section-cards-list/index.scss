@@ -59,10 +59,10 @@
           position         : fixed;
           transform        : translateX(0);
           background-color : var(--color-background-primary);
-          z-index          : 80;
-          right            : -100%;
+          z-index          : 95;
+          right            : -100vw;
           top              : var(--header-height);
-          height           : calc(100% - var(--header-height) - var(--tabbar-height));
+          height           : calc(100% - var(--header-height));
           width            : 100vw;
           overflow-y       : auto;
           overflow-x       : hidden;

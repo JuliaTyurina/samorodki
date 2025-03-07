@@ -35,6 +35,12 @@ export const app: AppInterface = {
     this.body && removeClass( EBodyStateClasses.SearchOpen, this.body )
     search.reset()
   },
+  sortOpen() {
+    this.body && addClass( EBodyStateClasses.SortOpen, this.body )
+  },
+  sortClose() {
+    this.body && removeClass( EBodyStateClasses.SortOpen, this.body )
+  },
   filtersOpen() {
     this.body && addClass( EBodyStateClasses.FiltersOpen, this.body )
   },
