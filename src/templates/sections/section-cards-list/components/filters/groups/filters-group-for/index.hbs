@@ -1,14 +1,15 @@
 <div class="filters-group {{filters-group-class}}">
   <div class="filters-group__header">
     <button class="filters-group__title">
-      <span class="text-xl font-bold">Вставка</span>
+      <span class="text-xl font-bold">Для кого</span>
       {{> svg id="chevron-up"}}
     </button>
   </div>
   <div class="filters-group__main">
     <div class="filters-group__list">
-      {{> checkbox text="Родий" }}
-      {{> checkbox text="Золото" }}
+      {{> checkbox type="filter" text="Для него" }}
+      {{> checkbox type="filter" text="Для нее" }}
+      {{> checkbox type="filter" text="Детям" }}
     </div>
   </div>
 </div>

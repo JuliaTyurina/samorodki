@@ -1,21 +1,36 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
 .range {
   position : relative;
 
   &.vertical {
     display        : flex;
-    flex-direction : column-reverse;
+    flex-direction : column;
+    gap            : 16px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      display        : flex;
+      flex-direction : column-reverse;
+    }
 
     .range {
       &__inputs {
         display        : flex;
         flex-direction : column;
-        row-gap        : 8px;
+        gap            : 8px;
       }
 
       &__slider {
-        position      : relative;
-        transform     : unset;
-        margin-bottom : 16px;
+        position  : relative;
+        transform : unset;
+      }
+
+      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+        &__inputs {
+          display               : grid;
+          grid-template-columns : repeat(2, minmax(0, auto));
+        }
       }
     }
   }

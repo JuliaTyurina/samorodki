@@ -25,12 +25,12 @@
           </div>
           <div class="section-cards-list__cards-wrapper">
             <div class="cards-list-header">
-              <div class="accept-filters">
+              <div class="scrollbar-hidden">
                 {{> filters-accept }}
               </div>
-              <div class="sort">
-                {{#> dropdown dropdown-context.sort }}
-                {{/dropdown}}
+              <div class="cards-list-header__sort-wrapper">
+                {{> sort-handler }}
+                {{> filters-handler filters-handler-class="__hide-after-md"}}
               </div>
             </div>
             {{> cards-list cards-list-class="cards-list--max-3" }}

@@ -1,0 +1,23 @@
+<div class="filters-group {{filters-group-class}}">
+  <div class="filters-group__header">
+    <button class="filters-group__title">
+      <span class="text-xl font-bold">Тип изделия</span>
+      {{> svg id="chevron-up"}}
+    </button>
+    <button class="filters-group__cancel">{{> svg id="cancel" }}</button>
+  </div>
+  <div class="filters-group__main">
+    <div class="filters-group__list">
+      {{> checkbox type="filter" text="Серьги" }}
+      {{> checkbox type="filter" text="Кольца" checked=true disabled=true }}
+      {{> checkbox type="filter" text="Подвески" disabled=true }}
+      {{> checkbox type="filter" text="Пирсинг" }}
+      {{> checkbox type="filter" text="Цепочки" }}
+      {{> checkbox type="filter" text="Колье" }}
+    </div>
+    <button class="filters-group__more font-bold">
+      <span>Раскрыть</span>
+      {{> svg id="chevron-down" svg-class="icon-sm" }}
+    </button>
+  </div>
+</div>

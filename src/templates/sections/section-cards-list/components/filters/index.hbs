@@ -1,0 +1,28 @@
+<div class="filters">
+  <div class="filters__header __hide-after-md">
+    <button class="filters__reset text-xl text-gray">Сбросить</button>
+    <span class="filters__title text-xl font-bold">
+      Фильтры (99)
+    </span>
+    <button class="filters__close" data-global-action="filters-close">{{> svg id="cancel" svg-class="icon-md"}}</button>
+  </div>
+  <div class="filters__accept __hide-after-md">
+    {{> chip text="Серебро" chip-class="active"}}
+    {{> chip text="Серьги" chip-class="active"}}
+  </div>
+  <div class="filters__wrapper">
+    {{> filters-group-type filters-group-class="open" }}
+    {{> filters-group-price filters-group-class="open" }}
+    {{> filters-group-material filters-group-class="open" }}
+    {{> filters-group-color filters-group-class="open" }}
+    {{> filters-group-insert }}
+    {{> filters-group-for }}
+    {{> filters-group-coating filters-group-class="open" }}
+
+    <div class="filters__switchers">
+      {{> switcher text="Только скидки" checked=true }}
+      {{> switcher text="Новинки" }}
+      {{> switcher text="Хиты"}}
+    </div>
+  </div>
+</div>

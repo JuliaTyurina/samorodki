@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.filters-accept {
+  display : flex;
+  gap     : 4px;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    flex-wrap : wrap;
+  }
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+    gap : 8px;
+  }
+}

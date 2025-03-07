@@ -1,4 +1,6 @@
 import "./index.scss"
+import "./filters-accept"
+import "./filters-handler"
 import { Nullable } from "@js/types";
 import { addClass, hasClass, removeClass } from "@js/helpers/classHelper.ts";
 import { EStateClass } from "@js/types/state.ts";

@@ -9,6 +9,8 @@ export interface AppInterface {
   setWindowVariables?: () => void
   searchOpen: () => void
   searchClose: () => void
+  filtersOpen: () => void
+  filtersClose: () => void
   catalogOpen: () => void
   catalogToggle: () => void
   catalogClose: () => void
@@ -26,6 +28,7 @@ export interface App extends Omit<AppInterface, 'initDependencies'> {
 
 export enum EBodyStateClasses {
   SearchOpen = "search-open",
+  FiltersOpen = "filters-open",
   CatalogOpen = "catalog-open",
   CatalogLvl2Open = "catalog-lvl2-open",
   MenuOpen = "menu-open",

@@ -1,7 +1,7 @@
 import "./checkbox"
 import "./switcher"
 import "./radio"
-import "./input"
+// import "./input"
 import { initInputsRange } from "./range";
 
 export const initInputs = () => {

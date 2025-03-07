@@ -1,0 +1,209 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.filters {
+  &__header {
+    position        : relative;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    padding         : 12px 16px;
+
+    button {
+      position         : absolute;
+      padding          : 0;
+      border           : none;
+      background-color : transparent;
+    }
+  }
+
+  &__accept {
+    border-bottom : 1px solid var(--color-stroke-primary);
+    padding       : 12px 16px;
+    display       : flex;
+    gap           : 8px;
+    margin-bottom : 24px;
+  }
+
+  &__reset {
+    left : 16px;
+  }
+
+  &__close {
+    right : 16px;
+  }
+
+  &__wrapper {
+    display        : flex;
+    flex-direction : column;
+    row-gap        : 24px;
+    padding-bottom : 48px;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      row-gap : 40px;
+    }
+  }
+
+  &__switchers {
+    display        : flex;
+    flex-direction : column;
+    gap            : 14px;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      gap : 0;
+
+      & > * {
+        padding : 16px;
+
+        &:not(:last-child) {
+          border-bottom : 1px solid var(--color-stroke-primary);
+        }
+      }
+    }
+  }
+}
+
+.filters-group {
+  &__header {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    gap             : 10px;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      padding-left  : 16px;
+      padding-right : 16px;
+    }
+  }
+
+  &__title {
+    display          : flex;
+    align-items      : center;
+    column-gap       : 8px;
+    padding          : 0;
+    border           : none;
+    background-color : transparent;
+    cursor           : pointer;
+
+    svg {
+      display   : block;
+      width     : 24px;
+      height    : 24px;
+      fill      : var(--color-icon-secondary);
+      transform : rotate(180deg);
+
+      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+        display : none;
+      }
+    }
+  }
+
+  &__cancel {
+    padding          : 0;
+    border           : none;
+    background-color : transparent;
+    cursor           : pointer;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      display : none;
+    }
+
+    svg {
+      width   : 16px;
+      height  : 16px;
+      display : block;
+    }
+  }
+
+  &__list {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 12px;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      flex-direction : column;
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      padding-left  : 16px;
+      padding-right : 16px;
+    }
+  }
+
+  &__more {
+    margin-top       : 12px;
+    padding          : 0;
+    border           : none;
+    background-color : transparent;
+    color            : var(--color-text-accent);
+    cursor           : pointer;
+    display          : flex;
+    align-items      : center;
+    gap              : 4px;
+
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      svg {
+        display : none;
+      }
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      padding         : 16px;
+      margin-top      : 16px;
+      border-bottom   : 1px solid var(--color-stroke-primary);
+      border-top      : 1px solid var(--color-stroke-primary);
+      width           : 100%;
+      justify-content : center;
+      fill            : var(--color-icon-accent);
+    }
+  }
+
+  &__range {
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      padding-left  : 16px;
+      padding-right : 16px;
+    }
+
+    &-variants {
+      margin-top     : 16px;
+      display        : flex;
+      flex-direction : column;
+      row-gap        : 8px;
+
+      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+        display : none;
+      }
+    }
+  }
+
+  &__main {
+    overflow    : hidden;
+    transition  : max-height .15s;
+    will-change : max-height;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      max-height : 0;
+    }
+
+    & > *:first-child {
+      padding-top : 16px;
+    }
+  }
+
+  &.open {
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      .filters-group {
+        &__main {
+          max-height : 1000px;
+        }
+
+        &__title {
+          svg {
+            transform : rotate(0);
+          }
+        }
+      }
+    }
+  }
+}

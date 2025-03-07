@@ -5,13 +5,17 @@
   opacity    : 0;
   visibility : hidden;
   top        : var(--header-height);
-  position   : absolute;
-  height     : calc(100vh - var(--header-height) - var(--tabbar-height));
-  width      : calc(100vw - var(--scrollbar-width));
+  position   : fixed;
+  width      : 100vw;
+  height     : calc(100% - var(--header-height) - var(--tabbar-height));
   z-index    : 90;
 
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    width : calc(100vw - var(--scrollbar-width));
+  }
+
   &__content {
-    position         : absolute;
+    position         : relative;
     z-index          : 2;
     background-color : var(--color-background-primary);
     width            : 100%;
@@ -19,10 +23,14 @@
     padding-bottom   : 24px;
 
     @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-      width      : 40%;
-      right      : 0;
-      transform  : translateX(100%);
-      transition : transform var(--transition-default);
+      width       : 40%;
+      margin-left : auto;
+      transform   : translateX(100%);
+      transition  : transform var(--transition-default);
+    }
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      position : absolute;
     }
   }
 
@@ -36,9 +44,13 @@
     background-color : rgba(0, 0, 0, .5);
   }
 
-  &__location {
-    width   : 100%;
-    padding : 24px 16px 16px 16px;
+  & .menu {
+    &__location {
+      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+        width   : 100%;
+        padding : 24px 16px 16px 16px;
+      }
+    }
   }
 
   &__button {

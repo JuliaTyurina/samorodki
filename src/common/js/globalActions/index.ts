@@ -19,6 +19,12 @@ export const initGlobalAction = () => {
       if ( action === EGlobalActions.MenuOpen ) app.menuOpen()
       if ( action === EGlobalActions.MenuClose ) app.menuClose()
       if ( action === EGlobalActions.MenuToggle ) app.menuToggle()
+      if ( action === EGlobalActions.FiltersOpen ) app.filtersOpen()
+      if ( action === EGlobalActions.FiltersClose ) app.filtersClose()
+
+      if ( action === EGlobalActions.SortOpen ) {
+        console.log( 'sort open' )
+      }
     }
   } )
 }

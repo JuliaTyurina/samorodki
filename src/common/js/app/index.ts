@@ -35,6 +35,12 @@ export const app: AppInterface = {
     this.body && removeClass( EBodyStateClasses.SearchOpen, this.body )
     search.reset()
   },
+  filtersOpen() {
+    this.body && addClass( EBodyStateClasses.FiltersOpen, this.body )
+  },
+  filtersClose() {
+    this.body && removeClass( EBodyStateClasses.FiltersOpen, this.body )
+  },
   catalogOpen() {
     this.body && addClass( EBodyStateClasses.CatalogOpen, this.body )
   },
@@ -83,7 +89,14 @@ export const app: AppInterface = {
         root.style.setProperty( '--scrollbar-width', `${ this.scrollbarWidth }px` )
       }
       if ( header ) {
-        root.style.setProperty( '--header-height', `${ header.offsetHeight }px` )
+        const menu: HTMLElement | null = document.querySelector( '.menu' )
+        const tabbarHeight = +getComputedStyle( document.documentElement ).getPropertyValue( '--tabbar-height' ).replace( /\D/g, "" )
+        const headerHeight = header.offsetHeight
+
+        if ( menu && tabbarHeight && !isDevice.pc ) {
+          root.style.setProperty( '--content-space', `${ window.innerHeight - headerHeight - tabbarHeight }px` )
+        }
+        root.style.setProperty( '--header-height', `${ headerHeight }px` )
       }
     }
   },
