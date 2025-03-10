@@ -1,6 +1,4 @@
 import "./index.scss"
-import "./cards-list"
-import "./filters"
-import "./filters-accept"
+import "./components/cards-list"
 
-export { initFilters } from './filters'
+export { initCardsList } from './components'

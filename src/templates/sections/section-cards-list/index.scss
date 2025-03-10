@@ -6,9 +6,10 @@
     .section-cards-list {
       &__header {
         display       : flex;
-        gap           : 16px;
+        gap           : 4px 16px;
         align-items   : flex-end;
-        margin-bottom : 16px;
+        flex-wrap     : wrap;
+        margin-bottom : 12px;
 
         @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
           margin-bottom : 32px;
@@ -21,8 +22,12 @@
 
       &__main {
         display               : grid;
-        grid-template-columns : 220px auto;
         column-gap            : 32px;
+        grid-template-columns : minmax(0, auto);
+
+        @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+          grid-template-columns : 220px auto;
+        }
       }
 
       &__cards {
@@ -30,6 +35,7 @@
           display        : flex;
           flex-direction : column;
           gap            : 24px;
+          max-width      : 100%;
 
           @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
             gap : 34px;
@@ -44,6 +50,22 @@
 
         @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
           margin-top : 56px;
+        }
+      }
+
+      &__filters {
+        @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+          transition       : transform var(--transition-default);
+          position         : fixed;
+          transform        : translateX(0);
+          background-color : var(--color-background-primary);
+          z-index          : 95;
+          right            : -100vw;
+          top              : var(--header-height);
+          height           : calc(100% - var(--header-height));
+          width            : 100vw;
+          overflow-y       : auto;
+          overflow-x       : hidden;
         }
       }
     }
@@ -69,6 +91,18 @@
     @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
       & > * {
         width : 100%;
+      }
+    }
+  }
+}
+
+body.filters-open {
+  @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    .section-cards-list.with-filters {
+      .section-cards-list {
+        &__filters {
+          transform : translateX(-100%);
+        }
       }
     }
   }

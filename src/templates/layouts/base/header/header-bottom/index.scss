@@ -2,6 +2,13 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 .header-bottom {
+  &__container.__container {
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      max-width    : calc(100vw - 16px);
+      margin-right : unset;
+    }
+  }
+
   &__main {
     display     : flex;
     align-items : center;
@@ -39,10 +46,6 @@
   &__mobile-buttons {
     display     : flex;
     align-items : center;
-
-    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
-      transform : translateX(var(--container-mobile-padding));
-    }
 
     & > button {
       margin           : 0;

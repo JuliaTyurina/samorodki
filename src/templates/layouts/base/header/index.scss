@@ -2,13 +2,21 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 .header {
-  display        : flex;
-  flex-direction : column;
-  row-gap        : 16px;
+  display          : flex;
+  flex-direction   : column;
+  row-gap          : 16px;
+  position         : sticky;
+  top              : 0;
+  z-index          : 90;
+  background-color : var(--color-background-primary);
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
     padding-top    : 16px;
     padding-bottom : 16px;
+  }
+
+  @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    border-bottom : 1px solid var(--color-stroke-primary);
   }
 }
 

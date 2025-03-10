@@ -1,0 +1,47 @@
+.sort-mobile {
+  &__title {
+    display : block;
+    padding : 13px;
+  }
+
+  &__list {
+    label {
+      position : relative;
+
+      input {
+        opacity  : 0;
+        width    : 0;
+        height   : 0;
+        position : absolute;
+
+        &:checked ~ span {
+          background-color : var(--color-background-secondary);
+          color            : var(--color-text-accent);
+          fill             : var(--color-icon-accent);
+
+          svg {
+            display : block;
+          }
+        }
+      }
+
+      & > span {
+        padding         : 16px;
+        display         : flex;
+        align-items     : center;
+        justify-content : space-between;
+        border-top      : 1px solid var(--color-stroke-primary);
+
+        & > span {
+          display     : flex;
+          align-items : center;
+          gap         : 16px;
+        }
+
+        svg {
+          display : none;
+        }
+      }
+    }
+  }
+}

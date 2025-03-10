@@ -1,11 +1,12 @@
-<label class="checkbox">
+<label class="checkbox {{type}}">
+  <input type="checkbox" name="{{name}}" {{set-checked checked}} {{set-disabled disabled}} aria-label="применить {{text}}">
   <span class="checkbox__icon {{#if dark}}checkbox__icon--dark{{/if}}">
-    <input type="checkbox" name="{{name}}" {{set-checked checked}} {{set-disabled disabled}} aria-label="применить {{text}}">
-    {{> svg id="checkbox-default" svg-class="default"}}
-    {{> svg id="checkbox-filled" svg-class="checked"}}
+    {{> svg id="checkbox-default" svg-class="default" }}
+    {{> svg id="checkbox-filled" svg-class="checked" }}
+    {{> svg id="checkbox-disabled" svg-class="disabled" }}
   </span>
   {{#if color }}
     <span class="checkbox__round {{round-class}}" style="background-color: {{color}}"></span>
   {{/if}}
-  <span class="text-md font-medium">{{text}}</span>
+  <span class="checkbox__text text-md font-medium">{{text}}</span>
 </label>

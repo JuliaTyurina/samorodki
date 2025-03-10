@@ -1,0 +1,68 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.cards-list {
+  display               : grid;
+  grid-template-columns : repeat(2, minmax(0, auto));
+  gap                   : 16px 8px;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+    gap : 48px 16px;
+  }
+
+  &--max-3 {
+    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      grid-template-columns : repeat(3, minmax(0, auto));
+    }
+  }
+
+  &:not(&--max-3) {
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      grid-template-columns : repeat(3, minmax(0, auto));
+    }
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+      grid-template-columns : repeat(4, minmax(0, auto));
+    }
+  }
+}
+
+.cards-list-header {
+  display : flex;
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+    column-gap      : 52px;
+    justify-content : space-between;
+  }
+
+  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+    column-gap : 84px;
+  }
+
+  @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    flex-direction : column-reverse;
+  }
+
+  & > *:first-child {
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      width       : calc(100vw - var(--scrollbar-width));
+      margin-left : -16px;
+
+      & > * {
+        padding-right : 16px;
+        padding-left  : 16px;
+      }
+    }
+  }
+
+  &__sort-wrapper {
+    display         : flex;
+    justify-content : space-between;
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+      margin-bottom  : 8px;
+      padding-top    : 12px;
+      padding-bottom : 12px;
+    }
+  }
+}

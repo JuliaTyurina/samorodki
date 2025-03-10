@@ -9,6 +9,8 @@ body {
   &.catalog-open,
   &.menu-open,
   &.search-open,
+  &.filters-open,
+  &.sort-open,
   &.search-active {
     overflow-y    : hidden;
     padding-right : var(--scrollbar-width);
@@ -17,4 +19,9 @@ body {
 
 #app {
   position : relative;
+
+  & > main {
+    overflow : hidden;
+    position : relative;
+  }
 }
