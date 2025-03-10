@@ -1,0 +1,48 @@
+{
+  "images": [
+    "/assets/media/images/single-product/single-product-main.png",
+    "/assets/media/images/single-product/single-product-thumbnail-1.png",
+    "/assets/media/images/single-product/single-product-thumbnail-2.png",
+    "/assets/media/images/single-product/single-product-thumbnail-3.png"
+  ],
+  "title": "Серебро серьги длинные с гранатом",
+  "price": {
+    "normal": "221 222₽",
+    "discounted": "2 134₽",
+    "discount": "- 23%"
+  },
+  "description": "Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в свою работу.",
+  "sizes": [
+    "16", "16.5", "17", "17.5", "18", "18.5",
+    "19", "19.5", "20", "20.5", "21", "21.5",
+    "22", "22.5", "23"
+  ],
+  "tags": [
+    { "text": "Новинка", "type": "new" },
+    { "text": "ХИТ-цена", "type": "hit" }
+  ],
+  "details": {
+    "Артикул": "281087",
+    "Модель": "0656-K5R-02",
+    "Материал изделия": "Розовое золото",
+    "Покрытие": "С элементами родия",
+    "Вставка": "Бриллиант, Бриллиант коньячный",
+    "Страна производства": "Россия",
+    "Вес изделия": "5.9 г"
+  },
+  "rating": "4.8",
+  "reviews": [
+    {
+      "name": "Мария",
+      "rating": "5",
+      "date": "01.02.2025",
+      "text": "супер кольцо!!\uD83D\uDC4D\uD83D\uDD25\uD83D\uDD25\uD83D\uDD25 очень понравилось!! село идеально!!\uD83D\uDC96\uD83D\uDC96\uD83D\uDC96 и брилианты сверкают бомбически!\uD83E\uDD29\uD83E\uDD29\uD83E\uDD29 однозначно рекомендую!!\uD83D\uDC9E\uD83D\uDC9E\uD83D\uDC9E",
+      "images": [
+        "/assets/media/images/single-product/review-1-1.png",
+        "/assets/media/images/single-product/review-1-2.png",
+        "/assets/media/images/single-product/review-1-3.png"
+      ]
+    }
+  ]
+
+}

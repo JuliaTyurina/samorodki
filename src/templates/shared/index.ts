@@ -4,11 +4,11 @@ import './phone'
 import './scroll-to-top'
 import './breadcrumbs'
 import './pagination'
-import './table'
 import './menu-button'
 import './location'
 import './rating'
 import './chip'
+import './discount'
 
 import { initInputs } from "./input";
 import { initDropdown } from "@shared/dropdown";

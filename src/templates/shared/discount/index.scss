@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+  padding: 4px 8px;
+  color: var(--color-project-7);
+  background-color: var(--color-project-8);
+  border-radius: 6px;
+}

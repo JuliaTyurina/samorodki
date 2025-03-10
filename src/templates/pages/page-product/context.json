@@ -1,0 +1,11 @@
+{
+  "page-title": "Page Product",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "#" },
+    { "text": "Каталог", "url": "#" },
+    { "text": "Серьги", "url": "#" },
+    { "text": "Серебро", "url": "#" },
+    { "text": "Серебро серьги длинные с гранатом" }
+  ]
+}
