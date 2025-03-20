@@ -8,14 +8,14 @@ html {
   --container-outer-indent   : calc((100vw - var(--container-width)) / 2);
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-    --container-width : #{map.get(breakpoints.$breakpoints-min, md)};
+    --container-width : calc(#{map.get(breakpoints.$breakpoints-min, md)} - var(--container-mobile-padding) * 2 );
   }
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    --container-width : #{map.get(breakpoints.$breakpoints-min, lg)};
+    --container-width : calc(#{map.get(breakpoints.$breakpoints-min, lg)} - var(--container-mobile-padding) * 2 );
   }
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-    --container-width : #{map.get(breakpoints.$breakpoints-min, xl)};
+    --container-width : calc(#{map.get(breakpoints.$breakpoints-min, xl)} - var(--container-mobile-padding) * 2 );
   }
 }

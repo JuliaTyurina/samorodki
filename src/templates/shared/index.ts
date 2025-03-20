@@ -9,12 +9,19 @@ import './location'
 import './rating'
 import './chip'
 import './discount'
+import './stars'
+import './promo'
+import './copy'
+import './share'
+import './favorite'
 
 import { initInputs } from "./input";
 import { initDropdown } from "@shared/dropdown";
+import {initCopyPromocode} from "@shared/promo";
 // import './tooltip'
 
 export const initShared = () => {
   initInputs()
   initDropdown()
+  initCopyPromocode()
 }

@@ -1,0 +1,68 @@
+<section class="section-feedback {{section-class}}" id="reviews">
+    <div class="section-feedback__container __container">
+        <div class="section-feedback__wrapper">
+            <div class="section-feedback__heading">
+                <h2 class="section-feedback__title">{{section-title}}</h2>
+                <span class="section-feedback__counter">{{single-product-context.reviews.length}}</span>
+            </div>
+            <div class="section-feedback__rating">
+                <div class="section-feedback__rating-counter">
+                    <div class="section-feedback__rating-number">{{single-product-context.rating.fractional}}</div>
+                    {{> stars stars-class="stars-16-32" rating=single-product-context.rating.integer }}
+                </div>
+                {{> button text="Оставить отзыв" button-class="section-feedback__rating-button" }}
+                <div class="section-feedback__chart">
+                    {{#each single-product-context.rating.chart }}
+                        <div class="section-feedback__chart-item">
+                            <span class="section-feedback__chart-name">{{name}}</span>
+                            {{> svg id="star" svg-class="section-feedback__chart-star" }}
+                            <span class="section-feedback__progress"><span
+                                    class="section-feedback__progress-indicator"></span></span>
+                            <span class="section-feedback__chart-value">{{value}}%</span>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{> sort-feedback sort-class="section-feedback__sort" }}
+            <div class="section-feedback__filter">
+                {{> chip text="Все" }}
+                {{> chip text="С фото" chip-class="active" }}
+            </div>
+
+            <div class="section-feedback__list">
+                {{#each single-product-context.reviews }}
+                    <article class="section-feedback__card" >
+                        <div class="section-feedback__card-heading">
+                            <div class="section-feedback__card-user">
+                                {{ name }}
+                            </div>
+                            {{> stars stars-class="stars-16 section-feedback__card-rating" }}
+                            <span class="section-feedback__card-date">{{ date }}</span>
+                        </div>
+                        <div class="section-feedback__card-body">
+                            <div class="section-feedback__card-caption">
+                                Комментарий
+                            </div>
+                            <div class="section-feedback__card-text">
+                                <p>{{ text }}</p>
+                            </div>
+                            <div class="section-feedback__card-photos">
+                                {{#each images }}
+                                    {{#if (compare @index '<' 6)}}
+                                        <img src="{{url}}" alt="" data-fancybox="product-feedback" >
+                                    {{/if}}
+                                {{/each}}
+                                <div class="section-feedback__card-photos-overlay" data-fancybox-index="5" >
+                                    <span class="section-feedback__card-photos-counter">+{{images.length}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                {{/each}}
+            </div>
+            <button class="section-feedback__more">{{> svg id="comment-message"}} Показать больше отзывов</button>
+
+        </div>
+    </div>
+</section>
+

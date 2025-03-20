@@ -1,0 +1,59 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+// Автоматическое заполнение звезд по data-rating
+@mixin fill-stars($max: 5, $color: var(--color-project-10)) {
+  @for $i from 1 through $max {
+    .stars[data-rating="#{$i}"] .stars__item:nth-child(-n+#{$i}) {
+      fill: $color;
+    }
+  }
+}
+
+@include fill-stars(5);
+@include fill-stars(4);
+@include fill-stars(3);
+@include fill-stars(2);
+@include fill-stars(1);
+
+
+.stars {
+  display: flex;
+  column-gap: 2px;
+
+  svg {
+    fill: #cdcdcd;
+  }
+
+
+  &.stars-12 {
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &.stars-16 {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.stars-16-32 {
+    svg {
+      width: 16px;
+      height: 16px;
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+        width: 32px;
+        height: 32px;
+      }
+
+      @media (min-width : map.get(breakpoints.$breakpoints-min, sm)) {
+        column-gap : 8px;
+      }
+    }
+  }
+}
+

@@ -1,9 +1,173 @@
 <section class="section-product {{section-class}}">
-  <div class="__container">
-      <div class="section-product__wrapper">
-          <div class="section-product__media"></div>
-          <div class="section-product__descr"></div>
-      </div>
-<!--      {{> discount value=single-product-context.price.discount }}-->
-  </div>
+    <div class="section-product__container">
+        <div class="section-product__wrapper">
+            <div class="section-product__media">
+                <div class="section-product__sliders">
+                    <div class="swiper main-slider">
+                        <div class="swiper-wrapper">
+                            {{#each single-product-context.images }}
+                                <div class="swiper-slide">
+                                    <a href="{{url}}" data-fancybox="product">
+                                        <img src="{{url}}" alt="">
+                                    </a>
+                                </div>
+                            {{/each}}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper thumbs-slider">
+                        <div class="swiper-wrapper">
+                            {{#each single-product-context.images }}
+                                <div class="swiper-slide">
+                                    <img src="{{url}}" alt="">
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-product__descr">
+                <div class="section-product__heading" id="trigger-order">
+                    <div class="section-product__price">
+                        <span class="section-product__price-normal">{{ single-product-context.price.normal }}</span>
+                        <span class="section-product__price-discounted text-gray">{{ single-product-context.price.discounted }}</span>
+                        <span class="section-product__discount">{{> discount value=single-product-context.price.discount }}</span>
+                    </div>
+                    <div class="section-product__tags">
+                        {{#each single-product-context.tags }}
+                            <span class="section-product__tag" data-tag="{{type}}">{{text}}</span>
+                        {{/each}}
+                    </div>
+                </div>
+                <h1 class="section-product__title">{{ single-product-context.title }}</h1>
+
+                {{#if single-product-context.promo}}
+                    <div class="section-product__promo">
+                        {{> promo code=single-product-context.promo.text date=single-product-context.promo.date }}
+                    </div>
+                {{/if}}
+                <div class="section-product__sizes">
+                    <div class="section-product__size">
+                        {{#each single-product-context.sizes }}
+                            <button class="section-product__size-btn">{{ value }}</button>
+                        {{/each}}
+                    </div>
+                    <button class="section-product__size-table">Таблица размеров</button>
+                </div>
+
+                <div class="section-product__order">
+                    <div class="section-product__order-container">
+                        <div class="section-product__order-primary">
+                            <div class="section-product__buttons">
+                                {{> button text="Добавить в корзину" }}
+                                {{> favorite }}
+                            </div>
+                        </div>
+                        <div class="section-product__order-secondary">
+                            <div class="section-product__price">
+                                <span class="section-product__price-normal">{{ single-product-context.price.normal }}</span>
+                                <span class="section-product__discount">{{> discount value=single-product-context.price.discount }}</span>
+                            </div>
+                            <div class="section-product__buttons">
+                                {{> button text="В корзину" }}
+                                {{> favorite }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{#if single-product-context.reviews}}
+                    <a href="#reviews" class="section-product__reviews">
+                        <div class="section-product__reviews-left">
+                            <div class="section-product__reviews-quantity">
+                                <span>{{ single-product-context.reviews.length }}</span>
+                                отзыва {{> svg id="angle-right"}}</div>
+                            <div class="section-product__reviews-rating">
+                                {{> stars stars-class="stars-12" rating=single-product-context.rating.integer }}
+                                <span class="section-product__reviews-rating-text text-gray">{{single-product-context.rating.fractional}}</span>
+                            </div>
+                        </div>
+                        <div class="section-product__reviews-right">
+                            <div class="section-product__reviews-img">
+                                {{#each single-product-context.reviews.[0].images}}
+                                    {{#if (compare @index '<' 3)}}
+                                        <img src="{{url}}" alt="">
+                                    {{/if}}
+                                {{/each}}
+                            </div>
+                            <span class="section-product__reviews-img-count text-gray">+12</span>
+                        </div>
+                    </a>
+                {{/if}}
+
+                <dl class="section-product__details list-reset">
+                    {{#each single-product-context.details }}
+                        <div class="section-product__details-item">
+                            <dt class="section-product__details-name">{{name}}</dt>
+                            <dd class="section-product__details-value">{{value}}</dd>
+                        </div>
+                    {{/each}}
+                </dl>
+
+                <div class="section-product__accordion">
+                    <details class="section-product__accordion-details">
+                        <summary class="section-product__accordion-summary">
+                            <span class="section-product__accordion-title" role="term" aria-details="faq-1">
+                               Описание
+                            </span>
+                            {{> svg id="chevron-up" svg-class="section-product__accordion-arrow" }}
+                        </summary>
+                    </details>
+                    <div class="section-product__accordion-content" id="faq-1" role="definition">
+                        <div class="section-product__accordion-body">
+                            <p class="section-product__accordion-text">
+                                Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в свою работу.
+                            </p>
+                            <p class="section-product__accordion-text section-product__accordion-text--secondary">
+                                В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия от представленных на фото или в описании
+                            </p>
+                        </div>
+                    </div>
+                    <details class="section-product__accordion-details">
+                        <summary class="section-product__accordion-summary">
+                            <span class="section-product__accordion-title" role="term" aria-details="faq-2">
+                               Условия обмена и возврата
+                            </span>
+                            {{> svg id="chevron-up" svg-class="section-product__accordion-arrow" }}
+
+                        </summary>
+                    </details>
+                    <div class="section-product__accordion-content" id="faq-2" role="definition">
+                        <div class="section-product__accordion-body">
+                            <p class="section-product__accordion-text">
+                                Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в свою работу.
+                            </p>
+                            <p class="section-product__accordion-text section-product__accordion-text--secondary">
+                                В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия от представленных на фото или в описании
+                            </p>
+                        </div>
+                    </div>
+                    <details class="section-product__accordion-details">
+                        <summary class="section-product__accordion-summary">
+                            <span class="section-product__accordion-title" role="term" aria-details="faq-3">
+                               Сертификаты на камни
+                            </span>
+                            {{> svg id="chevron-up" svg-class="section-product__accordion-arrow" }}
+                        </summary>
+                    </details>
+                    <div class="section-product__accordion-content" id="faq-3" role="definition">
+                        <div class="section-product__accordion-body">
+                            <p class="section-product__accordion-text">
+                                В соответствии с ОСТ 117-3-002-95 характеристики бриллиантов и цветных драгоценных камней указываются на бирке ювелирного изделия.
+                            </p>
+                            <p class="section-product__accordion-text">
+                                В соответствии с законодательством, предоставление сертификата на бриллиант или цветные драгоценные камни, закрепленные в ювелирное изделие, осуществляется продавцом на добровольной основе.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+

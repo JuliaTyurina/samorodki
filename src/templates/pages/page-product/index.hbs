@@ -1,7 +1,8 @@
 {{#> layout-main layout=page-product-context }}
 
-  {{> section-page-header }}
-  {{> breadcrumbs layout.breadcrumbs }}
-  {{> section-product  }}
+  {{> breadcrumbs list=layout.breadcrumbs share=true}}
+  {{> section-product section-class="section-first" }}
+  {{> section-suggestion section-class="section" section-title="Купите в комплекте" }}
+  {{> section-feedback section-class="section" section-title="Отзывы" }}
 
 {{/layout-main}}

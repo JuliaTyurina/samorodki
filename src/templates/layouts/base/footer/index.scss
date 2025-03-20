@@ -28,6 +28,7 @@
     grid-template-columns : repeat(4, auto);
     column-gap            : 50px;
     row-gap               : 32px;
+    width: 100%;
 
     @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
       grid-template-columns : repeat(2, auto);
@@ -76,6 +77,10 @@
 
     @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
       flex-direction : row;
+    }
+
+    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
+      margin-top: 40px;
     }
 
     &-first {

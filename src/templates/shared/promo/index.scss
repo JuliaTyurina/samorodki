@@ -1,0 +1,64 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.promo {
+  position: relative;
+  grid-area: promo;
+
+  &:hover,
+  &:focus-visible {
+    .copy {
+      visibility: visible;
+    }
+  }
+
+  &:focus-within {
+    .copy {
+      visibility: visible;
+    }
+  }
+
+  @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+    max-width: max-content;
+    margin-bottom: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: var(--color-project-9);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 1px solid transparent;
+    }
+  }
+
+  &__text {
+    display: flex;
+    column-gap: 5px;
+    margin-bottom: unset;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--color-text-tertiary);
+  }
+
+  &__code {
+    color: var(--color-text-primary);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-icon-secondary);
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      display: none;
+    }
+  }
+}

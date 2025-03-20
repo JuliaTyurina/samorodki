@@ -1,0 +1,26 @@
+<section class="section-suggestion {{section-class}}">
+    <div class="section-suggestion__container __container">
+        <header class="section-suggestion__header">
+            <h2 class="section-suggestion__title">
+                {{section-title}}
+            </h2>
+            <div class="section-suggestion__slider-buttons __hide-before-md">
+                <button class="slider-button-prev">
+                    {{> svg id="arrow-left" svg-class="icon-md" }}
+                </button>
+                <button class="slider-button-next">
+                    {{> svg id="arrow-right" svg-class="icon-md" }}
+                </button>
+            </div>
+        </header>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {{#each cards-context.list}}
+                    <div class="swiper-slide">
+                        {{> card }}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

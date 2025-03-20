@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <script type="module" crossorigin src="../../assets/js/modulepreload-polyfill.DaKOjhqt.js"></script>
+</head>  <body>
+    <div id="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-top __hide-before-lg">
+          <div class="header-top__container __container">
+            <div class="header-top__main">
+              <div class="header-top__left">
+                <button type="button" class="location ">
+                  <svg class="icon-md">
+                    <use href="#location-point"></use>
+                  </svg>  <span class="font-medium">Москва</span>
+                </button>          <div class="phone ">
+                    <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
+                    <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
+                  </div>
+              </div>
+              <div class="header-top__right">
+                <nav class="navigation">
+                  <ul class="list-reset">
+                    <li><a href="#" class="font-semibold">Акции</a></li>
+                    <li><a href="#" class="font-semibold">О бренде</a></li>
+                    <li><a href="#" class="font-semibold">Доставка и оплата</a></li>
+                    <li><a href="#" class="font-semibold">Обмен и возврат</a></li>
+                    <li><a href="#" class="font-semibold">Контакты</a></li>
+                  </ul>
+                </nav>      </div>
+            </div>
+          </div>
+        </div>  <div class="header-bottom">
+          <div class="header-bottom__container __container">
+            <div class="header-bottom__main">
+                <a class="logo-header link-reset " href="">
+                  <svg class="">
+                    <use href="#logo"></use>
+                  </svg>  </a>
+                <button class="button-lg button--accent __hide-before-lg" data-global-action="catalog-toggle">
+                    <svg class="button-icon">
+                      <use href="#burger"></use>
+                    </svg>      <svg class="button-icon-active">
+                      <use href="#cancel"></use>
+                    </svg>    <span>Каталог</span>
+                </button>
+              <div class="search header-bottom__search __hide-before-lg">
+                <div class="search__input-wrapper">
+                  <input class="search__input" type="text" name="search" placeholder="Поиск по более чем 10 000 товарам">
+                  <button class="search__button search__button--normal" data-global-action="search-open">
+                    <svg class="icon-md">
+                      <use href="#search"></use>
+                    </svg>    </button>
+                  <button class="search__button search__button--cancel" data-global-action="search-close">
+                    <svg class="icon-md">
+                      <use href="#cancel"></use>
+                    </svg>    </button>
+                  <div class="search__result">
+                    <div class="search-content">
+                      <div class="search-content__items">
+                          <button class="search-item">
+                            <span class="search-item__left">
+                                <svg class="icon-sm">
+                                  <use href="#history"></use>
+                                </svg>      <span>Серьги</span>
+                            </span>
+                            <span class="search-item__right"><svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg></span>
+                          </button>
+                          <a class="search-item link-reset" href="#">
+                            <span class="search-item__left">
+                                <svg class="icon-sm">
+                                  <use href="#search"></use>
+                                </svg>      <span>Серьги женские</span>
+                            </span>
+                            <span class="search-item__right"><svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg></span>
+                          </a>
+                          <a class="search-item link-reset" href="#">
+                            <span class="search-item__left">
+                                <svg class="icon-sm">
+                                  <use href="#search"></use>
+                                </svg>      <span>Серьги мужские</span>
+                            </span>
+                            <span class="search-item__right"><svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg></span>
+                          </a>
+                          <a class="search-item link-reset" href="#">
+                            <span class="search-item__left">
+                                <svg class="icon-sm">
+                                  <use href="#search"></use>
+                                </svg>      <span>Серьги золотые</span>
+                            </span>
+                            <span class="search-item__right"><svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg></span>
+                          </a>
+                      </div>
+                      <div class="search-content__groups-wrapper">
+                        <div class="search-content__groups">
+                          <a href="#" class="search-group link-reset">
+                            <span class="search-group__left">
+                              <span>Серьги</span>
+                              <span class="text-sm font-bold text-gray">Категория</span>
+                            </span>
+                            <span class="search-group__right"><svg class="icon-sm">
+                            <use href="#chevron-right"></use>
+                          </svg></span>
+                          </a>      <a href="#" class="search-group link-reset">
+                            <span class="search-group__left">
+                              <span>Золотые серьги</span>
+                              <span class="text-sm font-bold text-gray">Категория</span>
+                            </span>
+                            <span class="search-group__right"><svg class="icon-sm">
+                            <use href="#chevron-right"></use>
+                          </svg></span>
+                          </a>    </div>
+                      </div>
+                      <div class="search-content__cards scrollbar-custom">
+                        <a href="#" class="search-card link-reset">
+                          <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+                          <span class="search-card__text font-bold">67 112₽</span>
+                        </a>    <a href="#" class="search-card link-reset">
+                          <img class="search-card__image" src="../../assets/media/images/search/card-2.png" alt="" loading="lazy">
+                          <span class="search-card__text font-bold">2 321₽</span>
+                        </a>    <a href="#" class="search-card link-reset">
+                          <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+                          <span class="search-card__text font-bold">7 712₽</span>
+                        </a>    <a href="#" class="search-card link-reset">
+                          <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+                          <span class="search-card__text font-bold">1 712₽</span>
+                        </a>    <a href="#" class="search-card link-reset">
+                          <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+                          <span class="search-card__text font-bold">697 712₽</span>
+                        </a>  </div>
+                      <div class="search-content__footer-wrapper">
+                        <div class="search-content__footer">
+                          <span class="font-medium text-gray">Найдено 102 товара</span>
+                          <a class="link-reset" href="#" aria-label="смотреть все">
+                            <span class="font-bold">Все результаты поиска</span>
+                            <svg class="icon-sm">
+                              <use href="#chevron-right"></use>
+                            </svg>      </a>
+                        </div>
+                      </div>
+                    </div>    </div>
+                </div>
+                <div class="search__background"></div>
+              </div>      <div class="header-bottom__navbar __hide-before-lg">
+                  <button class="menu-button menu-button--header" >
+                    <span class="menu-button__icon">
+                      <svg class="">
+                        <use href="#baby"></use>
+                      </svg>          <span class="menu-button__badge-empty"></span>
+                    </span>
+                    <span class="menu-button__text text-md font-semibold">Войти</span>
+                  </button>
+                  <button class="menu-button menu-button--header" >
+                    <span class="menu-button__icon">
+                      <svg class="">
+                        <use href="#heart"></use>
+                      </svg>          <span class="menu-button__badge-count">8</span>
+                    </span>
+                    <span class="menu-button__text text-md font-semibold">Избранное</span>
+                  </button>
+                  <button class="menu-button menu-button--header" >
+                    <span class="menu-button__icon">
+                      <svg class="">
+                        <use href="#cart"></use>
+                      </svg>    </span>
+                    <span class="menu-button__text text-md font-semibold">Корзина</span>
+                  </button>
+              </div>
+              <div class="header-bottom__mobile-buttons __hide-after-md">
+                <button aria-label="поиск" data-global-action="search-open">
+                  <svg class="icon-md">
+                    <use href="#search"></use>
+                  </svg>        </button>
+                <a class="link-reset" href="tel:8 926 193 33 58" aria-label="телефон">
+                  <svg class="icon-md">
+                    <use href="#phone-volume"></use>
+                  </svg>        </a>
+                <button class="header-burger" aria-label="открыть меню" data-global-action="menu-toggle">
+                  <svg class="icon-md header-burger__default">
+                    <use href="#burger"></use>
+                  </svg>          <svg class="icon-md header-burger__active">
+                    <use href="#cancel"></use>
+                  </svg>        </button>
+              </div>
+            </div>
+          </div>
+        </div></header>      <!-- catalog-menu -->
+      <div class="catalog-menu-wrapper">
+        <div class="catalog-menu-main">
+          <div class="__container">
+            <div class="catalog-menu">
+              <div class="catalog-menu__lvl1-wrapper scrollbar-custom">
+                <button class="catalog-menu-back __hide-after-md" data-global-action="catalog-close">
+                  <svg class="icon-md">
+                    <use href="#chevron-left"></use>
+                  </svg>  <span class="title-lg font-bold">Каталог</span>
+                </button>          <div class="catalog-menu__lvl1 scrollbar-custom">
+                </div>
+              </div>
+              <div class="catalog-menu__lvl2 scrollbar-custom">
+                <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
+                  <span class="font-bold"></span>
+                  <svg class="icon-sm">
+                    <use href="#chevron-right"></use>
+                  </svg>          </a>
+      
+                <div class="catalog-menu__lvl2-groups-wrapper">
+                  <button class="catalog-menu-back __hide-after-md" data-global-action="catalog-lvl2-close">
+                    <svg class="icon-md">
+                      <use href="#chevron-left"></use>
+                    </svg>  <span class="title-lg font-bold">Все украшения</span>
+                  </button>            <div class="catalog-menu__lvl2-groups">
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-menu-background" data-global-action="catalog-close"></div>
+      </div>      <!-- Menu -->
+      <div class="menu">
+        <div class="menu__content scrollbar-custom">
+          <button type="button" class="location menu__location">
+            <svg class="icon-md">
+              <use href="#location-point"></use>
+            </svg>  <span class="font-medium">Москва</span>
+          </button>    <button class="menu__button" data-global-action="catalog-open">
+            <span class="title-sm font-bold">Каталог</span>
+            <svg class="icon-md">
+              <use href="#chevron-right"></use>
+            </svg>    </button>
+          <div class="menu__blocks">
+            <nav class="menu__block">
+              <ul class="list-reset">
+                <li><a class="font-semibold" href="#">Акции</a></li>
+                <li><a class="font-semibold" href="#">О бренде</a></li>
+                <li><a class="font-semibold" href="#">Доставка и оплата</a></li>
+                <li><a class="font-semibold" href="#">Обмен и возврат</a></li>
+                <li><a class="font-semibold" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="menu__block">
+              <span class="menu__block-title title-sm font-bold">Мы в соцсетях</span>
+              <ul class="list-reset">
+                <li><a class="font-semibold" href="#">Вконтакте</a></li>
+                <li><a class="font-semibold" href="#">Instagram</a></li>
+                <li><a class="font-semibold" href="#">Телеграм</a></li>
+              </ul>
+            </div>
+            <div class="menu__block menu__block--contacts">
+              <span class="menu__block-title title-sm font-bold">Контакты</span>
+              <ul class="list-reset">
+                <li>  <div class="phone font-bold">
+          <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
+          <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
+        </div>
+      </li>
+                <li><a class="font-bold" href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
+                <li><span>Москва, Искры, 17а, стр.3</span></li>
+                <li><span>Кострома, Сутырина, д.3</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="menu__background"></div>
+      </div>      <div class="search-mobile">
+        <div class="search-mobile__header">
+          <button class="search-mobile__cancel" data-global-action="search-close">
+            <svg class="icon-md">
+              <use href="#chevron-left"></use>
+            </svg>    </button>
+          <div class="search-mobile__input-wrapper">
+            <input class="search-mobile__input" type="text">
+            <button class="search-mobile__input-button">
+              <svg class="icon-md">
+                <use href="#search"></use>
+              </svg>      </button>
+          </div>
+        </div>
+        <div class="search-content">
+          <div class="search-content__items">
+              <button class="search-item">
+                <span class="search-item__left">
+                    <svg class="icon-sm">
+                      <use href="#history"></use>
+                    </svg>      <span>Серьги</span>
+                </span>
+                <span class="search-item__right"><svg class="icon-sm">
+              <use href="#chevron-right"></use>
+            </svg></span>
+              </button>
+              <a class="search-item link-reset" href="#">
+                <span class="search-item__left">
+                    <svg class="icon-sm">
+                      <use href="#search"></use>
+                    </svg>      <span>Серьги женские</span>
+                </span>
+                <span class="search-item__right"><svg class="icon-sm">
+              <use href="#chevron-right"></use>
+            </svg></span>
+              </a>
+              <a class="search-item link-reset" href="#">
+                <span class="search-item__left">
+                    <svg class="icon-sm">
+                      <use href="#search"></use>
+                    </svg>      <span>Серьги мужские</span>
+                </span>
+                <span class="search-item__right"><svg class="icon-sm">
+              <use href="#chevron-right"></use>
+            </svg></span>
+              </a>
+              <a class="search-item link-reset" href="#">
+                <span class="search-item__left">
+                    <svg class="icon-sm">
+                      <use href="#search"></use>
+                    </svg>      <span>Серьги золотые</span>
+                </span>
+                <span class="search-item__right"><svg class="icon-sm">
+              <use href="#chevron-right"></use>
+            </svg></span>
+              </a>
+          </div>
+          <div class="search-content__groups-wrapper">
+            <div class="search-content__groups">
+              <a href="#" class="search-group link-reset">
+                <span class="search-group__left">
+                  <span>Серьги</span>
+                  <span class="text-sm font-bold text-gray">Категория</span>
+                </span>
+                <span class="search-group__right"><svg class="icon-sm">
+                <use href="#chevron-right"></use>
+              </svg></span>
+              </a>      <a href="#" class="search-group link-reset">
+                <span class="search-group__left">
+                  <span>Золотые серьги</span>
+                  <span class="text-sm font-bold text-gray">Категория</span>
+                </span>
+                <span class="search-group__right"><svg class="icon-sm">
+                <use href="#chevron-right"></use>
+              </svg></span>
+              </a>    </div>
+          </div>
+          <div class="search-content__cards scrollbar-custom">
+            <a href="#" class="search-card link-reset">
+              <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+              <span class="search-card__text font-bold">67 112₽</span>
+            </a>    <a href="#" class="search-card link-reset">
+              <img class="search-card__image" src="../../assets/media/images/search/card-2.png" alt="" loading="lazy">
+              <span class="search-card__text font-bold">2 321₽</span>
+            </a>    <a href="#" class="search-card link-reset">
+              <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+              <span class="search-card__text font-bold">7 712₽</span>
+            </a>    <a href="#" class="search-card link-reset">
+              <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+              <span class="search-card__text font-bold">1 712₽</span>
+            </a>    <a href="#" class="search-card link-reset">
+              <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+              <span class="search-card__text font-bold">697 712₽</span>
+            </a>  </div>
+          <div class="search-content__footer-wrapper">
+            <div class="search-content__footer">
+              <span class="font-medium text-gray">Найдено 102 товара</span>
+              <a class="link-reset" href="#" aria-label="смотреть все">
+                <span class="font-bold">Все результаты поиска</span>
+                <svg class="icon-sm">
+                  <use href="#chevron-right"></use>
+                </svg>      </a>
+            </div>
+          </div>
+        </div></div>      <div class="mobile-bottom-menu">
+        <div class="mobile-bottom-menu__background" data-global-action="sort-close"></div>
+        <div class="mobile-bottom-menu__wrapper">
+          <div class="mobile-bottom-menu__header"></div>
+          <div class="mobile-bottom-menu__content">
+            <div class="sort-mobile">
+              <span class="sort-mobile__title title-sm font-bold text-center">Сортировка</span>
+              <ul class="sort-mobile__list list-reset">
+                <li>
+                  <label>
+                    <input type="radio" name="sort" checked>
+                    <span class="text-md font-medium">
+                      <span>
+                        <span>По популярности</span>
+                      </span>
+                      <svg class="icon-xmd">
+                        <use href="#check"></use>
+                      </svg>        </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="sort">
+                    <span class="text-md font-medium">
+                      <span>
+                        <span>По рейтингу</span>
+                      </span>
+                      <svg class="icon-xmd">
+                        <use href="#check"></use>
+                      </svg>        </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="sort">
+                    <span class="text-md font-medium">
+                      <span>
+                        <span>По алфавиту</span>
+                        <span class="text-gray">От А до Я</span>
+                      </span>
+                      <svg class="icon-xmd">
+                        <use href="#check"></use>
+                      </svg>        </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="sort">
+                    <span class="text-md font-medium">
+                      <span>
+                        <span>По алфавиту</span>
+                        <span class="text-gray">От Я до А</span>
+                      </span>
+                      <svg class="icon-xmd">
+                        <use href="#check"></use>
+                      </svg>        </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="sort">
+                    <span class="text-md font-medium">
+                      <span>
+                        <span>Сначала дешевле</span>
+                      </span>
+                      <svg class="icon-xmd">
+                        <use href="#check"></use>
+                      </svg>        </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="sort">
+                    <span class="text-md font-medium">
+                      <span>
+                        <span>Сначала дороже</span>
+                      </span>
+                      <svg class="icon-xmd">
+                        <use href="#check"></use>
+                      </svg>        </span>
+                  </label>
+                </li>
+              </ul>
+            </div>    </div>
+          <div class="mobile-bottom-menu__footer"></div>
+        </div>
+      </div>
+      <!-- main content -->
+      <main>
+          <section>
+            <div class="container">
+              <h1>Contacts page</h1>
+            </div>
+          </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__main __container">
+          <div class="footer__top">
+                <a class="logo-footer link-reset " href="">
+                  <svg class="">
+                    <use href="#logo-2"></use>
+                  </svg>    </a>
+            <div class="footer__content font-semibold">
+              <div class="footer__content-block">
+                <span class="footer__content-title title-sm font-bold">Покупателям</span>
+                <ul class="footer__content-list list-reset">
+                  <li><a href="#">акции</a></li>
+                  <li><a href="#">доставка и оплата</a></li>
+                  <li><a href="#">обмен и возврат</a></li>
+                  <li><a href="#">контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer__content-block">
+                <span class="footer__content-title title-sm font-bold">Samorodki</span>
+                <ul class="footer__content-list list-reset">
+                  <li><a href="#">о бренде</a></li>
+                  <li><a href="#">новости</a></li>
+                  <li><a href="#">журнал</a></li>
+                  <li><a href="#">вакансии</a></li>
+                </ul>
+              </div>
+              <div class="footer__content-block">
+                <span class="footer__content-title title-sm font-bold">Мы в соцсетях</span>
+                <ul class="footer__content-list footer__content-list--social list-reset">
+                  <li>
+                    <a class="footer__social" href="#">
+                      <svg class="icon-md">
+                        <use href="#telegram"></use>
+                      </svg>                <span>телеграм</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="footer__social" href="#">
+                      <svg class="icon-md">
+                        <use href="#instagram"></use>
+                      </svg>                <span>Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="footer__social" href="#">
+                      <svg class="icon-md">
+                        <use href="#vk"></use>
+                      </svg>                <span>вконтакте</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__content-block">
+                <span class="footer__content-title title-sm font-bold">Контакты</span>
+                <ul class="footer__content-list list-reset">
+                  <li>  <div class="phone ">
+          <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
+          <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
+        </div>
+      </li>
+                  <li><a href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
+                  <li><span>Москва, Искры, 17а, стр.3</span></li>
+                  <li><span>Кострома, Сутырина, д.3</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom text-gray">
+            <div class="footer__bottom-first">
+              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Юридическая информация</a>
+              <span>© 2025 Samorodki, Все права защищены</span>
+            </div>
+            <div class="footer__bottom-second">
+              <span>Создание сайта - <a href="#">drozzi.ru</a></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="tabbar">
+          <a class="menu-button link-reset " href="/" >
+            <span class="menu-button__icon">
+              <svg class="">
+                <use href="#home"></use>
+              </svg>    </span>
+            <span class="menu-button__text text-md font-semibold">Главная</span>
+          </a>
+          <button class="menu-button " >
+            <span class="menu-button__icon">
+              <svg class="">
+                <use href="#catalog"></use>
+              </svg>    </span>
+            <span class="menu-button__text text-md font-semibold">Каталог</span>
+          </button>
+          <button class="menu-button " >
+            <span class="menu-button__icon">
+              <svg class="">
+                <use href="#cart"></use>
+              </svg>          <span class="menu-button__badge-count">8</span>
+            </span>
+            <span class="menu-button__text text-md font-semibold">Корзина</span>
+          </button>
+          <button class="menu-button " >
+            <span class="menu-button__icon">
+              <svg class="">
+                <use href="#heart"></use>
+              </svg>    </span>
+            <span class="menu-button__text text-md font-semibold">Избранное</span>
+          </button>
+          <button class="menu-button " >
+            <span class="menu-button__icon">
+              <svg class="">
+                <use href="#baby"></use>
+              </svg>    </span>
+            <span class="menu-button__text text-md font-semibold">Евгения</span>
+          </button>
+      </div>
+      <!-- scripts -->
+      <script type="module" src=""></script>
+    </div>
+  </body>
+</html>

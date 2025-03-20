@@ -4,4 +4,8 @@
   width       : fit-content;
   column-gap  : 4px;
   fill        : var(--color-icon-warning);
+
+  span {
+    color: var(--color-text-tertiary);
+  }
 }

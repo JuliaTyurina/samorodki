@@ -56,5 +56,11 @@
     & > * {
       padding : 16px;
     }
+
+    .header-burger {
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        padding-right: unset;
+      }
+    }
   }
 }

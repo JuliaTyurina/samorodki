@@ -40,7 +40,20 @@
         "position": "right",
         "class": "icon-md"
       }
-    }
+    },
+    "items": "catalog"
+  },
+  "sort-feedback": {
+    "position": "right",
+    "header": {
+      "title": "Сортировка",
+      "icon": {
+        "id": "chevron-down",
+        "position": "right",
+        "class": "icon-md"
+      }
+    },
+    "items": "feedback"
   },
   "navigation": {
     "position": "left",
