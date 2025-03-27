@@ -1,10 +1,10 @@
 {{#if (or (not variant) (compare variant "===" "header"))}}
-  <a class="logo-header link-reset {{logo-class}}" href="{{url}}">
+  <a class="logo-header link-reset {{logo-class}}" href="{{url}}" aria-label="Логотип ювелирной компании «Самородки»">
     {{> svg id="logo"}}
   </a>
 {{else}}
   {{#if (compare variant "===" "footer")}}
-    <a class="logo-footer link-reset {{logo-class}}" href="{{url}}">
+    <a class="logo-footer link-reset {{logo-class}}" href="{{url}}" aria-label="Логотип ювелирной компании «Самородки»">
       {{> svg id="logo-2"}}
     </a>
   {{/if}}

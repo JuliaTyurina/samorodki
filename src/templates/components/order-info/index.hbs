@@ -21,13 +21,13 @@
             <dd class="order-info__value">{{ order-details-context.order.discounts.promo_code.amount }}₽</dd>
             <dt class="order-info__code">
                 {{ order-details-context.order.discounts.promo_code.code }}
-                <button class="order-info__code-delete">{{> svg id="cross" }}</button>
+                <button class="order-info__code-delete" aria-label="Удалить промокод">{{> svg id="cross" }}</button>
             </dt>
         </div>
     </dl>
         {{> button text="Перейти к оформлению" button-class="order-info__btn" }}
         <div class="order-info__promocode">
             <input type="text" class="order-info__promocode-input" placeholder="Введите промокод">
-            <button class="order-info__promocode-btn">{{> svg id="percentage" }}</button>
+            <button class="order-info__promocode-btn" aria-label="Добавить промокод">{{> svg id="percentage" }}</button>
         </div>
 </div>

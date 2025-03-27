@@ -6,10 +6,10 @@
   <title></title>
   <script type="module" crossorigin src="../../assets/js/vendors-swiper.JOPwSglI.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-@fancyapps.Z9libBee.js"></script>
-  <script type="module" crossorigin src="../../assets/js/index.CKQcFM9I.js"></script>
+  <script type="module" crossorigin src="../../assets/js/index.miYx4q2D.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/css/index.CvXGZF0-.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-swiper.CQ8wcuPq.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-@fancyapps.B2r9mFhI.css">
-  <link rel="stylesheet" crossorigin href="../../assets/css/index.CUrCVEee.css">
 </head>  <body>
     <div id="app">
       <!-- Header -->
@@ -42,7 +42,7 @@
         </div>  <div class="header-bottom">
           <div class="header-bottom__container __container">
             <div class="header-bottom__main">
-                <a class="logo-header link-reset " href="">
+                <a class="logo-header link-reset " href="" aria-label="Логотип ювелирной компании «Самородки»">
                   <svg class="">
                     <use href="#logo"></use>
                   </svg>  </a>
@@ -847,7 +847,7 @@
                               <span>Добавить в корзину</span>
                             </button>
                   
-                          <button class="favorite-filled selected ">
+                          <button class="favorite-filled selected " aria-label="Убрать из израбранного">
                               <svg class="favorite-filled__icon">
                                 <use href="#heart-fill"></use>
                               </svg></button>    </div>
@@ -913,7 +913,7 @@
                                 <span>Добавить в корзину</span>
                               </button>
                     
-                            <button class="favorite-filled selected ">
+                            <button class="favorite-filled selected " aria-label="Убрать из израбранного">
                                 <svg class="favorite-filled__icon">
                                   <use href="#heart-fill"></use>
                                 </svg></button>    </div>
@@ -975,8 +975,10 @@
                                                                     aria-label="Уменьшить количество"><svg class="">
               <use href="#minus"></use>
             </svg></button>
-                                                            <input class="quantity-input" type="number" value="1" min="1" max="10"
-                                                                   step="1">
+                                                            <label class="quantity-label">
+                                                                <span class="visually-hidden">Количество товара</span>
+                                                                <input id="quantity-input" class="quantity-input" type="number" value="1" min="1" max="10" step="1" aria-labelledby="quantity-label">
+                                                            </label>
                                                             <button class="quantity-plus"
                                                                     aria-label="Увеличить количество"><svg class="">
               <use href="#plus"></use>
@@ -985,7 +987,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="section-cart__product-controls">
-                                                    <button class="favorite  section-cart__product-favorite">
+                                                    <button class="favorite  section-cart__product-favorite" aria-label=" Добавить в избранное">
                                                             <svg class="favorite__icon">
                                                               <use href="#heart"></use>
                                                             </svg></button>                                        <button class="section-cart__product-delete" aria-label="Убрать из корзины">
@@ -1032,8 +1034,10 @@
                                                                     aria-label="Уменьшить количество"><svg class="">
               <use href="#minus"></use>
             </svg></button>
-                                                            <input class="quantity-input" type="number" value="1" min="1" max="10"
-                                                                   step="1">
+                                                            <label class="quantity-label">
+                                                                <span class="visually-hidden">Количество товара</span>
+                                                                <input id="quantity-input" class="quantity-input" type="number" value="1" min="1" max="10" step="1" aria-labelledby="quantity-label">
+                                                            </label>
                                                             <button class="quantity-plus"
                                                                     aria-label="Увеличить количество"><svg class="">
               <use href="#plus"></use>
@@ -1042,7 +1046,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="section-cart__product-controls">
-                                                    <button class="favorite selected section-cart__product-favorite">
+                                                    <button class="favorite selected section-cart__product-favorite" aria-label="Убрать из израбранного">
                                                             <svg class="favorite__icon favorite__icon--filled">
                                                               <use href="#heart-fill"></use>
                                                             </svg></button>                                        <button class="section-cart__product-delete" aria-label="Убрать из корзины">
@@ -1093,8 +1097,10 @@
                                                                     aria-label="Уменьшить количество"><svg class="">
               <use href="#minus"></use>
             </svg></button>
-                                                            <input class="quantity-input" type="number" value="1" min="1" max="10"
-                                                                   step="1">
+                                                            <label class="quantity-label">
+                                                                <span class="visually-hidden">Количество товара</span>
+                                                                <input id="quantity-input" class="quantity-input" type="number" value="1" min="1" max="10" step="1" aria-labelledby="quantity-label">
+                                                            </label>
                                                             <button class="quantity-plus"
                                                                     aria-label="Увеличить количество"><svg class="">
               <use href="#plus"></use>
@@ -1103,7 +1109,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="section-cart__product-controls">
-                                                    <button class="favorite  section-cart__product-favorite">
+                                                    <button class="favorite  section-cart__product-favorite" aria-label=" Добавить в избранное">
                                                             <svg class="favorite__icon">
                                                               <use href="#heart"></use>
                                                             </svg></button>                                        <button class="section-cart__product-delete" aria-label="Убрать из корзины">
@@ -1154,8 +1160,10 @@
                                                                     aria-label="Уменьшить количество"><svg class="">
               <use href="#minus"></use>
             </svg></button>
-                                                            <input class="quantity-input" type="number" value="1" min="1" max="10"
-                                                                   step="1">
+                                                            <label class="quantity-label">
+                                                                <span class="visually-hidden">Количество товара</span>
+                                                                <input id="quantity-input" class="quantity-input" type="number" value="1" min="1" max="10" step="1" aria-labelledby="quantity-label">
+                                                            </label>
                                                             <button class="quantity-plus"
                                                                     aria-label="Увеличить количество"><svg class="">
               <use href="#plus"></use>
@@ -1164,7 +1172,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="section-cart__product-controls">
-                                                    <button class="favorite  section-cart__product-favorite">
+                                                    <button class="favorite  section-cart__product-favorite" aria-label=" Добавить в избранное">
                                                             <svg class="favorite__icon">
                                                               <use href="#heart"></use>
                                                             </svg></button>                                        <button class="section-cart__product-delete" aria-label="Убрать из корзины">
@@ -1224,7 +1232,7 @@
                                             </div>
                                         </div>
                                         <div class="section-cart__product-controls">
-                                            <button class="favorite-filled  section-cart__product-favorite">
+                                            <button class="favorite-filled  section-cart__product-favorite" aria-label=" Добавить в избранное">
                                                 <svg class="favorite-filled__icon">
                                                   <use href="#heart-fill"></use>
                                                 </svg></button>                                <button class="section-cart__product-delete" aria-label="Убрать из корзины">
@@ -1273,7 +1281,7 @@
                                         <dd class="order-info__value">-282₽</dd>
                                         <dt class="order-info__code">
                                             VESNA25
-                                            <button class="order-info__code-delete"><svg class="">
+                                            <button class="order-info__code-delete" aria-label="Удалить промокод"><svg class="">
                               <use href="#cross"></use>
                             </svg></button>
                                         </dt>
@@ -1284,7 +1292,7 @@
                                       </button>
                                     <div class="order-info__promocode">
                                         <input type="text" class="order-info__promocode-input" placeholder="Введите промокод">
-                                        <button class="order-info__promocode-btn"><svg class="">
+                                        <button class="order-info__promocode-btn" aria-label="Добавить промокод"><svg class="">
                               <use href="#percentage"></use>
                             </svg></button>
                                     </div>
@@ -1311,7 +1319,7 @@
                                         <dd class="order-info__value">-282₽</dd>
                                         <dt class="order-info__code">
                                             VESNA25
-                                            <button class="order-info__code-delete"><svg class="">
+                                            <button class="order-info__code-delete" aria-label="Удалить промокод"><svg class="">
                               <use href="#cross"></use>
                             </svg></button>
                                         </dt>
@@ -1322,7 +1330,7 @@
                                       </button>
                                     <div class="order-info__promocode">
                                         <input type="text" class="order-info__promocode-input" placeholder="Введите промокод">
-                                        <button class="order-info__promocode-btn"><svg class="">
+                                        <button class="order-info__promocode-btn" aria-label="Добавить промокод"><svg class="">
                               <use href="#percentage"></use>
                             </svg></button>
                                     </div>
@@ -1350,11 +1358,11 @@
                             Вам понравится
                         </h2>
                         <div class="section-suggestion__slider-buttons __hide-before-md">
-                            <button class="slider-button-prev">
+                            <button class="slider-button-prev" aria-label="Листать назад">
                                 <svg class="icon-md">
                                   <use href="#arrow-left"></use>
                                 </svg>                </button>
-                            <button class="slider-button-next">
+                            <button class="slider-button-next" aria-label="Листать вперёд">
                                 <svg class="icon-md">
                                   <use href="#arrow-right"></use>
                                 </svg>                </button>
@@ -1364,7 +1372,7 @@
                         <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1382,11 +1390,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1414,7 +1422,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1431,11 +1439,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1461,7 +1469,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1477,11 +1485,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1509,7 +1517,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1526,11 +1534,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1558,7 +1566,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1575,11 +1583,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1607,7 +1615,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1623,11 +1631,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1655,7 +1663,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1672,11 +1680,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1702,7 +1710,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1718,11 +1726,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1750,7 +1758,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1768,11 +1776,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1798,7 +1806,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1815,11 +1823,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1847,7 +1855,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1864,11 +1872,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1894,7 +1902,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1911,11 +1919,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1943,7 +1951,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -1960,11 +1968,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -1990,7 +1998,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2006,11 +2014,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2038,7 +2046,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2054,11 +2062,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2086,7 +2094,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2103,11 +2111,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2143,11 +2151,11 @@
                             Аксессуары
                         </h2>
                         <div class="section-suggestion__slider-buttons __hide-before-md">
-                            <button class="slider-button-prev">
+                            <button class="slider-button-prev" aria-label="Листать назад">
                                 <svg class="icon-md">
                                   <use href="#arrow-left"></use>
                                 </svg>                </button>
-                            <button class="slider-button-next">
+                            <button class="slider-button-next" aria-label="Листать вперёд">
                                 <svg class="icon-md">
                                   <use href="#arrow-right"></use>
                                 </svg>                </button>
@@ -2157,7 +2165,7 @@
                         <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2175,11 +2183,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2207,7 +2215,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2224,11 +2232,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2254,7 +2262,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2270,11 +2278,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2302,7 +2310,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2319,11 +2327,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2351,7 +2359,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2368,11 +2376,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2400,7 +2408,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2416,11 +2424,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2448,7 +2456,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2465,11 +2473,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2495,7 +2503,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2511,11 +2519,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2543,7 +2551,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2561,11 +2569,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2591,7 +2599,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2608,11 +2616,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2640,7 +2648,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2657,11 +2665,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2687,7 +2695,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2704,11 +2712,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2736,7 +2744,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2753,11 +2761,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2783,7 +2791,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2799,11 +2807,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2831,7 +2839,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-image2="/assets/media/images/seo-1-image.jpg">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2847,11 +2855,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2879,7 +2887,7 @@
                                       </article>                    </div>
                                 <div class="swiper-slide">
                                       <article class="card-product"  data-product-video="/assets/media/videos/product_card_video.mp4">
-                                        <a class="card-product__link" href="#"></a>
+                                        <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
                                         <div class="card-product__media-wrapper">
                                           <div class="card-product__media">
                                             <div class="card-product__media-layer">
@@ -2896,11 +2904,11 @@
                                             </div>
                                             <div class="card-product__media-entry"></div>
                                           </div>
-                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+                                          <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
                                             <svg class="">
                                               <use href="#cart"></use>
                                             </svg>    </button>
-                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                            <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
                                                 <svg class="">
                                                   <use href="#cart"></use>
                                                 </svg>      </button>
@@ -2936,7 +2944,7 @@
       <footer class="footer">
         <div class="footer__main __container">
           <div class="footer__top">
-                <a class="logo-footer link-reset " href="">
+                <a class="logo-footer link-reset " href="" aria-label="Логотип ювелирной компании «Самородки»">
                   <svg class="">
                     <use href="#logo-2"></use>
                   </svg>    </a>

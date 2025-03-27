@@ -1,4 +1,4 @@
-<button class="favorite {{#if selected}}selected{{/if}} {{ favorite-class }}">
+<button class="favorite {{#if selected}}selected{{/if}} {{ favorite-class }}" aria-label="{{#if selected}}Убрать из израбранного{{else}} Добавить в избранное{{/if}}">
     {{#if selected}}
         {{> svg id="heart-fill" svg-class="favorite__icon favorite__icon--filled" }}
         {{else}}

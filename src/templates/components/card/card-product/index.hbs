@@ -1,5 +1,5 @@
 <article class="card-product" {{#if (str-equals media-type "image")}} data-product-image2="/assets/media/images/seo-1-image.jpg"{{else}} data-product-video="/assets/media/videos/product_card_video.mp4"{{/if}}>
-  <a class="card-product__link" href="#"></a>
+  <a class="card-product__link" href="#" aria-label="Перейти на страницу товара"></a>
   <div class="card-product__media-wrapper">
     <div class="card-product__media">
       <div class="card-product__media-layer">
@@ -25,10 +25,10 @@
       </div>
       <div class="card-product__media-entry"></div>
     </div>
-    <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
+    <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product" aria-label="Добавить товар в корзину">
       {{> svg id="cart" }}
     </button>
-      <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+      <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product" aria-label="Добавить товар в корзину">
           {{> svg id="cart" }}
       </button>
   </div>
