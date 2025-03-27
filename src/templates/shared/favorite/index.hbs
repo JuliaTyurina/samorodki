@@ -1,3 +1,7 @@
-<button class="favorite {{ class }}">
-    {{> svg id="heart-fill" svg-class="favorite__icon" }}
+<button class="favorite {{#if selected}}selected{{/if}} {{ favorite-class }}">
+    {{#if selected}}
+        {{> svg id="heart-fill" svg-class="favorite__icon favorite__icon--filled" }}
+        {{else}}
+        {{> svg id="heart" svg-class="favorite__icon" }}
+    {{/if}}
 </button>

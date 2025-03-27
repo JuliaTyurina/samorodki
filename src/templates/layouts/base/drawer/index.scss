@@ -1,0 +1,87 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.drawer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  visibility: hidden;
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.20);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    z-index: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: max-content;
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-stroke-primary);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 128px 64px 64px;
+    max-width: 520px;
+    background-color: var(--color-background-primary);
+    transform: translateX(40%);
+    transition: transform .3s;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__product,
+  &__support {
+    display: none;
+  }
+
+  &.product {
+    .drawer__product {
+      display: block;
+    }
+  }
+
+  &.support {
+    .drawer__support {
+      display: block;
+    }
+  }
+
+
+}
+
+body.drawer-open {
+  @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+    .drawer {
+      opacity: 1;
+      visibility: visible;
+
+      &__wrapper {
+        transform: translateY(0);
+      }
+    }
+  }
+}

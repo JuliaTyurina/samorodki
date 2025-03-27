@@ -21,8 +21,21 @@ export const initGlobalAction = () => {
       if ( action === EGlobalActions.MenuToggle ) app.menuToggle()
       if ( action === EGlobalActions.FiltersOpen ) app.filtersOpen()
       if ( action === EGlobalActions.FiltersClose ) app.filtersClose()
-      if ( action === EGlobalActions.SortOpen ) app.sortOpen()
-      if ( action === EGlobalActions.SortClose ) app.sortClose()
+      if ( action === EGlobalActions.MobileBottomMenuOpen ) {
+        if (target.dataset.bottomMenu) {
+          app.mobileBottomMenuOpen(target.dataset.bottomMenu)
+        }
+
+      }
+      if ( action === EGlobalActions.MobileBottomMenuClose ) app.mobileBottomMenuClose()
+
+      if ( action === EGlobalActions.DrawerOpen ) {
+        if (target.dataset.drawer) {
+          app.drawerOpen(target.dataset.drawer)
+        }
+
+      }
+      if ( action === EGlobalActions.DrawerClose ) app.drawerClose()
     }
   } )
 }

@@ -3,6 +3,7 @@ import '@layouts/base/footer'
 import '@layouts/base/catalog-menu'
 import '@layouts/base/tabbar'
 import '@layouts/base/mobile-bottom-menu'
+import '@layouts/base/drawer'
 
 import { app, initGlobalAction } from "@src/common";
 import { initShared } from "@shared/index.ts";

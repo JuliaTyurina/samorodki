@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.favorite-filled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: unset;
+  width: max-content;
+  height: fit-content;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+
+    .favorite-filled__icon {
+      fill: var(--color-icon-quaternary);
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-icon-tertiary);
+    transition: fill var(--transition-default), opacity var(--transition-default);
+  }
+
+  &.selected {
+    .favorite-filled__icon {
+      fill: var(--color-icon-negative);
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+
+      .favorite__icon {
+        opacity: 0.4;
+      }
+    }
+  }
+
+}

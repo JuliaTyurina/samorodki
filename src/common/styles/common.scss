@@ -10,18 +10,23 @@ body {
   &.menu-open,
   &.search-open,
   &.filters-open,
-  &.sort-open,
+  &.mobile-bottom-menu-open,
+  &.drawer-open,
   &.search-active {
-    overflow-y    : hidden;
+    overflow    : hidden;
     padding-right : var(--scrollbar-width);
   }
 }
 
 #app {
   position : relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   & > main {
     //overflow : hidden;
     position : relative;
+    flex-grow: 1;
   }
 }

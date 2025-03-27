@@ -1,9 +1,19 @@
 <div class="mobile-bottom-menu">
-  <div class="mobile-bottom-menu__background" data-global-action="sort-close"></div>
+  <div class="mobile-bottom-menu__background" data-global-action="mobile-bottom-menu-close"></div>
   <div class="mobile-bottom-menu__wrapper">
     <div class="mobile-bottom-menu__header"></div>
     <div class="mobile-bottom-menu__content">
-      {{> sort-mobile }}
+        <div class="mobile-bottom-menu__sort-catalog">
+            {{> sort-catalog }}
+        </div>
+
+        <div class="mobile-bottom-menu__sort-feedback">
+            {{> sort-feedback}}
+        </div>
+
+        <div class="mobile-bottom-menu__product">
+            {{> menu-product }}
+        </div>
     </div>
     <div class="mobile-bottom-menu__footer"></div>
   </div>

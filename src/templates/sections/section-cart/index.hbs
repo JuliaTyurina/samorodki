@@ -1,0 +1,136 @@
+<section class="section-cart">
+    <div class="section-cart__container __container">
+        <h1 class="section-cart__title">Корзина</h1>
+        <div class="section-cart__wrapper">
+            <ol class="section-cart__products list-reset">
+                {{#each order-details-context.products }}
+                    {{#if (compare @index '<' 4)}}
+                        <li class="section-cart__product">
+                            <article class="section-cart__product-card">
+                                <div class="section-cart__product-wrapper">
+                                    <div class="section-cart__product-media">
+                                        <img src="{{ image }}" alt="" class="section-cart__product-img">
+                                    </div>
+                                    <div class="section-cart__product-descr">
+                                        <div class="section-cart__product-heading">
+                                            <a href="" class="section-cart__product-title">{{ title }}</a>
+                                            <div class="section-cart__product-size text-gray">
+                                                Размер: <span>{{ size }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="section-cart__product-info">
+                                            <div class="section-cart__product-price">
+                                                <span class="section-cart__product-price-normal">{{ price.normal }}</span>
+                                                {{#if price.old }}
+                                                    <span class="section-cart__product-price-old text-gray">{{ price.old }}</span>
+                                                {{/if}}
+
+                                                {{#if price.discount }}
+                                                    <span class="section-cart__product-discount">{{> discount value=price.discount }}</span>
+                                                {{/if}}
+                                            </div>
+                                            <div class="section-cart__product-quantity quantity">
+                                                <button class="quantity-minus"
+                                                        aria-label="Уменьшить количество">{{> svg id="minus" }}</button>
+                                                <input class="quantity-input" type="number" value="1" min="1" max="10"
+                                                       step="1">
+                                                <button class="quantity-plus"
+                                                        aria-label="Увеличить количество">{{> svg id="plus" }}</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-cart__product-controls">
+                                        {{> favorite selected=favourite favorite-class="section-cart__product-favorite" }}
+                                        <button class="section-cart__product-delete" aria-label="Убрать из корзины">
+                                            {{> svg id="delete" }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="section-cart__removed">
+                                <div class="section-cart__removed-wrapper">
+                                    <div class="section-cart__removed-media">
+                                        <img src="{{ image }}" alt="" class="section-cart__product-img">
+                                    </div>
+                                    <div class="section-cart__removed-descr">
+                                        <p class="section-cart__removed-title">{{ title }}</p>
+                                        <button class="section-cart__removed-undo">{{> svg id="undo"}} Восстановить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {{/if}}
+                {{/each}}
+                <li class="section-cart__product removed">
+                    <article class="section-cart__product-card">
+                        <div class="section-cart__product-wrapper">
+                            <div class="section-cart__product-media">
+                                <img src="{{ order-details-context.products.[4].image }}" alt="" class="section-cart__product-img">
+                            </div>
+                            <div class="section-cart__product-descr">
+                                <div class="section-cart__product-heading">
+                                    <a href="" class="section-cart__product-title">{{ order-details-context.products.[4].title }}</a>
+                                    <div class="section-cart__product-size text-gray">
+                                        Размер: <span>{{ order-details-context.products.[4].size }}</span>
+                                    </div>
+                                </div>
+                                <div class="section-cart__product-info">
+                                    <div class="section-cart__product-price">
+                                        <span class="section-cart__product-price--normal">{{ order-details-context.products.[4].price.normal }}</span>
+                                        {{#if order-details-context.products.[4].price.discounted }}
+                                            <span class="section-cart__product-price--discounted text-gray">{{ order-details-context.products.[4].price.discounted }}</span>
+                                        {{/if}}
+
+                                        {{#if order-details-context.products.[4].price.discount }}
+                                            <span class="section-cart__product-discount">{{> discount value=order-details-context.products.[4].price.discount }}</span>
+                                        {{/if}}
+                                    </div>
+                                    <div class="section-cart__product-quantity quantity">
+                                        <button class="quantity-minus"
+                                                aria-label="Уменьшить количество">{{> svg id="minus" }}</button>
+                                        <input class="quantity-input" type="number" value="1" min="1" max="10"
+                                               step="1">
+                                        <button class="quantity-plus"
+                                                aria-label="Увеличить количество">{{> svg id="plus" }}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-cart__product-controls">
+                                {{> favorite-filled selected=order-details-context.products.[4].favourite favorite-class="section-cart__product-favorite" }}
+                                <button class="section-cart__product-delete" aria-label="Убрать из корзины">
+                                    {{> svg id="delete" }}
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="section-cart__removed">
+                        <div class="section-cart__removed-wrapper">
+                            <div class="section-cart__removed-media">
+                                <img src="{{ order-details-context.products.[4].image }}" alt="" class="section-cart__product-img">
+                            </div>
+                            <div class="section-cart__removed-descr">
+                                <p class="section-cart__removed-title">{{ order-details-context.products.[4].title }}</p>
+                                <button class="section-cart__removed-undo">{{> svg id="undo"}} Восстановить</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <aside class="section-cart__info">
+                {{>order-info }}
+                {{>order-info order-info-class="promocode-added" }}
+                <div class="section-cart__bar">
+                    <div class="section-cart__bar-wrapper">
+                        <div class="section-cart__bar-price">
+                            <span class="section-cart__bar-price-old text-gray">{{order-details-context.order.price.old}}₽</span>
+                            <span class="section-cart__bar-price-normal">{{order-details-context.order.price.normal}}₽</span>
+                            <span class="section-cart__bar-quantity text-gray">{{order-details-context.products.length}} товаров</span>
+                        </div>
+                        {{> button text="Оформить" button-class="section-cart__bar-btn" }}
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+

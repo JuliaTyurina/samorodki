@@ -27,7 +27,7 @@ a {
   text-decoration : inherit;
 
   &:not(.link-reset) {
-    transition : color var(--transition-default);
+    transition : color var(--transition-default), background-color var(--transition-default) ;
 
     svg {
       transition : fill var(--transition-default);

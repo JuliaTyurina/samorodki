@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title></title>
-  <script type="module" crossorigin src="../../assets/js/modulepreload-polyfill.DaKOjhqt.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-swiper.JOPwSglI.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-@fancyapps.Z9libBee.js"></script>
-  <script type="module" crossorigin src="../../assets/js/index.KKg-3tvZ.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/css/index.Cjy-vmk9.css">
+  <script type="module" crossorigin src="../../assets/js/index.CKQcFM9I.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/css/index.CUrCVEee.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-swiper.CQ8wcuPq.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-@fancyapps.B2r9mFhI.css">
 </head>  <body>
@@ -647,90 +646,285 @@
             </div>
           </div>
         </div></div>      <div class="mobile-bottom-menu">
-        <div class="mobile-bottom-menu__background" data-global-action="sort-close"></div>
+        <div class="mobile-bottom-menu__background" data-global-action="mobile-bottom-menu-close"></div>
         <div class="mobile-bottom-menu__wrapper">
           <div class="mobile-bottom-menu__header"></div>
           <div class="mobile-bottom-menu__content">
-            <div class="sort-mobile">
-              <span class="sort-mobile__title title-sm font-bold text-center">Сортировка</span>
-              <ul class="sort-mobile__list list-reset">
-                <li>
-                  <label>
-                    <input type="radio" name="sort" checked>
-                    <span class="text-md font-medium">
-                      <span>
-                        <span>По популярности</span>
-                      </span>
-                      <svg class="icon-xmd">
-                        <use href="#check"></use>
-                      </svg>        </span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="sort">
-                    <span class="text-md font-medium">
-                      <span>
-                        <span>По рейтингу</span>
-                      </span>
-                      <svg class="icon-xmd">
-                        <use href="#check"></use>
-                      </svg>        </span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="sort">
-                    <span class="text-md font-medium">
-                      <span>
-                        <span>По алфавиту</span>
-                        <span class="text-gray">От А до Я</span>
-                      </span>
-                      <svg class="icon-xmd">
-                        <use href="#check"></use>
-                      </svg>        </span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="sort">
-                    <span class="text-md font-medium">
-                      <span>
-                        <span>По алфавиту</span>
-                        <span class="text-gray">От Я до А</span>
-                      </span>
-                      <svg class="icon-xmd">
-                        <use href="#check"></use>
-                      </svg>        </span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="sort">
-                    <span class="text-md font-medium">
-                      <span>
-                        <span>Сначала дешевле</span>
-                      </span>
-                      <svg class="icon-xmd">
-                        <use href="#check"></use>
-                      </svg>        </span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="sort">
-                    <span class="text-md font-medium">
-                      <span>
-                        <span>Сначала дороже</span>
-                      </span>
-                      <svg class="icon-xmd">
-                        <use href="#check"></use>
-                      </svg>        </span>
-                  </label>
-                </li>
-              </ul>
-            </div>    </div>
+              <div class="mobile-bottom-menu__sort-catalog">
+                  <div class="sort-catalog">
+                    <span class="sort-catalog__title title-sm font-bold text-center">Сортировка</span>
+                    <ul class="sort-catalog__list list-reset">
+                      <li>
+                        <label>
+                          <input type="radio" name="sort" checked>
+                          <span class="text-md font-medium">
+                            <span>
+                              <span>По популярности</span>
+                            </span>
+                            <svg class="icon-xmd">
+                              <use href="#check"></use>
+                            </svg>        </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                            <span>
+                              <span>По рейтингу</span>
+                            </span>
+                            <svg class="icon-xmd">
+                              <use href="#check"></use>
+                            </svg>        </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                            <span>
+                              <span>По алфавиту</span>
+                              <span class="text-gray">От А до Я</span>
+                            </span>
+                            <svg class="icon-xmd">
+                              <use href="#check"></use>
+                            </svg>        </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                            <span>
+                              <span>По алфавиту</span>
+                              <span class="text-gray">От Я до А</span>
+                            </span>
+                            <svg class="icon-xmd">
+                              <use href="#check"></use>
+                            </svg>        </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                            <span>
+                              <span>Сначала дешевле</span>
+                            </span>
+                            <svg class="icon-xmd">
+                              <use href="#check"></use>
+                            </svg>        </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                            <span>
+                              <span>Сначала дороже</span>
+                            </span>
+                            <svg class="icon-xmd">
+                              <use href="#check"></use>
+                            </svg>        </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>        </div>
+      
+              <div class="mobile-bottom-menu__sort-feedback">
+                  <div class="sort-feedback">
+                      <span class="sort-feedback__title title-sm font-bold text-center">Сортировка</span>
+                      <ul class="sort-feedback__list list-reset">
+                          <li>
+                              <label>
+                                  <input type="radio" name="sort" checked>
+                                  <span class="text-md font-medium">
+                            <span>
+                              <span>Сначала полезные</span>
+                            </span>
+                                      <svg class="icon-xmd">
+                                        <use href="#check"></use>
+                                      </svg>        </span>
+                              </label>
+                          </li>
+                          <li>
+                              <label>
+                                  <input type="radio" name="sort">
+                                  <span class="text-md font-medium">
+                            <span>
+                              <span>С высокой оценкой</span>
+                            </span>
+                                      <svg class="icon-xmd">
+                                        <use href="#check"></use>
+                                      </svg>        </span>
+                              </label>
+                          </li>
+                  
+                          <li>
+                              <label>
+                                  <input type="radio" name="sort">
+                                  <span class="text-md font-medium">
+                            <span>
+                              <span>С низкой оценкой</span>
+                            </span>
+                                      <svg class="icon-xmd">
+                                        <use href="#check"></use>
+                                      </svg>        </span>
+                              </label>
+                          </li>
+                          <li>
+                              <label>
+                                  <input type="radio" name="sort">
+                                  <span class="text-md font-medium">
+                            <span>
+                              <span>Сначала новые</span>
+                            </span>
+                                      <svg class="icon-xmd">
+                                        <use href="#check"></use>
+                                      </svg>        </span>
+                              </label>
+                          </li>
+                          <li>
+                              <label>
+                                  <input type="radio" name="sort">
+                                  <span class="text-md font-medium">
+                            <span>
+                              <span>Сначала старые</span>
+                            </span>
+                                      <svg class="icon-xmd">
+                                        <use href="#check"></use>
+                                      </svg>        </span>
+                              </label>
+                          </li>
+                      </ul>
+                  </div>        </div>
+      
+              <div class="mobile-bottom-menu__product">
+                  <div class="menu-product">
+                      <p class="menu-product__title">Выберите размер изделия</p>
+                      <div class="menu-product__card">
+                          <div class="menu-product__card-media">
+                              <img src="../../assets/media/images/single-product/single-product-main.png" alt="" class="menu-product__image">
+                          </div>
+                          <div class="menu-product__card-descr">
+                              <p class="menu-product__subtitle">Серебро серьги длинные с гранатом</p>
+                              <div class="menu-product__price">
+                                  <span class="menu-product__price-normal">170 340₽</span>
+                                  <span class="menu-product__price-old text-gray">221 222₽</span>
+                                  <span class="discount">
+                                      - 23%
+                                  </span>            </div>
+                              <div class="menu-product__rating text-gray">
+                                  <div class="rating ">
+                                    <svg class="icon-sm">
+                                      <use href="#star"></use>
+                                    </svg>  <span></span>
+                                  </div>                4.89
+                              </div>
+                          </div>
+                  
+                      </div>
+                      <div class="menu-product__size">
+                              <button class="menu-product__size-btn">16</button>
+                              <button class="menu-product__size-btn">16.5</button>
+                              <button class="menu-product__size-btn">17</button>
+                              <button class="menu-product__size-btn">17.5</button>
+                              <button class="menu-product__size-btn">18</button>
+                              <button class="menu-product__size-btn">18.5</button>
+                              <button class="menu-product__size-btn">19</button>
+                              <button class="menu-product__size-btn">19.5</button>
+                              <button class="menu-product__size-btn">20</button>
+                              <button class="menu-product__size-btn">20.5</button>
+                              <button class="menu-product__size-btn">21</button>
+                              <button class="menu-product__size-btn">21.5</button>
+                              <button class="menu-product__size-btn">22</button>
+                              <button class="menu-product__size-btn">22.5</button>
+                              <button class="menu-product__size-btn">23</button>
+                      </div>
+                  
+                      <div class="menu-product__button">
+                            <button class="button-lg button--accent menu-product__button-add" >
+                              <span>Добавить в корзину</span>
+                            </button>
+                  
+                          <button class="favorite-filled selected ">
+                              <svg class="favorite-filled__icon">
+                                <use href="#heart-fill"></use>
+                              </svg></button>    </div>
+                      <!--        <button class="menu-product__size-table">Таблица размеров</button>-->
+                  </div>        </div>
+          </div>
           <div class="mobile-bottom-menu__footer"></div>
+        </div>
+      </div>      <div class="drawer">
+        <div class="drawer__overlay" data-global-action="drawer-close"></div>
+        <div class="drawer__wrapper">
+            <button class="drawer__close" data-global-action="drawer-close">
+                <svg class="drawer__close-icon">
+                  <use href="#cancel"></use>
+                </svg>      </button>
+      
+            <div class="drawer__content">
+                <div class="drawer__product">
+                    <div class="menu-product">
+                        <p class="menu-product__title">Выберите размер изделия</p>
+                        <div class="menu-product__card">
+                            <div class="menu-product__card-media">
+                                <img src="../../assets/media/images/single-product/single-product-main.png" alt="" class="menu-product__image">
+                            </div>
+                            <div class="menu-product__card-descr">
+                                <p class="menu-product__subtitle">Серебро серьги длинные с гранатом</p>
+                                <div class="menu-product__price">
+                                    <span class="menu-product__price-normal">170 340₽</span>
+                                    <span class="menu-product__price-old text-gray">221 222₽</span>
+                                    <span class="discount">
+                                        - 23%
+                                    </span>            </div>
+                                <div class="menu-product__rating text-gray">
+                                    <div class="rating ">
+                                      <svg class="icon-sm">
+                                        <use href="#star"></use>
+                                      </svg>  <span></span>
+                                    </div>                4.89
+                                </div>
+                            </div>
+                    
+                        </div>
+                        <div class="menu-product__size">
+                                <button class="menu-product__size-btn">16</button>
+                                <button class="menu-product__size-btn">16.5</button>
+                                <button class="menu-product__size-btn">17</button>
+                                <button class="menu-product__size-btn">17.5</button>
+                                <button class="menu-product__size-btn">18</button>
+                                <button class="menu-product__size-btn">18.5</button>
+                                <button class="menu-product__size-btn">19</button>
+                                <button class="menu-product__size-btn">19.5</button>
+                                <button class="menu-product__size-btn">20</button>
+                                <button class="menu-product__size-btn">20.5</button>
+                                <button class="menu-product__size-btn">21</button>
+                                <button class="menu-product__size-btn">21.5</button>
+                                <button class="menu-product__size-btn">22</button>
+                                <button class="menu-product__size-btn">22.5</button>
+                                <button class="menu-product__size-btn">23</button>
+                        </div>
+                    
+                        <div class="menu-product__button">
+                              <button class="button-lg button--accent menu-product__button-add" >
+                                <span>Добавить в корзину</span>
+                              </button>
+                    
+                            <button class="favorite-filled selected ">
+                                <svg class="favorite-filled__icon">
+                                  <use href="#heart-fill"></use>
+                                </svg></button>    </div>
+                        <!--        <button class="menu-product__size-table">Таблица размеров</button>-->
+                    </div>          </div>
+      
+                <div class="drawer__support">
+                    <div class="support">
+                    csmcj
+                    </div>          </div>
+            </div>
         </div>
       </div>
       <!-- main content -->
@@ -867,10 +1061,10 @@
                           </div>
                       </div>
                       <div class="section-product__descr">
-                          <div class="section-product__heading" id="trigger-order">
+                          <div class="section-product__heading">
                               <div class="section-product__price">
-                                  <span class="section-product__price-normal">221 222₽</span>
-                                  <span class="section-product__price-discounted text-gray">2 134₽</span>
+                                  <span class="section-product__price-normal">170 340₽</span>
+                                  <span class="section-product__price-old text-gray">221 222₽</span>
                                   <span class="section-product__discount"><span class="discount">
               - 23%
           </span></span>
@@ -921,14 +1115,14 @@
                                             <button class="button-lg button--accent " >
                                               <span>Добавить в корзину</span>
                                             </button>
-                                          <button class="favorite ">
-                                              <svg class="favorite__icon">
+                                          <button class="favorite-filled selected ">
+                                              <svg class="favorite-filled__icon">
                                                 <use href="#heart-fill"></use>
                                               </svg></button>                            </div>
                                   </div>
                                   <div class="section-product__order-secondary">
                                       <div class="section-product__price">
-                                          <span class="section-product__price-normal">221 222₽</span>
+                                          <span class="section-product__price-normal">170 340₽</span>
                                           <span class="section-product__discount"><span class="discount">
               - 23%
           </span></span>
@@ -937,8 +1131,8 @@
                                             <button class="button-lg button--accent " >
                                               <span>В корзину</span>
                                             </button>
-                                          <button class="favorite ">
-                                              <svg class="favorite__icon">
+                                          <button class="favorite-filled selected ">
+                                              <svg class="favorite-filled__icon">
                                                 <use href="#heart-fill"></use>
                                               </svg></button>                            </div>
                                   </div>
@@ -1021,10 +1215,13 @@
                               <div class="section-product__accordion-content" id="faq-1" role="definition">
                                   <div class="section-product__accordion-body">
                                       <p class="section-product__accordion-text">
-                                          Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в свою работу.
+                                          Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов
+                                          уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это
+                                          семейное дело, где каждый сотрудник вкладывает душу в свою работу.
                                       </p>
                                       <p class="section-product__accordion-text section-product__accordion-text--secondary">
-                                          В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия от представленных на фото или в описании
+                                          В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия
+                                          от представленных на фото или в описании
                                       </p>
                                   </div>
                               </div>
@@ -1041,10 +1238,13 @@
                               <div class="section-product__accordion-content" id="faq-2" role="definition">
                                   <div class="section-product__accordion-body">
                                       <p class="section-product__accordion-text">
-                                          Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в свою работу.
+                                          Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов
+                                          уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это
+                                          семейное дело, где каждый сотрудник вкладывает душу в свою работу.
                                       </p>
                                       <p class="section-product__accordion-text section-product__accordion-text--secondary">
-                                          В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия от представленных на фото или в описании
+                                          В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия
+                                          от представленных на фото или в описании
                                       </p>
                                   </div>
                               </div>
@@ -1060,10 +1260,13 @@
                               <div class="section-product__accordion-content" id="faq-3" role="definition">
                                   <div class="section-product__accordion-body">
                                       <p class="section-product__accordion-text">
-                                          В соответствии с ОСТ 117-3-002-95 характеристики бриллиантов и цветных драгоценных камней указываются на бирке ювелирного изделия.
+                                          В соответствии с ОСТ 117-3-002-95 характеристики бриллиантов и цветных драгоценных
+                                          камней указываются на бирке ювелирного изделия.
                                       </p>
                                       <p class="section-product__accordion-text">
-                                          В соответствии с законодательством, предоставление сертификата на бриллиант или цветные драгоценные камни, закрепленные в ювелирное изделие, осуществляется продавцом на добровольной основе.
+                                          В соответствии с законодательством, предоставление сертификата на бриллиант или цветные
+                                          драгоценные камни, закрепленные в ювелирное изделие, осуществляется продавцом на
+                                          добровольной основе.
                                       </p>
                                   </div>
                               </div>
@@ -1102,7 +1305,7 @@
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--hit">ХИТ-цена</div>
                                             </div>
-                                              <button class="card-product__favourite card-product__favourite--filled">
+                                              <button class="card-product__favourite card-product__favourite--filled" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1112,17 +1315,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">40 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 23%</span>
                                           </div>
@@ -1147,7 +1354,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1157,10 +1364,14 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
@@ -1189,7 +1400,7 @@
                                           <div class="card-product__media-layer">
                                             <div class="card-product__tags">
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1199,17 +1410,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">15 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 77%</span>
                                           </div>
@@ -1234,7 +1449,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1244,17 +1459,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">89 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 42%</span>
                                           </div>
@@ -1279,7 +1498,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1289,17 +1508,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">89 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 32%</span>
                                           </div>
@@ -1323,7 +1546,7 @@
                                           <div class="card-product__media-layer">
                                             <div class="card-product__tags">
                                             </div>
-                                              <button class="card-product__favourite card-product__favourite--filled">
+                                              <button class="card-product__favourite card-product__favourite--filled" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1333,17 +1556,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">89 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 32%</span>
                                           </div>
@@ -1368,7 +1595,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1378,10 +1605,14 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
@@ -1410,7 +1641,7 @@
                                           <div class="card-product__media-layer">
                                             <div class="card-product__tags">
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1420,17 +1651,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">89 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 32%</span>
                                           </div>
@@ -1456,7 +1691,7 @@
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--hit">ХИТ-цена</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1466,10 +1701,14 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
@@ -1499,7 +1738,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1509,17 +1748,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">809 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">2 134₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">2 134₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 23%</span>
                                           </div>
@@ -1544,7 +1787,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1554,10 +1797,14 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
@@ -1587,7 +1834,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1597,17 +1844,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">15 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">1 355₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">1 355₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 7%</span>
                                           </div>
@@ -1632,7 +1883,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--hit">ХИТ-цена</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1642,10 +1893,14 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
@@ -1674,7 +1929,7 @@
                                           <div class="card-product__media-layer">
                                             <div class="card-product__tags">
                                             </div>
-                                              <button class="card-product__favourite card-product__favourite--filled">
+                                              <button class="card-product__favourite card-product__favourite--filled" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1684,17 +1939,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">15 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">999₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">999₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 5%</span>
                                           </div>
@@ -1718,7 +1977,7 @@
                                           <div class="card-product__media-layer">
                                             <div class="card-product__tags">
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1728,17 +1987,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">89 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">9 222₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">9 222₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 15%</span>
                                           </div>
@@ -1763,7 +2026,7 @@
                                             <div class="card-product__tags">
                                                   <div class="card-product__tag text-sm font-bold card-product__tag--new">Новинка</div>
                                             </div>
-                                              <button class="card-product__favourite">
+                                              <button class="card-product__favourite" aria-label="Добавить в избранное">
                                                 <svg class="">
                                                   <use href="#heart-fill"></use>
                                                 </svg>          </button>
@@ -1773,17 +2036,21 @@
                                           </div>
                                           <div class="card-product__media-entry"></div>
                                         </div>
-                                        <button class="card-product__add-to-cart">
+                                        <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
                                           <svg class="">
                                             <use href="#cart"></use>
                                           </svg>    </button>
+                                          <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+                                              <svg class="">
+                                                <use href="#cart"></use>
+                                              </svg>      </button>
                                       </div>
                                       <div class="card-product__info">
                                         <div class="card-product__price-block">
                                           <div class="card-product__price-wrapper">
                                             <div class="card-product__prices">
                                               <span class="card-product__price title-md font-bold">89 222₽</span>
-                                                <span class="card-product__price-discounted font-medium text-gray text-through">9 222₽</span>
+                                                <span class="card-product__price-old font-medium text-gray text-through">9 222₽</span>
                                             </div>
                                               <span class="card-product__price-discount text-sm font-bold">- 15%</span>
                                           </div>
@@ -1870,32 +2137,101 @@
                                   </div>
                           </div>
                       </div>
-                      <div class="sort-handler section-feedback__sort">
-                        <button class="sort-button __hide-after-md" data-global-action="sort-open">
-                          <span class="text-md font-semibold">Сортировка</span>
-                          <svg class="icon-xmd">
-                            <use href="#chevron-down"></use>
-                          </svg>  </button>
-                        <div class="dropdown dropdown--right __hide-before-lg">
-                            <div class="dropdown__header" tabindex="0">
-                                <span class="dropdown__header-text">Сортировка</span>
-                                    <svg class="icon-md">
-                                      <use href="#chevron-down"></use>
-                                    </svg>    </div>
-                            <div class="dropdown__body">
-                                <div class="dropdown__content">
-                        
-                                        <ul class="list-reset">
-                                            <li><a href="#" class="dropdown-item">Сначала полезные</a></li>
-                                            <li><a href="#" class="dropdown-item">С высокой оценкой</a></li>
-                                            <li><a href="#" class="dropdown-item">С низкой оценкой</a></li>
-                                            <li><a href="#" class="dropdown-item">Сначала новые</a></li>
-                                            <li><a href="#" class="dropdown-item">Сначала старые</a></li>
-                                        </ul>
-                        
-                                </div>
-                            </div>
-                        </div></div>            <div class="section-feedback__filter">
+          <!--            <div class="sort-feedback">
+              <span class="sort-feedback__title title-sm font-bold text-center">Сортировка</span>
+              <ul class="sort-feedback__list list-reset">
+                  <li>
+                      <label>
+                          <input type="radio" name="sort" checked>
+                          <span class="text-md font-medium">
+                    <span>
+                      <span>Сначала полезные</span>
+                    </span>
+                              <svg class="icon-xmd">
+                                <use href="#check"></use>
+                              </svg>        </span>
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                    <span>
+                      <span>С высокой оценкой</span>
+                    </span>
+                              <svg class="icon-xmd">
+                                <use href="#check"></use>
+                              </svg>        </span>
+                      </label>
+                  </li>
+          
+                  <li>
+                      <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                    <span>
+                      <span>С низкой оценкой</span>
+                    </span>
+                              <svg class="icon-xmd">
+                                <use href="#check"></use>
+                              </svg>        </span>
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                    <span>
+                      <span>Сначала новые</span>
+                    </span>
+                              <svg class="icon-xmd">
+                                <use href="#check"></use>
+                              </svg>        </span>
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          <input type="radio" name="sort">
+                          <span class="text-md font-medium">
+                    <span>
+                      <span>Сначала старые</span>
+                    </span>
+                              <svg class="icon-xmd">
+                                <use href="#check"></use>
+                              </svg>        </span>
+                      </label>
+                  </li>
+              </ul>
+          </div>-->
+                      <div class="sort-handler">
+                          <button class="sort-button __hide-after-md" data-global-action="mobile-bottom-menu-open"
+                                  data-bottom-menu="sort-feedback">
+                              <span class="text-md font-semibold">Сортировка</span>
+                              <svg class="icon-xmd">
+                                <use href="#chevron-down"></use>
+                              </svg>    </button>
+                              <div class="dropdown dropdown--right __hide-before-lg">
+                                  <div class="dropdown__header" tabindex="0">
+                                      <span class="dropdown__header-text">Сортировка</span>
+                                          <svg class="icon-md">
+                                            <use href="#chevron-down"></use>
+                                          </svg>    </div>
+                                  <div class="dropdown__body">
+                                      <div class="dropdown__content">
+                              
+                                              <ul class="list-reset">
+                                                  <li><a href="#" class="dropdown-item">Сначала полезные</a></li>
+                                                  <li><a href="#" class="dropdown-item">С высокой оценкой</a></li>
+                                                  <li><a href="#" class="dropdown-item">С низкой оценкой</a></li>
+                                                  <li><a href="#" class="dropdown-item">Сначала новые</a></li>
+                                                  <li><a href="#" class="dropdown-item">Сначала старые</a></li>
+                                              </ul>
+                              
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                      <div class="section-feedback__filter">
                           <button class="chip text-md font-semibold " data-chip-value="">
                             <span class="text-no-wrap">Все</span>
                             <svg class="chip__cancel icon-sm">

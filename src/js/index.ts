@@ -1,6 +1,7 @@
 import 'virtual:svg-icons-register';
 
 import "@layouts/layout-main";
+import "../templates/components"
 import { search } from "@components/search";
 import { initSections } from "@sections/index.ts";
 import { initCard } from "@components/card";

@@ -1,0 +1,14 @@
+<div class="sort-handler">
+    <button class="sort-button __hide-after-md" data-global-action="mobile-bottom-menu-open"
+            data-bottom-menu="{{ data-bottom-menu }}">
+        <span class="text-md font-semibold">Сортировка</span>
+        {{> svg id="chevron-down" svg-class="icon-xmd"}}
+    </button>
+    {{#if (str-equals type "sort-catalog")}}
+        {{> dropdown dropdown-context.sort-catalog dropdown-class="__hide-before-lg" }}
+    {{/if}}
+    {{#if (str-equals type "sort-feedback")}}
+        {{> dropdown dropdown-context.sort-feedback dropdown-class="__hide-before-lg" }}
+    {{/if}}
+
+</div>

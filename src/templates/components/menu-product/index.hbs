@@ -1,0 +1,33 @@
+<div class="menu-product">
+    <p class="menu-product__title">Выберите размер изделия</p>
+    <div class="menu-product__card">
+        <div class="menu-product__card-media">
+            <img src="{{single-product-context.images.[0].url}}" alt="" class="menu-product__image">
+        </div>
+        <div class="menu-product__card-descr">
+            <p class="menu-product__subtitle">{{single-product-context.title}}</p>
+            <div class="menu-product__price">
+                <span class="menu-product__price-normal">{{ single-product-context.price.normal }}</span>
+                <span class="menu-product__price-old text-gray">{{ single-product-context.price.old }}</span>
+                {{> discount value=single-product-context.price.discount }}
+            </div>
+            <div class="menu-product__rating text-gray">
+                {{> rating }}
+                {{ single-product-context.rating.fractional }}
+            </div>
+        </div>
+
+    </div>
+    <div class="menu-product__size">
+        {{#each single-product-context.sizes }}
+            <button class="menu-product__size-btn">{{ value }}</button>
+        {{/each}}
+    </div>
+
+    <div class="menu-product__button">
+        {{> button text="Добавить в корзину" button-class="menu-product__button-add" }}
+
+        {{> favorite-filled selected=single-product-context.favourite }}
+    </div>
+    <!--        <button class="menu-product__size-table">Таблица размеров</button>-->
+</div>

@@ -14,6 +14,7 @@ import './promo'
 import './copy'
 import './share'
 import './favorite'
+import './favorite-filled'
 
 import { initInputs } from "./input";
 import { initDropdown } from "@shared/dropdown";

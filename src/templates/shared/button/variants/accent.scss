@@ -1,20 +1,27 @@
-$button-accent : (
-    default: (
-        color: var(--color-text-contrast),
-        border-color: var(--color-background-accent),
-        background-color: var(--color-background-accent),
-        fill: var(--color-text-contrast),
-    ),
-    hover: (
-        color: var(--color-text-contrast),
-        border-color: var(--color-accent-hover),
-        background-color: var(--color-accent-hover),
-        fill: var(--color-text-contrast),
-    ),
-    active: (
-        color: var(--color-text-contrast),
-        border-color: var(--color-accent-hover),
-        background-color: var(--color-accent-hover),
-        fill: var(--color-text-contrast),
-    ),
+$button-accent: (
+        default: (
+                color: var(--color-text-contrast),
+                border-color: var(--color-background-accent),
+                background-color: var(--color-background-accent),
+                fill: var(--color-text-contrast),
+        ),
+        hover: (
+                color: var(--color-text-contrast),
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-accent-hover),
+                fill: var(--color-text-contrast),
+        ),
+        focus-visible: (
+                color: var(--color-text-contrast),
+                outline: none,
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-accent-hover),
+                fill: var(--color-text-contrast),
+        ),
+        active: (
+                color: var(--color-text-contrast),
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-accent-hover),
+                fill: var(--color-text-contrast),
+        ),
 )

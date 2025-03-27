@@ -2,6 +2,8 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 .section-cards-list {
+  overflow-x: hidden;
+
   &.with-filters {
     .section-cards-list {
       &__header {

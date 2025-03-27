@@ -1,4 +1,8 @@
 {
-  "pageTitle": "Page Contacts",
-  "script-src": "/src/templates/pages/page-main/index.ts"
+  "page-title": "Page Contacts",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "#" },
+    { "text": "Контакты" }
+  ]
 }

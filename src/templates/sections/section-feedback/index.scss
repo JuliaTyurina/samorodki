@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
 
 .section-feedback {
 
@@ -46,14 +47,14 @@
 
   &__title {
     margin-bottom: unset;
-    font-size: clamp(24px, 1.182rem + 1.36vw, 36px);
+    font-size: functions.getClamp(24, 36);
     font-weight: 600;
     line-height: 1;
     letter-spacing: -0.48px;
   }
 
   &__counter {
-    font-size: clamp(18px, 1.072rem + 0.23vw, 20px);
+    font-size: functions.getClamp(18, 20);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.18px;
@@ -81,7 +82,7 @@
 
     &-number {
       margin-bottom: 2px;
-      font-size: clamp(32px, 1.576rem + 1.81vw, 48px);
+      font-size: functions.getClamp(32, 48);
       font-weight: 600;
       line-height: 1;
       letter-spacing: -0.64px;
@@ -95,7 +96,6 @@
     &-button {
       width: 100%;
       min-height: 48px;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
 
       @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
         max-width: max-content;
@@ -232,7 +232,7 @@
 
     &-user {
       grid-area: user;
-      font-size: clamp(18px, 0.966rem + 0.68vw, 24px);
+      font-size: functions.getClamp(18, 24);
       font-weight: 700;
       line-height: 1.3;
       letter-spacing: -0.24px;
@@ -244,7 +244,7 @@
 
     &-date {
       grid-area: date;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 500;
       line-height: 1.5;
       color: var(--color-text-tertiary);
@@ -258,14 +258,14 @@
 
     &-caption {
       margin-bottom: 2px;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 700;
       line-height: 1.5;
     }
 
     &-text {
       margin-bottom: 12px;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 400;
       line-height: 1.3;
     }
@@ -309,7 +309,7 @@
     align-items: center;
     column-gap: 8px;
     padding: 12px 24px;
-    font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+    font-size: functions.getClamp(14, 16);
     font-weight: 700;
     line-height: 1.3;
     color: var(--color-text-accent);

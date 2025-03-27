@@ -15,6 +15,7 @@ export const initSuggestions = () => {
     const prevButton: Nullable<HTMLElement> = section.querySelector( '.slider-button-prev' )
     const nextButton: Nullable<HTMLElement> = section.querySelector( '.slider-button-next' )
 
+
     if ( sliderElem ) {
       new Swiper( sliderElem, {
         modules: [ Navigation ],

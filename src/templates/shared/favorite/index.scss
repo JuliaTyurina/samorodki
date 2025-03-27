@@ -12,7 +12,10 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
+    outline: none;
+
     .favorite__icon {
       fill: var(--color-icon-quaternary);
     }
@@ -25,12 +28,15 @@
     transition: fill var(--transition-default), opacity var(--transition-default);
   }
 
-  &.filled {
-    .favorite__icon {
+  &.selected {
+    .favorite__icon--filled {
       fill: var(--color-icon-negative);
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
+      outline: none;
+
       .favorite__icon {
         opacity: 0.4;
       }

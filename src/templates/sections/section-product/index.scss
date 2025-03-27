@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
 
 .section-product {
 
@@ -88,14 +89,6 @@
       padding: unset;
       row-gap: 16px;
     }
-
-    //@media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-    //  max-width: 448px;
-    //}
-    //
-    //@media (min-width: map.get(breakpoints.$breakpoints-min, xxl)) {
-    //  max-width: unset;
-    //}
   }
 
   &__heading {
@@ -116,27 +109,27 @@
     display: grid;
     grid-template-areas:
       "normal discount"
-      "discounted discounted";
+      "old old";
     align-items: center;
     column-gap: 8px;
     row-gap: 4px;
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
       grid-template-areas:
-      "normal discounted discount";
+      "normal old discount";
     }
 
     &-normal {
       grid-area: normal;
-      font-size: clamp(24px, 1.182rem + 1.36vw, 36px);
+      font-size: functions.getClamp(24, 36);
       font-weight: 600;
       line-height: 1;
       letter-spacing: -0.48px;
     }
 
-    &-discounted {
-      grid-area: discounted;
-      font-size: clamp(16px, 0.947rem + 0.23vw, 18px);
+    &-old {
+      grid-area: old;
+      font-size: functions.getClamp(16, 18);
       font-weight: 400;
       line-height: 1.5;
       text-decoration: line-through;
@@ -157,7 +150,7 @@
     padding: 4px 8px;
     max-width: max-content;
     height: fit-content;
-    font-size: clamp(12px, 0.697rem + 0.23vw, 14px);
+    font-size: functions.getClamp(12, 14);
     font-weight: 700;
     line-height: 1.3;
     border-radius: 6px;
@@ -176,7 +169,7 @@
   &__title {
     grid-area: title;
     margin-bottom: unset;
-    font-size: clamp(24px, 1.182rem + 1.36vw, 36px);
+    font-size: functions.getClamp(24, 36);
     font-weight: 600;
     line-height: 1;
     letter-spacing: -0.48px;
@@ -212,33 +205,44 @@
       align-items: center;
       min-width: 48px;
       padding: 10px 12px;
-      font-size: clamp(12px, 0.697rem + 0.23vw, 14px);
+      font-size: functions.getClamp(12, 14);
       font-weight: 700;
       line-height: 1.5;
       text-align: center;
       background-color: var(--color-background-tertiary);
       border: 1px solid var(--color-stroke-primary);
       border-radius: 12px;
-      transition: border var(--transition-default);
+      transition: color var(--transition-default), background-color var(--transition-default) border var(--transition-default);
       cursor: pointer;
 
       @media (min-width: map.get(breakpoints.$breakpoints-min, xxl)) {
         padding: 12px 16px;
       }
 
+      &.added {
+        color: var(--color-text-contrast);
+        background-color: var(--color-background-contrast);
+      }
 
-      &:hover,
-      &:focus-visible,
-      &:focus,
-      &:focus-within {
-        outline: 1px solid transparent;
-        border: 1px solid var(--color-stroke-contrast);
+      &:not(:disabled) {
+        &:hover,
+        &:focus-visible,
+        &:focus,
+        &:focus-within {
+          outline: 1px solid transparent;
+          border: 1px solid var(--color-stroke-contrast);
+        }
+      }
+
+      &:disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
       }
     }
 
     &-table {
       padding: unset;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 700;
       line-height: 1.3;
       letter-spacing: -0.14px;
@@ -305,8 +309,6 @@
       column-gap: 16px;
       background-color: var(--color-white);
       transform: translateY(200%);
-      //transform: scaleY(0);
-      //transform-origin: bottom;
       transition: transform var(--transition-default);
 
       @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
@@ -421,7 +423,7 @@
       display: flex;
       flex-basis: 53%;
       column-gap: 6px;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 400;
       line-height: 1.3;
 
@@ -437,7 +439,7 @@
     &-value {
       flex-basis: 47%;
       margin: unset;
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 700;
       line-height: 1.3;
     }
@@ -491,7 +493,7 @@
     }
 
     &-text {
-      font-size: clamp(14px, 0.822rem + 0.23vw, 16px);
+      font-size: functions.getClamp(14, 16);
       font-weight: 400;
       line-height: 1.5;
 

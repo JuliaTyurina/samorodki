@@ -1,38 +1,56 @@
-import { Nullable } from "@js/types";
+import {Nullable} from "@js/types";
 
 export interface AppInterface {
-  scrollbarWidth: Nullable<number>
-  body?: Nullable<HTMLElement>
-  device: "mobile" | "tablet" | "pc"
-  bodyBlock: ( isBlock?: boolean ) => void
-  initDependencies: () => void
-  setWindowVariables?: () => void
-  searchOpen: () => void
-  searchClose: () => void
-  sortOpen: () => void
-  sortClose: () => void
-  filtersOpen: () => void
-  filtersClose: () => void
-  catalogOpen: () => void
-  catalogToggle: () => void
-  catalogClose: () => void
-  catalogLvl2Open: () => void
-  catalogLvl2Close: () => void
-  menuOpen: () => void
-  menuClose: () => void
-  menuToggle: () => void
-  // modalOpen: ( modalName?: string ) => void
-  // modalClose: ( modalName?: string ) => void
+    scrollbarWidth: Nullable<number>
+    body?: Nullable<HTMLElement>
+    mobileBottomMenu: Nullable<HTMLElement>
+    drawer: Nullable<HTMLElement>
+    device: "mobile" | "tablet" | "pc"
+    bodyBlock: (isBlock?: boolean) => void
+    initDependencies: () => void
+    setWindowVariables?: () => void
+    searchOpen: () => void
+    searchClose: () => void
+    mobileBottomMenuOpen: (className: string) => void
+    mobileBottomMenuClose: () => void
+    drawerOpen: (className: string) => void
+    drawerClose: () => void
+    filtersOpen: () => void
+    filtersClose: () => void
+    catalogOpen: () => void
+    catalogToggle: () => void
+    catalogClose: () => void
+    catalogLvl2Open: () => void
+    catalogLvl2Close: () => void
+    menuOpen: () => void
+    menuClose: () => void
+    menuToggle: () => void
+    // modalOpen: ( modalName?: string ) => void
+    // modalClose: ( modalName?: string ) => void
 }
 
 export interface App extends Omit<AppInterface, 'initDependencies'> {
 }
 
 export enum EBodyStateClasses {
-  SortOpen = "sort-open",
-  SearchOpen = "search-open",
-  FiltersOpen = "filters-open",
-  CatalogOpen = "catalog-open",
-  CatalogLvl2Open = "catalog-lvl2-open",
-  MenuOpen = "menu-open",
+    MobileBottomMenuOpen = "mobile-bottom-menu-open",
+    DrawerOpen = "drawer-open",
+    SearchOpen = "search-open",
+    FiltersOpen = "filters-open",
+    CatalogOpen = "catalog-open",
+    CatalogLvl2Open = "catalog-lvl2-open",
+    MenuOpen = "menu-open",
+}
+
+export enum EMobileBottomMenuClasses {
+    SortCatalog = "sort-catalog",
+    SortFeedback = "sort-feedback",
+    Product = "product",
+    Support = "support",
+
+}
+
+export enum EDrawerClasses {
+    Product = "product",
+    Support = "support",
 }

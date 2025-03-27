@@ -1,0 +1,33 @@
+<div class="order-info {{order-info-class}} ">
+    <dl class="order-info__content">
+        <div class="order-info__line">
+            <dt class="order-info__key">Итого</dt>
+            <dd class="order-info__value">{{ order-details-context.order.price.normal }}₽</dd>
+        </div>
+        <div class="order-info__line">
+            <dt class="order-info__key">{{order-details-context.products.length}} товара на сумму</dt>
+            <dd class="order-info__value">{{ order-details-context.order.price.old }}₽</dd>
+        </div>
+        <div class="order-info__line">
+            <dt class="order-info__key">Скидка по акции</dt>
+            <dd class="order-info__value">{{ order-details-context.order.discounts.promotional.amount }}₽</dd>
+        </div>
+        <div class="order-info__line">
+            <dt class="order-info__key">Доп. скидки</dt>
+            <dd class="order-info__value">{{ order-details-context.order.discounts.additional.amount }}₽</dd>
+        </div>
+        <div class="order-info__line order-info__line--promocode">
+            <dt class="order-info__key">Промокод</dt>
+            <dd class="order-info__value">{{ order-details-context.order.discounts.promo_code.amount }}₽</dd>
+            <dt class="order-info__code">
+                {{ order-details-context.order.discounts.promo_code.code }}
+                <button class="order-info__code-delete">{{> svg id="cross" }}</button>
+            </dt>
+        </div>
+    </dl>
+        {{> button text="Перейти к оформлению" button-class="order-info__btn" }}
+        <div class="order-info__promocode">
+            <input type="text" class="order-info__promocode-input" placeholder="Введите промокод">
+            <button class="order-info__promocode-btn">{{> svg id="percentage" }}</button>
+        </div>
+</div>

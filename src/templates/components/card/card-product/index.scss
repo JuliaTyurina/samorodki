@@ -120,6 +120,21 @@
   }
 
   &__add-to-cart {
+
+    &.desktop {
+      display: none;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        display: block;
+      }
+    }
+
+    &.mobile {
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        display: none;
+      }
+    }
+
     border-radius    : 8px;
     background-color : rgba(24, 26, 29, 0.70);
     padding          : 8px;
@@ -137,6 +152,12 @@
       fill    : var(--color-icon-contrast);
     }
 
+    @media (min-width : map.get(breakpoints.$breakpoints-min, sm)) {
+      svg {
+        @include mixins.size('24px');
+      }
+    }
+
     @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
       bottom     : 16px;
       right      : 16px;
@@ -144,10 +165,6 @@
       opacity    : 0;
       visibility : hidden;
       transition : opacity var(--transition-default);
-
-      svg {
-        @include mixins.size('24px');
-      }
     }
   }
 
@@ -182,6 +199,7 @@
   }
 
   &__favourite {
+    align-self: flex-start;
     position         : relative;
     padding          : 4px;
     margin           : 0;
@@ -196,7 +214,7 @@
       @include mixins.size('16px');
       display : block;
 
-      @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
+      @media (min-width : map.get(breakpoints.$breakpoints-min, sm)) {
         @include mixins.size('24px');
       }
     }

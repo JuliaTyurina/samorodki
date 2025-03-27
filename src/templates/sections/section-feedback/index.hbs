@@ -23,7 +23,9 @@
                     {{/each}}
                 </div>
             </div>
-            {{> sort-feedback sort-class="section-feedback__sort" }}
+<!--            {{> sort-feedback sort-class="section-feedback__sort" }}-->
+            {{> sort-handler data-bottom-menu="sort-feedback" type="sort-feedback" }}
+
             <div class="section-feedback__filter">
                 {{> chip text="Все" }}
                 {{> chip text="С фото" chip-class="active" }}

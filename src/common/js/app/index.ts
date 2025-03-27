@@ -1,4 +1,4 @@
-import { AppInterface, EBodyStateClasses } from "./types";
+import {AppInterface, EBodyStateClasses, EDrawerClasses, EMobileBottomMenuClasses} from "./types";
 import { Nullable } from "@js/types";
 import { addClass, hasClass, removeClass } from "@js/helpers/classHelper.ts";
 import { search } from "@components/search";
@@ -23,6 +23,8 @@ export const app: AppInterface = {
   scrollbarWidth: 0,
   device: "mobile",
   body: null,
+  mobileBottomMenu: null,
+  drawer: null,
   bodyBlock( isBlock = true ) {
     if ( this.body ) {
       isBlock ? addClass( "no-scroll", this.body ) : removeClass( "no-scroll", this.body )
@@ -35,11 +37,29 @@ export const app: AppInterface = {
     this.body && removeClass( EBodyStateClasses.SearchOpen, this.body )
     search.reset()
   },
-  sortOpen() {
-    this.body && addClass( EBodyStateClasses.SortOpen, this.body )
+  mobileBottomMenuOpen(className: string) {
+    this.body && addClass( EBodyStateClasses.MobileBottomMenuOpen, this.body )
+    this.mobileBottomMenu && addClass( className, this.mobileBottomMenu )
   },
-  sortClose() {
-    this.body && removeClass( EBodyStateClasses.SortOpen, this.body )
+  mobileBottomMenuClose() {
+    this.body && removeClass( EBodyStateClasses.MobileBottomMenuOpen, this.body )
+    this.mobileBottomMenu && removeClass( [
+        EMobileBottomMenuClasses.SortCatalog,
+        EMobileBottomMenuClasses.SortFeedback,
+        EMobileBottomMenuClasses.Product,
+        EMobileBottomMenuClasses.Support,
+    ], this.mobileBottomMenu )
+  },
+  drawerOpen(className: string) {
+    this.body && addClass( EBodyStateClasses.DrawerOpen, this.body )
+    this.drawer && addClass( className, this.drawer )
+  },
+  drawerClose() {
+    this.body && removeClass( EBodyStateClasses.DrawerOpen, this.body )
+    this.drawer && removeClass( [
+      EDrawerClasses.Product,
+      EDrawerClasses.Support,
+    ], this.drawer )
   },
   filtersOpen() {
     this.body && addClass( EBodyStateClasses.FiltersOpen, this.body )
@@ -82,6 +102,8 @@ export const app: AppInterface = {
   initDependencies() {
     const { isDevice } = mqData()
     this.body = document.body
+    this.mobileBottomMenu = document.querySelector(".mobile-bottom-menu")
+    this.drawer = document.querySelector(".drawer")
     const root: Nullable<HTMLElement> = document.querySelector( ':root' );
     const header: Nullable<HTMLElement> = document.querySelector( 'header.header' );
 

@@ -1,1 +1,2 @@
-import "./sort-mobile"
+import "./sort-catalog"
+import "./sort-feedback"

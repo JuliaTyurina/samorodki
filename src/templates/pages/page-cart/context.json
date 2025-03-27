@@ -1,0 +1,8 @@
+{
+  "page-title": "Корзина",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "/" },
+    { "text": "Корзина" }
+  ]
+}

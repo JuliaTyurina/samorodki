@@ -31,7 +31,7 @@
       }
     ]
   },
-  "sort": {
+  "sort-catalog": {
     "position": "right",
     "header": {
       "title": "Сортировка",

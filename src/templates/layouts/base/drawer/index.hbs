@@ -1,0 +1,18 @@
+<div class="drawer">
+  <div class="drawer__overlay" data-global-action="drawer-close"></div>
+  <div class="drawer__wrapper">
+      <button class="drawer__close" data-global-action="drawer-close">
+          {{> svg id="cancel" svg-class="drawer__close-icon" }}
+      </button>
+
+      <div class="drawer__content">
+          <div class="drawer__product">
+              {{> menu-product }}
+          </div>
+
+          <div class="drawer__support">
+              {{> menu-support }}
+          </div>
+      </div>
+  </div>
+</div>

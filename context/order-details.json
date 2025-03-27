@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "image": "/assets/media/images/products/product_1.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "30 999₽",
+        "old": "40 222₽",
+        "discount": "-23%"
+      },
+      "favourite": false,
+      "size": 17,
+      "tags": [
+        { "text": "Новинка", "type": "new" },
+        { "text": "ХИТ-цена", "type": "hit" }
+      ],
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_2.png",
+      "title": "Подвеска на шею серебро 925 подвеска на шею серебро 925",
+      "price": {
+        "normal": "15 222₽",
+        "old": "",
+        "discount": ""
+      },
+      "favourite": true,
+      "size": 17,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_3.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "3 600₽",
+        "old": "15 222₽",
+        "discount": "- 77%"
+      },
+      "favourite": false,
+      "size": 17,
+      "media-type": "image"
+    },
+    {
+      "image": "/assets/media/images/products/product_4.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "51 800₽",
+        "old": "89 222₽",
+        "discount": "- 42%"
+      },
+      "rating": "3.7",
+      "favourite": false,
+      "size": 17,
+      "tags": [
+        { "text": "Новинка", "type": "new" }
+      ],
+      "media-type": "video"
+    },
+    {
+      "image": "/assets/media/images/products/product_3.png",
+      "title": "Подвеска на шею серебро 925",
+      "price": {
+        "normal": "2 134₽",
+        "old": "15 222₽",
+        "discount": "- 77%"
+      },
+      "favourite": false,
+      "size": 17,
+      "media-type": "image"
+    }
+  ],
+  "order": {
+    "price": {
+      "normal": 98282,
+      "old": 9999998282
+
+    },
+    "discounts": {
+      "promotional": {
+        "amount": -9999908282
+      },
+      "additional": {
+        "amount": -8282
+      },
+      "promo_code": {
+        "amount": -282,
+        "code": "VESNA25"
+      }
+    }
+  }
+}

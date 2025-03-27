@@ -11,11 +11,11 @@
           {{/if}}
         </div>
         {{#if favourite}}
-          <button class="card-product__favourite card-product__favourite--filled">
+          <button class="card-product__favourite card-product__favourite--filled" aria-label="Добавить в избранное">
             {{> svg id="heart-fill"}}
           </button>
         {{else}}
-          <button class="card-product__favourite">
+          <button class="card-product__favourite" aria-label="Добавить в избранное">
             {{> svg id="heart-fill"}}
           </button>
         {{/if}}
@@ -25,17 +25,20 @@
       </div>
       <div class="card-product__media-entry"></div>
     </div>
-    <button class="card-product__add-to-cart">
+    <button class="card-product__add-to-cart desktop" data-global-action="drawer-open" data-drawer="product">
       {{> svg id="cart" }}
     </button>
+      <button class="card-product__add-to-cart mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="product">
+          {{> svg id="cart" }}
+      </button>
   </div>
   <div class="card-product__info">
     <div class="card-product__price-block">
       <div class="card-product__price-wrapper">
         <div class="card-product__prices">
           <span class="card-product__price title-md font-bold">{{price.normal}}</span>
-          {{#if price.discounted}}
-            <span class="card-product__price-discounted font-medium text-gray text-through">{{price.discounted}}</span>
+          {{#if price.old}}
+            <span class="card-product__price-old font-medium text-gray text-through">{{price.old}}</span>
           {{/if}}
         </div>
         {{#if price.discount}}

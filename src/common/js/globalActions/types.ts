@@ -8,11 +8,13 @@ export enum EGlobalActions {
   CatalogLvl2Close = "catalog-lvl2-close",
   FiltersOpen = "filters-open",
   FiltersClose = "filters-close",
-  SortOpen = "sort-open",
-  SortClose = "sort-close",
+  MobileBottomMenuOpen = "mobile-bottom-menu-open",
+  MobileBottomMenuClose = "mobile-bottom-menu-close",
   MenuOpen = "menu-open",
   MenuClose = "menu-close",
   MenuToggle = "menu-toggle",
   ModalOpen = "modal-open",
-  ModalClose = "modal-close"
+  ModalClose = "modal-close",
+  DrawerOpen = "drawer-open",
+  DrawerClose = "drawer-close"
 }
