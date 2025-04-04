@@ -14,20 +14,22 @@
             {{/each}}
           </div>
         </div>
-        <div class="catalog-menu__lvl2 scrollbar-custom">
-          <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
-            <span class="font-bold">{{catalog-menu-context.lvl2.title}}</span>
-            {{> svg id="chevron-right" svg-class="icon-sm" }}
-          </a>
+        <div class="catalog-menu__lvl2 ">
+            <div class="catalog-menu__lvl2-wrapper scrollbar-custom">
+                <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
+                    <span class="font-bold">{{catalog-menu-context.lvl2.title}}</span>
+                    {{> svg id="chevron-right" svg-class="icon-sm" }}
+                </a>
 
-          <div class="catalog-menu__lvl2-groups-wrapper">
-            {{> catalog-menu-back text="Все украшения" class="__hide-after-md" attributes='data-global-action="catalog-lvl2-close"'}}
-            <div class="catalog-menu__lvl2-groups">
-              {{#each catalog-menu-context.lvl2.groups}}
-                {{> catalog-lvl2-group }}
-              {{/each}}
+                <div class="catalog-menu__lvl2-groups-wrapper">
+                    {{> catalog-menu-back text="Все украшения" class="__hide-after-md" attributes='data-global-action="catalog-lvl2-close"'}}
+                    <div class="catalog-menu__lvl2-groups ">
+                        {{#each catalog-menu-context.lvl2.groups}}
+                            {{> catalog-lvl2-group }}
+                        {{/each}}
+                    </div>
+                </div>
             </div>
-          </div>
 
         </div>
       </div>

@@ -48,6 +48,8 @@ export const app: AppInterface = {
         EMobileBottomMenuClasses.SortFeedback,
         EMobileBottomMenuClasses.Product,
         EMobileBottomMenuClasses.Support,
+        EMobileBottomMenuClasses.Locality,
+        EMobileBottomMenuClasses.DeliveryPoint,
     ], this.mobileBottomMenu )
   },
   drawerOpen(className: string) {
@@ -59,6 +61,8 @@ export const app: AppInterface = {
     this.drawer && removeClass( [
       EDrawerClasses.Product,
       EDrawerClasses.Support,
+      EDrawerClasses.Locality,
+      EDrawerClasses.DeliveryPoint,
     ], this.drawer )
   },
   filtersOpen() {
@@ -119,7 +123,7 @@ export const app: AppInterface = {
       if ( header ) {
         const menu: HTMLElement | null = document.querySelector( '.menu' )
         const tabbarHeight = +getComputedStyle( document.documentElement ).getPropertyValue( '--tabbar-height' ).replace( /\D/g, "" )
-        const headerHeight = header.offsetHeight
+        const headerHeight = header.offsetHeight - 3
 
         if ( menu && tabbarHeight && !isDevice.pc ) {
           root.style.setProperty( '--content-space', `${ window.innerHeight - headerHeight - tabbarHeight }px` )

@@ -342,8 +342,6 @@
     bottom: 54px;
     width: 100vw;
     padding: 16px 0 8px;
-    transform: translateY(0);
-    transition: transform var(--transition-default);
     background-color: var(--color-background-primary);
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
@@ -357,14 +355,6 @@
       display: flex;
       justify-content: space-between;
       column-gap: 16px;
-    }
-
-    &.scrolled {
-      transform: translateY(40%);
-
-      .section-cart__bar-wrapper > * {
-        display: none;
-      }
     }
 
     &-price {
@@ -397,3 +387,10 @@
   }
 }
 
+[data-float-bar] {
+  display: none;
+}
+
+[data-float-visible="true"] [data-float-bar] {
+  display: block;
+}

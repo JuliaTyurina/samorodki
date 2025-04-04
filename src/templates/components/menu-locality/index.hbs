@@ -1,0 +1,26 @@
+<div class="menu-locality">
+    <div class="menu-locality__title">Населенный пункт</div>
+    {{> input input-class="menu-locality__search" size="lg" label="Найти город" placeholder="Найти город" type="search" }}
+
+    <ul class="menu-locality__list list-reset">
+        {{#each delivery-data-context.cities}}
+            <li class="menu-locality__item">
+                <label class="menu-locality__item-label">
+                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                    <span class="menu-locality__item-wrapper">
+                        <span class="menu-locality__item-text">{{name}}</span>
+                        {{> svg id="check" svg-class="icon-xmd menu-locality__item-icon" }}
+                    </span>
+                </label>
+            </li>
+        {{/each}}
+    </ul>
+
+    {{> button
+            button-class="menu-locality__btn"
+            text="Закрыть"
+            variant="gray"
+            size="sm"
+            attributes=(str-concat
+                    'data-global-action="drawer-close" ') }}
+</div>

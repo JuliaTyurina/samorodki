@@ -1,53 +1,51 @@
 import "./index.scss"
 
-export const initCartOrderBar = (triggerClass, flipperClass, breakpointShow = 1024) => {
-    const trigger = document.querySelector(`.${triggerClass}`);
-    const flipper = document.querySelector(`.${flipperClass}`);
+export const initFloatingBar = () => {
+    document.querySelectorAll("[data-float-wrapper]").forEach(wrapper => {
+        const trigger = wrapper.querySelector("[data-float-trigger]");
+        const bar = wrapper.querySelector("[data-float-bar]");
+        const breakpointShow = parseInt(wrapper.dataset.floatBreakpoint, 10) || 1024;
 
-    if (!trigger || !flipper) return;
+        if (!trigger || !bar) return;
 
-    let ticking = false;
+        let ticking = false;
 
-    const handleScroll = () => {
-        if (window.innerWidth >= breakpointShow) {
-            removeScrollListener();
-            return;
-        }
+        const handleScroll = () => {
+            if (window.innerWidth >= breakpointShow) {
+                removeScrollListener();
+                wrapper.dataset.floatVisible = "false";
+                return;
+            }
 
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                const rect = trigger.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const rect = trigger.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
 
-                if (rect.bottom <= windowHeight - 100) {
-                    flipper.classList.add("scrolled");
-                } else {
-                    flipper.classList.remove("scrolled");
-                }
+                    wrapper.dataset.floatVisible = rect.bottom <= windowHeight - 100 ? "false" : "true";
 
-                ticking = false;
-            });
+                    ticking = false;
+                });
 
-            ticking = true;
-        }
-    };
+                ticking = true;
+            }
+        };
 
-    const removeScrollListener = () => {
-        document.removeEventListener("scroll", handleScroll);
-    };
+        const removeScrollListener = () => {
+            document.removeEventListener("scroll", handleScroll);
+        };
 
-    const handleResize = () => {
-        if (window.innerWidth >= breakpointShow) {
-            removeScrollListener();
-            flipper.classList.remove("scrolled");
-        } else {
-            document.addEventListener("scroll", handleScroll, { passive: true });
-            handleScroll();
-        }
-    };
+        const handleResize = () => {
+            if (window.innerWidth >= breakpointShow) {
+                removeScrollListener();
+                wrapper.dataset.floatVisible = "false";
+            } else {
+                document.addEventListener("scroll", handleScroll, { passive: true });
+                handleScroll();
+            }
+        };
 
-    window.addEventListener("resize", handleResize);
-    handleResize();
+        window.addEventListener("resize", handleResize);
+        handleResize();
+    });
 };
-
-

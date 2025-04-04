@@ -47,10 +47,14 @@ export enum EMobileBottomMenuClasses {
     SortFeedback = "sort-feedback",
     Product = "product",
     Support = "support",
+    Locality = "locality",
+    DeliveryPoint = "delivery-point",
 
 }
 
 export enum EDrawerClasses {
     Product = "product",
     Support = "support",
+    Locality = "locality",
+    DeliveryPoint = "delivery-point",
 }

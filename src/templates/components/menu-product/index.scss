@@ -3,7 +3,7 @@
 @use "/src/settings/styles/functions";
 
 .menu-product {
-  padding: 24px var(--container-mobile-padding);
+  padding: 0 var(--container-mobile-padding);
 
   @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
     padding: unset;
@@ -15,6 +15,10 @@
     font-weight: 600;
     line-height: 1;
     letter-spacing: -0.72px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      margin-bottom: 32px;
+    }
   }
 
   &__card {

@@ -3,7 +3,7 @@
 
 .pagination {
   display    : flex;
-  column-gap : 6px;
+  column-gap : 4px;
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
     column-gap : 8px;

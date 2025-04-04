@@ -1,3 +1,45 @@
-<div class="support">
-csmcj
+<div class="menu-support">
+    <div class="menu-support__title">Напишите нам</div>
+
+    <ul class="menu-support__list list-reset">
+            <li class="menu-support__item">
+                <a href="https://t.me/+79261933358" target="_blank" class="menu-support__link">
+                    {{> svg id="telegram" svg-class="menu-support__icon" }}
+                    телеграм
+                </a>
+
+
+
+            </li>
+
+        <li class="menu-support__item">
+            <a href="https://wa.me/79261933358" target="_blank" class="menu-support__link">
+                {{> svg id="whatsapp" svg-class="menu-support__icon" }}
+                whatsapp
+            </a>
+        </li>
+        <li class="menu-support__item">
+            <a href="viber://add?number=79261933358" target="_blank" class="menu-support__link">
+                {{> svg id="viber" svg-class="menu-support__icon" }}
+                viber
+            </a>
+        </li>
+        <li class="menu-support__item">
+            <a href="tel:+79261933358" target="_blank" class="menu-support__link">
+                {{> svg id="phone" svg-class="menu-support__icon" }}
+                8 926 193 33 58
+            </a>
+        </li>
+
+    </ul>
+
+    {{> button
+            button-class="menu-support__btn"
+            text="Закрыть"
+            variant="gray"
+            size="sm"
+            attributes=(str-concat
+                    'data-global-action="drawer-close" ') }}
+
+
 </div>

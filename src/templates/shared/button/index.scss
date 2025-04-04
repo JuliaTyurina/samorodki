@@ -13,6 +13,13 @@ $button-sizes: (
                 padding-left: (min: 23px, max: 31px),
                 padding-right: (min: 23px, max: 31px),
         ),
+
+        sm: (
+                padding-top: 10px,
+                padding-bottom: 10px,
+                padding-left: 16px,
+                padding-right: 16px,
+        )
 );
 
 $button-variants: (
@@ -42,7 +49,8 @@ $button-variants: (
 
 
   &:disabled {
-    opacity: .1
+    opacity: .4;
+    cursor: not-allowed;
   }
 
   &:not(:disabled) {

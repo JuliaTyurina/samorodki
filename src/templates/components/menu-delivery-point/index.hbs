@@ -1,0 +1,36 @@
+<div class="menu-delivery-point" data-view="карта">
+    <div class="menu-delivery-point__title">Выбрать пункт</div>
+
+        {{> input input-class="menu-delivery-point__search" size="lg" label="Найти пункт выдачи" placeholder="Найти пункт выдачи" type="search" id="delivery-point-search" }}
+        <ul class="menu-delivery-point__list list-reset">
+            {{#each delivery-data-context.addresses}}
+                <li class="menu-delivery-point__item">
+                    <label class="menu-delivery-point__item-label">
+                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                        <span class="menu-delivery-point__item-wrapper">
+                        <span class="menu-delivery-point__item-text">{{value}}</span>
+                            {{> svg id="check" svg-class="icon-xmd menu-delivery-point__item-icon" }}
+                    </span>
+                    </label>
+                </li>
+            {{/each}}
+        </ul>
+
+    <div class="menu-delivery-point__map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af628bd2dee8e787168f3a4010b46d6495ce11edb32339b540f1d3f45c77419b2&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    </div>
+
+    <div class="menu-delivery-point__control">
+        <button class="menu-delivery-point__control-btn" data-mode="карта">Карта</button>
+        <button class="menu-delivery-point__control-btn" data-mode="список">Список</button>
+    </div>
+
+
+    {{> button
+            button-class="menu-delivery-point__btn"
+            text="Закрыть"
+            variant="gray"
+            size="sm"
+            attributes=(str-concat
+                    'data-global-action="drawer-close" ') }}
+</div>

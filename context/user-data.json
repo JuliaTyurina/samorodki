@@ -1,0 +1,13 @@
+{
+  "personal": {
+    "name": "Евгения",
+    "surname": "Петрова",
+    "middlename": ""
+  },
+  "contacts": {
+    "phone": "+7 999 881 99 21",
+    "email": "e-mail"
+  },
+  "address": "Иваново, Посадский пер., д4",
+  "avatar": "/assets/media/images/avatar.png"
+}

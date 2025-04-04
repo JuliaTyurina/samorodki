@@ -1,25 +1,16 @@
-<div class="input input--{{or input-size "md"}} {{input-class}}">
-  <label class="input__label">
-    {{#if label-text}}
-      <span class="input__label-text text-sm font-500 text-gray">{{label-text}}</span>
-    {{/if}}
-
-    {{#if (str-equals type "textarea")}}
-      <textarea class="input__main" rows="{{or rows "5"}}" maxlength="{{or maxlength "200"}}"
-        {{#if id}}id="{{id}}" {{/if}}
-        {{#if name}}name="{{name}}" {{/if}}
-        {{#if placeholder}}placeholder="{{placeholder}}" {{/if}}></textarea>
-    {{else}}
-      <input class="input__main"
+<label class="input-group {{ input-class }} {{#if required}}required{{/if}}">
+    <span class="visually-hidden">{{label}}</span>
+    <input
+            class="input-field input-field--{{size}}"
         {{#if id}}id="{{id}}" {{/if}}
         {{#if type}}type="{{type}}" {{/if}}
         {{#if name}}name="{{name}}" {{/if}}
         {{#if placeholder}}placeholder="{{placeholder}}"{{/if}}
-      >
-    {{/if}}
-  </label>
-  {{#if hint}}
-    <span class="input__hint">{{hint}}</span>
-  {{/if}}
-</div>
+        {{safe attributes}}
+    >
+    {{#if hint}}
+        <div class="input-hint">{{hint}}</div> {{/if}}
+
+</label>
+
 

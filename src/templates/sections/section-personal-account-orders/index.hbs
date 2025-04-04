@@ -1,0 +1,65 @@
+<section class="personal-account {{section-class}}">
+    <div class="personal-account__container __container">
+        <div class="personal-account__wrapper">
+            <aside class="personal-account__menu">
+                <div class="personal-account__badge">
+                    <img src="{{user-data-context.avatar}}" alt="Аватар пользователя"
+                         class="personal-account__badge-avatar">
+                    <div class="personal-account__badge-wrapper">
+                        <p class="personal-account__badge-name">{{user-data-context.personal.name}} {{user-data-context.personal.surname}}</p>
+                        <button class="personal-account__badge-btn">
+                            {{> svg id="exit" }}
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+
+                <div class="personal-account__links">
+                    <a href="#" class="personal-account__link active">Мой профиль {{> svg id="angle-right" }}</a>
+                    <a href="#" class="personal-account__link">Покупки {{> svg id="angle-right" }}</a>
+                </div>
+
+                <div class="personal-account__support">
+                    <button class="personal-account__support-btn" data-global-action="drawer-open"
+                            data-drawer="support">
+                        {{> svg id="comment-message" svg-class="personal-account__support-icon" }}
+                        <span class="personal-account__support-content">
+                            <span class="personal-account__support-text">нужна помощь?</span>
+                            <span class="personal-account__support-title">Служба поддержки</span>
+                        </span>
+                    </button>
+                </div>
+            </aside>
+
+            <div class="personal-account__orders">
+                <h1 class="personal-account__title">Заказы</h1>
+                <div class="personal-account__orders-content">
+                    <div class="personal-account__table">
+                        <div class="personal-account__table-head">
+                            <span>Дата заказа</span>
+                            <span>№ Заказа</span>
+                            <span>Статус</span>
+                            <span>Количество</span>
+                            <span>Сумма</span>
+                        </div>
+                        <div class="personal-account__table-body">
+                            {{#each orders-context.orders }}
+                                <a href="#" class="personal-account__table-row">
+                                    <span>{{date}}</span>
+                                    <span>{{id}}</span>
+                                    <span>{{status}}</span>
+                                    <span>{{quantity}}</span>
+                                    <span>{{amount}}</span>
+                                </a>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+               {{> pagination }}
+            </div>
+        </div>
+    </div>
+
+</section>
+
+

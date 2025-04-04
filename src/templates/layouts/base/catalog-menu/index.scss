@@ -2,154 +2,167 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 .catalog-menu-wrapper {
-  position   : fixed;
-  width      : 100%;
-  right      : 0;
-  top        : var(--header-height);
-  height     : calc(100vh - var(--header-height) - var(--tabbar-height));
-  opacity    : 0;
-  visibility : hidden;
-  z-index    : 91;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height) - var(--tabbar-height));
+  opacity: 0;
+  visibility: hidden;
+  z-index: 91;
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-    width : 40%;
+  @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+    width: 40%;
   }
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    border-top : 1px solid var(--color-stroke-primary);
-    height     : 100vw;
-    width      : 100%;
-    left       : 0;
-    right      : unset;
+  @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+    border-top: 1px solid var(--color-stroke-primary);
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    right: unset;
   }
 }
 
 body.catalog-open {
   .catalog-menu-wrapper {
-    opacity    : 1;
-    visibility : visible;
+    opacity: 1;
+    visibility: visible;
   }
 
   &:where(.catalog-lvl2-open) {
     .catalog-menu {
       &__lvl1 {
         &-wrapper {
-          transform : translateX(100%);
+          transform: translateX(100%);
         }
       }
 
       &__lvl2 {
-        transform : translateX(0);
+        transform: translateX(0);
       }
     }
   }
 }
 
 .catalog-menu-main {
-  background-color : var(--color-background-primary);
-  position         : relative;
-  z-index          : 2;
-  height           : calc(100vh - var(--header-height) - var(--tabbar-height));
+  background-color: var(--color-background-primary);
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - var(--header-height) - var(--tabbar-height));
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    height : unset;
+  @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+    height: unset;
   }
 
-  @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+  @media (max-width: map.get(breakpoints.$breakpoints-max, md)) {
     .__container {
-      max-width : unset;
+      max-width: unset;
     }
   }
 }
 
 .catalog-menu-background {
-  background-color : rgba(0, 0, 0, 0.50);
-  position         : absolute;
-  inset            : 0;
-  z-index          : 1;
+  background-color: rgba(0, 0, 0, 0.50);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .catalog-menu {
-  --catalog-menu-height : 600px;
-  height                : 100%;
-  position              : relative;
-  overflow              : hidden;
+  --catalog-menu-height: 600px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    max-height            : var(--catalog-menu-height);
-    column-gap            : 4px;
-    display               : grid;
-    grid-template-columns : 235px auto;
+  @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+    //max-height            : var(--catalog-menu-height);
+    max-height: calc(74vh - var(--header-height));
+    column-gap: 4px;
+    display: grid;
+    grid-template-columns: 235px auto;
   }
 
   &__lvl1 {
-    display         : flex;
-    flex-direction  : column;
-    overflow-anchor : none;
-    padding-right   : 12px;
-    row-gap         : 6px;
-    width           : 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-anchor: none;
+    padding-right: 12px;
+    row-gap: 6px;
+    width: 100%;
     //transform       : translateX(100%);
 
-    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-      position   : static;
-      transform  : none;
-      width      : unset;
-      max-height : 545px;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      position: static;
+      transform: none;
+      width: unset;
+      max-height: calc(74vh - var(--header-height) - 56px);
 
       &-wrapper {
-        position       : absolute;
-        padding-top    : 16px;
-        padding-bottom : 40px;
-        top            : 0;
-        right          : 0;
+        position: absolute;
+        padding-top: 16px;
+        padding-bottom: 40px;
+        top: 0;
+        right: 0;
 
-        @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-          position : static;
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          position: static;
+
         }
       }
     }
 
-    @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    @media (max-width: map.get(breakpoints.$breakpoints-max, md)) {
       &-wrapper {
-        height : calc(100vh - var(--header-height) - var(--tabbar-height));
+        height: calc(100vh - var(--header-height) - var(--tabbar-height));
       }
     }
   }
 
   &__lvl2 {
-    width     : 100%;
-    transform : translateX(100%);
-    position  : absolute;
-    top       : 0;
-    right     : 0;
-    height    : calc(100vh - var(--header-height) - var(--tabbar-height));
+    width: 100%;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: calc(100vh - var(--header-height) - var(--tabbar-height));
 
-    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-      border-left : 1px solid var(--color-stroke-primary);
-      position    : static;
-      transform   : none;
-      max-height  : var(--catalog-menu-height);
-      padding     : 24px 32px;
-      width       : unset;
-      height      : unset;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      border-left: 1px solid var(--color-stroke-primary);
+      position: static;
+      transform: none;
+      //max-height  : var(--catalog-menu-height);
+      //max-height: calc(100vh - var(--header-height));
+      padding: 24px 0;
+      width: unset;
+      height: unset;
+    }
+
+    &-wrapper {
+      height: calc(100vh - var(--header-height) - var(--tabbar-height));
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        padding: 0 32px;
+        max-height: calc(74vh - var(--header-height) - 64px);
+
+      }
     }
 
     &-title {
-      display       : flex;
-      align-items   : center;
-      column-gap    : 12px;
-      margin-bottom : 12px;
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      margin-bottom: 12px;
     }
 
     &-groups {
-      display   : flex;
-      flex-wrap : wrap;
-      gap       : 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
 
-      @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
-        flex-direction : column;
-        gap            : 48px;
+      @media (max-width: map.get(breakpoints.$breakpoints-max, md)) {
+        flex-direction: column;
+        gap: 48px;
       }
     }
   }

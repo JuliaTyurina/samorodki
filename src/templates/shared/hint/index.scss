@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+
+.hint {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 12px;
+  border-radius: 0 0 12px 12px;
+  background-color: var(--color-background-secondary);
+  z-index: 89;
+
+  &__list {
+    height: 186px;
+    overflow-y: auto;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px;
+    cursor: pointer;
+  }
+}
+
+[data-hint-list] {
+  display: none;
+
+}
+
+[data-hint-visible="false"] [data-hint-list] {
+  display: none;
+}
+
+[data-hint-visible="true"] [data-hint-list] {
+  display: block;
+}

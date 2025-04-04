@@ -1,41 +1,196 @@
-<section class="order">
+<section class="order {{section-class}}" data-float-wrapper data-float-breakpoint="1024">
     <div class="section-cart__container __container">
         <h1 class="order__title">Оформление заказа</h1>
         <div class="order__wrapper">
-            <div class="order__accordion">
-                <div class="order__accordion-item">
-                    <details class="order__accordion-details">
-                        <summary class="order__accordion-summary">
-                            <span class="order__accordion-title" role="term" aria-details="faq-1">
-                               Описание
-                            </span>
-                            {{> svg id="chevron-up" svg-class="order__accordion-arrow" }}
-                        </summary>
-                    </details>
-                    <div class="order__accordion-content" id="faq-1" role="definition">
-                        <div class="order__accordion-body">
-                            <p class="order__accordion-text">
-                                Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов
-                                уникальными и стильными изделиями. Мы гордимся тем, что наш ювелирный бизнес – это
-                                семейное дело, где каждый сотрудник вкладывает душу в свою работу.
-                            </p>
-                            <p class="order__accordion-text order__accordion-text--secondary">
-                                В редких случаях характеристики изделия, дизайн бирки или упаковка могут иметь отличия
-                                от представленных на фото или в описании
-                            </p>
+            <div class="order__container">
+                <div class="order__accordion">
+                    <div class="order__accordion-item" data-hint>
+                        <details class="order__accordion-details" open>
+                            <summary class="order__accordion-summary">
+                                <h2 class="order__accordion-title">
+                                    Способ доставки
+                                </h2>
+                                {{> svg id="chevron-up" svg-class="order__accordion-arrow" }}
+                            </summary>
+                        </details>
+                        <div class="order__accordion-content">
+                            <div class="order__accordion-body">
+                                <div class="order__accordion-info">
+                                    <h3 class="order__accordion-subtitle">Населённый пункт</h3>
+                                    <div class="order__locality">
+                                        <span class="order__locality-title">Нижний Новгород</span>
+
+                                        {{> button
+                                                button-class="order__locality-btn desktop"
+                                                text="Изменить"
+                                                variant="gray"
+                                                size="sm"
+                                                attributes=(str-concat
+                                                        'data-global-action="drawer-open" '
+                                                        'data-drawer="locality" ') }}
+
+                                        {{> button
+                                                button-class="order__locality-btn mobile"
+                                                text="Изменить"
+                                                variant="gray"
+                                                size="sm"
+                                                attributes=(str-concat
+                                                        'data-global-action="mobile-bottom-menu-open" '
+                                                        'data-bottom-menu="locality" ') }}
+
+                                    </div>
+                                </div>
+                                <div class="order__accordion-info">
+                                    <h3 class="order__accordion-subtitle">Способ доставки</h3>
+                                    <ul class="order__delivery-type list-reset">
+                                        <li class="order__delivery-type-item">
+                                            {{> radio id="choose-delivery-address" text="Курьер" description="служба доставки" name="delivery" price="199" }}
+                                        </li>
+                                        <li class="order__delivery-type-item">
+                                            {{> radio id="choose-delivery-point" text="Получение в ПВЗ" description="магазины, пвз" name="delivery" price="0" checked=true }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="order__accordion-info">
+                                    <h3 class="order__accordion-subtitle">Выбор службы доставки</h3>
+                                    <ul class="order__delivery-service list-reset">
+                                        <li class="order__delivery-service-item">
+                                            {{> radio text="СДЭК" name="delivery-service" price="199" }}
+                                        </li>
+                                        <li class="order__delivery-service-item">
+                                            {{> radio text="5POST" name="delivery-service" price="0" }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="order__accordion-info order__accordion-info--delivery-point">
+                                    <h3 class="order__accordion-subtitle">Выбор ПВЗ</h3>
+                                    <div class="order__delivery-point">
+                                        <span class="order__delivery-point-title">ул Большая Грузинская, д 62</span>
+
+                                        {{> button
+                                                button-class="order__delivery-point-btn desktop"
+                                                text="Изменить"
+                                                variant="gray"
+                                                size="sm"
+                                                attributes=(str-concat
+                                                        'data-global-action="drawer-open" '
+                                                        'data-drawer="delivery-point" ') }}
+
+                                        {{> button
+                                                button-class="order__delivery-point-btn mobile"
+                                                text="Изменить"
+                                                variant="gray"
+                                                size="sm"
+                                                attributes=(str-concat
+                                                        'data-global-action="mobile-bottom-menu-open" '
+                                                        'data-bottom-menu="delivery-point" ') }}
+
+                                    </div>
+                                </div>
+                                <div class="order__accordion-info order__accordion-info--delivery-address">
+                                    <h3 class="order__accordion-subtitle">Адрес доставки</h3>
+                                    <div class="order__delivery-address">
+                                        {{> input input-class="order__delivery-address-search" size="lg" label="Введите адрес доставки" placeholder="Введите адрес" type="search" attributes=(str-concat
+                                                'data-hint-input ')  }}
+                                        <button class="order__delivery-address-empty" data-hint-clear>
+                                            {{> svg id="cross" }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__accordion-hint">
+                            {{> hint items=delivery-data-context.addresses }}
                         </div>
                     </div>
-                </div>
+                    <div class="order__accordion-item">
+                        <details class="order__accordion-details" open>
+                            <summary class="order__accordion-summary">
+                                <h2 class="order__accordion-title">
+                                    Получатель
+                                </h2>
+                                {{> svg id="chevron-up" svg-class="order__accordion-arrow" }}
+                            </summary>
+                        </details>
+                        <div class="order__accordion-content">
+                            <div class="order__accordion-body">
+                                <div class="order__accordion-info">
+                                    <p class="order__accordion-text">
+                                        для получения предоплаченного заказа будет необходимо предъявить паспорт
+                                    </p>
+                                    <h3 class="order__accordion-subtitle">Ваши данные</h3>
+                                    <div class="order__user">
+                                        {{> input input-class="order__user-surname" size="lg" label="Введите фамилию" placeholder="Фамилия" type="text" }}
+                                        {{> input input-class="order__user-name" size="lg" label="Введите имя" placeholder="Имя" type="text" }}
+                                        {{> input input-class="order__user-middlename" size="lg" label="Введите отчество" placeholder="Отчество" type="text" hint="обязательно, при доставке почтой" }}
+                                    </div>
+                                </div>
+                                <div class="order__accordion-info">
+                                    <h3 class="order__accordion-subtitle">Контакты</h3>
+                                    <div class="order__contact">
+                                        {{> input input-class="order__contact-tel" size="lg" label="Введите номер телефона" placeholder="Номер телефона" type="tel" }}
+                                        {{> input input-class="order__contact-email" size="lg" label="Введите адрес электронной почты" placeholder="Почта" type="email" hint="для отправки чека" }}
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__accordion-item">
+                        <details class="order__accordion-details" open>
+                            <summary class="order__accordion-summary">
+                                <h2 class="order__accordion-title">
+                                    Способ оплаты
+                                </h2>
+                                {{> svg id="chevron-up" svg-class="order__accordion-arrow" }}
+                            </summary>
+                        </details>
+                        <div class="order__accordion-content">
+                            <div class="order__accordion-body">
+                                <div class="order__accordion-info">
+                                    <p class="order__accordion-text">
+                                        для получения предоплаченного заказа будет необходимо предъявить паспорт
+                                    </p>
+                                    <ul class="order__payment-option list-reset">
+                                        <li class="order__payment-option-item">
+                                            {{> radio text="СПБ" name="payment" price="199" }}
+                                        </li>
+                                        <li class="order__payment-option-item">
+                                            {{> radio text="SberPay" name="payment" price="0" checked=true }}
+                                        </li>
+                                    </ul>
+                                    <div class="order__payment-option-switcher">
+                                        {{> switcher text="Оплата при получении" }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="order__content" data-float-trigger>
+                    <h2 class="order__content-title">
+                        Состав заказа
+                    </h2>
+                    <div class="order__content-images">
+                        {{#each order-details-context.products }}
+                            <img src="{{image}}" alt="" class="order__content-img">
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
             <aside class="order__info">
                 {{>order-info }}
                 {{>order-info order-info-class="promocode-added" }}
-                <div class="order__bar">
+                <div class="order__bar" data-float-bar>
                     <div class="order__bar-wrapper">
                         <div class="order__bar-price">
                             <span class="order__bar-price-total text-gray">Итого</span>
-                            <span class="order__bar-price-normal">{{order-details-context.order.price.normal}}₽</span>
-                            <span class="order__bar-quantity text-gray">{{order-details-context.products.length}} товаров</span>
+                            <span class="order__bar-price-normal">{{order-details-context.order.price.normal}}
+                                ₽</span>
+                            <span class="order__bar-quantity text-gray">{{order-details-context.products.length}}
+                                товаров</span>
                         </div>
                         {{> button text="Оформить" button-class="section-cart__bar-btn" }}
                     </div>

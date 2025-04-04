@@ -10,7 +10,7 @@ html {
   --tabbar-height               : 54px;
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    --header-height   : 80px;
+    --header-height   : 128px;
     --sections-indent : 96px;
   }
 }

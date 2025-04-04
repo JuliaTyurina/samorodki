@@ -1,0 +1,43 @@
+<section class="personal-account mobile {{section-class}}" >
+    <div class="personal-account__container __container">
+        <div class="personal-account__wrapper">
+            <aside class="personal-account__menu">
+                <div class="personal-account__badge">
+                    <img src="{{user-data-context.avatar}}" alt="Аватар пользователя" class="personal-account__badge-avatar">
+                    <div class="personal-account__badge-wrapper">
+                        <p class="personal-account__badge-name">{{user-data-context.personal.name}} {{user-data-context.personal.surname}}</p>
+                        <button class="personal-account__badge-btn">
+                            {{> svg id="exit" }}
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+
+                <div class="personal-account__links">
+                    <a href="#" class="personal-account__link active">Мой профиль {{> svg id="angle-right" }}</a>
+                    <a href="#" class="personal-account__link">Покупки {{> svg id="angle-right" }}</a>
+                </div>
+
+                <div class="personal-account__support ">
+                    <button class="personal-account__support-btn desktop" data-global-action="drawer-open" data-drawer="support">
+                        {{> svg id="comment-message" svg-class="personal-account__support-icon" }}
+                        <span class="personal-account__support-content">
+                            <span class="personal-account__support-text">нужна помощь?</span>
+                            <span class="personal-account__support-title">Служба поддержки</span>
+                        </span>
+                    </button>
+
+                    <button class="personal-account__support-btn mobile" data-global-action="mobile-bottom-menu-open" data-bottom-menu="support">
+                        {{> svg id="comment-message" svg-class="personal-account__support-icon" }}
+                        <span class="personal-account__support-content">
+                            <span class="personal-account__support-text">нужна помощь?</span>
+                            <span class="personal-account__support-title">Служба поддержки</span>
+                        </span>
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+

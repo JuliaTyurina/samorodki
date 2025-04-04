@@ -1,8 +1,8 @@
-<section class="section-cart">
+<section class="section-cart " data-float-wrapper data-float-breakpoint="1024">
     <div class="section-cart__container __container">
         <h1 class="section-cart__title">Корзина</h1>
         <div class="section-cart__wrapper">
-            <ol class="section-cart__products list-reset">
+            <ol class="section-cart__products list-reset" data-float-trigger>
                 {{#each order-details-context.products }}
                     {{#if (compare @index '<' 4)}}
                         <li class="section-cart__product">
@@ -121,7 +121,7 @@
             <aside class="section-cart__info">
                 {{>order-info }}
                 {{>order-info order-info-class="promocode-added" }}
-                <div class="section-cart__bar">
+                <div class="section-cart__bar" data-float-bar>
                     <div class="section-cart__bar-wrapper">
                         <div class="section-cart__bar-price">
                             <span class="section-cart__bar-price-old text-gray">{{order-details-context.order.price.old}}₽</span>

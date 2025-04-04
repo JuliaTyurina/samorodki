@@ -1,11 +1,30 @@
+@use "/src/settings/styles/functions";
+
 .radio {
   display     : flex;
   align-items : flex-start;
   column-gap  : 10px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-within {
+    & > * {
+      color: var(--color-text-accent);
+    }
+
+    svg {
+      fill: var(--color-text-accent);
+    }
+  }
 
   &__icon {
     display  : block;
     position : relative;
+
+    .checked {
+      display : none;
+      fill: var(--color-icon-primary);
+    }
 
     input {
       position : absolute;
@@ -16,22 +35,27 @@
 
     svg {
       display : block;
-
-      &.checked {
-        display : none;
-      }
+      width: 20px;
+      height: 20px;
+      fill: var(--color-icon-secondary);
+      transition: fill var(--transition-default);
     }
 
-    input:checked {
-      & ~ svg {
-        &.default {
-          display : none;
-        }
 
-        &.checked {
-          display : block;
+    input {
+
+      &:checked {
+        & ~ svg {
+          &.default {
+            display : none;
+          }
+
+          &.checked {
+            display : block;
+          }
         }
       }
+
     }
   }
 
@@ -39,6 +63,30 @@
     display        : flex;
     flex-direction : column;
     row-gap        : 4px;
+  }
+
+  &__title {
+    font-size: functions.getClamp(14, 16);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.14px;
+    transition: color var(--transition-default);
+  }
+
+  &__descr {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    transition: color var(--transition-default);
+  }
+
+  &__price {
+    margin-left: auto;
+    font-size: functions.getClamp(14, 16);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.14px;
+    transition: color var(--transition-default);
   }
 }
 

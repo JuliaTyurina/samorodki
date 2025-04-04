@@ -1,0 +1,69 @@
+<section class="personal-account {{section-class}}" >
+    <div class="personal-account__container __container">
+        <div class="personal-account__wrapper">
+            <aside class="personal-account__menu">
+                <div class="personal-account__badge">
+                    <img src="{{user-data-context.avatar}}" alt="Аватар пользователя" class="personal-account__badge-avatar">
+                    <div class="personal-account__badge-wrapper">
+                        <p class="personal-account__badge-name">{{user-data-context.personal.name}} {{user-data-context.personal.surname}}</p>
+                        <button class="personal-account__badge-btn">
+                            {{> svg id="exit" }}
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+
+                <div class="personal-account__links">
+                    <a href="#" class="personal-account__link active">Мой профиль {{> svg id="angle-right" }}</a>
+                    <a href="#" class="personal-account__link">Покупки {{> svg id="angle-right" }}</a>
+                </div>
+
+                <div class="personal-account__support">
+                    <button class="personal-account__support-btn" data-global-action="drawer-open" data-drawer="support">
+                        {{> svg id="comment-message" svg-class="personal-account__support-icon" }}
+                        <span class="personal-account__support-content">
+                            <span class="personal-account__support-text">нужна помощь?</span>
+                            <span class="personal-account__support-title">Служба поддержки</span>
+                        </span>
+                    </button>
+                </div>
+            </aside>
+
+            <div class="personal-account__user">
+                <h1 class="personal-account__title">Мой профиль</h1>
+                <form class="personal-account__form">
+                    <fieldset class="personal-account__form-wrapper">
+                        <legend class="personal-account__form-title">Личная информация</legend>
+                        {{> input type="text" size="lg" placeholder="Имя" label="Введите имя" required=true }}
+                        {{> input type="text" size="lg" placeholder="Фамилия" label="Введите фамилию" required=true }}
+                        {{> input type="text" size="lg" placeholder="Отчество" label="Введите отчество" }}
+                    </fieldset>
+                    <fieldset class="personal-account__form-wrapper">
+                        <legend class="personal-account__form-title">Контакты</legend>
+                        {{> input type="tel" size="lg" placeholder="Телефон" label="Введите номер телефона" required=true }}
+                        {{> input type="email" size="lg" placeholder="Почта" label="Введите адрес электронной почты" }}
+                    </fieldset>
+                    <fieldset class="personal-account__form-wrapper">
+                        <legend class="personal-account__form-title">Адрес доставки</legend>
+                        {{> input type="text" size="lg" placeholder="Адрес" label="Введите адрес" required=true }}
+                    </fieldset>
+
+                    {{> button type=submit text="Сохранить изменения" button-class="personal-account__form-btn" }}
+                </form>
+                <form class="personal-account__form">
+                    <fieldset class="personal-account__form-wrapper">
+                        <legend class="personal-account__form-title">Сменить пароль</legend>
+                        {{> input type="text" size="lg" placeholder="Ваш пароль" label="Введите пароль" required=true }}
+                        {{> input type="text" size="lg" placeholder="Новый пароль" label="Введите новый пароль" }}
+                        {{> input type="text" size="lg" placeholder="Повторить новый пароль" label="Повторите новый пароль" }}
+                    </fieldset>
+                    {{> button text="Сменить пароль" button-class="personal-account__form-btn" attributes=(str-concat
+                            'disabled') }}
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+

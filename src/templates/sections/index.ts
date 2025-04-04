@@ -9,13 +9,16 @@ import "./section-feedback"
 import "./section-cart-empty"
 import "./section-cart"
 import "./section-order"
+import "./section-personal-account"
 import { initSliderFull } from "./section-slider-full";
 import { initCardsSlider } from "./section-cards-slider";
 import { initSlider2Elems } from "./section-slider-2";
 import { initCollectionSlider } from "@sections/section-collection";
 import {initProductSlider, initProductOrderBar} from "@sections/section-product"
-import {initCartOrderBar} from "@sections/section-cart";
+import {initFloatingBar} from "@sections/section-cart";
 import { initSuggestions } from "./section-suggestion";
+import { initChooseDeliveryType} from "./section-order";
+import {initDeliveryTabs} from "@components/menu-delivery-point";
 
 export const initSections = () => {
   initCollectionSlider()
@@ -24,6 +27,8 @@ export const initSections = () => {
   initSlider2Elems()
   initProductSlider()
   initProductOrderBar("section-product__heading", "section-product__order", 768)
-  initCartOrderBar("section-cart__products", "section-cart__bar", 1024)
+  initFloatingBar()
   initSuggestions()
+  initChooseDeliveryType()
+  initDeliveryTabs()
 }

@@ -1,53 +1,24 @@
-import "./index.scss"
+import "./index.scss";
 
-export const initCartOrderBar = (triggerClass, flipperClass, breakpointShow = 1024) => {
-    const trigger = document.querySelector(`.${triggerClass}`);
-    const flipper = document.querySelector(`.${flipperClass}`);
+export const initChooseDeliveryType = () => {
+    document.querySelectorAll(".order__accordion-item").forEach(orderItem => {
+        const deliveryRadios = orderItem.querySelectorAll(".order__delivery-type input[type='radio']");
 
-    if (!trigger || !flipper) return;
-
-    let ticking = false;
-
-    const handleScroll = () => {
-        if (window.innerWidth >= breakpointShow) {
-            removeScrollListener();
-            return;
+        if (!deliveryRadios.length) {
+            return
         }
 
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                const rect = trigger.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
+        const updateType = (selectedInput) => {
+            orderItem.dataset.deliveryType = selectedInput.id === "choose-delivery-point" ? "point" : "address";
+        };
 
-                if (rect.bottom <= windowHeight - 100) {
-                    flipper.classList.add("scrolled");
-                } else {
-                    flipper.classList.remove("scrolled");
-                }
-
-                ticking = false;
-            });
-
-            ticking = true;
+        const checkedRadio = orderItem.querySelector(".order__delivery-type input[type='radio']:checked");
+        if (checkedRadio) {
+            updateType(checkedRadio)
         }
-    };
 
-    const removeScrollListener = () => {
-        document.removeEventListener("scroll", handleScroll);
-    };
-
-    const handleResize = () => {
-        if (window.innerWidth >= breakpointShow) {
-            removeScrollListener();
-            flipper.classList.remove("scrolled");
-        } else {
-            document.addEventListener("scroll", handleScroll, { passive: true });
-            handleScroll();
-        }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
+        deliveryRadios.forEach(radio => {
+            radio.addEventListener("change", () => updateType(radio));
+        });
+    });
 };
-
-
