@@ -2,115 +2,134 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 .section-seo-1 {
-  position : relative;
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-    padding-top : 20px;
+  @media (max-width: map.get(breakpoints.$breakpoints-max, sm)) {
+    .__container-big {
+      max-width: unset;
+    }
   }
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-    padding-top : 50px;
+  &__wrapper {
+    display: grid;
+    row-gap: 24px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-flow: dense;
+      column-gap: 32px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: 50px auto auto 100px;
+      row-gap: 32px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      column-gap: 90px;
+    }
   }
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, xxl)) {
-    padding-top : 83px;
-  }
+  &__top {
+    position: relative;
+    padding-top: 24px;
+    color: var(--color-text-contrast);
 
+    @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
+      grid-column: span 2;
+      padding-top: 46px;
+      padding-bottom: 46px;
+    }
 
-  &__bg-wrapper {
-    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
-      max-width : 100%;
-      position  : relative;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      padding: 46px 60px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      grid-column: 1 / span 1;
+      grid-row: 2/ span 1;
+      max-height: fit-content;
+      padding: 72px 0 60px 72px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      padding: 72px 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: calc(100% + 242px);
+      background: radial-gradient(81.43% 85.53% at 27.47% 55.25%, #000A12 16.75%, #082940 58.51%, #0E416D 83.7%);
+      z-index: -1;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
+        height: 100%;
+      }
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        left: calc(var(--container-width) / 2);
+        width: var(--container-width);
+        border-radius: 32px;
+      }
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+        left: calc(var(--container-width) / 2);
+        width: var(--container-big-width);
+        max-width: 100vw;
+      }
     }
   }
 
   &__image {
-    position      : absolute;
-    right         : var(--container-outer-indent);
-    border-radius : 8px;
-    aspect-ratio  : 0.77/1;
-    object-fit    : cover;
-    max-height    : 340px;
-    bottom        : 0;
-    transform     : translateY(120px);
+    justify-self: right;
+    width: 260px;
+    aspect-ratio: 3/4;
+    border-radius: 8px;
 
-
-    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-      transform     : unset;
-      bottom        : auto;
-      top           : 0;
-      border-radius : 24px;
-      min-width     : 25%;
-      max-width     : 35%;
-      max-height    : unset;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
+      width: 100%;
+      grid-column: 2/3;
     }
 
-    @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-      min-width : 30%;
-      max-width : 40%;
-      top       : 0;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      grid-row: 1/ span 4;
+      width: 450px;
+      border-radius: 24px;
     }
 
-    @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-      height : 100%;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      width: 540px;
     }
   }
-}
 
-.section-seo-1-header {
-  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-    max-width : 45%;
-  }
-}
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
 
-.section-seo-1-bottom {
-  padding-top    : 145px;
-  display        : flex;
-  flex-direction : column;
-  row-gap        : 32px;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      grid-row: 3/ span 1;
+      row-gap: 36px;
+      padding-left: 60px;
+    }
 
-  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-    max-width : 45%;
-  }
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    padding-top    : 32px;
-    padding-bottom : 50px;
-  }
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-    padding-bottom : 130px;
-  }
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) and (max-width : map.get(breakpoints.$breakpoints-max, md)) {
-    padding-left : 24px;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      padding-left: unset;
+    }
   }
 
   &__action {
-    @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
-      width : 100%;
+    width: 100%;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      max-width: fit-content;
     }
   }
+
 }
 
-.section-seo-1-bg {
-  padding    : 24px 16px 242px;
-  color      : var(--color-text-contrast);
-  background : radial-gradient(81.43% 85.53% at 27.47% 55.25%, #000A12 16.75%, #082940 58.51%, #0E416D 83.7%);
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-    background    : radial-gradient(83.69% 111.18% at 42.74% 73.5%, #02121E 0%, #02111D 27.06%, #082940 53%, #0E466D 74.6%);
-    padding       : 24px;
-    border-radius : 12px;
-  }
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    border-radius : 24px;
-    padding       : 44px;
-  }
-
-  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-    border-radius : 32px;
-    padding       : 72px;
-  }
-}

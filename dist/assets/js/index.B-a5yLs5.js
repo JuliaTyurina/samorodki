@@ -994,22 +994,45 @@ const initCollectionSlider = () => {
     const swiperElem = section.querySelector(ESwiperElems.Swiper);
     if (swiperElem) {
       new Swiper(swiperElem, {
-        modules: [EffectCoverflow],
-        slidesPerView: 3.1,
+        modules: [EffectCoverflow, Navigation],
+        slidesPerView: 1.9,
+        centeredSlides: true,
         initialSlide: 1,
         effect: "coverflow",
         loop: true,
+        navigation: {
+          nextEl: ".section-collection__controls-next",
+          prevEl: ".section-collection__controls-prev"
+        },
         coverflowEffect: {
-          rotate: 30,
-          stretch: 25,
+          rotate: 50,
+          stretch: 58,
           depth: 100,
           scale: 0.9,
           slideShadows: false
         },
         breakpoints: {
-          [breakpoinstNum.xl]: {
+          [breakpoinstNum.md]: {
             spaceBetween: 25,
-            slidesPerView: 5,
+            slidesPerView: 3,
+            coverflowEffect: {
+              rotate: 40,
+              stretch: 0,
+              scale: 1
+            }
+          },
+          [breakpoinstNum.lg]: {
+            spaceBetween: 25,
+            slidesPerView: 3.6,
+            coverflowEffect: {
+              rotate: 30,
+              stretch: 0,
+              scale: 1
+            }
+          },
+          [breakpoinstNum.xl]: {
+            spaceBetween: 32,
+            slidesPerView: 4.4,
             coverflowEffect: {
               rotate: 30,
               stretch: 0,

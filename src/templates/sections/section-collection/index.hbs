@@ -2,7 +2,11 @@
 <section class="section-collection {{section-class}}">
   <div class="section-collection__container __container-big">
     <h2 class="section-collection__title text-center title-lg font-semibold">Коллекция месяца</h2>
-    <div class="section-collection__images">
+      <div class="section-collection__controls">
+          <button class="section-collection__controls-prev">{{>svg id="arrow-left"}}</button>
+          <button class="section-collection__controls-next">{{>svg id="arrow-right"}}</button>
+      </div>
+      <div class="section-collection__images">
       <div class="swiper">
         <div class="swiper-wrapper">
           {{#each collection-context.list}}

@@ -6,10 +6,10 @@
   <title></title>
   <script type="module" crossorigin src="../../assets/js/vendors-swiper.JOPwSglI.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-@fancyapps.Z9libBee.js"></script>
-  <script type="module" crossorigin src="../../assets/js/index.DamL3DtT.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/css/index.DSNaym1z.css">
+  <script type="module" crossorigin src="../../assets/js/index.B-a5yLs5.js"></script>
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-swiper.CQ8wcuPq.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-@fancyapps.B2r9mFhI.css">
+  <link rel="stylesheet" crossorigin href="../../assets/css/index.xerEhwxb.css">
 </head>  <body>
     <div id="app">
       <!-- Header -->
@@ -161,7 +161,7 @@
                               </div>            </div>
                       </div>
                   </div>
-                  <div class="search__background"></div>
+                  <div class="search__background" data-global-action="search-close"></div>
               </div>      <div class="header-bottom__navbar __hide-before-lg">
                   <button class="menu-button menu-button--header" >
                     <span class="menu-button__icon">
@@ -2730,7 +2730,15 @@
           <section class="section-collection section">
             <div class="section-collection__container __container-big">
               <h2 class="section-collection__title text-center title-lg font-semibold">Коллекция месяца</h2>
-              <div class="section-collection__images">
+                <div class="section-collection__controls">
+                    <button class="section-collection__controls-prev"><svg class="">
+            <use href="#arrow-left"></use>
+          </svg></button>
+                    <button class="section-collection__controls-next"><svg class="">
+            <use href="#arrow-right"></use>
+          </svg></button>
+                </div>
+                <div class="section-collection__images">
                 <div class="swiper">
                   <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -2825,32 +2833,62 @@
             </div>
           </section>  <!-- section-seo-1 -->
           <section class="section-seo-1 section">
-            <div class="section-seo-1__bg-wrapper __container-big">
-              <div class="section-seo-1-bg">
-                <div class="__container">
-                  <div class="section-seo-1-header">
-                    <h2 class="heading-md font-medium">Ювелирный интернет-магазин «Samorodki»</h2>
-                    <div class="text-xl">
-                      <p>Украшения, которые делают каждый ваш день особенным</p>
-                    </div>
+              <div class="__container-big">
+                  <div class="__container">
+                      <div class="section-seo-1__wrapper">
+                          <div class="section-seo-1__top">
+                              <h2 class="heading-md font-medium">Ювелирный интернет-магазин «Samorodki»</h2>
+                              <div class="text-xl">
+                                  <p>Украшения, которые делают каждый ваш день особенным</p>
+                              </div>
+                          </div>
+                          <img class="section-seo-1__image" src="../../assets/media/images/seo-1-image.png" alt="">
+                          <div class="section-seo-1__bottom">
+                              <div class="text-xl">
+                                  <p>Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов
+                                      уникальными и
+                                      стильными
+                                      изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник
+                                      вкладывает душу в
+                                      свою работу.</p>
+                              </div>
+                                <a class="button-lg button--accent section-seo-1__action" href="#" >
+                                  <span>Подробнее о бренде</span>
+                                </a>
+                          </div>
+                      </div>
                   </div>
-                </div>
               </div>
-              <img class="section-seo-1__image" src="../../assets/media/images/seo-1-image.jpg" alt="">
-            </div>
-            <div class="__container">
-              <div class="section-seo-1-bottom">
-                <div class="text-xl">
-                  <p>Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными
-                    изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в
-                    свою работу.</p>
-                </div>
-                  <a class="button-lg button--accent section-seo-1-bottom__action" href="#" >
-                    <span>Подробнее о бренде</span>
-                  </a>
-              </div>
-            </div>
-          </section>  <!-- section-gifts -->
+          </section>
+          
+          <!--<section class="section-seo-1 section">-->
+          <!--  <div class="section-seo-1__bg-wrapper __container-big">-->
+          <!--    <div class="section-seo-1-bg">-->
+          <!--      <div class="__container">-->
+          <!--        <div class="section-seo-1-header">-->
+          <!--          <h2 class="heading-md font-medium">Ювелирный интернет-магазин «Samorodki»</h2>-->
+          <!--          <div class="text-xl">-->
+          <!--            <p>Украшения, которые делают каждый ваш день особенным</p>-->
+          <!--          </div>-->
+          <!--        </div>-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--    <img class="section-seo-1__image" src="/assets/media/images/seo-1-image.jpg" alt="">-->
+          <!--  </div>-->
+          <!--  <div class="__container">-->
+          <!--    <div class="section-seo-1-bottom">-->
+          <!--      <div class="text-xl">-->
+          <!--        <p>Наша компания, базирующаяся в Санкт-Петербурге, уже более 25 лет радует своих клиентов уникальными и стильными-->
+          <!--          изделиями. Мы гордимся тем, что наш ювелирный бизнес – это семейное дело, где каждый сотрудник вкладывает душу в-->
+          <!--          свою работу.</p>-->
+          <!--      </div>-->
+          <!--        <a class="button-lg button--accent section-seo-1-bottom__action" href="#" >
+              <span>Подробнее о бренде</span>
+            </a>
+          -->
+          <!--    </div>-->
+          <!--  </div>-->
+          <!--</section>-->  <!-- section-gifts -->
           <section class="section-gifts section">
             <div class="__container">
               <div class="section-gifts-header">
