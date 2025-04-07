@@ -1,0 +1,134 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+
+.promo-single {
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      column-gap: 32px;
+    }
+  }
+
+  &__media {
+    position: relative;
+    border-radius: 8px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      border-radius: 16px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      width: 42%;
+      border-radius: 24px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: 20%;
+        width: 114%;
+        aspect-ratio: 12/13;
+        background-image: url("/assets/media/images/logo-back.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    img {
+      position: relative;
+      border-radius: 8px;
+      z-index: 1;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        border-radius: 16px;
+      }
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        border-radius: 24px;
+      }
+    }
+  }
+
+  &__descr {
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      width: 52%;
+    }
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    font-size: functions.getClamp(24, 36);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.72px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-bottom: 32px;
+    }
+  }
+
+  h2 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-size: functions.getClamp(18, 24);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.18px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  ol, ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: unset;
+    margin: 0 0 24px;
+    list-style-position: inside;
+    font-size: functions.getClamp(14, 16);
+    font-weight: 500;
+    line-height: 1.5;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      row-gap: 12px;
+      margin: 0 0 32px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      &:before {
+        content: '—';
+      }
+    }
+  }
+
+  p {
+    font-size: functions.getClamp(14, 16);
+    font-weight: 500;
+    line-height: 1.5;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  a {
+    color: var(--color-text-accent);
+  }
+}
+

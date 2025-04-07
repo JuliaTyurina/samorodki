@@ -13,28 +13,39 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Manrope, sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.5;
             background: #fff;
             z-index: 100;
+        }
+
+        #preloader svg {
+            width: 32px;
+            height: 32px;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         #preloader.hidden {
             display: none;
         }
+
+
     </style>
   <script type="module" crossorigin src="../../assets/js/vendors-swiper.JOPwSglI.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-@fancyapps.Z9libBee.js"></script>
-  <script type="module" crossorigin src="../../assets/js/index.D55P7mbM.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/css/index.Y_Ufqr4E.css">
+  <script type="module" crossorigin src="../../assets/js/index.Cs-iBo4r.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/css/index.DqleHdYt.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-swiper.CQ8wcuPq.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-@fancyapps.B2r9mFhI.css">
 </head><body>
 <div class="preloader" id="preloader">
-    <span>Идет загрузка...</span>
-</div>
+   <svg class="">
+     <use href="#loader"></use>
+   </svg></div>
 <div id="app">
     <!-- Header -->
     <header class="header">

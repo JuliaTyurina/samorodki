@@ -11,16 +11,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Manrope, sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.5;
             background: #fff;
             z-index: 100;
+        }
+
+        #preloader svg {
+            width: 32px;
+            height: 32px;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         #preloader.hidden {
             display: none;
         }
+
+
     </style>
 </head>
