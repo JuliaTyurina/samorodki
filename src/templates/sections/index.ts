@@ -10,6 +10,7 @@ import "./section-cart-empty"
 import "./section-cart"
 import "./section-order"
 import "./section-personal-account"
+import "./section-promo-archive"
 import { initSliderFull } from "./section-slider-full";
 import { initCardsSlider } from "./section-cards-slider";
 import { initSlider2Elems } from "./section-slider-2";

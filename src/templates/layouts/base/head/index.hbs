@@ -1,5 +1,26 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ pageTitle }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ pageTitle }}</title>
+    <style>
+        #preloader {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Manrope, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            background: #fff;
+            z-index: 100;
+        }
+
+        #preloader.hidden {
+            display: none;
+        }
+    </style>
 </head>

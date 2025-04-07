@@ -1,0 +1,8 @@
+{
+  "page-title": "Page Promo Archive",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "#" },
+    { "text": "Акции" }
+  ]
+}

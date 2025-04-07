@@ -1,0 +1,30 @@
+{
+  "promos": [
+    {
+      "url": "/assets/media/images/promo-1.png",
+      "title": "Дарим бонусы",
+      "description": "Получите бонусы на следующий заказ при покупке от 5 000₽"
+    },
+    {
+      "url": "/assets/media/images/promo-2.png",
+      "title": "Ювелирный дом Samorodki Jewelry",
+      "description": "Эксклюзивные предложения от нашего бренда — только до конца месяца"
+    },
+    {
+      "url": "/assets/media/images/promo-3.png",
+      "title": "Скидка 10% на первый заказ",
+      "description": "Оформите первую покупку и получите скидку автоматически"
+    },
+    {
+      "url": "/assets/media/images/promo-4.png",
+      "title": "Подарок при покупке от 15 000₽",
+      "description": "Выберите подарок из ограниченной коллекции при оформлении заказа"
+    },
+    {
+      "url": "/assets/media/images/promo-5.png",
+      "title": "Сезон блеска: -20% на избранные украшения",
+      "description": "Сияйте этой весной — скидки на лучшие изделия из новой коллекции"
+    }
+  ]
+
+}

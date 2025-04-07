@@ -25,7 +25,8 @@ $button-sizes: (
 $button-variants: (
         accent: variants.$button-accent,
         gray: variants.$button-gray,
-        transparent: variants.$button-transparent
+        transparent: variants.$button-transparent,
+        tgray: variants.$button-tgray
 );
 
 .button {

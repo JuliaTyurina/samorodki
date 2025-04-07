@@ -12,5 +12,9 @@
 
   &__left {
     column-gap : 24px;
+
+    svg {
+      fill: currentColor;
+    }
   }
 }

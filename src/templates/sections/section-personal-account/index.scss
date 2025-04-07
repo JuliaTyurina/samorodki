@@ -376,7 +376,6 @@
           font-size: functions.getClamp(14px, 16px);
           font-weight: 500;
           line-height: 1.5;
-          color: var(--color-text-tertiary);
 
           &:nth-last-child(2) {
             text-align: right;
@@ -465,6 +464,273 @@
 
     }
   }
+
+
+  &__order {
+    width: 100%;
+
+    &-back {
+      display: none;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        display: flex;
+        height: fit-content;
+
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    &-heading {
+      display: flex;
+      column-gap: 6px;
+      margin-bottom: 32px;
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      margin-bottom: unset;
+
+      span {
+        color: var(--color-text-secondary);
+      }
+    }
+
+    &-status {
+      margin-left: auto;
+    }
+
+
+    &-section {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          margin-bottom: 48px;
+        }
+      }
+
+      &-title {
+        margin-bottom: 12px;
+
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .personal-account__table {
+      counter-reset: product-counter;
+      display: grid;
+      grid-template-columns: max-content auto auto auto;
+      column-gap: 8px;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        grid-template-columns: max-content auto auto auto auto;
+        column-gap: 6px;
+      }
+
+      &-head {
+        display: none;
+
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          display: grid;
+          grid-column: span 5;
+          grid-template-columns: subgrid;
+          padding-bottom: 16px;
+
+          span {
+
+            &:nth-last-child(-n + 2) {
+              @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+                text-align: center;
+              }
+            }
+
+            &:last-child {
+              @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+
+      &-body {
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: subgrid;
+        row-gap: 16px;
+        margin-bottom: 32px;
+
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          grid-column: span 5;
+        }
+      }
+
+      &-row {
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-auto-flow: dense;
+        row-gap: 16px;
+        counter-increment: product-counter;
+
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          grid-column: span 5;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 16px;
+          border-bottom: 1px solid var(--color-stroke-primary);
+
+          @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+            padding-bottom: unset;
+            border: none;
+          }
+        }
+
+        &:before {
+          content: counter(product-counter);
+        }
+
+        .title {
+          grid-column: span 3;
+
+          @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+            grid-column: span 1;
+            max-width: 500px;
+          }
+        }
+
+        .info {
+          grid-column: 2/ span 3;
+          display: flex;
+          column-gap: 16px;
+
+          @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+            grid-column: 3/ span 3;
+            display: grid;
+            grid-template-columns: subgrid;
+            column-gap: 6px;
+          }
+        }
+
+        .price {
+
+          &:after {
+            content: '=';
+            margin-left: 16px;
+
+            @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+              display: none;
+            }
+          }
+        }
+
+        .quantity {
+          order: -1;
+
+          @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+            order: initial;
+            text-align: center;
+          }
+
+          &:after {
+            content: 'x';
+            margin-left: 16px;
+
+            @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+              display: none;
+            }
+          }
+        }
+
+        .total {
+          @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+            text-align: right;
+          }
+        }
+      }
+
+      &-footer {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+          grid-column: span 5;
+          row-gap: 12px;
+        }
+
+        .summary {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 6px;
+
+          &__label {
+            display: flex;
+            column-gap: 6px;
+            flex-grow: 1;
+
+            &:after {
+              content: '';
+              flex-grow: 1;
+              min-width: 24px;
+              height: 1.1rem;
+              border-bottom: 1px dashed var(--color-stroke-primary);
+            }
+          }
+
+          &__discount {
+            color: var(--color-text-accent);
+          }
+
+          &__total {
+            @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+              padding-top: 12px;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    &-delivery {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        span {
+          &:last-child {
+            color: var(--color-text-secondary);
+          }
+        }
+      }
+    }
+
+    &-btn {
+      width: 100%;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
+        max-width: fit-content;
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+    }
+  }
+
 }
 
 

@@ -1,0 +1,19 @@
+<div class="status {{ status-class}}" {{safe attributes}}>
+    <span class="status__item status__item--completed">
+        {{>svg id="completed" }}
+        Выполнен
+    </span>
+    <span class="status__item status__item--cancelled">
+        {{>svg id="cancelled" }}
+        Отменен
+    </span>
+    <span class="status__item status__item--progress">
+        {{>svg id="progress" }}
+        В работе
+    </span>
+    <span class="status__item status__item--awaiting-payment">
+        {{>svg id="awaiting-payment" }}
+        Ожидает оплаты
+    </span>
+
+</div>

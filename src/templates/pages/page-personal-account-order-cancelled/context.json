@@ -1,0 +1,8 @@
+{
+  "page-title": "Page Personal Account – Order Cancelled",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "#" },
+    { "text": "Заказы" }
+  ]
+}

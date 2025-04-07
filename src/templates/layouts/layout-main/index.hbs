@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 {{> head layout.head }}
-  <body>
-    <div id="app">
-      {{> header header-layout=layout.header }}
-      {{> catalog-menu }}
-      {{> menu }}
-      {{> search-mobile }}
-      {{> mobile-bottom-menu }}
-      {{> drawer }}
+<body>
+{{> preloader}}
 
-      <!-- main content -->
-      <main>
+<div id="app">
+    {{> header header-layout=layout.header }}
+    {{> catalog-menu }}
+    {{> menu }}
+    {{> search-mobile }}
+    {{> mobile-bottom-menu }}
+    {{> drawer }}
+
+    <!-- main content -->
+    <main>
         {{> @partial-block }}
-      </main>
+    </main>
 
-      {{> footer footer-layout=layout.footer }}
+    {{> footer footer-layout=layout.footer }}
 
-      {{> tabbar }}
+    {{> tabbar }}
 
-      <!-- scripts -->
-      <script type="module" src="{{ layout.script-src }}"></script>
-    </div>
-  </body>
+    <!-- scripts -->
+    <script type="module" src="{{ layout.script-src }}"></script>
+</div>
+</body>
 </html>

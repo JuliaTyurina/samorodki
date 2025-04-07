@@ -8,5 +8,5 @@ import './order-info';
 import { initCard } from './card'
 
 export {
-  initCard
+  initCard,
 }

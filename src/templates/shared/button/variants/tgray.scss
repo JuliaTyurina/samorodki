@@ -1,0 +1,18 @@
+$button-tgray: (
+        default: (
+                color: var(--color-text-primary),
+                border-color: var(--color-stroke-primary),
+                background-color: transparent,
+                fill: var(--color-text-primary),
+        ),
+        hover: (
+                border-color: var(--color-stroke-primary),
+                background-color: var(--color-background-tertiary),
+                fill: var(--color-text-primary),
+        ),
+        active: (
+                border-color: var(--color-stroke-primary),
+                background-color: var(--color-background-tertiary),
+                fill: var(--color-text-primary),
+        ),
+)

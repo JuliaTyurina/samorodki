@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+
+.status {
+
+  &__item {
+    display: none;
+    column-gap: 4px;
+    font-size: functions.getClamp(14, 16);
+    font-weight: 500;
+    line-height: 1.5;
+
+    svg {
+      margin-top: 0.14rem;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      fill: currentColor;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        margin-top: 0.1rem;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+      }
+    }
+
+    &--completed {
+      color: var(--color-text-positive);
+    }
+
+    &--cancelled {
+      color: var(--color-text-negative);
+    }
+
+    &--progress {
+      color: var(--color-text-warning);
+    }
+
+    &--awaiting-payment {
+      color: var(--color-text-accent);
+    }
+  }
+
+  &[data-order-status="completed"] {
+    .status__item--completed {
+      display: flex;
+    }
+  }
+
+  &[data-order-status="cancelled"] {
+    .status__item--cancelled {
+      display: flex;
+    }
+  }
+
+  &[data-order-status="progress"] {
+    .status__item--progress {
+      display: flex;
+    }
+  }
+
+  &[data-order-status="awaiting-payment"] {
+    .status__item--awaiting-payment {
+      display: flex;
+    }
+  }
+
+}
+
+

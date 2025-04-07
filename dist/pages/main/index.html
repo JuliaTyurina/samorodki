@@ -1,813 +1,1344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title></title>
+    <style>
+        #preloader {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Manrope, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            background: #fff;
+            z-index: 100;
+        }
+
+        #preloader.hidden {
+            display: none;
+        }
+    </style>
   <script type="module" crossorigin src="../../assets/js/vendors-swiper.JOPwSglI.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-@fancyapps.Z9libBee.js"></script>
-  <script type="module" crossorigin src="../../assets/js/index.B-a5yLs5.js"></script>
+  <script type="module" crossorigin src="../../assets/js/index.D55P7mbM.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/css/index.Y_Ufqr4E.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-swiper.CQ8wcuPq.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-@fancyapps.B2r9mFhI.css">
-  <link rel="stylesheet" crossorigin href="../../assets/css/index.xerEhwxb.css">
-</head>  <body>
-    <div id="app">
-      <!-- Header -->
-      <header class="header">
-        <div class="header-top __hide-before-lg">
-          <div class="header-top__container __container">
-            <div class="header-top__main">
-              <div class="header-top__left">
-                <button type="button" class="location ">
-                  <svg class="icon-md">
-                    <use href="#location-point"></use>
-                  </svg>  <span class="font-medium">Москва</span>
-                </button>          <div class="phone ">
-                    <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
-                    <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
-                  </div>
-              </div>
-              <div class="header-top__right">
-                <nav class="navigation">
-                  <ul class="list-reset">
-                    <li><a href="#" class="font-semibold">Акции</a></li>
-                    <li><a href="#" class="font-semibold">О бренде</a></li>
-                    <li><a href="#" class="font-semibold">Доставка и оплата</a></li>
-                    <li><a href="#" class="font-semibold">Обмен и возврат</a></li>
-                    <li><a href="#" class="font-semibold">Контакты</a></li>
-                  </ul>
-                </nav>      </div>
+</head><body>
+<div class="preloader" id="preloader">
+    <span>Идет загрузка...</span>
+</div>
+<div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-top __hide-before-lg">
+        <div class="header-top__container __container">
+          <div class="header-top__main">
+            <div class="header-top__left">
+              <button type="button" class="location ">
+                <svg class="icon-md">
+                  <use href="#location-point"></use>
+                </svg>  <span class="font-medium">Москва</span>
+              </button>          <div class="phone ">
+                  <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
+                  <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
+                </div>
             </div>
+            <div class="header-top__right">
+              <nav class="navigation">
+                <ul class="list-reset">
+                  <li><a href="#" class="font-semibold">Акции</a></li>
+                  <li><a href="#" class="font-semibold">О бренде</a></li>
+                  <li><a href="#" class="font-semibold">Доставка и оплата</a></li>
+                  <li><a href="#" class="font-semibold">Обмен и возврат</a></li>
+                  <li><a href="#" class="font-semibold">Контакты</a></li>
+                </ul>
+              </nav>      </div>
           </div>
-        </div>  <div class="header-bottom">
-          <div class="header-bottom__container __container">
-            <div class="header-bottom__main">
-                <a class="logo-header link-reset " href="" aria-label="Логотип ювелирной компании «Самородки»">
-                  <svg class="">
-                    <use href="#logo"></use>
-                  </svg>  </a>
-                <button class="button-lg button--accent __hide-before-lg" data-global-action="catalog-toggle">
-                    <svg class="button-icon">
-                      <use href="#burger"></use>
-                    </svg>      <svg class="button-icon-active">
-                      <use href="#cancel"></use>
-                    </svg>    <span>Каталог</span>
-                </button>
-              <div class="search header-bottom__search __hide-before-lg">
-                  <div class="search__input-wrapper">
-                      <input class="search__input" type="text" name="search" placeholder="Поиск по более чем 10 000 товарам">
-                      <button class="search__button search__button--normal" data-global-action="search-open"
-                              aria-label="Искать товар">
-                          <svg class="icon-md">
-                            <use href="#search"></use>
-                          </svg>        </button>
-                      <button class="search__button search__button--cancel" data-global-action="search-close"
-                              aria-label="Закрыть меню поиска">
-                          <svg class="icon-md">
-                            <use href="#cancel"></use>
-                          </svg>        </button>
-                      <div class="search__result">
-                          <div class="search__result-wrapper">
-                              <div class="search-content">
-                                  <div class="search-content__items">
-                                        <button class="search-item">
-                                          <span class="search-item__left">
-                                              <svg class="icon-sm">
-                                                <use href="#history"></use>
-                                              </svg>      <span>Серьги</span>
-                                          </span>
-                                          <span class="search-item__right"><svg class="icon-sm">
-                                        <use href="#chevron-right"></use>
-                                      </svg></span>
-                                        </button>
-                                        <a class="search-item link-reset" href="#">
-                                          <span class="search-item__left">
-                                              <svg class="icon-sm">
-                                                <use href="#search"></use>
-                                              </svg>      <span>Серьги женские</span>
-                                          </span>
-                                          <span class="search-item__right"><svg class="icon-sm">
-                                        <use href="#chevron-right"></use>
-                                      </svg></span>
-                                        </a>
-                                        <a class="search-item link-reset" href="#">
-                                          <span class="search-item__left">
-                                              <svg class="icon-sm">
-                                                <use href="#search"></use>
-                                              </svg>      <span>Серьги мужские</span>
-                                          </span>
-                                          <span class="search-item__right"><svg class="icon-sm">
-                                        <use href="#chevron-right"></use>
-                                      </svg></span>
-                                        </a>
-                                        <a class="search-item link-reset" href="#">
-                                          <span class="search-item__left">
-                                              <svg class="icon-sm">
-                                                <use href="#search"></use>
-                                              </svg>      <span>Серьги золотые</span>
-                                          </span>
-                                          <span class="search-item__right"><svg class="icon-sm">
-                                        <use href="#chevron-right"></use>
-                                      </svg></span>
-                                        </a>
-                                  </div>
-                                  <div class="search-content__groups-wrapper">
-                                      <div class="search-content__groups">
-                                          <a href="#" class="search-group link-reset">
-                                            <span class="search-group__left">
-                                              <span>Серьги</span>
-                                              <span class="text-sm font-bold text-gray">Категория</span>
-                                            </span>
-                                            <span class="search-group__right"><svg class="icon-sm">
-                                            <use href="#chevron-right"></use>
-                                          </svg></span>
-                                          </a>            <a href="#" class="search-group link-reset">
-                                            <span class="search-group__left">
-                                              <span>Золотые серьги</span>
-                                              <span class="text-sm font-bold text-gray">Категория</span>
-                                            </span>
-                                            <span class="search-group__right"><svg class="icon-sm">
-                                            <use href="#chevron-right"></use>
-                                          </svg></span>
-                                          </a>        </div>
-                                  </div>
-                                  <div class="search-content__cards scrollbar-custom">
-                                      <a href="#" class="search-card link-reset">
-                                        <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
-                                        <span class="search-card__text font-bold">67 112₽</span>
-                                      </a>        <a href="#" class="search-card link-reset">
-                                        <img class="search-card__image" src="../../assets/media/images/search/card-2.png" alt="" loading="lazy">
-                                        <span class="search-card__text font-bold">2 321₽</span>
-                                      </a>        <a href="#" class="search-card link-reset">
-                                        <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
-                                        <span class="search-card__text font-bold">7 712₽</span>
-                                      </a>        <a href="#" class="search-card link-reset">
-                                        <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
-                                        <span class="search-card__text font-bold">1 712₽</span>
-                                      </a>        <a href="#" class="search-card link-reset">
-                                        <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
-                                        <span class="search-card__text font-bold">697 712₽</span>
-                                      </a>    </div>
-                                  <div class="search-content__footer-wrapper">
-                                      <div class="search-content__footer">
-                                          <span class="font-medium text-gray">Найдено 102 товара</span>
-                                          <a class="link-reset" href="#" aria-label="смотреть все">
-                                              <span class="font-bold">Все результаты поиска</span>
-                                              <svg class="icon-sm">
-                                                <use href="#chevron-right"></use>
-                                              </svg>            </a>
-                                      </div>
-                                  </div>
-                              </div>            </div>
-                      </div>
-                  </div>
-                  <div class="search__background" data-global-action="search-close"></div>
-              </div>      <div class="header-bottom__navbar __hide-before-lg">
-                  <button class="menu-button menu-button--header" >
-                    <span class="menu-button__icon">
-                      <svg class="">
-                        <use href="#baby"></use>
-                      </svg>          <span class="menu-button__badge-empty"></span>
-                    </span>
-                    <span class="menu-button__text text-md font-semibold">Войти</span>
-                  </button>
-                  <button class="menu-button menu-button--header" >
-                    <span class="menu-button__icon">
-                      <svg class="">
-                        <use href="#heart"></use>
-                      </svg>          <span class="menu-button__badge-count">8</span>
-                    </span>
-                    <span class="menu-button__text text-md font-semibold">Избранное</span>
-                  </button>
-                  <button class="menu-button menu-button--header" >
-                    <span class="menu-button__icon">
-                      <svg class="">
-                        <use href="#cart"></use>
-                      </svg>    </span>
-                    <span class="menu-button__text text-md font-semibold">Корзина</span>
-                  </button>
-              </div>
-              <div class="header-bottom__mobile-buttons __hide-after-md">
-                <button aria-label="поиск" data-global-action="search-open">
-                  <svg class="icon-md">
-                    <use href="#search"></use>
-                  </svg>        </button>
-                <a class="link-reset" href="tel:8 926 193 33 58" aria-label="телефон">
-                  <svg class="icon-md">
-                    <use href="#phone-volume"></use>
-                  </svg>        </a>
-                <button class="header-burger" aria-label="открыть меню" data-global-action="menu-toggle">
-                  <svg class="icon-md header-burger__default">
+        </div>
+      </div>  <div class="header-bottom">
+        <div class="header-bottom__container __container">
+          <div class="header-bottom__main">
+              <a class="logo-header link-reset " href="" aria-label="Логотип ювелирной компании «Самородки»">
+                <svg class="">
+                  <use href="#logo"></use>
+                </svg>  </a>
+              <button class="button-lg button--accent __hide-before-lg" data-global-action="catalog-toggle">
+                  <svg class="button-icon">
                     <use href="#burger"></use>
-                  </svg>          <svg class="icon-md header-burger__active">
+                  </svg>      <svg class="button-icon-active">
                     <use href="#cancel"></use>
-                  </svg>        </button>
-              </div>
+                  </svg>    <span>Каталог</span>
+              </button>
+            <div class="search header-bottom__search __hide-before-lg">
+                <div class="search__input-wrapper">
+                    <input class="search__input" type="text" name="search" placeholder="Поиск по более чем 10 000 товарам">
+                    <button class="search__button search__button--normal" data-global-action="search-open"
+                            aria-label="Искать товар">
+                        <svg class="icon-md">
+                          <use href="#search"></use>
+                        </svg>        </button>
+                    <button class="search__button search__button--cancel" data-global-action="search-close"
+                            aria-label="Закрыть меню поиска">
+                        <svg class="icon-md">
+                          <use href="#cancel"></use>
+                        </svg>        </button>
+                    <div class="search__result">
+                        <div class="search__result-wrapper">
+                            <div class="search-content">
+                                <div class="search-content__items">
+                                      <button class="search-item">
+                                        <span class="search-item__left">
+                                            <svg class="icon-sm">
+                                              <use href="#history"></use>
+                                            </svg>      <span>Серьги</span>
+                                        </span>
+                                        <span class="search-item__right"><svg class="icon-sm">
+                                      <use href="#chevron-right"></use>
+                                    </svg></span>
+                                      </button>
+                                      <a class="search-item link-reset" href="#">
+                                        <span class="search-item__left">
+                                            <svg class="icon-sm">
+                                              <use href="#search"></use>
+                                            </svg>      <span>Серьги женские</span>
+                                        </span>
+                                        <span class="search-item__right"><svg class="icon-sm">
+                                      <use href="#chevron-right"></use>
+                                    </svg></span>
+                                      </a>
+                                      <a class="search-item link-reset" href="#">
+                                        <span class="search-item__left">
+                                            <svg class="icon-sm">
+                                              <use href="#search"></use>
+                                            </svg>      <span>Серьги мужские</span>
+                                        </span>
+                                        <span class="search-item__right"><svg class="icon-sm">
+                                      <use href="#chevron-right"></use>
+                                    </svg></span>
+                                      </a>
+                                      <a class="search-item link-reset" href="#">
+                                        <span class="search-item__left">
+                                            <svg class="icon-sm">
+                                              <use href="#search"></use>
+                                            </svg>      <span>Серьги золотые</span>
+                                        </span>
+                                        <span class="search-item__right"><svg class="icon-sm">
+                                      <use href="#chevron-right"></use>
+                                    </svg></span>
+                                      </a>
+                                </div>
+                                <div class="search-content__groups-wrapper">
+                                    <div class="search-content__groups">
+                                        <a href="#" class="search-group link-reset">
+                                          <span class="search-group__left">
+                                            <span>Серьги</span>
+                                            <span class="text-sm font-bold text-gray">Категория</span>
+                                          </span>
+                                          <span class="search-group__right"><svg class="icon-sm">
+                                          <use href="#chevron-right"></use>
+                                        </svg></span>
+                                        </a>            <a href="#" class="search-group link-reset">
+                                          <span class="search-group__left">
+                                            <span>Золотые серьги</span>
+                                            <span class="text-sm font-bold text-gray">Категория</span>
+                                          </span>
+                                          <span class="search-group__right"><svg class="icon-sm">
+                                          <use href="#chevron-right"></use>
+                                        </svg></span>
+                                        </a>        </div>
+                                </div>
+                                <div class="search-content__cards scrollbar-custom">
+                                    <a href="#" class="search-card link-reset">
+                                      <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+                                      <span class="search-card__text font-bold">67 112₽</span>
+                                    </a>        <a href="#" class="search-card link-reset">
+                                      <img class="search-card__image" src="../../assets/media/images/search/card-2.png" alt="" loading="lazy">
+                                      <span class="search-card__text font-bold">2 321₽</span>
+                                    </a>        <a href="#" class="search-card link-reset">
+                                      <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+                                      <span class="search-card__text font-bold">7 712₽</span>
+                                    </a>        <a href="#" class="search-card link-reset">
+                                      <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+                                      <span class="search-card__text font-bold">1 712₽</span>
+                                    </a>        <a href="#" class="search-card link-reset">
+                                      <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+                                      <span class="search-card__text font-bold">697 712₽</span>
+                                    </a>    </div>
+                                <div class="search-content__footer-wrapper">
+                                    <div class="search-content__footer">
+                                        <span class="font-medium text-gray">Найдено 102 товара</span>
+                                        <a class="link-reset" href="#" aria-label="смотреть все">
+                                            <span class="font-bold">Все результаты поиска</span>
+                                            <svg class="icon-sm">
+                                              <use href="#chevron-right"></use>
+                                            </svg>            </a>
+                                    </div>
+                                </div>
+                            </div>            </div>
+                    </div>
+                </div>
+                <div class="search__background" data-global-action="search-close"></div>
+            </div>      <div class="header-bottom__navbar __hide-before-lg">
+                <button class="menu-button menu-button--header" >
+                  <span class="menu-button__icon">
+                    <svg class="">
+                      <use href="#baby"></use>
+                    </svg>          <span class="menu-button__badge-empty"></span>
+                  </span>
+                  <span class="menu-button__text text-md font-semibold">Войти</span>
+                </button>
+                <button class="menu-button menu-button--header" >
+                  <span class="menu-button__icon">
+                    <svg class="">
+                      <use href="#heart"></use>
+                    </svg>          <span class="menu-button__badge-count">8</span>
+                  </span>
+                  <span class="menu-button__text text-md font-semibold">Избранное</span>
+                </button>
+                <button class="menu-button menu-button--header" >
+                  <span class="menu-button__icon">
+                    <svg class="">
+                      <use href="#cart"></use>
+                    </svg>    </span>
+                  <span class="menu-button__text text-md font-semibold">Корзина</span>
+                </button>
             </div>
-          </div>
-        </div></header>      <!-- catalog-menu -->
-      <div class="catalog-menu-wrapper">
-        <div class="catalog-menu-main">
-          <div class="__container">
-            <div class="catalog-menu">
-              <div class="catalog-menu__lvl1-wrapper scrollbar-custom">
-                <button class="catalog-menu-back __hide-after-md" data-global-action="catalog-close">
-                  <svg class="icon-md">
-                    <use href="#chevron-left"></use>
-                  </svg>  <span class="title-lg font-bold">Каталог</span>
-                </button>          <div class="catalog-menu__lvl1 scrollbar-custom">
-                    <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#diamond"></use>
-                        </svg>    <span class="text-md font-bold">Все украшения</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#adjust-half"></use>
-                        </svg>    <span class="text-md font-bold">Акции</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#gift"></use>
-                        </svg>    <span class="text-md font-bold">Новинки</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#gold"></use>
-                        </svg>    <span class="text-md font-bold">Золото под заказ</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#coins"></use>
-                        </svg>    <span class="text-md font-bold">Серебро</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#link-broken"></use>
-                        </svg>    <span class="text-md font-bold">Цепи</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#master-card"></use>
-                        </svg>    <span class="text-md font-bold">Свадьба</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#adjust-circle"></use>
-                        </svg>    <span class="text-md font-bold">Серьги</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#circle-layer"></use>
-                        </svg>    <span class="text-md font-bold">Броши</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#record-audio"></use>
-                        </svg>    <span class="text-md font-bold">Кольца</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#brightness-empty"></use>
-                        </svg>    <span class="text-md font-bold">Браслеты</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#cell"></use>
-                        </svg>    <span class="text-md font-bold">Подвески</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#diamond"></use>
-                        </svg>    <span class="text-md font-bold">Все украшения</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#adjust-half"></use>
-                        </svg>    <span class="text-md font-bold">Акции</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#gift"></use>
-                        </svg>    <span class="text-md font-bold">Новинки</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#gold"></use>
-                        </svg>    <span class="text-md font-bold">Золото под заказ</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#coins"></use>
-                        </svg>    <span class="text-md font-bold">Серебро</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#link-broken"></use>
-                        </svg>    <span class="text-md font-bold">Цепи</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#master-card"></use>
-                        </svg>    <span class="text-md font-bold">Свадьба</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#adjust-circle"></use>
-                        </svg>    <span class="text-md font-bold">Серьги</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#circle-layer"></use>
-                        </svg>    <span class="text-md font-bold">Броши</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#record-audio"></use>
-                        </svg>    <span class="text-md font-bold">Кольца</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#brightness-empty"></use>
-                        </svg>    <span class="text-md font-bold">Браслеты</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
-                      <span class="catalog-lvl1-item__main">
-                        <svg class="icon-md">
-                          <use href="#cell"></use>
-                        </svg>    <span class="text-md font-bold">Подвески</span>
-                      </span>
-                      <svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></button>          </div>
-              </div>
-              <div class="catalog-menu__lvl2 ">
-                  <div class="catalog-menu__lvl2-wrapper scrollbar-custom">
-                      <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
-                          <span class="font-bold">Все категории</span>
-                          <svg class="icon-sm">
-                            <use href="#chevron-right"></use>
-                          </svg>                </a>
-      
-                      <div class="catalog-menu__lvl2-groups-wrapper">
-                          <button class="catalog-menu-back __hide-after-md" data-global-action="catalog-lvl2-close">
-                            <svg class="icon-md">
-                              <use href="#chevron-left"></use>
-                            </svg>  <span class="title-lg font-bold">Все украшения</span>
-                          </button>                    <div class="catalog-menu__lvl2-groups ">
-                                  <div class="catalog-lvl2-group">
-                                    <span class="catalog-lvl2-group__title font-bold">Категория</span>
-                                    <ul class="catalog-lvl2-group__list list-reset">
-                                        <li><a href="#">Серьги</a></li>
-                                        <li><a href="#">Кольца</a></li>
-                                        <li><a href="#">Подвески</a></li>
-                                        <li><a href="#">Пирсинг</a></li>
-                                        <li><a href="#">Цепочки</a></li>
-                                        <li><a href="#">Колье</a></li>
-                                        <li><a href="#">Ювелирные коробки</a></li>
-                                        <li><a href="#">Серьги</a></li>
-                                        <li><a href="#">Кольца</a></li>
-                                        <li><a href="#">Подвески</a></li>
-                                        <li><a href="#">Пирсинг</a></li>
-                                        <li><a href="#">Цепочки</a></li>
-                                        <li><a href="#">Колье</a></li>
-                                        <li><a href="#">Ювелирные коробки</a></li>
-                                    </ul>
-                                  </div>                            <div class="catalog-lvl2-group">
-                                    <span class="catalog-lvl2-group__title font-bold">Материал</span>
-                                    <ul class="catalog-lvl2-group__list list-reset">
-                                        <li><a href="#">Золото под заказ</a></li>
-                                        <li><a href="#">Серебро</a></li>
-                                        <li><a href="#">Золото под заказ</a></li>
-                                        <li><a href="#">Серебро</a></li>
-                                    </ul>
-                                  </div>                            <div class="catalog-lvl2-group">
-                                    <span class="catalog-lvl2-group__title font-bold">Для кого</span>
-                                    <ul class="catalog-lvl2-group__list list-reset">
-                                        <li><a href="#">Для женщин</a></li>
-                                        <li><a href="#">Для мужчин</a></li>
-                                        <li><a href="#">Для детей</a></li>
-                                        <li><a href="#">Унисекс</a></li>
-                                        <li><a href="#">Для женщин</a></li>
-                                        <li><a href="#">Для мужчин</a></li>
-                                        <li><a href="#">Для детей</a></li>
-                                        <li><a href="#">Унисекс</a></li>
-                                    </ul>
-                                  </div>                            <div class="catalog-lvl2-group">
-                                    <span class="catalog-lvl2-group__title font-bold">Вставки</span>
-                                    <ul class="catalog-lvl2-group__list list-reset">
-                                        <li><a href="#">C камнями</a></li>
-                                        <li><a href="#">Без вставки</a></li>
-                                        <li><a href="#">Все бриллианты</a></li>
-                                        <li><a href="#">Бриллиант природный</a></li>
-                                        <li><a href="#">Бриллиант выращенный</a></li>
-                                        <li><a href="#">Изумруд</a></li>
-                                        <li><a href="#">Сапфир</a></li>
-                                        <li><a href="#">Рубин</a></li>
-                                        <li><a href="#">Фианит</a></li>
-                                        <li><a href="#">Топаз</a></li>
-                                        <li><a href="#">Жемчуг</a></li>
-                                        <li><a href="#">Гранат</a></li>
-                                        <li><a href="#">Аметист</a></li>
-                                        <li><a href="#">C камнями</a></li>
-                                        <li><a href="#">Без вставки</a></li>
-                                        <li><a href="#">Все бриллианты</a></li>
-                                        <li><a href="#">Бриллиант природный</a></li>
-                                        <li><a href="#">Бриллиант выращенный</a></li>
-                                        <li><a href="#">Изумруд</a></li>
-                                        <li><a href="#">Сапфир</a></li>
-                                        <li><a href="#">Рубин</a></li>
-                                        <li><a href="#">Фианит</a></li>
-                                        <li><a href="#">Топаз</a></li>
-                                        <li><a href="#">Жемчуг</a></li>
-                                        <li><a href="#">Гранат</a></li>
-                                        <li><a href="#">Аметист</a></li>
-                                    </ul>
-                                  </div>                    </div>
-                      </div>
-                  </div>
-      
-              </div>
+            <div class="header-bottom__mobile-buttons __hide-after-md">
+              <button aria-label="поиск" data-global-action="search-open">
+                <svg class="icon-md">
+                  <use href="#search"></use>
+                </svg>        </button>
+              <a class="link-reset" href="tel:8 926 193 33 58" aria-label="телефон">
+                <svg class="icon-md">
+                  <use href="#phone-volume"></use>
+                </svg>        </a>
+              <button class="header-burger" aria-label="открыть меню" data-global-action="menu-toggle">
+                <svg class="icon-md header-burger__default">
+                  <use href="#burger"></use>
+                </svg>          <svg class="icon-md header-burger__active">
+                  <use href="#cancel"></use>
+                </svg>        </button>
             </div>
           </div>
         </div>
-        <div class="catalog-menu-background" data-global-action="catalog-close"></div>
-      </div>      <!-- Menu -->
-      <div class="menu">
-        <div class="menu__content scrollbar-custom">
-          <button type="button" class="location menu__location">
+      </div></header>    <!-- catalog-menu -->
+    <div class="catalog-menu-wrapper">
+      <div class="catalog-menu-main">
+        <div class="__container">
+          <div class="catalog-menu">
+            <div class="catalog-menu__lvl1-wrapper scrollbar-custom">
+              <button class="catalog-menu-back __hide-after-md" data-global-action="catalog-close">
+                <svg class="icon-md">
+                  <use href="#chevron-left"></use>
+                </svg>  <span class="title-lg font-bold">Каталог</span>
+              </button>          <div class="catalog-menu__lvl1 scrollbar-custom">
+                  <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#diamond"></use>
+                      </svg>    <span class="text-md font-bold">Все украшения</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#adjust-half"></use>
+                      </svg>    <span class="text-md font-bold">Акции</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#gift"></use>
+                      </svg>    <span class="text-md font-bold">Новинки</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#gold"></use>
+                      </svg>    <span class="text-md font-bold">Золото под заказ</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#coins"></use>
+                      </svg>    <span class="text-md font-bold">Серебро</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#link-broken"></use>
+                      </svg>    <span class="text-md font-bold">Цепи</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#master-card"></use>
+                      </svg>    <span class="text-md font-bold">Свадьба</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#adjust-circle"></use>
+                      </svg>    <span class="text-md font-bold">Серьги</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#circle-layer"></use>
+                      </svg>    <span class="text-md font-bold">Броши</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#record-audio"></use>
+                      </svg>    <span class="text-md font-bold">Кольца</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#brightness-empty"></use>
+                      </svg>    <span class="text-md font-bold">Браслеты</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#cell"></use>
+                      </svg>    <span class="text-md font-bold">Подвески</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#diamond"></use>
+                      </svg>    <span class="text-md font-bold">Все украшения</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#adjust-half"></use>
+                      </svg>    <span class="text-md font-bold">Акции</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#gift"></use>
+                      </svg>    <span class="text-md font-bold">Новинки</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#gold"></use>
+                      </svg>    <span class="text-md font-bold">Золото под заказ</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#coins"></use>
+                      </svg>    <span class="text-md font-bold">Серебро</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#link-broken"></use>
+                      </svg>    <span class="text-md font-bold">Цепи</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#master-card"></use>
+                      </svg>    <span class="text-md font-bold">Свадьба</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#adjust-circle"></use>
+                      </svg>    <span class="text-md font-bold">Серьги</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#circle-layer"></use>
+                      </svg>    <span class="text-md font-bold">Броши</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#record-audio"></use>
+                      </svg>    <span class="text-md font-bold">Кольца</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#brightness-empty"></use>
+                      </svg>    <span class="text-md font-bold">Браслеты</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>              <button class="catalog-lvl1-item" data-global-action="catalog-lvl2-open">
+                    <span class="catalog-lvl1-item__main">
+                      <svg class="icon-md">
+                        <use href="#cell"></use>
+                      </svg>    <span class="text-md font-bold">Подвески</span>
+                    </span>
+                    <svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></button>          </div>
+            </div>
+            <div class="catalog-menu__lvl2 ">
+                <div class="catalog-menu__lvl2-wrapper scrollbar-custom">
+                    <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
+                        <span class="font-bold">Все категории</span>
+                        <svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg>                </a>
+    
+                    <div class="catalog-menu__lvl2-groups-wrapper">
+                        <button class="catalog-menu-back __hide-after-md" data-global-action="catalog-lvl2-close">
+                          <svg class="icon-md">
+                            <use href="#chevron-left"></use>
+                          </svg>  <span class="title-lg font-bold">Все украшения</span>
+                        </button>                    <div class="catalog-menu__lvl2-groups ">
+                                <div class="catalog-lvl2-group">
+                                  <span class="catalog-lvl2-group__title font-bold">Категория</span>
+                                  <ul class="catalog-lvl2-group__list list-reset">
+                                      <li><a href="#">Серьги</a></li>
+                                      <li><a href="#">Кольца</a></li>
+                                      <li><a href="#">Подвески</a></li>
+                                      <li><a href="#">Пирсинг</a></li>
+                                      <li><a href="#">Цепочки</a></li>
+                                      <li><a href="#">Колье</a></li>
+                                      <li><a href="#">Ювелирные коробки</a></li>
+                                      <li><a href="#">Серьги</a></li>
+                                      <li><a href="#">Кольца</a></li>
+                                      <li><a href="#">Подвески</a></li>
+                                      <li><a href="#">Пирсинг</a></li>
+                                      <li><a href="#">Цепочки</a></li>
+                                      <li><a href="#">Колье</a></li>
+                                      <li><a href="#">Ювелирные коробки</a></li>
+                                  </ul>
+                                </div>                            <div class="catalog-lvl2-group">
+                                  <span class="catalog-lvl2-group__title font-bold">Материал</span>
+                                  <ul class="catalog-lvl2-group__list list-reset">
+                                      <li><a href="#">Золото под заказ</a></li>
+                                      <li><a href="#">Серебро</a></li>
+                                      <li><a href="#">Золото под заказ</a></li>
+                                      <li><a href="#">Серебро</a></li>
+                                  </ul>
+                                </div>                            <div class="catalog-lvl2-group">
+                                  <span class="catalog-lvl2-group__title font-bold">Для кого</span>
+                                  <ul class="catalog-lvl2-group__list list-reset">
+                                      <li><a href="#">Для женщин</a></li>
+                                      <li><a href="#">Для мужчин</a></li>
+                                      <li><a href="#">Для детей</a></li>
+                                      <li><a href="#">Унисекс</a></li>
+                                      <li><a href="#">Для женщин</a></li>
+                                      <li><a href="#">Для мужчин</a></li>
+                                      <li><a href="#">Для детей</a></li>
+                                      <li><a href="#">Унисекс</a></li>
+                                  </ul>
+                                </div>                            <div class="catalog-lvl2-group">
+                                  <span class="catalog-lvl2-group__title font-bold">Вставки</span>
+                                  <ul class="catalog-lvl2-group__list list-reset">
+                                      <li><a href="#">C камнями</a></li>
+                                      <li><a href="#">Без вставки</a></li>
+                                      <li><a href="#">Все бриллианты</a></li>
+                                      <li><a href="#">Бриллиант природный</a></li>
+                                      <li><a href="#">Бриллиант выращенный</a></li>
+                                      <li><a href="#">Изумруд</a></li>
+                                      <li><a href="#">Сапфир</a></li>
+                                      <li><a href="#">Рубин</a></li>
+                                      <li><a href="#">Фианит</a></li>
+                                      <li><a href="#">Топаз</a></li>
+                                      <li><a href="#">Жемчуг</a></li>
+                                      <li><a href="#">Гранат</a></li>
+                                      <li><a href="#">Аметист</a></li>
+                                      <li><a href="#">C камнями</a></li>
+                                      <li><a href="#">Без вставки</a></li>
+                                      <li><a href="#">Все бриллианты</a></li>
+                                      <li><a href="#">Бриллиант природный</a></li>
+                                      <li><a href="#">Бриллиант выращенный</a></li>
+                                      <li><a href="#">Изумруд</a></li>
+                                      <li><a href="#">Сапфир</a></li>
+                                      <li><a href="#">Рубин</a></li>
+                                      <li><a href="#">Фианит</a></li>
+                                      <li><a href="#">Топаз</a></li>
+                                      <li><a href="#">Жемчуг</a></li>
+                                      <li><a href="#">Гранат</a></li>
+                                      <li><a href="#">Аметист</a></li>
+                                  </ul>
+                                </div>                    </div>
+                    </div>
+                </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-menu-background" data-global-action="catalog-close"></div>
+    </div>    <!-- Menu -->
+    <div class="menu">
+      <div class="menu__content scrollbar-custom">
+        <button type="button" class="location menu__location">
+          <svg class="icon-md">
+            <use href="#location-point"></use>
+          </svg>  <span class="font-medium">Москва</span>
+        </button>    <button class="menu__button" data-global-action="catalog-open">
+          <span class="title-sm font-bold">Каталог</span>
+          <svg class="icon-md">
+            <use href="#chevron-right"></use>
+          </svg>    </button>
+        <div class="menu__blocks">
+          <nav class="menu__block">
+            <ul class="list-reset">
+              <li><a class="font-semibold" href="#">Акции</a></li>
+              <li><a class="font-semibold" href="#">О бренде</a></li>
+              <li><a class="font-semibold" href="#">Доставка и оплата</a></li>
+              <li><a class="font-semibold" href="#">Обмен и возврат</a></li>
+              <li><a class="font-semibold" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__block">
+            <span class="menu__block-title title-sm font-bold">Мы в соцсетях</span>
+            <ul class="list-reset">
+              <li><a class="font-semibold" href="#">Вконтакте</a></li>
+              <li><a class="font-semibold" href="#">Instagram</a></li>
+              <li><a class="font-semibold" href="#">Телеграм</a></li>
+            </ul>
+          </div>
+          <div class="menu__block menu__block--contacts">
+            <span class="menu__block-title title-sm font-bold">Контакты</span>
+            <ul class="list-reset">
+              <li>  <div class="phone font-bold">
+        <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
+        <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
+      </div>
+    </li>
+              <li><a class="font-bold" href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
+              <li><span>Москва, Искры, 17а, стр.3</span></li>
+              <li><span>Кострома, Сутырина, д.3</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="menu__background"></div>
+    </div>    <div class="search-mobile">
+      <div class="search-mobile__header">
+        <button class="search-mobile__cancel" data-global-action="search-close">
+          <svg class="icon-md">
+            <use href="#chevron-left"></use>
+          </svg>    </button>
+        <div class="search-mobile__input-wrapper">
+          <input class="search-mobile__input" type="text">
+          <button class="search-mobile__input-button">
             <svg class="icon-md">
-              <use href="#location-point"></use>
-            </svg>  <span class="font-medium">Москва</span>
-          </button>    <button class="menu__button" data-global-action="catalog-open">
-            <span class="title-sm font-bold">Каталог</span>
-            <svg class="icon-md">
-              <use href="#chevron-right"></use>
-            </svg>    </button>
-          <div class="menu__blocks">
-            <nav class="menu__block">
-              <ul class="list-reset">
-                <li><a class="font-semibold" href="#">Акции</a></li>
-                <li><a class="font-semibold" href="#">О бренде</a></li>
-                <li><a class="font-semibold" href="#">Доставка и оплата</a></li>
-                <li><a class="font-semibold" href="#">Обмен и возврат</a></li>
-                <li><a class="font-semibold" href="#">Контакты</a></li>
-              </ul>
-            </nav>
-            <div class="menu__block">
-              <span class="menu__block-title title-sm font-bold">Мы в соцсетях</span>
-              <ul class="list-reset">
-                <li><a class="font-semibold" href="#">Вконтакте</a></li>
-                <li><a class="font-semibold" href="#">Instagram</a></li>
-                <li><a class="font-semibold" href="#">Телеграм</a></li>
-              </ul>
-            </div>
-            <div class="menu__block menu__block--contacts">
-              <span class="menu__block-title title-sm font-bold">Контакты</span>
-              <ul class="list-reset">
-                <li>  <div class="phone font-bold">
-          <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
-          <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
+              <use href="#search"></use>
+            </svg>      </button>
         </div>
-      </li>
-                <li><a class="font-bold" href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
-                <li><span>Москва, Искры, 17а, стр.3</span></li>
-                <li><span>Кострома, Сутырина, д.3</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="menu__background"></div>
-      </div>      <div class="search-mobile">
-        <div class="search-mobile__header">
-          <button class="search-mobile__cancel" data-global-action="search-close">
-            <svg class="icon-md">
-              <use href="#chevron-left"></use>
-            </svg>    </button>
-          <div class="search-mobile__input-wrapper">
-            <input class="search-mobile__input" type="text">
-            <button class="search-mobile__input-button">
-              <svg class="icon-md">
-                <use href="#search"></use>
-              </svg>      </button>
-          </div>
-        </div>
-          <div class="search-mobile__wrapper">
-              <div class="search-content">
-                  <div class="search-content__items">
-                        <button class="search-item">
-                          <span class="search-item__left">
-                              <svg class="icon-sm">
-                                <use href="#history"></use>
-                              </svg>      <span>Серьги</span>
+      </div>
+        <div class="search-mobile__wrapper">
+            <div class="search-content">
+                <div class="search-content__items">
+                      <button class="search-item">
+                        <span class="search-item__left">
+                            <svg class="icon-sm">
+                              <use href="#history"></use>
+                            </svg>      <span>Серьги</span>
+                        </span>
+                        <span class="search-item__right"><svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></span>
+                      </button>
+                      <a class="search-item link-reset" href="#">
+                        <span class="search-item__left">
+                            <svg class="icon-sm">
+                              <use href="#search"></use>
+                            </svg>      <span>Серьги женские</span>
+                        </span>
+                        <span class="search-item__right"><svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></span>
+                      </a>
+                      <a class="search-item link-reset" href="#">
+                        <span class="search-item__left">
+                            <svg class="icon-sm">
+                              <use href="#search"></use>
+                            </svg>      <span>Серьги мужские</span>
+                        </span>
+                        <span class="search-item__right"><svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></span>
+                      </a>
+                      <a class="search-item link-reset" href="#">
+                        <span class="search-item__left">
+                            <svg class="icon-sm">
+                              <use href="#search"></use>
+                            </svg>      <span>Серьги золотые</span>
+                        </span>
+                        <span class="search-item__right"><svg class="icon-sm">
+                      <use href="#chevron-right"></use>
+                    </svg></span>
+                      </a>
+                </div>
+                <div class="search-content__groups-wrapper">
+                    <div class="search-content__groups">
+                        <a href="#" class="search-group link-reset">
+                          <span class="search-group__left">
+                            <span>Серьги</span>
+                            <span class="text-sm font-bold text-gray">Категория</span>
                           </span>
-                          <span class="search-item__right"><svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></span>
-                        </button>
-                        <a class="search-item link-reset" href="#">
-                          <span class="search-item__left">
-                              <svg class="icon-sm">
-                                <use href="#search"></use>
-                              </svg>      <span>Серьги женские</span>
+                          <span class="search-group__right"><svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg></span>
+                        </a>            <a href="#" class="search-group link-reset">
+                          <span class="search-group__left">
+                            <span>Золотые серьги</span>
+                            <span class="text-sm font-bold text-gray">Категория</span>
                           </span>
-                          <span class="search-item__right"><svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></span>
-                        </a>
-                        <a class="search-item link-reset" href="#">
-                          <span class="search-item__left">
-                              <svg class="icon-sm">
-                                <use href="#search"></use>
-                              </svg>      <span>Серьги мужские</span>
+                          <span class="search-group__right"><svg class="icon-sm">
+                          <use href="#chevron-right"></use>
+                        </svg></span>
+                        </a>        </div>
+                </div>
+                <div class="search-content__cards scrollbar-custom">
+                    <a href="#" class="search-card link-reset">
+                      <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+                      <span class="search-card__text font-bold">67 112₽</span>
+                    </a>        <a href="#" class="search-card link-reset">
+                      <img class="search-card__image" src="../../assets/media/images/search/card-2.png" alt="" loading="lazy">
+                      <span class="search-card__text font-bold">2 321₽</span>
+                    </a>        <a href="#" class="search-card link-reset">
+                      <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+                      <span class="search-card__text font-bold">7 712₽</span>
+                    </a>        <a href="#" class="search-card link-reset">
+                      <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
+                      <span class="search-card__text font-bold">1 712₽</span>
+                    </a>        <a href="#" class="search-card link-reset">
+                      <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
+                      <span class="search-card__text font-bold">697 712₽</span>
+                    </a>    </div>
+                <div class="search-content__footer-wrapper">
+                    <div class="search-content__footer">
+                        <span class="font-medium text-gray">Найдено 102 товара</span>
+                        <a class="link-reset" href="#" aria-label="смотреть все">
+                            <span class="font-bold">Все результаты поиска</span>
+                            <svg class="icon-sm">
+                              <use href="#chevron-right"></use>
+                            </svg>            </a>
+                    </div>
+                </div>
+            </div>    </div>
+    </div>    <div class="mobile-bottom-menu">
+      <div class="mobile-bottom-menu__background" data-global-action="mobile-bottom-menu-close"></div>
+      <div class="mobile-bottom-menu__wrapper">
+        <div class="mobile-bottom-menu__header"></div>
+        <div class="mobile-bottom-menu__content">
+            <div class="mobile-bottom-menu__sort-catalog">
+                <div class="sort-catalog">
+                  <span class="sort-catalog__title title-sm font-bold text-center">Сортировка</span>
+                  <ul class="sort-catalog__list list-reset">
+                    <li>
+                      <label>
+                        <input type="radio" name="sort" checked>
+                        <span class="text-md font-medium">
+                          <span>
+                            <span>По популярности</span>
                           </span>
-                          <span class="search-item__right"><svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></span>
-                        </a>
-                        <a class="search-item link-reset" href="#">
-                          <span class="search-item__left">
-                              <svg class="icon-sm">
-                                <use href="#search"></use>
-                              </svg>      <span>Серьги золотые</span>
+                          <svg class="icon-xmd">
+                            <use href="#check"></use>
+                          </svg>        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="sort">
+                        <span class="text-md font-medium">
+                          <span>
+                            <span>По рейтингу</span>
                           </span>
-                          <span class="search-item__right"><svg class="icon-sm">
-                        <use href="#chevron-right"></use>
-                      </svg></span>
-                        </a>
-                  </div>
-                  <div class="search-content__groups-wrapper">
-                      <div class="search-content__groups">
-                          <a href="#" class="search-group link-reset">
-                            <span class="search-group__left">
-                              <span>Серьги</span>
-                              <span class="text-sm font-bold text-gray">Категория</span>
-                            </span>
-                            <span class="search-group__right"><svg class="icon-sm">
-                            <use href="#chevron-right"></use>
-                          </svg></span>
-                          </a>            <a href="#" class="search-group link-reset">
-                            <span class="search-group__left">
-                              <span>Золотые серьги</span>
-                              <span class="text-sm font-bold text-gray">Категория</span>
-                            </span>
-                            <span class="search-group__right"><svg class="icon-sm">
-                            <use href="#chevron-right"></use>
-                          </svg></span>
-                          </a>        </div>
-                  </div>
-                  <div class="search-content__cards scrollbar-custom">
-                      <a href="#" class="search-card link-reset">
-                        <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
-                        <span class="search-card__text font-bold">67 112₽</span>
-                      </a>        <a href="#" class="search-card link-reset">
-                        <img class="search-card__image" src="../../assets/media/images/search/card-2.png" alt="" loading="lazy">
-                        <span class="search-card__text font-bold">2 321₽</span>
-                      </a>        <a href="#" class="search-card link-reset">
-                        <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
-                        <span class="search-card__text font-bold">7 712₽</span>
-                      </a>        <a href="#" class="search-card link-reset">
-                        <img class="search-card__image" src="../../assets/media/images/search/card-1.png" alt="" loading="lazy">
-                        <span class="search-card__text font-bold">1 712₽</span>
-                      </a>        <a href="#" class="search-card link-reset">
-                        <img class="search-card__image" src="../../assets/media/images/search/card-3.png" alt="" loading="lazy">
-                        <span class="search-card__text font-bold">697 712₽</span>
-                      </a>    </div>
-                  <div class="search-content__footer-wrapper">
-                      <div class="search-content__footer">
-                          <span class="font-medium text-gray">Найдено 102 товара</span>
-                          <a class="link-reset" href="#" aria-label="смотреть все">
-                              <span class="font-bold">Все результаты поиска</span>
-                              <svg class="icon-sm">
-                                <use href="#chevron-right"></use>
-                              </svg>            </a>
-                      </div>
-                  </div>
-              </div>    </div>
-      </div>      <div class="mobile-bottom-menu">
-        <div class="mobile-bottom-menu__background" data-global-action="mobile-bottom-menu-close"></div>
-        <div class="mobile-bottom-menu__wrapper">
-          <div class="mobile-bottom-menu__header"></div>
-          <div class="mobile-bottom-menu__content">
-              <div class="mobile-bottom-menu__sort-catalog">
-                  <div class="sort-catalog">
-                    <span class="sort-catalog__title title-sm font-bold text-center">Сортировка</span>
-                    <ul class="sort-catalog__list list-reset">
-                      <li>
-                        <label>
-                          <input type="radio" name="sort" checked>
-                          <span class="text-md font-medium">
-                            <span>
-                              <span>По популярности</span>
-                            </span>
-                            <svg class="icon-xmd">
-                              <use href="#check"></use>
-                            </svg>        </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="sort">
-                          <span class="text-md font-medium">
-                            <span>
-                              <span>По рейтингу</span>
-                            </span>
-                            <svg class="icon-xmd">
-                              <use href="#check"></use>
-                            </svg>        </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="sort">
-                          <span class="text-md font-medium">
-                            <span>
-                              <span>По алфавиту</span>
-                              <span class="text-gray">От А до Я</span>
-                            </span>
-                            <svg class="icon-xmd">
-                              <use href="#check"></use>
-                            </svg>        </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="sort">
-                          <span class="text-md font-medium">
-                            <span>
-                              <span>По алфавиту</span>
-                              <span class="text-gray">От Я до А</span>
-                            </span>
-                            <svg class="icon-xmd">
-                              <use href="#check"></use>
-                            </svg>        </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="sort">
-                          <span class="text-md font-medium">
-                            <span>
-                              <span>Сначала дешевле</span>
-                            </span>
-                            <svg class="icon-xmd">
-                              <use href="#check"></use>
-                            </svg>        </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="sort">
-                          <span class="text-md font-medium">
-                            <span>
-                              <span>Сначала дороже</span>
-                            </span>
-                            <svg class="icon-xmd">
-                              <use href="#check"></use>
-                            </svg>        </span>
-                        </label>
-                      </li>
+                          <svg class="icon-xmd">
+                            <use href="#check"></use>
+                          </svg>        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="sort">
+                        <span class="text-md font-medium">
+                          <span>
+                            <span>По алфавиту</span>
+                            <span class="text-gray">От А до Я</span>
+                          </span>
+                          <svg class="icon-xmd">
+                            <use href="#check"></use>
+                          </svg>        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="sort">
+                        <span class="text-md font-medium">
+                          <span>
+                            <span>По алфавиту</span>
+                            <span class="text-gray">От Я до А</span>
+                          </span>
+                          <svg class="icon-xmd">
+                            <use href="#check"></use>
+                          </svg>        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="sort">
+                        <span class="text-md font-medium">
+                          <span>
+                            <span>Сначала дешевле</span>
+                          </span>
+                          <svg class="icon-xmd">
+                            <use href="#check"></use>
+                          </svg>        </span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="sort">
+                        <span class="text-md font-medium">
+                          <span>
+                            <span>Сначала дороже</span>
+                          </span>
+                          <svg class="icon-xmd">
+                            <use href="#check"></use>
+                          </svg>        </span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>        </div>
+    
+            <div class="mobile-bottom-menu__sort-feedback">
+                <div class="sort-feedback">
+                    <span class="sort-feedback__title title-sm font-bold text-center">Сортировка</span>
+                    <ul class="sort-feedback__list list-reset">
+                        <li>
+                            <label>
+                                <input type="radio" name="sort" checked>
+                                <span class="text-md font-medium">
+                          <span>
+                            <span>Сначала полезные</span>
+                          </span>
+                                    <svg class="icon-xmd">
+                                      <use href="#check"></use>
+                                    </svg>        </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="sort">
+                                <span class="text-md font-medium">
+                          <span>
+                            <span>С высокой оценкой</span>
+                          </span>
+                                    <svg class="icon-xmd">
+                                      <use href="#check"></use>
+                                    </svg>        </span>
+                            </label>
+                        </li>
+                
+                        <li>
+                            <label>
+                                <input type="radio" name="sort">
+                                <span class="text-md font-medium">
+                          <span>
+                            <span>С низкой оценкой</span>
+                          </span>
+                                    <svg class="icon-xmd">
+                                      <use href="#check"></use>
+                                    </svg>        </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="sort">
+                                <span class="text-md font-medium">
+                          <span>
+                            <span>Сначала новые</span>
+                          </span>
+                                    <svg class="icon-xmd">
+                                      <use href="#check"></use>
+                                    </svg>        </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="sort">
+                                <span class="text-md font-medium">
+                          <span>
+                            <span>Сначала старые</span>
+                          </span>
+                                    <svg class="icon-xmd">
+                                      <use href="#check"></use>
+                                    </svg>        </span>
+                            </label>
+                        </li>
                     </ul>
-                  </div>        </div>
-      
-              <div class="mobile-bottom-menu__sort-feedback">
-                  <div class="sort-feedback">
-                      <span class="sort-feedback__title title-sm font-bold text-center">Сортировка</span>
-                      <ul class="sort-feedback__list list-reset">
-                          <li>
-                              <label>
-                                  <input type="radio" name="sort" checked>
-                                  <span class="text-md font-medium">
-                            <span>
-                              <span>Сначала полезные</span>
-                            </span>
-                                      <svg class="icon-xmd">
-                                        <use href="#check"></use>
-                                      </svg>        </span>
-                              </label>
-                          </li>
-                          <li>
-                              <label>
-                                  <input type="radio" name="sort">
-                                  <span class="text-md font-medium">
-                            <span>
-                              <span>С высокой оценкой</span>
-                            </span>
-                                      <svg class="icon-xmd">
-                                        <use href="#check"></use>
-                                      </svg>        </span>
-                              </label>
-                          </li>
-                  
-                          <li>
-                              <label>
-                                  <input type="radio" name="sort">
-                                  <span class="text-md font-medium">
-                            <span>
-                              <span>С низкой оценкой</span>
-                            </span>
-                                      <svg class="icon-xmd">
-                                        <use href="#check"></use>
-                                      </svg>        </span>
-                              </label>
-                          </li>
-                          <li>
-                              <label>
-                                  <input type="radio" name="sort">
-                                  <span class="text-md font-medium">
-                            <span>
-                              <span>Сначала новые</span>
-                            </span>
-                                      <svg class="icon-xmd">
-                                        <use href="#check"></use>
-                                      </svg>        </span>
-                              </label>
-                          </li>
-                          <li>
-                              <label>
-                                  <input type="radio" name="sort">
-                                  <span class="text-md font-medium">
-                            <span>
-                              <span>Сначала старые</span>
-                            </span>
-                                      <svg class="icon-xmd">
-                                        <use href="#check"></use>
-                                      </svg>        </span>
-                              </label>
-                          </li>
-                      </ul>
-                  </div>        </div>
-      
-              <div class="mobile-bottom-menu__product">
+                </div>        </div>
+    
+            <div class="mobile-bottom-menu__product">
+                <div class="menu-product">
+                    <p class="menu-product__title">Выберите размер изделия</p>
+                    <div class="menu-product__card">
+                        <div class="menu-product__card-media">
+                            <img src="../../assets/media/images/single-product/single-product-main.png" alt="" class="menu-product__image">
+                        </div>
+                        <div class="menu-product__card-descr">
+                            <p class="menu-product__subtitle">Серебро серьги длинные с гранатом</p>
+                            <div class="menu-product__price">
+                                <span class="menu-product__price-normal">170 340₽</span>
+                                <span class="menu-product__price-old text-gray">221 222₽</span>
+                                <span class="discount">
+                                    - 23%
+                                </span>            </div>
+                            <div class="menu-product__rating text-gray">
+                                <div class="rating ">
+                                  <svg class="icon-sm">
+                                    <use href="#star"></use>
+                                  </svg>  <span></span>
+                                </div>                4.89
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div class="menu-product__size">
+                            <button class="menu-product__size-btn">16</button>
+                            <button class="menu-product__size-btn">16.5</button>
+                            <button class="menu-product__size-btn">17</button>
+                            <button class="menu-product__size-btn">17.5</button>
+                            <button class="menu-product__size-btn">18</button>
+                            <button class="menu-product__size-btn">18.5</button>
+                            <button class="menu-product__size-btn">19</button>
+                            <button class="menu-product__size-btn">19.5</button>
+                            <button class="menu-product__size-btn">20</button>
+                            <button class="menu-product__size-btn">20.5</button>
+                            <button class="menu-product__size-btn">21</button>
+                            <button class="menu-product__size-btn">21.5</button>
+                            <button class="menu-product__size-btn">22</button>
+                            <button class="menu-product__size-btn">22.5</button>
+                            <button class="menu-product__size-btn">23</button>
+                    </div>
+                
+                    <div class="menu-product__button">
+                          <button class="button-lg button--accent menu-product__button-add" >
+                            <span>Добавить в корзину</span>
+                          </button>
+                
+                        <button class="favorite-filled selected " aria-label="Убрать из израбранного">
+                            <svg class="favorite-filled__icon">
+                              <use href="#heart-fill"></use>
+                            </svg></button>    </div>
+                    <!--        <button class="menu-product__size-table">Таблица размеров</button>-->
+                </div>        </div>
+    
+            <div class="mobile-bottom-menu__support">
+                <div class="menu-support">
+                    <div class="menu-support__title">Напишите нам</div>
+                
+                    <ul class="menu-support__list list-reset">
+                            <li class="menu-support__item">
+                                <a href="https://t.me/+79261933358" target="_blank" class="menu-support__link">
+                                    <svg class="menu-support__icon">
+                                      <use href="#telegram"></use>
+                                    </svg>                    телеграм
+                                </a>
+                
+                
+                
+                            </li>
+                
+                        <li class="menu-support__item">
+                            <a href="https://wa.me/79261933358" target="_blank" class="menu-support__link">
+                                <svg class="menu-support__icon">
+                                  <use href="#whatsapp"></use>
+                                </svg>                whatsapp
+                            </a>
+                        </li>
+                        <li class="menu-support__item">
+                            <a href="viber://add?number=79261933358" target="_blank" class="menu-support__link">
+                                <svg class="menu-support__icon">
+                                  <use href="#viber"></use>
+                                </svg>                viber
+                            </a>
+                        </li>
+                        <li class="menu-support__item">
+                            <a href="tel:+79261933358" target="_blank" class="menu-support__link">
+                                <svg class="menu-support__icon">
+                                  <use href="#phone"></use>
+                                </svg>                8 926 193 33 58
+                            </a>
+                        </li>
+                
+                    </ul>
+                
+                      <button class="button-sm button--gray menu-support__btn" data-global-action="drawer-close" >
+                        <span>Закрыть</span>
+                      </button>
+                
+                
+                </div>        </div>
+    
+            <div class="mobile-bottom-menu__locality">
+                <div class="menu-locality">
+                    <div class="menu-locality__title">Населенный пункт</div>
+                    <label class="input-group menu-locality__search ">
+                        <span class="visually-hidden">Найти город</span>
+                        <input
+                                class="input-field input-field--lg"
+                            
+                            type="search" 
+                            
+                            placeholder="Найти город"
+                            
+                        >
+                    
+                    
+                    </label>
+                    
+                    
+                
+                    <ul class="menu-locality__list list-reset">
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Москва</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Санкт-Петербург</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Новосибирск</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Екатеринбург</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Казань</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Нижний Новгород</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Красноярск</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Челябинск</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Уфа</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Самара</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Ростов-на-Дону</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Краснодар</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Омск</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Воронеж</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                            <li class="menu-locality__item">
+                                <label class="menu-locality__item-label">
+                                    <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
+                                    <span class="menu-locality__item-wrapper">
+                                        <span class="menu-locality__item-text">Пермь</span>
+                                        <svg class="icon-xmd menu-locality__item-icon">
+                                          <use href="#check"></use>
+                                        </svg>                    </span>
+                                </label>
+                            </li>
+                    </ul>
+                
+                      <button class="button-sm button--gray menu-locality__btn" data-global-action="drawer-close" >
+                        <span>Закрыть</span>
+                      </button>
+                </div>        </div>
+    
+            <div class="mobile-bottom-menu__delivery-point">
+                <div class="menu-delivery-point" data-view="карта">
+                    <div class="menu-delivery-point__title">Выбрать пункт</div>
+                
+                        <label class="input-group menu-delivery-point__search ">
+                            <span class="visually-hidden">Найти пункт выдачи</span>
+                            <input
+                                    class="input-field input-field--lg"
+                                id="delivery-point-search" 
+                                type="search" 
+                                
+                                placeholder="Найти пункт выдачи"
+                                
+                            >
+                        
+                        
+                        </label>
+                        
+                        
+                        <ul class="menu-delivery-point__list list-reset">
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153032, Россия, Ивановская область, Иваново, ул. Лежневская, 164</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153025, Россия, Ивановская область, Иваново, ул. Юрия Гагарина, 4</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153037, Россия, Ивановская область, Иваново, пр-т Шереметевский, 117</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153038, Россия, Ивановская область, Иваново, пр. Строителей, 50 А, пом.1002</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153022, Россия, Ивановская область, Иваново, ул. Громобоя, 16/50</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153005, Россия, Ивановская область, Иваново, ул. Шошина, 15</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153003, Россия, Ивановская область, Иваново, ул. Парижской Коммуны, 16А</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153045, Россия, Ивановская область, Иваново, ул. Победы, 55</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153051, Россия, Ивановская область, Иваново, ул. Кохомское шоссе, 1 Д, 868</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153013, Россия, Ивановская область, Иваново, ул. Куконковых, 141А</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153000, Россия, Ивановская область, Иваново, ул. Варенцовой, 4</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153023, Россия, Ивановская область, Иваново, ул. Авдотьинская, 28</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153003, Россия, Ивановская область, Иваново, ул. Кузнецова, 67Б, корп. 1</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153051, Россия, Ивановская область, Иваново, ул. Кохомское шоссе, 12А</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153023, Россия, Ивановская область, Иваново, ул. Дюковская, 19А</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153014, Россия, Ивановская область, Иваново, ул. микрорайон 14-е Почтовое Отделение, 253</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153045, Россия, Ивановская область, Иваново, ул. 2-я улица Чайковского, 10Б</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                                <li class="menu-delivery-point__item">
+                                    <label class="menu-delivery-point__item-label">
+                                        <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
+                                        <span class="menu-delivery-point__item-wrapper">
+                                        <span class="menu-delivery-point__item-text">153005, Россия, Ивановская область, Иваново, ул. Шошина, 10</span>
+                                            <svg class="icon-xmd menu-delivery-point__item-icon">
+                                              <use href="#check"></use>
+                                            </svg>                    </span>
+                                    </label>
+                                </li>
+                        </ul>
+                
+                    <div class="menu-delivery-point__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af628bd2dee8e787168f3a4010b46d6495ce11edb32339b540f1d3f45c77419b2&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                    </div>
+                
+                    <div class="menu-delivery-point__control">
+                        <button class="menu-delivery-point__control-btn" data-mode="карта">Карта</button>
+                        <button class="menu-delivery-point__control-btn" data-mode="список">Список</button>
+                    </div>
+                
+                
+                      <button class="button-sm button--gray menu-delivery-point__btn" data-global-action="drawer-close" >
+                        <span>Закрыть</span>
+                      </button>
+                </div>        </div>
+        </div>
+        <div class="mobile-bottom-menu__footer"></div>
+      </div>
+    </div>    <div class="drawer">
+      <div class="drawer__overlay" data-global-action="drawer-close"></div>
+      <div class="drawer__wrapper">
+          <button class="drawer__close" data-global-action="drawer-close">
+              <svg class="drawer__close-icon">
+                <use href="#cancel"></use>
+              </svg>      </button>
+    
+          <div class="drawer__content">
+              <div class="drawer__product">
                   <div class="menu-product">
                       <p class="menu-product__title">Выберите размер изделия</p>
                       <div class="menu-product__card">
@@ -860,9 +1391,9 @@
                                 <use href="#heart-fill"></use>
                               </svg></button>    </div>
                       <!--        <button class="menu-product__size-table">Таблица размеров</button>-->
-                  </div>        </div>
-      
-              <div class="mobile-bottom-menu__support">
+                  </div>          </div>
+    
+              <div class="drawer__support">
                   <div class="menu-support">
                       <div class="menu-support__title">Напишите нам</div>
                   
@@ -907,9 +1438,9 @@
                         </button>
                   
                   
-                  </div>        </div>
-      
-              <div class="mobile-bottom-menu__locality">
+                  </div>          </div>
+    
+              <div class="drawer__locality">
                   <div class="menu-locality">
                       <div class="menu-locality__title">Населенный пункт</div>
                       <label class="input-group menu-locality__search ">
@@ -1084,9 +1615,9 @@
                         <button class="button-sm button--gray menu-locality__btn" data-global-action="drawer-close" >
                           <span>Закрыть</span>
                         </button>
-                  </div>        </div>
-      
-              <div class="mobile-bottom-menu__delivery-point">
+                  </div>          </div>
+    
+              <div class="drawer__delivery-point">
                   <div class="menu-delivery-point" data-view="карта">
                       <div class="menu-delivery-point__title">Выбрать пункт</div>
                   
@@ -1301,519 +1832,12 @@
                         <button class="button-sm button--gray menu-delivery-point__btn" data-global-action="drawer-close" >
                           <span>Закрыть</span>
                         </button>
-                  </div>        </div>
+                  </div>          </div>
           </div>
-          <div class="mobile-bottom-menu__footer"></div>
-        </div>
-      </div>      <div class="drawer">
-        <div class="drawer__overlay" data-global-action="drawer-close"></div>
-        <div class="drawer__wrapper">
-            <button class="drawer__close" data-global-action="drawer-close">
-                <svg class="drawer__close-icon">
-                  <use href="#cancel"></use>
-                </svg>      </button>
-      
-            <div class="drawer__content">
-                <div class="drawer__product">
-                    <div class="menu-product">
-                        <p class="menu-product__title">Выберите размер изделия</p>
-                        <div class="menu-product__card">
-                            <div class="menu-product__card-media">
-                                <img src="../../assets/media/images/single-product/single-product-main.png" alt="" class="menu-product__image">
-                            </div>
-                            <div class="menu-product__card-descr">
-                                <p class="menu-product__subtitle">Серебро серьги длинные с гранатом</p>
-                                <div class="menu-product__price">
-                                    <span class="menu-product__price-normal">170 340₽</span>
-                                    <span class="menu-product__price-old text-gray">221 222₽</span>
-                                    <span class="discount">
-                                        - 23%
-                                    </span>            </div>
-                                <div class="menu-product__rating text-gray">
-                                    <div class="rating ">
-                                      <svg class="icon-sm">
-                                        <use href="#star"></use>
-                                      </svg>  <span></span>
-                                    </div>                4.89
-                                </div>
-                            </div>
-                    
-                        </div>
-                        <div class="menu-product__size">
-                                <button class="menu-product__size-btn">16</button>
-                                <button class="menu-product__size-btn">16.5</button>
-                                <button class="menu-product__size-btn">17</button>
-                                <button class="menu-product__size-btn">17.5</button>
-                                <button class="menu-product__size-btn">18</button>
-                                <button class="menu-product__size-btn">18.5</button>
-                                <button class="menu-product__size-btn">19</button>
-                                <button class="menu-product__size-btn">19.5</button>
-                                <button class="menu-product__size-btn">20</button>
-                                <button class="menu-product__size-btn">20.5</button>
-                                <button class="menu-product__size-btn">21</button>
-                                <button class="menu-product__size-btn">21.5</button>
-                                <button class="menu-product__size-btn">22</button>
-                                <button class="menu-product__size-btn">22.5</button>
-                                <button class="menu-product__size-btn">23</button>
-                        </div>
-                    
-                        <div class="menu-product__button">
-                              <button class="button-lg button--accent menu-product__button-add" >
-                                <span>Добавить в корзину</span>
-                              </button>
-                    
-                            <button class="favorite-filled selected " aria-label="Убрать из израбранного">
-                                <svg class="favorite-filled__icon">
-                                  <use href="#heart-fill"></use>
-                                </svg></button>    </div>
-                        <!--        <button class="menu-product__size-table">Таблица размеров</button>-->
-                    </div>          </div>
-      
-                <div class="drawer__support">
-                    <div class="menu-support">
-                        <div class="menu-support__title">Напишите нам</div>
-                    
-                        <ul class="menu-support__list list-reset">
-                                <li class="menu-support__item">
-                                    <a href="https://t.me/+79261933358" target="_blank" class="menu-support__link">
-                                        <svg class="menu-support__icon">
-                                          <use href="#telegram"></use>
-                                        </svg>                    телеграм
-                                    </a>
-                    
-                    
-                    
-                                </li>
-                    
-                            <li class="menu-support__item">
-                                <a href="https://wa.me/79261933358" target="_blank" class="menu-support__link">
-                                    <svg class="menu-support__icon">
-                                      <use href="#whatsapp"></use>
-                                    </svg>                whatsapp
-                                </a>
-                            </li>
-                            <li class="menu-support__item">
-                                <a href="viber://add?number=79261933358" target="_blank" class="menu-support__link">
-                                    <svg class="menu-support__icon">
-                                      <use href="#viber"></use>
-                                    </svg>                viber
-                                </a>
-                            </li>
-                            <li class="menu-support__item">
-                                <a href="tel:+79261933358" target="_blank" class="menu-support__link">
-                                    <svg class="menu-support__icon">
-                                      <use href="#phone"></use>
-                                    </svg>                8 926 193 33 58
-                                </a>
-                            </li>
-                    
-                        </ul>
-                    
-                          <button class="button-sm button--gray menu-support__btn" data-global-action="drawer-close" >
-                            <span>Закрыть</span>
-                          </button>
-                    
-                    
-                    </div>          </div>
-      
-                <div class="drawer__locality">
-                    <div class="menu-locality">
-                        <div class="menu-locality__title">Населенный пункт</div>
-                        <label class="input-group menu-locality__search ">
-                            <span class="visually-hidden">Найти город</span>
-                            <input
-                                    class="input-field input-field--lg"
-                                
-                                type="search" 
-                                
-                                placeholder="Найти город"
-                                
-                            >
-                        
-                        
-                        </label>
-                        
-                        
-                    
-                        <ul class="menu-locality__list list-reset">
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Москва</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Санкт-Петербург</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Новосибирск</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Екатеринбург</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Казань</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Нижний Новгород</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Красноярск</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Челябинск</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Уфа</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Самара</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Ростов-на-Дону</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Краснодар</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Омск</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Воронеж</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                                <li class="menu-locality__item">
-                                    <label class="menu-locality__item-label">
-                                        <input class="menu-locality__item-input visually-hidden" type="radio" name="city">
-                                        <span class="menu-locality__item-wrapper">
-                                            <span class="menu-locality__item-text">Пермь</span>
-                                            <svg class="icon-xmd menu-locality__item-icon">
-                                              <use href="#check"></use>
-                                            </svg>                    </span>
-                                    </label>
-                                </li>
-                        </ul>
-                    
-                          <button class="button-sm button--gray menu-locality__btn" data-global-action="drawer-close" >
-                            <span>Закрыть</span>
-                          </button>
-                    </div>          </div>
-      
-                <div class="drawer__delivery-point">
-                    <div class="menu-delivery-point" data-view="карта">
-                        <div class="menu-delivery-point__title">Выбрать пункт</div>
-                    
-                            <label class="input-group menu-delivery-point__search ">
-                                <span class="visually-hidden">Найти пункт выдачи</span>
-                                <input
-                                        class="input-field input-field--lg"
-                                    id="delivery-point-search" 
-                                    type="search" 
-                                    
-                                    placeholder="Найти пункт выдачи"
-                                    
-                                >
-                            
-                            
-                            </label>
-                            
-                            
-                            <ul class="menu-delivery-point__list list-reset">
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153032, Россия, Ивановская область, Иваново, ул. Лежневская, 164</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153025, Россия, Ивановская область, Иваново, ул. Юрия Гагарина, 4</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153037, Россия, Ивановская область, Иваново, пр-т Шереметевский, 117</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153038, Россия, Ивановская область, Иваново, пр. Строителей, 50 А, пом.1002</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153022, Россия, Ивановская область, Иваново, ул. Громобоя, 16/50</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153005, Россия, Ивановская область, Иваново, ул. Шошина, 15</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153003, Россия, Ивановская область, Иваново, ул. Парижской Коммуны, 16А</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153045, Россия, Ивановская область, Иваново, ул. Победы, 55</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153051, Россия, Ивановская область, Иваново, ул. Кохомское шоссе, 1 Д, 868</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153013, Россия, Ивановская область, Иваново, ул. Куконковых, 141А</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153000, Россия, Ивановская область, Иваново, ул. Варенцовой, 4</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153023, Россия, Ивановская область, Иваново, ул. Авдотьинская, 28</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153003, Россия, Ивановская область, Иваново, ул. Кузнецова, 67Б, корп. 1</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153051, Россия, Ивановская область, Иваново, ул. Кохомское шоссе, 12А</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153023, Россия, Ивановская область, Иваново, ул. Дюковская, 19А</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153014, Россия, Ивановская область, Иваново, ул. микрорайон 14-е Почтовое Отделение, 253</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153045, Россия, Ивановская область, Иваново, ул. 2-я улица Чайковского, 10Б</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                                    <li class="menu-delivery-point__item">
-                                        <label class="menu-delivery-point__item-label">
-                                            <input class="menu-delivery-point__item-input visually-hidden" type="radio" name="city">
-                                            <span class="menu-delivery-point__item-wrapper">
-                                            <span class="menu-delivery-point__item-text">153005, Россия, Ивановская область, Иваново, ул. Шошина, 10</span>
-                                                <svg class="icon-xmd menu-delivery-point__item-icon">
-                                                  <use href="#check"></use>
-                                                </svg>                    </span>
-                                        </label>
-                                    </li>
-                            </ul>
-                    
-                        <div class="menu-delivery-point__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af628bd2dee8e787168f3a4010b46d6495ce11edb32339b540f1d3f45c77419b2&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-                        </div>
-                    
-                        <div class="menu-delivery-point__control">
-                            <button class="menu-delivery-point__control-btn" data-mode="карта">Карта</button>
-                            <button class="menu-delivery-point__control-btn" data-mode="список">Список</button>
-                        </div>
-                    
-                    
-                          <button class="button-sm button--gray menu-delivery-point__btn" data-global-action="drawer-close" >
-                            <span>Закрыть</span>
-                          </button>
-                    </div>          </div>
-            </div>
-        </div>
       </div>
-      <!-- main content -->
-      <main>
+    </div>
+    <!-- main content -->
+    <main>
         
           <!-- section-slider-full -->
           <section class="section-slider-full section-first">
@@ -3675,127 +3699,127 @@
               </div>
             </section>
         
-      </main>
+    </main>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer__main __container">
-          <div class="footer__top">
-                <a class="logo-footer link-reset " href="" aria-label="Логотип ювелирной компании «Самородки»">
-                  <svg class="">
-                    <use href="#logo-2"></use>
-                  </svg>    </a>
-            <div class="footer__content font-semibold">
-              <div class="footer__content-block">
-                <span class="footer__content-title title-sm font-bold">Покупателям</span>
-                <ul class="footer__content-list list-reset">
-                  <li><a href="#">акции</a></li>
-                  <li><a href="#">доставка и оплата</a></li>
-                  <li><a href="#">обмен и возврат</a></li>
-                  <li><a href="#">контакты</a></li>
-                </ul>
-              </div>
-              <div class="footer__content-block">
-                <span class="footer__content-title title-sm font-bold">Samorodki</span>
-                <ul class="footer__content-list list-reset">
-                  <li><a href="#">о бренде</a></li>
-                  <li><a href="#">новости</a></li>
-                  <li><a href="#">журнал</a></li>
-                  <li><a href="#">вакансии</a></li>
-                </ul>
-              </div>
-              <div class="footer__content-block">
-                <span class="footer__content-title title-sm font-bold">Мы в соцсетях</span>
-                <ul class="footer__content-list footer__content-list--social list-reset">
-                  <li>
-                    <a class="footer__social" href="#">
-                      <svg class="icon-md">
-                        <use href="#telegram"></use>
-                      </svg>                <span>телеграм</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="footer__social" href="#">
-                      <svg class="icon-md">
-                        <use href="#instagram"></use>
-                      </svg>                <span>Instagram</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="footer__social" href="#">
-                      <svg class="icon-md">
-                        <use href="#vk"></use>
-                      </svg>                <span>вконтакте</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__content-block">
-                <span class="footer__content-title title-sm font-bold">Контакты</span>
-                <ul class="footer__content-list list-reset">
-                  <li>  <div class="phone ">
-          <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
-          <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
-        </div>
-      </li>
-                  <li><a href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
-                  <li><span>Москва, Искры, 17а, стр.3</span></li>
-                  <li><span>Кострома, Сутырина, д.3</span></li>
-                </ul>
-              </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__main __container">
+        <div class="footer__top">
+              <a class="logo-footer link-reset " href="" aria-label="Логотип ювелирной компании «Самородки»">
+                <svg class="">
+                  <use href="#logo-2"></use>
+                </svg>    </a>
+          <div class="footer__content font-semibold">
+            <div class="footer__content-block">
+              <span class="footer__content-title title-sm font-bold">Покупателям</span>
+              <ul class="footer__content-list list-reset">
+                <li><a href="#">акции</a></li>
+                <li><a href="#">доставка и оплата</a></li>
+                <li><a href="#">обмен и возврат</a></li>
+                <li><a href="#">контакты</a></li>
+              </ul>
             </div>
-          </div>
-          <div class="footer__bottom text-gray">
-            <div class="footer__bottom-first">
-              <a href="#">Политика конфиденциальности</a>
-              <a href="#">Юридическая информация</a>
-              <span>© 2025 Samorodki, Все права защищены</span>
+            <div class="footer__content-block">
+              <span class="footer__content-title title-sm font-bold">Samorodki</span>
+              <ul class="footer__content-list list-reset">
+                <li><a href="#">о бренде</a></li>
+                <li><a href="#">новости</a></li>
+                <li><a href="#">журнал</a></li>
+                <li><a href="#">вакансии</a></li>
+              </ul>
             </div>
-            <div class="footer__bottom-second">
-              <span>Создание сайта - <a href="#">drozzi.ru</a></span>
+            <div class="footer__content-block">
+              <span class="footer__content-title title-sm font-bold">Мы в соцсетях</span>
+              <ul class="footer__content-list footer__content-list--social list-reset">
+                <li>
+                  <a class="footer__social" href="#">
+                    <svg class="icon-md">
+                      <use href="#telegram"></use>
+                    </svg>                <span>телеграм</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__social" href="#">
+                    <svg class="icon-md">
+                      <use href="#instagram"></use>
+                    </svg>                <span>Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__social" href="#">
+                    <svg class="icon-md">
+                      <use href="#vk"></use>
+                    </svg>                <span>вконтакте</span>
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-      </footer>
-      <div class="tabbar">
-          <a class="menu-button link-reset " href="/" >
-            <span class="menu-button__icon">
-              <svg class="">
-                <use href="#home"></use>
-              </svg>    </span>
-            <span class="menu-button__text text-md font-semibold">Главная</span>
-          </a>
-          <button class="menu-button " >
-            <span class="menu-button__icon">
-              <svg class="">
-                <use href="#catalog"></use>
-              </svg>    </span>
-            <span class="menu-button__text text-md font-semibold">Каталог</span>
-          </button>
-          <button class="menu-button " >
-            <span class="menu-button__icon">
-              <svg class="">
-                <use href="#cart"></use>
-              </svg>          <span class="menu-button__badge-count">8</span>
-            </span>
-            <span class="menu-button__text text-md font-semibold">Корзина</span>
-          </button>
-          <button class="menu-button " >
-            <span class="menu-button__icon">
-              <svg class="">
-                <use href="#heart"></use>
-              </svg>    </span>
-            <span class="menu-button__text text-md font-semibold">Избранное</span>
-          </button>
-          <button class="menu-button " >
-            <span class="menu-button__icon">
-              <svg class="">
-                <use href="#baby"></use>
-              </svg>    </span>
-            <span class="menu-button__text text-md font-semibold">Евгения</span>
-          </button>
+            <div class="footer__content-block">
+              <span class="footer__content-title title-sm font-bold">Контакты</span>
+              <ul class="footer__content-list list-reset">
+                <li>  <div class="phone ">
+        <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
+        <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
       </div>
-      <!-- scripts -->
+    </li>
+                <li><a href="mailto:ssamorodki@yandex.ru">ssamorodki@yandex.ru</a></li>
+                <li><span>Москва, Искры, 17а, стр.3</span></li>
+                <li><span>Кострома, Сутырина, д.3</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom text-gray">
+          <div class="footer__bottom-first">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Юридическая информация</a>
+            <span>© 2025 Samorodki, Все права защищены</span>
+          </div>
+          <div class="footer__bottom-second">
+            <span>Создание сайта - <a href="#">drozzi.ru</a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="tabbar">
+        <a class="menu-button link-reset " href="/" >
+          <span class="menu-button__icon">
+            <svg class="">
+              <use href="#home"></use>
+            </svg>    </span>
+          <span class="menu-button__text text-md font-semibold">Главная</span>
+        </a>
+        <button class="menu-button " >
+          <span class="menu-button__icon">
+            <svg class="">
+              <use href="#catalog"></use>
+            </svg>    </span>
+          <span class="menu-button__text text-md font-semibold">Каталог</span>
+        </button>
+        <button class="menu-button " >
+          <span class="menu-button__icon">
+            <svg class="">
+              <use href="#cart"></use>
+            </svg>          <span class="menu-button__badge-count">8</span>
+          </span>
+          <span class="menu-button__text text-md font-semibold">Корзина</span>
+        </button>
+        <button class="menu-button " >
+          <span class="menu-button__icon">
+            <svg class="">
+              <use href="#heart"></use>
+            </svg>    </span>
+          <span class="menu-button__text text-md font-semibold">Избранное</span>
+        </button>
+        <button class="menu-button " >
+          <span class="menu-button__icon">
+            <svg class="">
+              <use href="#baby"></use>
+            </svg>    </span>
+          <span class="menu-button__text text-md font-semibold">Евгения</span>
+        </button>
     </div>
-  </body>
+    <!-- scripts -->
+</div>
+</body>
 </html>

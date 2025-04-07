@@ -1,0 +1,126 @@
+<section class="personal-account {{section-class}}">
+    <div class="personal-account__container __container">
+        <div class="personal-account__wrapper">
+            <aside class="personal-account__menu">
+                <div class="personal-account__badge">
+                    <img src="{{user-data-context.avatar}}" alt="Аватар пользователя"
+                         class="personal-account__badge-avatar">
+                    <div class="personal-account__badge-wrapper">
+                        <p class="personal-account__badge-name">{{user-data-context.personal.name}} {{user-data-context.personal.surname}}</p>
+                        <button class="personal-account__badge-btn">
+                            {{> svg id="exit" }}
+                            Выйти
+                        </button>
+                    </div>
+                </div>
+
+                <div class="personal-account__links">
+                    <a href="#" class="personal-account__link">Мой профиль {{> svg id="angle-right" }}</a>
+                    <a href="#" class="personal-account__link active">Покупки {{> svg id="angle-right" }}</a>
+                </div>
+
+                <div class="personal-account__support">
+                    <button class="personal-account__support-btn" data-global-action="drawer-open"
+                            data-drawer="support">
+                        {{> svg id="comment-message" svg-class="personal-account__support-icon" }}
+                        <span class="personal-account__support-content">
+                            <span class="personal-account__support-text">нужна помощь?</span>
+                            <span class="personal-account__support-title">Служба поддержки</span>
+                        </span>
+                    </button>
+                </div>
+            </aside>
+            <div class="personal-account__order" >
+                <div class="personal-account__order-heading">
+                    <a href="#" class="personal-account__order-back">{{> svg id="back" }}</a>
+                    <h1 class="personal-account__order-title title-lg">
+                        Заказ №1332003
+                        <span class="text-lg font-medium">от 13 мая 2025</span>
+                    </h1>
+                    {{> status status-class="personal-account__order-status" attributes=(str-concat
+                            'data-order-status="progress"') }}
+                </div>
+                <div class="personal-account__order-section">
+                    <h2 class="personal-account__order-section-title title-sm">
+                        Товары
+                    </h2>
+                    <div class="personal-account__table text-lg ">
+                        <div class="personal-account__table-head font-medium text-gray">
+                            <span>№</span>
+                            <span>Наименование</span>
+                            <span>Цена</span>
+                            <span>Количество</span>
+                            <span>Сумма</span>
+                        </div>
+                        <div class="personal-account__table-body font-bold">
+                            <div class="personal-account__table-row">
+                                <div class="title">
+                                    Серебро серьги длинные с гранатом на новый год
+                                </div>
+                                <div class="info">
+                                    <span class="price">215 000₽</span>
+                                    <span class="quantity">2 шт.</span>
+                                    <span class="total">330 000₽</span>
+                                </div>
+                            </div>
+                            <div class="personal-account__table-row">
+                                <div class="title">
+                                    <span>Подвеска на шею серебро 925</span>
+                                </div>
+                                <div class="info">
+                                    <span class="price">5 000₽</span>
+                                    <span class="quantity">1 шт.</span>
+                                    <span class="total">5 000₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-account__table-footer">
+                            <div class="summary text-lg">
+                                <span class="summary__label font-regular">На сумму</span>
+                                <span class="summary__value font-bold">20&nbsp;000₽</span>
+                            </div>
+                            <div class="summary summary__discount text-lg">
+                                <span class="summary__label font-regular">Скидка</span>
+                                <span class="summary__value font-bold">10&nbsp;000₽</span>
+                            </div>
+                            <div class="summary text-lg">
+                                <span class="summary__label font-regular">Доставка</span>
+                                <span class="summary__value font-bold">500₽</span>
+                            </div>
+                            <div class="summary summary__total">
+                                <span class="summary__label text-lg font-regular">Итого</span>
+                                <span class="summary__value title-sm font-bold">10&nbsp;500₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-account__order-section">
+                    <h2 class="personal-account__order-section-title title-sm">
+                        Детали доставки
+                    </h2>
+                    <div class="personal-account__order-delivery">
+                        <div class="personal-account__order-delivery-info">
+                            <span class="text-lg font-medium">СДЭК (Курьером)</span>
+                            <span class="text-sm">Россия, Иваново, Посадский пер., д4</span>
+                        </div>
+                        <div class="personal-account__order-delivery-info">
+                            <span class="text-lg font-medium">Александра Игнатьева</span>
+                            <span class="text-sm">+7 999 001 99 21</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-account__order-section">
+                    <h2 class="personal-account__order-section-title title-sm">
+                        Способ оплаты
+                    </h2>
+                    <span class="text-lg font-medium">Оплата онлайн</span>
+                </div>
+
+                {{> button variant="gray" text="Отменить" button-class="personal-account__order-btn"}}
+            </div>
+        </div>
+    </div>
+
+</section>
+
+

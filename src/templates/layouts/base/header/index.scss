@@ -13,6 +13,7 @@
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
     padding-top    : 16px;
     padding-bottom : 16px;
+    z-index: 92;
   }
 
   @media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
