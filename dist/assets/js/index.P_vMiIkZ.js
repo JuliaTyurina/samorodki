@@ -1,4 +1,4 @@
-import { S as Swiper, P as Pagination, T as Thumb, N as Navigation, E as EffectFade, A as Autoplay, a as EffectCoverflow } from "./vendors-swiper.JOPwSglI.js";
+import { S as Swiper, f as freeMode, P as Pagination, T as Thumb, N as Navigation, E as EffectFade, A as Autoplay, a as EffectCoverflow } from "./vendors-swiper.DK2CajGK.js";
 import { O as Oe } from "./vendors-@fancyapps.Z9libBee.js";
 (function polyfill() {
   const relList = document.createElement("link").relList;
@@ -791,10 +791,11 @@ const initProductSlider = () => {
       const thumbsSliderElem = section.querySelector(".thumbs-slider");
       if (sliderElem && thumbsSliderElem) {
         const thumbsSwiper = new Swiper(thumbsSliderElem, {
+          modules: [freeMode],
           spaceBetween: 8,
           slidesPerView: 4,
           freeMode: true,
-          watchSlidesProgress: true,
+          // watchSlidesProgress: true,
           breakpoints: {
             [breakpointsNum.lg]: {
               direction: "vertical",
@@ -954,6 +955,23 @@ const initChooseDeliveryType = () => {
     });
   });
 };
+const initContactsGallerySlider = () => {
+  const sections = document.querySelectorAll(".contacts");
+  if (sections) {
+    sections.forEach((section) => {
+      const sliderElem = section.querySelector(ESwiperElems.Swiper);
+      if (sliderElem) {
+        new Swiper(sliderElem, {
+          modules: [Pagination],
+          slidesPerView: 1,
+          pagination: {
+            el: ".swiper-pagination"
+          }
+        });
+      }
+    });
+  }
+};
 var ESliderFullElems = /* @__PURE__ */ ((ESliderFullElems2) => {
   ESliderFullElems2["SliderFull"] = ".slider-full";
   ESliderFullElems2["SliderPagination"] = ".slider-full-pagination";
@@ -1105,6 +1123,7 @@ const initSections = () => {
   initSuggestions();
   initChooseDeliveryType();
   initDeliveryTabs();
+  initContactsGallerySlider();
 };
 const defaultFancyOptions = {
   Images: {

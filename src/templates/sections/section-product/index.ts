@@ -2,7 +2,7 @@ import "./index.scss"
 import {ESwiperElems} from "@js/libs/swiper";
 import {Nullable} from "@js/types";
 import {Swiper} from "swiper";
-import {Pagination, Thumbs} from "swiper/modules";
+import {Pagination, Thumbs, FreeMode} from "swiper/modules";
 import {mqData} from "@js/helpers/media.ts";
 
 export const initProductSlider = () => {
@@ -18,10 +18,11 @@ export const initProductSlider = () => {
 
             if (sliderElem && thumbsSliderElem) {
                 const thumbsSwiper = new Swiper(thumbsSliderElem, {
+                    modules: [FreeMode],
                     spaceBetween: 8,
                     slidesPerView: 4,
                     freeMode: true,
-                    watchSlidesProgress: true,
+                    // watchSlidesProgress: true,
                     breakpoints: {
                         [breakpointsNum.lg]: {
                             direction: "vertical",

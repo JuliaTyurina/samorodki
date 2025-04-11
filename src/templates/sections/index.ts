@@ -26,6 +26,7 @@ import {initFloatingBar} from "@sections/section-cart";
 import { initSuggestions } from "./section-suggestion";
 import { initChooseDeliveryType} from "./section-order";
 import {initDeliveryTabs} from "@components/menu-delivery-point";
+import {initContactsGallerySlider} from "@sections/section-contacts";
 
 export const initSections = () => {
   initCollectionSlider()
@@ -38,4 +39,5 @@ export const initSections = () => {
   initSuggestions()
   initChooseDeliveryType()
   initDeliveryTabs()
+  initContactsGallerySlider()
 }

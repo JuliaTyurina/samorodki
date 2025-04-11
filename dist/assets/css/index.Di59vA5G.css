@@ -7580,7 +7580,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (min-width: 768px) {
   .contacts .swiper {
-    position: static;
+    left: unset;
     width: 100%;
     margin-bottom: unset;
     border-radius: 32px;
@@ -7595,6 +7595,14 @@ input[type=search]::-webkit-search-results-decoration {
 .contacts .swiper img {
   height: 100%;
   object-fit: cover;
+}
+.contacts .swiper .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-neutral-100a12);
+}
+.contacts .swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-neutral-100);
 }@media (max-width: 767px) {
   .section-slider-full .__container-big {
     max-width: unset;
