@@ -2,7 +2,7 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 
 html {
-  --container-big-width      : 1500px;
+  --container-big-width      : 1600px;
   --container-mobile-padding : 16px;
   --container-width          : calc(100vw - var(--container-mobile-padding) * 2);
   --container-outer-indent   : calc((100vw - var(--container-width)) / 2);

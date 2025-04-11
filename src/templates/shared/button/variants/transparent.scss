@@ -10,6 +10,12 @@ $button-transparent: (
                 background-color: var(--color-project-12),
                 fill: var(--color-text-contrast),
         ),
+        focus-visible: (
+                outline: none,
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-project-12),
+                fill: var(--color-text-contrast),
+        ),
         active: (
                 border-color: var(--color-accent-hover),
                 background-color: var(--color-project-12),

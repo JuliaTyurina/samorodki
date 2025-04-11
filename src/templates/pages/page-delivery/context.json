@@ -1,0 +1,8 @@
+{
+  "page-title": "Page Delivery",
+  "script-src": "/src/js/index.ts",
+  "breadcrumbs": [
+    { "text": "Samorodki", "url": "#" },
+    { "text": "Доставка заказа" }
+  ]
+}

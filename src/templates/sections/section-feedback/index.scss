@@ -16,11 +16,11 @@
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
       grid-template-areas:
-    "heading heading"
-    "rating rating"
-    "sort filter"
-    "list list"
-    "more more";
+      "heading heading"
+      "rating rating"
+      "sort filter"
+      "list list"
+      "more more";
     }
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
@@ -103,6 +103,12 @@
       @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
         grid-row: 2/3;
       }
+    }
+  }
+
+  .sort-handler {
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      justify-self: end;
     }
   }
 
@@ -316,6 +322,13 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: color var(--transition-default);
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      color: var(--color-accent-hover);
+    }
 
     svg {
       width: 24px;

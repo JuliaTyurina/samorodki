@@ -5,8 +5,9 @@
   align-items      : center;
   gap              : 6px;
   padding          : 6px 12px;
-  background-color : var(--color-background-tertiary);
   width            : fit-content;
+  color: var(--color-text-primary);
+  background-color : var(--color-background-tertiary);
   transition       : background-color var(--transition-default);
 
   &:not(.active) {
@@ -14,6 +15,7 @@
 
     &:hover,
     &:focus-visible {
+      outline: none;
       background-color : #D7D8DA;
     }
   }
@@ -25,6 +27,7 @@
 
     &:hover,
     &:focus-visible {
+      outline: none;
       background-color : #475869;
     }
 

@@ -38,7 +38,9 @@
     }
 
     &:not(&--current, .empty) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
+        outline: none;
         border-color : var(--color-stroke-primary);
       }
     }

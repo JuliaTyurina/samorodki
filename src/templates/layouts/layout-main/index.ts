@@ -13,3 +13,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
   initGlobalAction()
   initShared()
 } )
+
+if (window.screen.orientation) {
+  window.screen.orientation.addEventListener('change', () => {
+    requestAnimationFrame(() => {
+      app.initDependencies();
+    });
+  });
+}

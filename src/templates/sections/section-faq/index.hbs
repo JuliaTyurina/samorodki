@@ -1,0 +1,55 @@
+<section class="faq {{section-class}}">
+    <div class="faq__container __container">
+        <div class="faq__wrapper">
+            <div class="faq__descr">
+                <h1 class="faq__title title-lg font-semibold">
+                    Часто задаваемые вопросы
+                </h1>
+                {{#each page-faq-context.faq }}
+                    <div class="faq__section">
+                        <h2 class="faq__section-title title-md font-bold">
+                            {{theme}}
+                        </h2>
+                        {{#if text}}
+                            <div class="faq__section-text">
+                                <p>
+                                    Доставка работает каждый день с 9:00 до 21:00. Если в вашем заказе несколько изделий, они могут доставляться разными посылками. Точную информацию о количестве посылок и их составе вы узнаете после подтверждения сборки заказа.
+                                </p>
+                                <p>
+                                    В случае, если вы хотите перенести дату доставки, изменить адрес (в рамках одного города) или получателя, позвоните на горячую линию по телефону 8 800 5555 585. Также вы можете связаться с нами с нами в чате.
+                                </p>
+                                <p>
+                                    Легче всего получить покупку в наших магазинах, пунктах выдачи заказов СДЭК или постаматах партнёров, куда вы можете приехать в удобное для вас время. Также у нас есть курьерская доставка: подробности о ней вы найдёте здесь.
+                                </p>
+                            </div>
+                        {{/if}}
+                        <ul class="faq__list list-reset">
+                            {{#each list }}
+                                <li class="faq__item">
+                                    <article class="faq__card">
+                                        <h3 class="faq__card-question text-xl font-bold">
+                                            {{question}}
+                                        </h3>
+                                        <div class="faq__card-answer text-lg font-medium">
+                                            <p>
+                                                {{answer}}
+                                            </p>
+                                        </div>
+                                    </article>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                {{/each}}
+            </div>
+            <div class="faq__media">
+                <div class="faq__img">
+                    <div class="faq__img-top"></div>
+                    <div class="faq__img-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

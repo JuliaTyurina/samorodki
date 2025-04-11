@@ -9,7 +9,7 @@
   width            : 100%;
   position         : sticky;
   bottom           : 0;
-  z-index          : 90;
+  z-index          : 92;
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
     display : none;
@@ -20,5 +20,15 @@
     height         : 100%;
     padding-top    : 6px;
     padding-bottom : 6px;
+    color: var(--color-text-primary);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-text-accent);
+    }
+
+    svg {
+      fill: currentColor;
+    }
   }
 }

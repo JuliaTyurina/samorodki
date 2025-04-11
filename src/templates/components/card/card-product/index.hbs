@@ -11,14 +11,11 @@
           {{/if}}
         </div>
         {{#if favourite}}
-          <button class="card-product__favourite card-product__favourite--filled" aria-label="Добавить в избранное">
-            {{> svg id="heart-fill"}}
-          </button>
+            {{> favorite-filled favorite-class="card-product__favorite" selected=true }}
         {{else}}
-          <button class="card-product__favourite" aria-label="Добавить в избранное">
-            {{> svg id="heart-fill"}}
-          </button>
+            {{> favorite-filled favorite-class="card-product__favorite" }}
         {{/if}}
+
       </div>
       <div class="card-product__image">
         <img src="{{image}}" alt="{{title}}">

@@ -1,20 +1,27 @@
-$button-gray : (
-    default: (
-        color: var(--color-text-primary),
-        border-color: var(--color-stroke-primary),
-        background-color: var(--color-background-tertiary),
-        fill: var(--color-text-primary),
-    ),
-    hover: (
-        color: var(--color-text-primary),
-        border-color: var(--color-project-4),
-        background-color: var(--color-project-4),
-        fill: var(--color-text-primary),
-    ),
-    active: (
-        color: var(--color-text-primary),
-        border-color: var(--color-project-4),
-        background-color: var(--color-project-4),
-        fill: var(--color-text-primary),
-    ),
+$button-gray: (
+        default: (
+                color: var(--color-text-primary),
+                border-color: var(--color-stroke-primary),
+                background-color: var(--color-background-tertiary),
+                fill: var(--color-text-primary),
+        ),
+        hover: (
+                color: var(--color-text-primary),
+                border-color: var(--color-project-4),
+                background-color: var(--color-project-4),
+                fill: var(--color-text-primary),
+        ),
+        focus-visible: (
+                color: var(--color-text-primary),
+                outline: none,
+                border-color: var(--color-project-4),
+                background-color: var(--color-project-4),
+                fill: var(--color-text-primary),
+        ),
+        active: (
+                color: var(--color-text-primary),
+                border-color: var(--color-project-4),
+                background-color: var(--color-project-4),
+                fill: var(--color-text-primary),
+        ),
 )

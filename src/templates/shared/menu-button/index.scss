@@ -13,11 +13,11 @@
   transition       : color var(--transition-default);
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-    &:not(:disabled):hover {
-      color : var(--color-text-secondary);
-
-      svg {
-        fill : var(--color-text-secondary);
+    &:not(:disabled) {
+      outline: none;
+      &:hover,
+      &:focus-visible {
+        color : var(--color-text-secondary);
       }
     }
   }
@@ -32,10 +32,11 @@
     position : relative;
 
     svg {
+      display    : block;
       width      : 24px;
       height     : 24px;
+      fill: currentColor;
       transition : fill var(--transition-default);
-      display    : block;
     }
   }
 

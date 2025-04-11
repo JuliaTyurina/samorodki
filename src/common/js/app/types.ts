@@ -8,6 +8,7 @@ export interface AppInterface {
     device: "mobile" | "tablet" | "pc"
     bodyBlock: (isBlock?: boolean) => void
     initDependencies: () => void
+    initSmoothScroll(headerHeight: number): void;
     setWindowVariables?: () => void
     searchOpen: () => void
     searchClose: () => void

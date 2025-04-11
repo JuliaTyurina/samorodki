@@ -3,10 +3,10 @@
 
 .catalog-menu-wrapper {
   position: fixed;
-  width: 100%;
   right: 0;
   top: var(--header-height);
-  height: calc(100vh - var(--header-height) - var(--tabbar-height));
+  width: 100vw;
+  height: calc(100% - var(--header-height) - var(--tabbar-height));
   opacity: 0;
   visibility: hidden;
   z-index: 91;
@@ -16,9 +16,8 @@
   }
 
   @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-    border-top: 1px solid var(--color-stroke-primary);
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     left: 0;
     right: unset;
   }
@@ -46,17 +45,22 @@ body.catalog-open {
 }
 
 .catalog-menu-main {
-  background-color: var(--color-background-primary);
-  position: relative;
-  z-index: 2;
-  height: calc(100vh - var(--header-height) - var(--tabbar-height));
+  position         : relative;
+  width            : 100%;
+  height           : 100%;
+  background-color : var(--color-background-primary);
+  z-index          : 2;
 
   @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-    height: unset;
+    top: 1px;
+    height: 60%;
+    border-top: 1px solid var(--color-stroke-primary);
   }
 
-  @media (max-width: map.get(breakpoints.$breakpoints-max, md)) {
-    .__container {
+  .__container {
+    height: 100%;
+
+    @media (max-width: map.get(breakpoints.$breakpoints-max, md)) {
       max-width: unset;
     }
   }
@@ -70,82 +74,62 @@ body.catalog-open {
 }
 
 .catalog-menu {
-  --catalog-menu-height: 600px;
-  height: 100%;
   position: relative;
+  height: 100%;
   overflow: hidden;
 
   @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-    //max-height            : var(--catalog-menu-height);
-    max-height: calc(74vh - var(--header-height));
     column-gap: 4px;
     display: grid;
     grid-template-columns: 235px auto;
   }
 
   &__lvl1 {
-    display: flex;
-    flex-direction: column;
-    overflow-anchor: none;
-    padding-right: 12px;
-    row-gap: 6px;
-    width: 100%;
-    //transform       : translateX(100%);
+    height: 100%;
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-      position: static;
-      transform: none;
-      width: unset;
-      max-height: calc(74vh - var(--header-height) - 56px);
-
-      &-wrapper {
-        position: absolute;
-        padding-top: 16px;
-        padding-bottom: 40px;
-        top: 0;
-        right: 0;
-
-        @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-          position: static;
-
-        }
-      }
-    }
-
-    @media (max-width: map.get(breakpoints.$breakpoints-max, md)) {
-      &-wrapper {
-        height: calc(100vh - var(--header-height) - var(--tabbar-height));
-      }
-    }
-  }
-
-  &__lvl2 {
-    width: 100%;
-    transform: translateX(100%);
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: calc(100vh - var(--header-height) - var(--tabbar-height));
-
-    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-      border-left: 1px solid var(--color-stroke-primary);
-      position: static;
-      transform: none;
-      //max-height  : var(--catalog-menu-height);
-      //max-height: calc(100vh - var(--header-height));
-      padding: 24px 0;
-      width: unset;
-      height: unset;
+      padding: 16px 0 40px;
     }
 
     &-wrapper {
-      height: calc(100vh - var(--header-height) - var(--tabbar-height));
+      display: flex;
+      flex-direction: column;
+      overflow-anchor: none;
+      row-gap: 6px;
+      width: 100%;
+      padding-bottom: 24px;
+      padding-left: 6px;
 
       @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-        padding: 0 32px;
-        max-height: calc(74vh - var(--header-height) - 64px);
-
+        width: unset;
+        padding: 0 8px 0 0;
+        height: 100%;
       }
+    }
+
+  }
+
+  &__lvl2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    background-color : var(--color-background-primary);
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      position: static;
+      transform: none;
+      width: unset;
+      height: unset;
+      padding: 24px 0 40px 32px;
+      border-left: 1px solid var(--color-stroke-primary);
+    }
+
+    &-wrapper {
+      height: 100%;
+
     }
 
     &-title {

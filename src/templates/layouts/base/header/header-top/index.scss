@@ -13,8 +13,15 @@
   &__left {
     column-gap : 24px;
 
-    svg {
-      fill: currentColor;
+    button {
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      svg {
+        fill: currentColor;
+      }
     }
   }
 }

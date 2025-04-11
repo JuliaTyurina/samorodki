@@ -1,5 +1,12 @@
 .search-card {
   display : block;
+  transition: color var(--transition-default);
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    color: var(--color-text-accent);
+  }
 
   &__image {
     width         : 100%;

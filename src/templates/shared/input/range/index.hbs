@@ -1,15 +1,26 @@
 <div class="range {{range-type}}" data-range-from="{{or from 0}}" data-range-to="{{to}}" data-range-max="{{or max to}}">
-  <div class="range__inputs text-md font-semibold">
-    <div class="range__input-wrapper range__input-wrapper--from">
-      <input class="range__input-from" type="number" name="{{name}}_from" value="" aria-label="{{aria-label}} изменить от">
+    <div class="range__inputs text-md font-semibold">
+        <div class="range__input-wrapper range__input-wrapper--from">
+            <input class="range__input-from" type="number" name="{{name}}_from" value=""
+                   aria-label="{{aria-label}} изменить от">
+            <button class="range__input-clean" type="button" aria-label="Очистить поле от">
+                {{>svg id="cancel"}}
+            </button>
+        </div>
+        <div class="range__input-wrapper range__input-wrapper--to">
+            <input class="range__input-to" type="number" name="{{name}}_to" value=""
+                   aria-label="{{aria-label}} изменить до">
+            <button class="range__input-clean" type="button" aria-label="Очистить поле до">
+                {{>svg id="cancel"}}
+            </button>
+
+        </div>
     </div>
-    <div class="range__input-wrapper range__input-wrapper--to">
-      <input class="range__input-to" type="number" name="{{name}}_to" value="" aria-label="{{aria-label}} изменить до">
+    <div class="range__slider">
+        <div class="range__trek"></div>
+        <input class="range__slider-from" type="range" min="0" max="{{or max to}}" value=""
+               aria-label="{{aria-label}} изменить от">
+        <input class="range__slider-to" type="range" min="0" max="{{or max to}}" value=""
+               aria-label="{{aria-label}} изменить до">
     </div>
-  </div>
-  <div class="range__slider">
-    <div class="range__trek"></div>
-    <input class="range__slider-from" type="range" min="0" max="{{or max to}}" value="" aria-label="{{aria-label}} изменить от">
-    <input class="range__slider-to" type="range" min="0" max="{{or max to}}" value="" aria-label="{{aria-label}} изменить до">
-  </div>
 </div>

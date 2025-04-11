@@ -7,6 +7,7 @@
   cursor           : pointer;
   column-gap       : 15px;
   padding          : 8px 16px 8px 8px;
+  color: var(--color-text-primary);
   transition       : color var(--transition-default), background-color var(--transition-default);
   border-radius    : 12px;
 
@@ -14,7 +15,9 @@
     transition : fill var(--transition-default);
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
+    outline: none;
     color            : var(--color-text-accent);
     background-color : var(--color-highlight-accent);
 

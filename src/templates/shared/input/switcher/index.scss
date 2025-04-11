@@ -11,6 +11,7 @@
   }
 
   &__icon {
+    will-change: left;
     display          : block;
     width            : 30px;
     height           : 16px;
@@ -27,9 +28,8 @@
       left             : -#{$round-side-indent};
       top              : -2px;
       border-radius    : 50%;
-      //box-shadow       : 0 0 2px 0 rgba(0, 0, 0, .2);
       transition       : left .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      filter           : drop-shadow(0px 1.25px 3.75px rgba(0, 0, 0, 0.10)) drop-shadow(0px 1.25px 0px rgba(0, 0, 0, 0.10)) drop-shadow(0px 2.5px 5px rgba(0, 0, 0, 0.10));
+      box-shadow: 0 2.5px 5px 0 rgba(0, 0, 0, 0.10), 0 1.25px 0 0 rgba(0, 0, 0, 0.10), 0 1.25px 3.75px 0 rgba(0, 0, 0, 0.10);
     }
   }
 

@@ -53,9 +53,9 @@
                 <form class="personal-account__form">
                     <fieldset class="personal-account__form-wrapper">
                         <legend class="personal-account__form-title">Сменить пароль</legend>
-                        {{> input type="text" size="lg" placeholder="Ваш пароль" label="Введите пароль" required=true }}
-                        {{> input type="text" size="lg" placeholder="Новый пароль" label="Введите новый пароль" }}
-                        {{> input type="text" size="lg" placeholder="Повторить новый пароль" label="Повторите новый пароль" }}
+                        {{> input type="password" size="lg" placeholder="Ваш пароль" label="Введите пароль" required=true }}
+                        {{> input type="password" size="lg" placeholder="Новый пароль" label="Введите новый пароль" }}
+                        {{> input type="password" size="lg" placeholder="Повторить новый пароль" label="Повторите новый пароль" }}
                     </fieldset>
                     {{> button text="Сменить пароль" button-class="personal-account__form-btn" attributes=(str-concat
                             'disabled') }}

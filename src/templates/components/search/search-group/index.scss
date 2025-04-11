@@ -17,6 +17,7 @@
   &:hover,
   &:active,
   &:focus-visible {
+    outline: none;
     background-color : var(--color-background-tertiary);
   }
 

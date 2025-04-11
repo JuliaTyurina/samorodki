@@ -1,0 +1,169 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+
+.delivery {
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 32px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      column-gap: 128px;
+    }
+  }
+
+  &__descr {
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      width: 56%;
+      max-width: 670px;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: functions.getClamp(24, 36);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.72px;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        margin-bottom: 32px;
+      }
+    }
+
+    h2 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      font-size: functions.getClamp(18, 24);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.18px;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        margin-top: 32px;
+        margin-bottom: 24px;
+      }
+    }
+
+    h3, h4, h5, h6 {
+      margin-top: 20px;
+      margin-bottom: 12px;
+      font-size: functions.getClamp(18, 20);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.18px;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        margin-top: 24px;
+        margin-bottom: 16px;
+      }
+    }
+
+    ol, ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      padding: unset;
+      margin: 0 0 24px;
+      list-style-position: inside;
+      font-size: functions.getClamp(14, 16);
+      font-weight: 500;
+      line-height: 1.5;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        row-gap: 12px;
+        margin: 0 0 32px;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        &:before {
+          content: '—';
+        }
+      }
+    }
+
+    p {
+      font-size: functions.getClamp(14, 16);
+      font-weight: 500;
+      line-height: 1.5;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    a {
+      color: var(--color-text-accent);
+    }
+  }
+
+
+  &__media {
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      flex-grow: 1;
+    }
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      align-items: flex-start;
+    }
+
+    &-top {
+      margin-bottom: -70px;
+      width: 343px;
+      aspect-ratio: 12/13;
+      background-image: url("/assets/media/images/logo-back.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        width: 114%;
+        margin-bottom: -132px;
+      }
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, xxl)) {
+        width: 128%;
+      }
+    }
+
+    &-bottom {
+      position: relative;
+      right: -10px;
+      width: 388px;
+      aspect-ratio: 21 / 19;
+      background-image: url("/assets/media/images/box.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+        right: -46px;
+        width: 114%;
+      }
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, xxl)) {
+        width: 128%;
+      }
+    }
+  }
+}

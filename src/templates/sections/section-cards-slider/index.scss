@@ -36,6 +36,10 @@
       &:not(.active) {
         color : var(--color-text-tertiary);
       }
+
+      &.active {
+        color: var(--color-text-primary);
+      }
     }
   }
 

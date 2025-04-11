@@ -1,0 +1,146 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+
+.contacts {
+
+  &__section {
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      display: flex;
+      flex-direction: row;
+      column-gap: 32px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      column-gap: 64px;
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: var(--sections-indent);
+    }
+
+    a {
+      width: fit-content;
+    }
+  }
+
+  &__map {
+    position: relative;
+    left: -16px;
+    width: 100vw;
+    aspect-ratio: 16/9;
+    margin-bottom: 24px;
+
+    iframe {
+      height: 100%;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      position: static;
+      width: 100%;
+      margin-bottom: unset;
+      border-radius: 32px;
+      overflow: hidden;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      min-height: 610px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      min-width: fit-content;
+      max-width: 280px;
+      padding: 32px 0;
+    }
+  }
+
+  &__address {
+    padding-bottom: 8px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__phones,
+  &__emails {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      row-gap: 4px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+
+      svg {
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__anchor {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    width: fit-content;
+
+    svg {
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+    }
+  }
+
+  .swiper {
+    position: relative;
+    left: -16px;
+    width: 100vw;
+    aspect-ratio: 16/9;
+    margin-bottom: 24px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      position: static;
+      width: 100%;
+      margin-bottom: unset;
+      border-radius: 32px;
+      overflow: hidden;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      min-height: 610px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

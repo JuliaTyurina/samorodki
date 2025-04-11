@@ -87,11 +87,19 @@
       color: var(--color-text-negative);
       background-color: transparent;
       border: none;
+      transition: var(--transition-default);
+      cursor: pointer;
 
       svg {
         width: 16px;
         height: 16px;
         fill: currentColor;
+      }
+
+      &:hover,
+      &:focus-visible {
+        outline: none;
+        color: #F8B7AA;
       }
     }
   }
@@ -190,6 +198,15 @@
       border: none;
       cursor: pointer;
 
+      &:hover,
+      &:focus-visible {
+        outline: none;
+
+        svg {
+          fill: var(--color-icon-accent);
+        }
+      }
+
       @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
         flex-direction: column;
       }
@@ -213,6 +230,7 @@
       width: 48px;
       height: 48px;
       fill: var(--color-icon-tertiary);
+      transition: fill var(--transition-default);
 
       @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
         margin-bottom: 14px;

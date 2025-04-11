@@ -3,7 +3,7 @@
         {{#if (str-equals header.icon.position "left")}}
             {{> svg id=header.icon.id svg-class=header.icon.class}}
         {{/if}}
-        <span class="dropdown__header-text">{{ header.title }}</span>
+        <span class="dropdown__header-text font-semibold">{{ header.title }}</span>
         {{#if (str-equals header.icon.position "right")}}
             {{> svg id=header.icon.id svg-class=header.icon.class}}
         {{/if}}

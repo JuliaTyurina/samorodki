@@ -4,6 +4,7 @@
 
 .promo-single {
   overflow: hidden;
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -13,6 +14,10 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       column-gap: 32px;
+    }
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
+      column-gap: 60px;
     }
   }
 
@@ -58,7 +63,8 @@
 
   &__descr {
     @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-      width: 52%;
+      width: 56%;
+      max-width: 746px;
     }
   }
 
@@ -85,6 +91,20 @@
     @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
       margin-top: 32px;
       margin-bottom: 24px;
+    }
+  }
+
+  h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: functions.getClamp(18, 20);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.18px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-top: 24px;
+      margin-bottom: 16px;
     }
   }
 

@@ -6,6 +6,10 @@
     margin-top : 16px;
   }
 
+  @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
+    padding: 0 16px;
+  }
+
   &__container {
     @media (max-width : map.get(breakpoints.$breakpoints-max, sm)) {
       max-width : 100%;

@@ -62,7 +62,9 @@
     font-weight: 400;
     line-height: 1.5;
     border: unset;
+    border-radius: unset;
     border-bottom: 1px solid var(--color-stroke-primary);
+    background-color: var(--color-background-primary);
     transition: border-bottom-color var(--transition-default);
 
     &:hover,

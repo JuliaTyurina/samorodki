@@ -209,6 +209,7 @@
       font-weight: 700;
       line-height: 1.5;
       text-align: center;
+      color: var(--color-text-primary);
       background-color: var(--color-background-tertiary);
       border: 1px solid var(--color-stroke-primary);
       border-radius: 12px;
@@ -249,6 +250,14 @@
       color: var(--color-text-accent);
       background-color: transparent;
       border: none;
+      transition: color var(--transition-default);
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        outline: none;
+        color: var(--color-accent-hover);
+      }
 
       @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
         text-align: left;
@@ -277,6 +286,7 @@
       .section-product__order-primary {
         z-index: -1;
       }
+
       .section-product__order-secondary {
         transform: translateY(0);
         z-index: 1;
@@ -336,6 +346,19 @@
     background-color: var(--color-project-9);
     border-radius: 12px;
 
+    &:hover,
+    &:focus-visible {
+      outline: none;
+
+      .section-product__reviews-quantity {
+        color: var(--color-accent-hover);
+
+        svg {
+          transform: translateX(2px);
+        }
+      }
+    }
+
     @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
       margin-bottom: 16px;
     }
@@ -348,12 +371,15 @@
       font-weight: 700;
       line-height: 1.5;
       color: var(--color-text-accent);
-    }
+      transition: color var(--transition-default);
 
-    svg {
-      fill: currentColor;
-      width: 16px;
-      height: 16px;
+      svg {
+        fill: currentColor;
+        width: 16px;
+        height: 16px;
+        transform: translateX(0);
+        transition: transform var(--transition-default);
+      }
     }
 
     &-rating {
@@ -453,10 +479,20 @@
       display: flex;
       justify-content: space-between;
       list-style: none;
+      transition: color var(--transition-default);
       cursor: pointer;
+
+      &:focus-visible {
+        outline: none;
+        color: var(--color-text-secondary);
+      }
 
       &::-webkit-details-marker {
         display: none;
+      }
+
+      svg {
+        fill: currentColor;
       }
     }
 

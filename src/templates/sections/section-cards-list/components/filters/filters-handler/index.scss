@@ -2,6 +2,11 @@
   display          : flex;
   gap              : 7px;
   padding          : 0;
+  color: var(--color-text-primary);
   background-color : transparent;
   border           : none;
+
+  svg {
+    fill: currentColor;
+  }
 }

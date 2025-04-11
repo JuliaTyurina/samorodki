@@ -1,17 +1,25 @@
 .catalog-menu-back {
+  position         : relative;
   display          : flex;
   align-items      : center;
   width            : 100%;
   border           : none;
-  background-color : transparent;
   justify-content  : center;
   padding          : 24px 46px;
-  position         : relative;
+  background-color : transparent;
+  color: var(--color-text-primary);
+  transition: color var(--transition-default);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text-accent);
+  }
 
   & > svg {
     position  : absolute;
-    left      : 0;
+    left      : 14px;
     top       : 50%;
     transform : translateY(-50%);
+    fill: currentColor;
   }
 }

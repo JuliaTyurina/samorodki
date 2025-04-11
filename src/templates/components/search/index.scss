@@ -7,6 +7,18 @@
   &__input-wrapper {
     position : relative;
     z-index  : 3;
+
+    &:hover {
+      input {
+        border        : 1px solid var(--color-stroke-contrast);
+      }
+    }
+
+    &:focus-within {
+      input {
+        border        : 1px solid var(--color-stroke-accent);
+      }
+    }
   }
 
   &__input {
@@ -44,12 +56,20 @@
     border           : none;
     padding          : 0;
 
+    &:focus-visible {
+      outline: none;
+      svg {
+        fill: var(--color-text-secondary);
+      }
+    }
+
     &--cancel {
       display : none;
     }
 
     svg {
       display : block;
+      transition: fill var(--transition-default);
     }
   }
 

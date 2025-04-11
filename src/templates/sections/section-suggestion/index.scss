@@ -65,7 +65,9 @@
       &:not(.swiper-button-disabled) {
         cursor : pointer;
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
+          outline: none;
           fill : var(--color-icon-accent);
         }
       }

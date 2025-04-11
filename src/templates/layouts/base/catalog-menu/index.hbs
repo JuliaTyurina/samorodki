@@ -1,11 +1,11 @@
 <!-- catalog-menu -->
-<div class="catalog-menu-wrapper">
+<div class="catalog-menu-wrapper ">
   <div class="catalog-menu-main">
     <div class="__container">
       <div class="catalog-menu">
-        <div class="catalog-menu__lvl1-wrapper scrollbar-custom">
+        <div class="catalog-menu__lvl1 scrollbar-custom">
           {{> catalog-menu-back text="Каталог" class="__hide-after-md" attributes='data-global-action="catalog-close"'}}
-          <div class="catalog-menu__lvl1 scrollbar-custom">
+          <div class="catalog-menu__lvl1-wrapper scrollbar-custom">
             {{#each catalog-menu-context.lvl1}}
               {{> catalog-lvl1-item }}
             {{/each}}
@@ -14,7 +14,7 @@
             {{/each}}
           </div>
         </div>
-        <div class="catalog-menu__lvl2 ">
+        <div class="catalog-menu__lvl2 scrollbar-custom">
             <div class="catalog-menu__lvl2-wrapper scrollbar-custom">
                 <a class="catalog-menu__lvl2-title __hide-before-lg" href="#">
                     <span class="font-bold">{{catalog-menu-context.lvl2.title}}</span>

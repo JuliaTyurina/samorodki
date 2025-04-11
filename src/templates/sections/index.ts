@@ -12,6 +12,9 @@ import "./section-order"
 import "./section-personal-account"
 import "./section-promo-archive"
 import "./section-promo-single"
+import "./section-faq"
+import "./section-delivery"
+import "./section-contacts"
 
 
 import { initSliderFull } from "./section-slider-full";

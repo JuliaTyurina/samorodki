@@ -85,7 +85,9 @@
       fill: var(--color-text-accent);
       transition: opacity var(--transition-default);
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
+        outline: none;
         opacity: .8;
       }
 

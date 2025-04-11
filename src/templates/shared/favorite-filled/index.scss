@@ -23,6 +23,7 @@
 
   &__icon {
     width: 32px;
+    min-width: 32px;
     height: 32px;
     fill: var(--color-icon-tertiary);
     transition: fill var(--transition-default), opacity var(--transition-default);
@@ -37,8 +38,8 @@
     &:focus-visible {
       outline: none;
 
-      .favorite__icon {
-        opacity: 0.4;
+      .favorite-filled__icon {
+        fill: #F8B7AA;
       }
     }
   }

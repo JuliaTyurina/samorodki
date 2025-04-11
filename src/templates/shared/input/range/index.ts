@@ -76,6 +76,27 @@ export const initInputsRange = () => {
           updateValues()
           fillColor()
         }
+        const clearButtons = range.querySelectorAll('.range__input-clean');
+
+        clearButtons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const wrapper = btn.closest('.range__input-wrapper');
+
+            if (wrapper?.classList.contains('range__input-wrapper--from')) {
+              store.from = from ? Number(from) : 0;
+              inputFrom!.value = '';
+              sliderFrom!.value = `${store.from}`;
+            }
+
+            if (wrapper?.classList.contains('range__input-wrapper--to')) {
+              store.to = to ? Number(to) : 0;
+              inputTo!.value = '';
+              sliderTo!.value = `${store.to}`;
+            }
+
+            fillColor();
+          });
+        });
       } );
     }
   } )

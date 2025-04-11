@@ -33,7 +33,9 @@ a {
       transition : fill var(--transition-default);
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
+      outline: none;
       color : var(--color-text-accent);
 
       svg {
