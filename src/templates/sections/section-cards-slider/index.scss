@@ -32,6 +32,7 @@
       border           : none;
       cursor           : pointer;
       text-wrap        : nowrap;
+      transition: color var(--transition-default);
 
       &:not(.active) {
         color : var(--color-text-tertiary);
@@ -39,6 +40,11 @@
 
       &.active {
         color: var(--color-text-primary);
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--color-text-accent);
       }
     }
   }
@@ -61,7 +67,9 @@
       &:not(.swiper-button-disabled) {
         cursor : pointer;
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
+          outline: none;
           fill : var(--color-icon-accent);
         }
       }

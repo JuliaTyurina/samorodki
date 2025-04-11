@@ -72,7 +72,8 @@
     }
 
     @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
         span {
           &:first-child {
             &:after {
