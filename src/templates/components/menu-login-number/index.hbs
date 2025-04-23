@@ -1,0 +1,19 @@
+<div class="menu-login number">
+    <div class="menu-login__title title-lg font-semibold">Войти или создать профиль</div>
+    <p class="menu-login__text text-lg font-regular">
+        Позвоним или пришлём SMS. Введите последние четыре цифры входящего номера телефона или код из SMS-сообщения.
+    </p>
+    <label class="menu-login__label text-sm font-regular">
+        Номер телефона
+        <span class="menu-login__phone-input phone">
+            <span class="phone-prefix text-lg">+7</span>
+            <input type="tel" class="phone-input text-lg" placeholder="(———)-(———)-(——)-(——)" inputmode="tel"/>
+        </span>
+    </label>
+    {{> button button-class="menu-login__btn-main" text="Получить код" }}
+    {{> button variant="transparent" button-class="menu-login__btn-secondary" text="Войти с паролем" icon-left="key" }}
+
+    <p class="menu-login__agreement text-md font-regular">
+        Нажимая кнопку «Получить код», вы принимаете <a href="#">пользовательское соглашение</a> и <a href="#">политику конфиденциальности</a>
+    </p>
+</div>

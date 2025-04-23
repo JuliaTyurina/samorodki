@@ -1,8 +1,8 @@
 {
-  "page-title": "Page Promo Archive",
+  "page-title": "Page Favorites",
   "script-src": "/src/js/index.ts",
   "breadcrumbs": [
     { "text": "Samorodki", "url": "#" },
-    { "text": "Акции" }
+    { "text": "Избранное" }
   ]
 }

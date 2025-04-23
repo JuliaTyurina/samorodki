@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+
+.menu-feedback-not-auth {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 0 var(--container-mobile-padding);
+  height: 100%;
+  overflow-y: auto;
+
+  @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+    padding: unset;
+  }
+
+  &__link {
+    color: var(--color-text-accent);
+    transition: color var(--transition-default);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-accent-hover);
+    }
+  }
+
+  &__close {
+    margin-top: auto;
+    width: 100%;
+  }
+
+}
+

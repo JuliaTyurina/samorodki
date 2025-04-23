@@ -1,0 +1,17 @@
+<div class="__container">
+    {{> button text="Войти по номеру телефона" attributes=(str-concat
+            'data-global-action="drawer-open" '
+            'data-drawer="login-number" ') }}
+    {{> button text="Войти с паролем" attributes=(str-concat
+            'data-global-action="drawer-open" '
+            'data-drawer="login-password" ') }}
+    {{> button text="Подтверждение номера – этап 1" attributes=(str-concat
+            'data-global-action="drawer-open" '
+            'data-drawer="login-number-confirmation-step-1" ') }}
+    {{> button text="Подтверждение номера – этап 2" attributes=(str-concat
+            'data-global-action="drawer-open" '
+            'data-drawer="login-number-confirmation-step-2" ') }}
+    {{> button text="Капча" attributes=(str-concat
+            'data-global-action="drawer-open" '
+            'data-drawer="login-captcha" ') }}
+</div>

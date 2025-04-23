@@ -25,8 +25,9 @@ $button-sizes: (
 $button-variants: (
         accent: variants.$button-accent,
         gray: variants.$button-gray,
-        transparent: variants.$button-transparent,
-        tgray: variants.$button-tgray
+        taccent: variants.$button-taccent,
+        tgray: variants.$button-tgray,
+        transparent: variants.$button-transparent
 );
 
 .button {
@@ -47,11 +48,9 @@ $button-variants: (
     transition: fill var(--transition-default);
   }
 
-
-
   &:disabled {
     opacity: .4;
-    cursor: not-allowed;
+    pointer-events: none;
   }
 
   &:not(:disabled) {

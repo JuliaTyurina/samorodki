@@ -63,6 +63,12 @@ export const app: AppInterface = {
             EDrawerClasses.Support,
             EDrawerClasses.Locality,
             EDrawerClasses.DeliveryPoint,
+            EDrawerClasses.Feedback,
+            EDrawerClasses.FeedbackNotAuth,
+            EDrawerClasses.LoginNumber,
+            EDrawerClasses.LoginNumberConfirmationStep1,
+            EDrawerClasses.LoginNumberConfirmationStep2,
+            EDrawerClasses.LoginCaptcha,
         ], this.drawer)
     },
     filtersOpen() {
@@ -132,26 +138,6 @@ export const app: AppInterface = {
 
                 root.style.setProperty('--header-height', `${headerHeight}px`)
             }
-
-            // addMediaAction({
-            //     name: 'headerHeightChange',
-            //     breakpoints: ['lg'],
-            //     onChange: () => {
-            //         if (header) {
-            //             const menu = document.querySelector('.menu');
-            //             const tabbarHeight = +getComputedStyle(document.documentElement)
-            //                 .getPropertyValue('--tabbar-height')
-            //                 .replace(/\D/g, "");
-            //
-            //             const headerHeight = header.offsetHeight - 3;
-            //
-            //             if (menu && tabbarHeight && !isDevice.pc) {
-            //                 root.style.setProperty('--content-space', `${window.innerHeight - headerHeight - tabbarHeight}px`);
-            //             }
-            //             root.style.setProperty('--header-height', `${headerHeight}px`);
-            //         }
-            //     }
-            // });
         }
     },
 };

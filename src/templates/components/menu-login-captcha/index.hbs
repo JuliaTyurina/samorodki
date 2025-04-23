@@ -1,0 +1,18 @@
+<div class="menu-login captcha">
+    <a href="#" class="menu-login__back link-reset">
+        {{> svg id="arrow-left" }}
+    </a>
+    <div class="menu-login__title title-lg font-semibold">Код подтверждения</div>
+
+    <div class="menu-login__captcha">
+        <img class="menu-login__captcha-img" src="/assets/media/images/captcha.png" alt="">
+        <button class="menu-login__captcha-update">
+            {{> svg id="update"}}
+        </button>
+    </div>
+
+    {{> input input-class="menu-login__code-input" type="number" size="lg" placeholder="XX XX XX" attributes=(str-concat
+            'maxlength="6" pattern="\d+" onKeyPress="if(this.value.length === 6) return false"') }}
+    {{> button button-class="menu-login__btn-main" text="Отправить" }}
+
+</div>

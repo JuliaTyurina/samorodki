@@ -1,0 +1,24 @@
+$button-taccent: (
+        default: (
+                color: var(--color-text-accent),
+                border-color: var(--color-stroke-accent),
+                background-color: transparent,
+                fill: var(--color-text-accent),
+        ),
+        hover: (
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-project-12),
+                fill: var(--color-text-contrast),
+        ),
+        focus-visible: (
+                outline: none,
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-project-12),
+                fill: var(--color-text-contrast),
+        ),
+        active: (
+                border-color: var(--color-accent-hover),
+                background-color: var(--color-project-12),
+                fill: var(--color-text-contrast),
+        ),
+)

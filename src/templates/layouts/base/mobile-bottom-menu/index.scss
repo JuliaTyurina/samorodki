@@ -72,7 +72,8 @@
   &__product,
   &__support,
   &__locality,
-  &__delivery-point {
+  &__delivery-point,
+  &__login-number {
     display: none;
   }
 
@@ -113,6 +114,12 @@
 
   &.delivery-point {
     .mobile-bottom-menu__delivery-point {
+      display: block;
+    }
+  }
+
+  &.login-number {
+    .mobile-bottom-menu__login-number {
       display: block;
     }
   }

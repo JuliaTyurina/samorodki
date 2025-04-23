@@ -1,0 +1,11 @@
+<div class="menu-feedback-not-auth">
+    <div class="menu-feedback-not-auth__title title-lg font-semibold">Оставьте отзыв</div>
+    <p class="menu-feedback-not-auth__text text-lg font-regular">
+        Вы можете оставить отзыв о товаре только после совершения покупки.
+    </p>
+    <p class="menu-feedback-not-auth__text text-lg font-regular">
+        Посмотреть Ваши покупки можно в <a href="#" class="menu-feedback-not-auth__link list-reset">личном кабинете</a>
+    </p>
+    {{> button text="Закрыть" variant="taccent" button-class="menu-feedback-not-auth__close"  attributes=(str-concat
+            'data-global-action="drawer-close" ') }}
+</div>

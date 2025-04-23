@@ -38,6 +38,14 @@
     border: 1px solid var(--color-stroke-primary);
     border-radius: 50%;
     cursor: pointer;
+    z-index: 1;
+    transition: background-color var(--transition-default);
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background-color: var(--color-background-tertiary);
+    }
 
     &-icon {
       width: 24px;
@@ -47,28 +55,48 @@
 
   &__wrapper {
     //position: relative;
-    width: var(--drawer-width);
     background-color: var(--color-background-primary);
     //transform: translateX(40%);
     //transition: transform .3s;
+    width: 100%;
+    max-width: map.get(breakpoints.$breakpoints-max, sm);
     z-index: 2;
     height: 100%;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      width: var(--drawer-width);
+      max-width: unset;
+    }
   }
 
   &__content {
     height: 100%;
     max-height: 100%;
+
+    //@media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
+    //  width: var(--drawer-width);
+    //}
   }
 
   &__product,
   &__support,
   &__locality,
-  &__delivery-point {
+  &__delivery-point,
+  &__feedback,
+  &__feedback-not-auth,
+  &__login-number,
+  &__login-number-confirmation-step-1,
+  &__login-number-confirmation-step-2,
+  &__login-captcha {
     display: none;
-    padding: 128px 64px 64px;
+    padding: 128px 0 64px;
     height: 100%;
     max-height: 100%;
     overflow-y: auto;
+
+    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+      padding: 128px 64px 64px;
+    }
   }
 
   &.product {
@@ -95,11 +123,49 @@
     }
   }
 
+  &.feedback {
+    .drawer__feedback {
+      display: block;
+    }
+  }
+
+  &.feedback-not-auth {
+    .drawer__feedback-not-auth {
+      display: block;
+    }
+  }
+
+  &.login-number {
+    .drawer__login-number {
+      display: block;
+    }
+  }
+
+  &.login-number-confirmation-step-1 {
+    .drawer__login-number-confirmation-step-1 {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &.login-number-confirmation-step-2 {
+    .drawer__login-number-confirmation-step-2 {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &.login-captcha {
+    .drawer__login-captcha {
+      display: block;
+      position: relative;
+    }
+  }
 
 }
 
 body.drawer-open {
-  @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+  //@media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
     .drawer {
       opacity: 1;
       visibility: visible;
@@ -108,5 +174,5 @@ body.drawer-open {
       //  transform: translateY(0);
       //}
     }
-  }
+  //}
 }

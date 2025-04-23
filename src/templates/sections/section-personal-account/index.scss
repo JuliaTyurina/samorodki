@@ -259,10 +259,6 @@
 
   &__title {
     margin-bottom: 32px;
-    font-size: functions.getClamp(24, 36);
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.48px;
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
       margin-bottom: 48px;

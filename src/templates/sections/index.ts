@@ -15,6 +15,8 @@ import "./section-promo-single"
 import "./section-faq"
 import "./section-delivery"
 import "./section-contacts"
+import "./section-favorites"
+import "./section-search-empty"
 
 
 import { initSliderFull } from "./section-slider-full";

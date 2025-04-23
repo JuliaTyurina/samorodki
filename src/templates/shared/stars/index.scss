@@ -17,12 +17,34 @@
 @include fill-stars(1);
 
 
+@mixin fill-stars-hover($max: 5, $color: var(--color-project-10)) {
+  @for $i from 1 through $max {
+    .stars[data-hover="#{$i}"] .stars__item:nth-child(-n+#{$i}) {
+      fill: $color !important;
+    }
+  }
+}
+
+@include fill-stars-hover(5);
+
+
 .stars {
   display: flex;
   column-gap: 2px;
 
   svg {
     fill: #cdcdcd;
+    transition: fill var(--transition-default);
+
+    &:hover,
+    &:focus-visible {
+      fill: var(--color-project-10);
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
 
@@ -37,6 +59,13 @@
     svg {
       width: 16px;
       height: 16px;
+    }
+  }
+
+  &.stars-32 {
+    svg {
+      width: 32px;
+      height: 32px;
     }
   }
 

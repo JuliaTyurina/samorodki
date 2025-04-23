@@ -2,74 +2,27 @@
 @use "/src/settings/styles/breakpoints/breakpoints";
 @use "/src/settings/styles/functions";
 
-.promo-archive {
-
+.section-favorites {
   &__title {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 
-    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
-      column-gap: 32px;
+    @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
+      margin-bottom: 24px;
     }
   }
 
-  &__list {
+  &__wrapper {
     display: grid;
-    row-gap: 24px;
-
-    @media (min-width: map.get(breakpoints.$breakpoints-min, sm)) {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 16px;
-    }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 8px;
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
-      column-gap: 32px;
-      row-gap: 32px;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
-      column-gap: 40px;
-    }
-  }
-
-  &__card {
-    &-media {
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 16px;
-
-      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
-        border-radius: 16px
-      }
-
-      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-        border-radius: 24px
-      }
-
-      @media (min-width: map.get(breakpoints.$breakpoints-min, xl)) {
-        border-radius: 32px
-      }
-    }
-
-    &-img {
-      aspect-ratio: 16/9;
-    }
-
-    &-descr {
-      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
-        padding: 0 24px;
-      }
-
-      @media (min-width: map.get(breakpoints.$breakpoints-min, lg)) {
-        padding: 0 32px;
-      }
-    }
-
-    &-title {
-      margin-bottom: 4px;
-
-      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
-        margin-bottom: 8px;
-      }
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px 24px;
     }
   }
 }

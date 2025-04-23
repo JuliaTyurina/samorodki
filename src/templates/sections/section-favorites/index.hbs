@@ -1,25 +1,11 @@
-<section class="promo-archive {{section-class}}">
-    <div class="promo-archive__container __container">
-        <h1 class="promo-archive__title title-lg font-bold">
-            Акции
-        </h1>
-        <ul class="promo-archive__list list-reset">
-            {{#each promo-context.promos }}
-                <li class="promo-archive__item">
-                    <a href="#" class="promo-archive__link">
-                        <article class="promo-archive__card">
-                            <div class="promo-archive__card-media">
-                                <img src="{{url}}" alt="" class="promo-archive__card-img">
-                            </div>
-                            <div class="promo-archive__card-descr">
-                                <h2 class="promo-archive__card-title title-md font-bold">{{title}}</h2>
-                                <p class="promo-archive__card-text text-lg font-medium">{{description}}</p>
-                            </div>
-                        </article>
-                    </a>
-                </li>
+<section class="section-favorites {{section-class}}">
+    <div class="section-favorites__container __container">
+        <h1 class="section-favorites__title title-lg font-semibold">Избранное</h1>
+        <div class="section-favorites__wrapper">
+            {{#each favorites-context.list}}
+                {{> card }}
             {{/each}}
-        </ul>
+        </div>
     </div>
 </section>
 

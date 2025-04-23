@@ -1,0 +1,25 @@
+<div class="menu-login confirmation">
+    <a href="#" class="menu-login__back link-reset">
+        {{> svg id="arrow-left" }}
+    </a>
+    <div class="menu-login__title title-lg font-semibold">Подтвердите номер</div>
+    <div class="menu-login__subtitle title-sm font-bold">+7 915 888 99 10</div>
+    <p class="menu-login__text text-lg font-regular">
+        Введите код из смс или <strong>последние 4 цифры</strong> входящего номера
+    </p>
+
+    <p class="menu-login__subtext text-lg text-gray font-regular">
+        Например +7 ХХХ ХХХ <span>ХХ ХХ</span>
+    </p>
+    {{> input input-class="menu-login__code-input" type="number" size="lg" placeholder="XX XX" attributes=(str-concat
+            'maxlength="4" pattern="\d+" onKeyPress="if(this.value.length === 4) return false"') }}
+    <button class="menu-login__code-send text-md font-regular">
+        Отправить новый код
+    </button>
+
+    <p class="menu-login__code-help text-sm text-gray font-medium">
+        Не получили код? Позвоните на <a href="tel:+79261933358">8 926 193 33 58</a>, и мы поможем вам
+    </p>
+
+    {{> button button-class="menu-login__btn-main" text="Подтвердить номер" }}
+</div>

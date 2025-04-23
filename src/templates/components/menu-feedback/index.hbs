@@ -1,0 +1,31 @@
+<div class="menu-feedback">
+    <div class="menu-feedback__title title-lg font-semibold">Оставьте отзыв</div>
+
+    <div class="menu-feedback__stars">
+        {{> stars stars-class="stars-32" tabindex=true }}
+    </div>
+
+    <div class="menu-feedback__photos photo-upload" data-upload-container>
+        <label class="photo-upload__trigger" tabindex="0" >
+            <input type="file" id="fileInput" multiple accept="image/*" hidden data-file-input/>
+            {{> svg id="camera" svg-class="photo-upload__icon" }}
+            <span class="photo-upload__text text-md font-regular">Загрузить не более 10 файлов</span>
+        </label>
+<!--        используем эту разметку для загруженных фото-->
+<!--        {{#each order-details-context.products }}-->
+<!--            <div class="photo-upload__preview">-->
+<!--                <img class="photo-upload__preview-img" src="{{image}}" alt="">-->
+<!--                <button class="photo-upload__preview-remove">{{> svg id="cross"}}</button>-->
+<!--            </div>-->
+<!--        {{/each}}-->
+    </div>
+
+    <label class="menu-feedback__content text-sm text-gray">
+        <span>Как вам товар?</span>
+        <textarea class="menu-feedback__textarea" rows="1" placeholder="Расскажите о вашем впечатлении"></textarea>
+    </label>
+
+    {{> button button-class="menu-feedback__btn" text="Отправить"}}
+
+    <p class="menu-feedback__notification text-md font-regular text-gray">После заполнения всех полей отзыв отправляется на проверку, которая может занять до 7 дней</p>
+</div>

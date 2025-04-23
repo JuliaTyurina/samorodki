@@ -5905,10 +5905,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .order__title {
   margin-bottom: 32px;
-  font-size: clamp(24px, 24px + (36 - 24) * (100vw - 375px) / (1920 - 375), 36px);
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.48px;
 }
 @media (min-width: 1024px) {
   .order__title {
@@ -6465,10 +6461,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .personal-account__title {
   margin-bottom: 32px;
-  font-size: clamp(24px, 24px + (36 - 24) * (100vw - 375px) / (1920 - 375), 36px);
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.48px;
 }
 @media (min-width: 1024px) {
   .personal-account__title {
@@ -7603,6 +7595,69 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .contacts .swiper .swiper-pagination-bullet-active {
   background-color: var(--color-neutral-100);
+}.section-favorites__title {
+  margin-bottom: 32px;
+}
+@media (min-width: 1024px) {
+  .section-favorites__title {
+    margin-bottom: 24px;
+  }
+}
+.section-favorites__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 8px;
+}
+@media (min-width: 768px) {
+  .section-favorites__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1300px) {
+  .section-favorites__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px 24px;
+  }
+}.section-search-empty {
+  margin: auto 0;
+  padding: 128px 0;
+}
+.section-search-empty__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-search-empty svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+@media (min-width: 768px) {
+  .section-search-empty svg {
+    width: 108px;
+    height: 108px;
+  }
+}
+.section-search-empty__title {
+  margin-bottom: 12px;
+  font-size: clamp(18px, 18px + (24 - 18) * (100vw - 375px) / (1920 - 375), 24px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.18px;
+}
+.section-search-empty__subtitle {
+  margin-bottom: 32px;
+  font-size: clamp(14px, 14px + (16 - 14) * (100vw - 375px) / (1920 - 375), 16px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.section-search-empty__button {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .section-search-empty__button {
+    width: fit-content;
+  }
 }@media (max-width: 767px) {
   .section-slider-full .__container-big {
     max-width: unset;

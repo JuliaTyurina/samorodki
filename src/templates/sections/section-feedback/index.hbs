@@ -10,7 +10,9 @@
                     <div class="section-feedback__rating-number">{{single-product-context.rating.fractional}}</div>
                     {{> stars stars-class="stars-16-32" rating=single-product-context.rating.integer }}
                 </div>
-                {{> button text="Оставить отзыв" button-class="section-feedback__rating-button" }}
+                {{> button text="Оставить отзыв" button-class="section-feedback__rating-button" attributes=(str-concat
+                        'data-global-action="drawer-open" '
+                        'data-drawer="feedback" ') }}
                 <div class="section-feedback__chart">
                     {{#each single-product-context.rating.chart }}
                         <div class="section-feedback__chart-item">

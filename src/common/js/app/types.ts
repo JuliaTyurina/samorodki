@@ -50,7 +50,6 @@ export enum EMobileBottomMenuClasses {
     Support = "support",
     Locality = "locality",
     DeliveryPoint = "delivery-point",
-
 }
 
 export enum EDrawerClasses {
@@ -58,4 +57,10 @@ export enum EDrawerClasses {
     Support = "support",
     Locality = "locality",
     DeliveryPoint = "delivery-point",
+    Feedback = "feedback",
+    FeedbackNotAuth = "feedback-not-auth",
+    LoginNumber = "login-number",
+    LoginNumberConfirmationStep1 = "login-number-confirmation-step-1",
+    LoginNumberConfirmationStep2 = "login-number-confirmation-step-2",
+    LoginCaptcha = "login-captcha",
 }
