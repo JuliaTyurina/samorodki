@@ -125,12 +125,24 @@
     }
   }
 
-  &__button {
+  &__selected-size {
+    display: flex;
+    column-gap: 5px;
+    padding-top: 8px;
+
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+      padding-top: 12px;
+    }
+  }
+
+  &__buttons {
     position: sticky;
     bottom: 0;
     display: flex;
     align-items: center;
     column-gap: 16px;
+    flex-wrap: wrap;
+    row-gap: 8px;
 
     &:before {
       content: '';
@@ -152,8 +164,79 @@
       }
     }
 
-    &-add {
-      flex-grow: 1;
+    > .favorite-filled {
+      width: 100%;
+      max-width: fit-content;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        margin-bottom: 64px;
+      }
+    }
+  }
+
+  &__button {
+    flex-grow: 1;
+  }
+
+  .tabs {
+
+    &__nav {
+      column-gap: 8px;
+      margin-bottom: 16px;
+      overflow-y: auto;
+
+      -ms-overflow-style: none;  /* Для IE и Edge */
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none; /* Для Webkit (Chrome, Safari, Opera) */
+      }
+    }
+
+    &__nav-btn {
+      border           : none;
+      border-radius    : 16px;
+      display          : flex;
+      align-items      : center;
+      gap              : 6px;
+      padding          : 6px 12px;
+      width            : max-content;
+      color: var(--color-text-primary);
+      background-color : var(--color-background-tertiary);
+      transition       : background-color var(--transition-default), color var(--transition-default);
+
+      &:not(.tabs__nav-btn--active) {
+        cursor : pointer;
+
+        &:hover,
+        &:focus-visible {
+          outline: none;
+          background-color : #D7D8DA;
+        }
+      }
+
+      &--active {
+        background-color : var(--color-background-contrast);
+        color            : var(--color-text-contrast);
+        fill             : var(--color-icon-contrast);
+
+        &:hover,
+        &:focus-visible,
+        &:focus {
+          outline: none;
+          background-color : #475869;
+        }
+      }
+    }
+
+    &__panel {
+      @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
+        width: calc(520px - 64px);
+      }
     }
   }
 }

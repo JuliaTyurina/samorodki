@@ -39,6 +39,15 @@ export const app: AppInterface = {
     },
     mobileBottomMenuOpen(className: string) {
         this.body && addClass(EBodyStateClasses.MobileBottomMenuOpen, this.body)
+        this.mobileBottomMenu && removeClass([
+            EMobileBottomMenuClasses.SortCatalog,
+            EMobileBottomMenuClasses.SortFeedback,
+            EMobileBottomMenuClasses.Product,
+            EMobileBottomMenuClasses.ProductAdded,
+            EMobileBottomMenuClasses.Support,
+            EMobileBottomMenuClasses.Locality,
+            EMobileBottomMenuClasses.DeliveryPoint,
+        ], this.mobileBottomMenu)
         this.mobileBottomMenu && addClass(className, this.mobileBottomMenu)
     },
     mobileBottomMenuClose() {
@@ -47,6 +56,7 @@ export const app: AppInterface = {
             EMobileBottomMenuClasses.SortCatalog,
             EMobileBottomMenuClasses.SortFeedback,
             EMobileBottomMenuClasses.Product,
+            EMobileBottomMenuClasses.ProductAdded,
             EMobileBottomMenuClasses.Support,
             EMobileBottomMenuClasses.Locality,
             EMobileBottomMenuClasses.DeliveryPoint,
@@ -54,12 +64,26 @@ export const app: AppInterface = {
     },
     drawerOpen(className: string) {
         this.body && addClass(EBodyStateClasses.DrawerOpen, this.body)
+        this.drawer && removeClass([
+            EDrawerClasses.Product,
+            EDrawerClasses.ProductAdded,
+            EDrawerClasses.Support,
+            EDrawerClasses.Locality,
+            EDrawerClasses.DeliveryPoint,
+            EDrawerClasses.Feedback,
+            EDrawerClasses.FeedbackNotAuth,
+            EDrawerClasses.LoginNumber,
+            EDrawerClasses.LoginNumberConfirmationStep1,
+            EDrawerClasses.LoginNumberConfirmationStep2,
+            EDrawerClasses.LoginCaptcha,
+        ], this.drawer)
         this.drawer && addClass(className, this.drawer)
     },
     drawerClose() {
         this.body && removeClass(EBodyStateClasses.DrawerOpen, this.body)
         this.drawer && removeClass([
             EDrawerClasses.Product,
+            EDrawerClasses.ProductAdded,
             EDrawerClasses.Support,
             EDrawerClasses.Locality,
             EDrawerClasses.DeliveryPoint,

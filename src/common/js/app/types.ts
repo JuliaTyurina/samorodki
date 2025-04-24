@@ -47,6 +47,7 @@ export enum EMobileBottomMenuClasses {
     SortCatalog = "sort-catalog",
     SortFeedback = "sort-feedback",
     Product = "product",
+    ProductAdded = "product-added",
     Support = "support",
     Locality = "locality",
     DeliveryPoint = "delivery-point",
@@ -54,6 +55,7 @@ export enum EMobileBottomMenuClasses {
 
 export enum EDrawerClasses {
     Product = "product",
+    ProductAdded = "product-added",
     Support = "support",
     Locality = "locality",
     DeliveryPoint = "delivery-point",

@@ -9,6 +9,7 @@ import { initCardsList } from "@sections/section-cards-list";
 import {initPreviewImage} from "@js/libs/fancybox";
 import { toggleLoader } from '@shared/preloader'
 import { initPhoneInputMask } from '@components/menu-login-number'
+import {initMenuProductSuggestions} from "@components/menu-product";
 
 
 window.addEventListener("load", () => {
@@ -22,4 +23,5 @@ document.addEventListener( 'DOMContentLoaded', () => {
   initPhoneInputMask()
   initCardsList()
   initPreviewImage()
+  initMenuProductSuggestions()
 } )

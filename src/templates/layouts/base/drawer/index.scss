@@ -79,6 +79,7 @@
   }
 
   &__product,
+  &__product-added,
   &__support,
   &__locality,
   &__delivery-point,
@@ -101,6 +102,12 @@
 
   &.product {
     .drawer__product {
+      display: block;
+    }
+  }
+
+  &.product-added {
+    .drawer__product-added {
       display: block;
     }
   }

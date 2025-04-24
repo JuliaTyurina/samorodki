@@ -1,0 +1,68 @@
+<div class="menu-product">
+    <p class="menu-product__title">Товар добавлен в корзину</p>
+    <div class="menu-product__card">
+        <div class="menu-product__card-media">
+            <img src="{{single-product-context.images.[0].url}}" alt="" class="menu-product__image">
+        </div>
+        <div class="menu-product__card-descr">
+            <p class="menu-product__subtitle">{{single-product-context.title}}</p>
+            <div class="menu-product__price">
+                <span class="menu-product__price-normal">{{ single-product-context.price.normal }}</span>
+                <span class="menu-product__price-old text-gray">{{ single-product-context.price.old }}</span>
+                {{> discount value=single-product-context.price.discount }}
+            </div>
+            <div class="menu-product__rating text-gray">
+                {{> rating }}
+                {{ single-product-context.rating.fractional }}
+            </div>
+
+            <div class="menu-product__selected-size text-md font-medium text-gray">
+                Размер: <span>17</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="menu-product__buttons">
+        {{> button text="Перейти в корзину" button-class="menu-product__button" }}
+        {{> button text="Продолжить покупки" variant="tgray" button-class="menu-product__button" }}
+    </div>
+
+    <section class="menu-product__suggestions">
+        <div class="tabs" data-tabs="tab">
+            <ul class="tabs__nav list-reset">
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn" type="button">Может понравиться</button>
+                </li>
+                <li class="tabs__nav-item">
+                    <button class="tabs__nav-btn" type="button">Аксессуары</button>
+                </li>
+            </ul>
+            <div class="tabs__content">
+                <div class="tabs__panel">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            {{#each cards-context.list}}
+                                <div class="swiper-slide">
+                                    {{> card size="sm" }}
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__panel">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            {{#each cards-2-context.list}}
+                                <div class="swiper-slide">
+                                    {{> card size="sm" }}
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

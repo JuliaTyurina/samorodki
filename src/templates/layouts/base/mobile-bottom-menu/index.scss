@@ -67,9 +67,18 @@
     }
   }
 
+  &__product-added {
+    .menu-product__buttons {
+      &:before {
+        content: unset;
+      }
+    }
+  }
+
   &__sort-catalog,
   &__sort-feedback,
   &__product,
+  &__product-added,
   &__support,
   &__locality,
   &__delivery-point,
@@ -77,6 +86,8 @@
     display: none;
   }
 
+  &__product,
+  &__product-added,
   &__locality,
   &__delivery-point {
     height: 72vh;
@@ -96,6 +107,12 @@
 
   &.product {
     .mobile-bottom-menu__product {
+      display: block;
+    }
+  }
+
+  &.product-added {
+    .mobile-bottom-menu__product-added {
       display: block;
     }
   }

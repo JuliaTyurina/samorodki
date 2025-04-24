@@ -1,5 +1,6 @@
+import { S as Swiper, N as Navigation, f as freeMode, P as Pagination, T as Thumb, E as EffectFade, A as Autoplay, a as EffectCoverflow } from "./vendors-swiper.DK2CajGK.js";
+import { G as GraphTabs } from "./vendors-graph-tabs.Dpr5g75m.js";
 import { I as IMask } from "./vendors-imask.Byfa6iJT.js";
-import { S as Swiper, f as freeMode, P as Pagination, T as Thumb, N as Navigation, E as EffectFade, A as Autoplay, a as EffectCoverflow } from "./vendors-swiper.DK2CajGK.js";
 import { O as Oe } from "./vendors-@fancyapps.Z9libBee.js";
 (function polyfill() {
   const relList = document.createElement("link").relList;
@@ -74,6 +75,7 @@ var EMobileBottomMenuClasses = /* @__PURE__ */ ((EMobileBottomMenuClasses2) => {
   EMobileBottomMenuClasses2["SortCatalog"] = "sort-catalog";
   EMobileBottomMenuClasses2["SortFeedback"] = "sort-feedback";
   EMobileBottomMenuClasses2["Product"] = "product";
+  EMobileBottomMenuClasses2["ProductAdded"] = "product-added";
   EMobileBottomMenuClasses2["Support"] = "support";
   EMobileBottomMenuClasses2["Locality"] = "locality";
   EMobileBottomMenuClasses2["DeliveryPoint"] = "delivery-point";
@@ -81,6 +83,7 @@ var EMobileBottomMenuClasses = /* @__PURE__ */ ((EMobileBottomMenuClasses2) => {
 })(EMobileBottomMenuClasses || {});
 var EDrawerClasses = /* @__PURE__ */ ((EDrawerClasses2) => {
   EDrawerClasses2["Product"] = "product";
+  EDrawerClasses2["ProductAdded"] = "product-added";
   EDrawerClasses2["Support"] = "support";
   EDrawerClasses2["Locality"] = "locality";
   EDrawerClasses2["DeliveryPoint"] = "delivery-point";
@@ -266,6 +269,15 @@ const app = {
   },
   mobileBottomMenuOpen(className) {
     this.body && addClass(EBodyStateClasses.MobileBottomMenuOpen, this.body);
+    this.mobileBottomMenu && removeClass([
+      EMobileBottomMenuClasses.SortCatalog,
+      EMobileBottomMenuClasses.SortFeedback,
+      EMobileBottomMenuClasses.Product,
+      EMobileBottomMenuClasses.ProductAdded,
+      EMobileBottomMenuClasses.Support,
+      EMobileBottomMenuClasses.Locality,
+      EMobileBottomMenuClasses.DeliveryPoint
+    ], this.mobileBottomMenu);
     this.mobileBottomMenu && addClass(className, this.mobileBottomMenu);
   },
   mobileBottomMenuClose() {
@@ -274,6 +286,7 @@ const app = {
       EMobileBottomMenuClasses.SortCatalog,
       EMobileBottomMenuClasses.SortFeedback,
       EMobileBottomMenuClasses.Product,
+      EMobileBottomMenuClasses.ProductAdded,
       EMobileBottomMenuClasses.Support,
       EMobileBottomMenuClasses.Locality,
       EMobileBottomMenuClasses.DeliveryPoint
@@ -281,12 +294,26 @@ const app = {
   },
   drawerOpen(className) {
     this.body && addClass(EBodyStateClasses.DrawerOpen, this.body);
+    this.drawer && removeClass([
+      EDrawerClasses.Product,
+      EDrawerClasses.ProductAdded,
+      EDrawerClasses.Support,
+      EDrawerClasses.Locality,
+      EDrawerClasses.DeliveryPoint,
+      EDrawerClasses.Feedback,
+      EDrawerClasses.FeedbackNotAuth,
+      EDrawerClasses.LoginNumber,
+      EDrawerClasses.LoginNumberConfirmationStep1,
+      EDrawerClasses.LoginNumberConfirmationStep2,
+      EDrawerClasses.LoginCaptcha
+    ], this.drawer);
     this.drawer && addClass(className, this.drawer);
   },
   drawerClose() {
     this.body && removeClass(EBodyStateClasses.DrawerOpen, this.body);
     this.drawer && removeClass([
       EDrawerClasses.Product,
+      EDrawerClasses.ProductAdded,
       EDrawerClasses.Support,
       EDrawerClasses.Locality,
       EDrawerClasses.DeliveryPoint,
@@ -680,6 +707,33 @@ if (window.screen.orientation) {
     });
   });
 }
+var ESwiperElems = /* @__PURE__ */ ((ESwiperElems2) => {
+  ESwiperElems2["Swiper"] = ".swiper";
+  return ESwiperElems2;
+})(ESwiperElems || {});
+const tabBlocks = document.querySelectorAll('[data-tabs="tab"]');
+tabBlocks.forEach((block, index) => {
+  const uniqueId = `tab-${index + 1}`;
+  block.setAttribute("data-tabs", uniqueId);
+  new GraphTabs(uniqueId);
+});
+const initMenuProductSuggestions = () => {
+  const sections = document.querySelectorAll(".menu-product");
+  sections.forEach((section) => {
+    const sliderElems = section.querySelectorAll(ESwiperElems.Swiper);
+    sliderElems.forEach((sliderElem) => {
+      new Swiper(sliderElem, {
+        modules: [Navigation],
+        slidesPerView: 2.1,
+        spaceBetween: 8,
+        observer: true,
+        observeParents: true,
+        watchSlidesProgress: true,
+        watchOverflow: true
+      });
+    });
+  });
+};
 const initDeliveryTabs = () => {
   const { breakpoints } = mqData();
   const breakpointsNum = breakpoints.toNumbers();
@@ -843,10 +897,6 @@ const initFilters = () => {
 const initCardsList = () => {
   initFilters();
 };
-var ESwiperElems = /* @__PURE__ */ ((ESwiperElems2) => {
-  ESwiperElems2["Swiper"] = ".swiper";
-  return ESwiperElems2;
-})(ESwiperElems || {});
 const initProductSlider = () => {
   const { breakpoints } = mqData();
   const breakpointsNum = breakpoints.toNumbers();
@@ -1220,4 +1270,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initPhoneInputMask();
   initCardsList();
   initPreviewImage();
+  initMenuProductSuggestions();
 });
