@@ -54,16 +54,13 @@
   }
 
   &__wrapper {
-    //position: relative;
     background-color: var(--color-background-primary);
-    //transform: translateX(40%);
-    //transition: transform .3s;
     width: 100%;
     max-width: map.get(breakpoints.$breakpoints-max, sm);
     z-index: 2;
     height: 100%;
 
-    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
       width: var(--drawer-width);
       max-width: unset;
     }
@@ -72,14 +69,11 @@
   &__content {
     height: 100%;
     max-height: 100%;
-
-    //@media (max-width : map.get(breakpoints.$breakpoints-max, md)) {
-    //  width: var(--drawer-width);
-    //}
   }
 
   &__product,
   &__product-added,
+  &__product-counter,
   &__support,
   &__locality,
   &__delivery-point,
@@ -95,7 +89,7 @@
     max-height: 100%;
     overflow-y: auto;
 
-    @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
+    @media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
       padding: 128px 64px 64px;
     }
   }
@@ -108,6 +102,12 @@
 
   &.product-added {
     .drawer__product-added {
+      display: block;
+    }
+  }
+
+  &.product-counter {
+    .drawer__product-counter {
       display: block;
     }
   }
@@ -172,14 +172,8 @@
 }
 
 body.drawer-open {
-  //@media (min-width: map.get(breakpoints.$breakpoints-min, md)) {
-    .drawer {
-      opacity: 1;
-      visibility: visible;
-
-      //&__wrapper {
-      //  transform: translateY(0);
-      //}
-    }
-  //}
+  .drawer {
+    opacity: 1;
+    visibility: visible;
+  }
 }

@@ -17,6 +17,7 @@ import './favorite'
 import './favorite-filled'
 import './hint'
 import './status'
+import './quantity'
 
 import { initInputs } from "./input";
 import { initDropdown } from "@shared/dropdown";

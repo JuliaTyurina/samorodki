@@ -1,0 +1,14 @@
+<div class="menu-product">
+    <p class="menu-product__title">Количество</p>
+    <div class="menu-product__residual text-lg font-regular">Осталось <span>9</span> изделий</div>
+    <div class="menu-product__counter">
+        {{> quantity accent=true}}
+        {{> button text="Выбрать" button-class="menu-product__counter-btn desktop" attributes=(str-concat
+                ' data-global-action="drawer-open" '
+                ' data-drawer="product-added" ') }}
+
+        {{> button text="Выбрать" button-class="menu-product__counter-btn mobile" attributes=(str-concat
+                ' data-global-action="mobile-bottom-menu-open" '
+                ' data-bottom-menu="product-added" ') }}
+    </div>
+</div>

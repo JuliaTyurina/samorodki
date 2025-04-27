@@ -1,4 +1,4 @@
-<div class="drawer">
+<div class="drawer" tabindex="-1">
   <div class="drawer__overlay" data-global-action="drawer-close"></div>
   <div class="drawer__wrapper">
       <button class="drawer__close" data-global-action="drawer-close">
@@ -12,6 +12,10 @@
 
           <div class="drawer__product-added">
               {{> menu-product-added }}
+          </div>
+
+          <div class="drawer__product-counter">
+              {{> menu-product-counter }}
           </div>
 
           <div class="drawer__support">

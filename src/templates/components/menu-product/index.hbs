@@ -25,7 +25,13 @@
     </div>
 
     <div class="menu-product__buttons">
-        {{> button text="Добавить в корзину" button-class="menu-product__button" }}
+        {{> button text="Добавить в корзину" button-class="menu-product__button desktop" attributes=(str-concat
+                ' data-global-action="drawer-open" '
+                ' data-drawer="product-counter" ') }}
+
+        {{> button text="Добавить в корзину" button-class="menu-product__button mobile" attributes=(str-concat
+                ' data-global-action="mobile-bottom-menu-open" '
+                ' data-bottom-menu="product-counter" ') }}
 
         {{> favorite-filled selected=single-product-context.favourite }}
     </div>

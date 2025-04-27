@@ -79,6 +79,7 @@
   &__sort-feedback,
   &__product,
   &__product-added,
+  &__product-counter,
   &__support,
   &__locality,
   &__delivery-point,
@@ -88,6 +89,7 @@
 
   &__product,
   &__product-added,
+  &__product-counter,
   &__locality,
   &__delivery-point {
     height: 72vh;
@@ -113,6 +115,12 @@
 
   &.product-added {
     .mobile-bottom-menu__product-added {
+      display: block;
+    }
+  }
+
+  &.product-counter {
+    .mobile-bottom-menu__product-counter {
       display: block;
     }
   }

@@ -44,6 +44,7 @@ export const app: AppInterface = {
             EMobileBottomMenuClasses.SortFeedback,
             EMobileBottomMenuClasses.Product,
             EMobileBottomMenuClasses.ProductAdded,
+            EMobileBottomMenuClasses.ProductCounter,
             EMobileBottomMenuClasses.Support,
             EMobileBottomMenuClasses.Locality,
             EMobileBottomMenuClasses.DeliveryPoint,
@@ -57,6 +58,7 @@ export const app: AppInterface = {
             EMobileBottomMenuClasses.SortFeedback,
             EMobileBottomMenuClasses.Product,
             EMobileBottomMenuClasses.ProductAdded,
+            EMobileBottomMenuClasses.ProductCounter,
             EMobileBottomMenuClasses.Support,
             EMobileBottomMenuClasses.Locality,
             EMobileBottomMenuClasses.DeliveryPoint,
@@ -78,6 +80,7 @@ export const app: AppInterface = {
             EDrawerClasses.LoginCaptcha,
         ], this.drawer)
         this.drawer && addClass(className, this.drawer)
+        this.drawer && this.drawer.focus()
     },
     drawerClose() {
         this.body && removeClass(EBodyStateClasses.DrawerOpen, this.body)

@@ -61,11 +61,11 @@
                             <div class="section-product__buttons">
                                 {{> button button-class="section-product__button desktop" text="Добавить в корзину" attributes=(str-concat
                                         'data-global-action="drawer-open" '
-                                        'data-drawer="product-added" ') }}
+                                        'data-drawer="product-counter" ') }}
 
                                 {{> button button-class="section-product__button mobile" text="Добавить в корзину" attributes=(str-concat
                                         ' data-global-action="mobile-bottom-menu-open" '
-                                        ' data-bottom-menu="product-added" ') }}
+                                        ' data-bottom-menu="product-counter" ') }}
                                 {{> favorite-filled selected=single-product-context.favourite }}
                             </div>
                         </div>

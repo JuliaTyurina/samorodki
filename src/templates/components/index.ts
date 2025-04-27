@@ -7,6 +7,7 @@ import './menu-login-number';
 import './menu-feedback';
 import './menu-feedback-not-auth';
 import './order-info';
+import './snackbar';
 
 import { initCard } from './card'
 

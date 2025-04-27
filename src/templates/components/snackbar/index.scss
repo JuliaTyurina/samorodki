@@ -1,0 +1,60 @@
+@use "sass:map";
+@use "/src/settings/styles/breakpoints/breakpoints";
+@use "/src/settings/styles/functions";
+
+.snackbar {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 12px;
+  width: 100%;
+  max-width: 343px;
+  background-color: var(--color-background-tertiary);
+  border: 1px solid var(--color-stroke-primary);
+  border-radius: 12px;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: unset;
+    color: var(--color-text-primary);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color var(--transition-default);
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      transition: fill var(--transition-default);
+
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+        color: var(--color-icon-secondary);
+    }
+  }
+
+  &[data-status="success"] {
+    color: var(--color-text-positive);
+  }
+
+  &[data-status="error"] {
+    color: var(--color-text-negative);
+  }
+
+  &[data-status="warning"] {
+    color: var(--color-text-warning);
+  }
+}

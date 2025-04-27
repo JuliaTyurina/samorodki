@@ -48,6 +48,7 @@ export enum EMobileBottomMenuClasses {
     SortFeedback = "sort-feedback",
     Product = "product",
     ProductAdded = "product-added",
+    ProductCounter = "product-counter",
     Support = "support",
     Locality = "locality",
     DeliveryPoint = "delivery-point",
@@ -56,6 +57,7 @@ export enum EMobileBottomMenuClasses {
 export enum EDrawerClasses {
     Product = "product",
     ProductAdded = "product-added",
+    ProductCounter = "product-counter",
     Support = "support",
     Locality = "locality",
     DeliveryPoint = "delivery-point",
