@@ -301,6 +301,7 @@ const app = {
     this.drawer && removeClass([
       EDrawerClasses.Product,
       EDrawerClasses.ProductAdded,
+      EDrawerClasses.ProductCounter,
       EDrawerClasses.Support,
       EDrawerClasses.Locality,
       EDrawerClasses.DeliveryPoint,
@@ -319,6 +320,7 @@ const app = {
     this.drawer && removeClass([
       EDrawerClasses.Product,
       EDrawerClasses.ProductAdded,
+      EDrawerClasses.ProductCounter,
       EDrawerClasses.Support,
       EDrawerClasses.Locality,
       EDrawerClasses.DeliveryPoint,

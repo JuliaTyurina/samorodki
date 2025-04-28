@@ -69,6 +69,7 @@ export const app: AppInterface = {
         this.drawer && removeClass([
             EDrawerClasses.Product,
             EDrawerClasses.ProductAdded,
+            EDrawerClasses.ProductCounter,
             EDrawerClasses.Support,
             EDrawerClasses.Locality,
             EDrawerClasses.DeliveryPoint,
@@ -87,6 +88,7 @@ export const app: AppInterface = {
         this.drawer && removeClass([
             EDrawerClasses.Product,
             EDrawerClasses.ProductAdded,
+            EDrawerClasses.ProductCounter,
             EDrawerClasses.Support,
             EDrawerClasses.Locality,
             EDrawerClasses.DeliveryPoint,
