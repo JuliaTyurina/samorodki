@@ -1,7 +1,14 @@
 <!-- Menu -->
 <div class="menu">
   <div class="menu__content scrollbar-custom">
-    {{> location city="Москва" location-class="menu__location"}}
+    {{> location city="Москва" location-class="menu__location desktop" attributes=(str-concat
+            'data-global-action="drawer-open" '
+            'data-drawer="locality" ')}}
+
+      {{> location city="Москва" location-class="menu__location mobile" attributes=(str-concat
+              ' data-global-action="mobile-bottom-menu-open" '
+              ' data-bottom-menu="locality" ')}}
+
     <button class="menu__button" data-global-action="catalog-open">
       <span class="title-sm font-bold">Каталог</span>
       {{> svg id="chevron-right" svg-class="icon-md" }}

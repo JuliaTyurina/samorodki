@@ -2,7 +2,13 @@
   <div class="header-top__container __container">
     <div class="header-top__main">
       <div class="header-top__left">
-        {{> location city="Москва"}}
+          {{> location city="Москва" location-class="desktop" attributes=(str-concat
+                  'data-global-action="drawer-open" '
+                  'data-drawer="locality" ')}}
+
+          {{> location city="Москва" location-class="mobile" attributes=(str-concat
+                  ' data-global-action="mobile-bottom-menu-open" '
+                  ' data-bottom-menu="locality" ')}}
         {{> phone number="8 926 193 33 58" description="с 9 -21" }}
       </div>
       <div class="header-top__right">

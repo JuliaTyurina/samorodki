@@ -39,8 +39,8 @@
   <script type="module" crossorigin src="../../assets/js/vendors-graph-tabs.Dpr5g75m.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-imask.Byfa6iJT.js"></script>
   <script type="module" crossorigin src="../../assets/js/vendors-@fancyapps.Z9libBee.js"></script>
-  <script type="module" crossorigin src="../../assets/js/index.4RxdcQ7V.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/css/index.fEDfWcUA.css">
+  <script type="module" crossorigin src="../../assets/js/index.BBblHGNe.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/css/index.Dde-maOF.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-swiper.CQ8wcuPq.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-graph-tabs.MEj_WEAR.css">
   <link rel="stylesheet" crossorigin href="../../assets/css/vendors-@fancyapps.B2r9mFhI.css">
@@ -56,11 +56,16 @@
         <div class="header-top__container __container">
           <div class="header-top__main">
             <div class="header-top__left">
-              <button type="button" class="location ">
-                <svg class="icon-md" >
-                  <use href="#location-point"></use>
-                </svg>  <span class="font-medium">Москва</span>
-              </button>          <div class="phone ">
+                <button type="button" class="location desktop" data-global-action="drawer-open" data-drawer="locality" >
+                  <svg class="icon-md" >
+                    <use href="#location-point"></use>
+                  </svg>  <span class="font-medium">Москва</span>
+                </button>
+                <button type="button" class="location mobile"  data-global-action="mobile-bottom-menu-open"  data-bottom-menu="locality" >
+                  <svg class="icon-md" >
+                    <use href="#location-point"></use>
+                  </svg>  <span class="font-medium">Москва</span>
+                </button>          <div class="phone ">
                   <a class="text-no-wrap" href="tel:8 926 193 33 58">8 926 193 33 58</a>
                   <span class="phone__description  text-gray text-no-wrap text-md">с 9 -21</span>
                 </div>
@@ -542,11 +547,17 @@
     </div>    <!-- Menu -->
     <div class="menu">
       <div class="menu__content scrollbar-custom">
-        <button type="button" class="location menu__location">
+        <button type="button" class="location menu__location desktop" data-global-action="drawer-open" data-drawer="locality" >
           <svg class="icon-md" >
             <use href="#location-point"></use>
           </svg>  <span class="font-medium">Москва</span>
-        </button>    <button class="menu__button" data-global-action="catalog-open">
+        </button>
+          <button type="button" class="location menu__location mobile"  data-global-action="mobile-bottom-menu-open"  data-bottom-menu="locality" >
+            <svg class="icon-md" >
+              <use href="#location-point"></use>
+            </svg>  <span class="font-medium">Москва</span>
+          </button>
+        <button class="menu__button" data-global-action="catalog-open">
           <span class="title-sm font-bold">Каталог</span>
           <svg class="icon-md" >
             <use href="#chevron-right"></use>
@@ -3050,7 +3061,7 @@
         </div>
         <div class="mobile-bottom-menu__footer"></div>
       </div>
-    </div>    <div class="drawer" tabindex="-1">
+    </div>    <div class="drawer" >
       <div class="drawer__overlay" data-global-action="drawer-close"></div>
       <div class="drawer__wrapper">
           <button class="drawer__close" data-global-action="drawer-close">

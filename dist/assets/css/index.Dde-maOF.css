@@ -2107,6 +2107,19 @@ body.menu-open .menu {
 }
 .location:hover, .location:active, .location:focus-visible {
   color: var(--color-text-accent);
+}
+.location.desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .location.desktop {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .location.mobile {
+    display: none;
+  }
 }.rating {
   display: flex;
   align-items: center;
