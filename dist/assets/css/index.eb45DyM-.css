@@ -4469,6 +4469,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: rgba(24, 26, 29, 0.7);
   cursor: pointer;
   transition: background-color var(--transition-default);
+  z-index: 1;
 }
 .card-product__add-to-cart.desktop {
   display: none;

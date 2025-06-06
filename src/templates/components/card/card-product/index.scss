@@ -127,6 +127,7 @@
     background-color: rgba(24, 26, 29, 0.70);
     cursor: pointer;
     transition: background-color var(--transition-default);
+    z-index: 1;
 
     &:hover,
     &:focus-visible {
