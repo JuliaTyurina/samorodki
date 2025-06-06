@@ -10,6 +10,7 @@
   &__link {
     position: absolute;
     inset: 0;
+    z-index: 1;
 
     &:hover,
     &:focus-visible {

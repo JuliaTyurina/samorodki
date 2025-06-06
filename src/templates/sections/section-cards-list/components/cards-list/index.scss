@@ -3,7 +3,7 @@
 
 .cards-list {
   display               : grid;
-  grid-template-columns : repeat(2, minmax(0, auto));
+  grid-template-columns : repeat(2, minmax(0, 1fr));
   gap                   : 16px 8px;
 
   @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
@@ -12,17 +12,17 @@
 
   &--max-3 {
     @media (min-width : map.get(breakpoints.$breakpoints-min, lg)) {
-      grid-template-columns : repeat(3, minmax(0, auto));
+      grid-template-columns : repeat(3, minmax(0, 1fr));
     }
   }
 
   &:not(&--max-3) {
     @media (min-width : map.get(breakpoints.$breakpoints-min, md)) {
-      grid-template-columns : repeat(3, minmax(0, auto));
+      grid-template-columns : repeat(3, minmax(0, 1fr));
     }
 
     @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
-      grid-template-columns : repeat(4, minmax(0, auto));
+      grid-template-columns : repeat(4, minmax(0, 1fr));
     }
   }
 }
