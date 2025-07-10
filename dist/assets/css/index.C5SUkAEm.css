@@ -4642,11 +4642,6 @@ input[type=search]::-webkit-search-results-decoration {
     margin-top: 16px;
   }
 }
-@media (min-width: 1300px) {
-  .section-page-header {
-    padding: 0 16px;
-  }
-}
 @media (max-width: 767px) {
   .section-page-header__container {
     max-width: 100%;
