@@ -16,6 +16,7 @@
 
     @media (min-width : map.get(breakpoints.$breakpoints-min, xl)) {
       max-width : var(--container-big-width);
+      padding: 0 var(--container-mobile-padding);
     }
   }
 
